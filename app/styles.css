@@ -1,0 +1,51 @@
+
+.box-FF8000 {
+    background: repeating-linear-gradient(
+        135deg,
+        #fff,
+        #fff 4%,
+        #FF8000 4%,
+        #FF8000 8%
+      );
+}
+
+.box-4E9DFF {
+    background: repeating-linear-gradient(
+        135deg,
+        #fff,
+        #fff 4%,
+        #4E9DFF 4%,
+        #4E9DFF 8%
+      );
+}
+
+.box-A163FF {
+    background: repeating-linear-gradient(
+        135deg,
+        #fff,
+        #fff 4%,
+        #A163FF 4%,
+        #A163FF 8%
+      );
+}
+
+.box-inner {
+    transition: opacity 2s ease-in-out;
+}
+
+.box-inner:hover {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.color-A163FF{
+    color: #A163FF;
+  }
+  
+  .color-D07280{
+    color: #D07280;
+  }
+  
+  .color-FF8000{
+    color: #FF8000;
+  }
