@@ -49,3 +49,30 @@
   .color-FF8000{
     color: #FF8000;
   }
+
+  .color-BBF149 {
+    color: #BBF149;
+  }
+  .color-B281FE {
+    color: #B281FE;
+  }
+  .color-4E9DFF {
+    color: #4E9DFF;
+  }
+  .color-F6902A {
+    color: #F6902A;
+  }
+
+
+  .bg-BBF149 {
+    background-color: #BBF149;
+  }
+  .bg-B281FE {
+    background-color: #B281FE;
+  }
+  .bg-4E9DFF {
+    background-color: #4E9DFF;
+  }
+  .bg-F6902A {
+    background-color: #F6902A;
+  }

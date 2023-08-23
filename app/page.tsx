@@ -62,9 +62,8 @@ export default function Geek() {
         <Navbar />
         <Hero />
       </div>
-
-      <Footer />
       <ScrollSection />
+      <Footer />
     </div>
   );
 }
