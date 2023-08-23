@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useWindowSize } from "rooks";
 import { motion } from "framer-motion";
+import { sleepForSeconds } from "../utils";
 
 interface Item {
   heading: string;
@@ -47,6 +48,52 @@ const items: Item[] = [
     color: "F6902A",
   },
 ];
+
+const NavbarScrollSection = ({
+  selectedIndex,
+  setSelectedIndex,
+}: {
+  selectedIndex: number;
+  setSelectedIndex: Function;
+}) => {
+  const setSelectedIndexSlowly = async (newIndex: number) => {
+    if (newIndex === selectedIndex) return;
+
+    if (newIndex > selectedIndex) {
+      for (let index = selectedIndex + 1; index <= newIndex; index++) {
+        setSelectedIndex(index);
+        await sleepForSeconds(0.08);
+      }
+    } else {
+      for (let index = selectedIndex - 1; index >= newIndex; index--) {
+        setSelectedIndex(index);
+        await sleepForSeconds(0.08);
+      }
+    }
+  };
+
+  return (
+    <div className="flex justify-between items-center px-14 py-10 z-50 block w-full absolute">
+      <div className="flex font-poppins justify-between items-center font-medium text-white pointer-events-auto">
+        {items.map(({ heading, color }, index) => {
+          return (
+            <div
+              key={index}
+              className={`${index === 0 ? `` : `ml-8`} cursor-pointer ${
+                index === selectedIndex
+                  ? `color-${color} underline underline-offset-4`
+                  : null
+              }`}
+              onClick={() => setSelectedIndexSlowly(index)}
+            >
+              {heading}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 const Section = ({
   item,
@@ -101,14 +148,18 @@ const Section = ({
     <div
       className={`grid grid-cols-2 h-[100vh] ${
         index !== 3 ? "sticky top-0" : null
-      } z-${(5 - index) * 10}`}
+      } z-${(4 - index) * 10}`}
     >
-      <div className="flex flex-col justify-end py-10 px-10">
-        <h1 className={`text-4xl color-${item.color}`}>{item.heading}</h1>
-        <p className="mt-6 text-[#F9F9F9]">{item.text}</p>
+      <div className="flex flex-col justify-end pb-16 px-10 font-poppins ">
+        <h1 className={`text-5xl font-bold color-${item.color}`}>
+          {item.heading}
+        </h1>
+        <p className="mt-6 text-[#F9F9F9] font-dm-sans font-normal">
+          {item.text}
+        </p>
         <Link
           href={item.linkTo}
-          className={`bg-${item.color} self-start px-10 py-4 rounded-full mt-6`}
+          className={`bg-${item.color} self-start px-10 py-4 rounded-full mt-10 font-dm-sans font-medium`}
         >
           Learn More
         </Link>
@@ -139,14 +190,11 @@ export default function ScrollSection() {
   const { innerHeight: height, innerWidth: width } = useWindowSize();
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     if (!height) return;
 
     const position = window.scrollY;
-    setScrollPosition(position);
-
     const scrolled = position - scrollSectionRef.current?.offsetTop;
 
     console.log(
@@ -165,6 +213,18 @@ export default function ScrollSection() {
     setSelectedIndex(index);
   };
 
+  const setSelectedIndexAndResetScroll = (index: number) => {
+    if (!height) return;
+
+    setSelectedIndex(index);
+
+    window.scrollTo({
+      top:
+        scrollSectionRef.current?.offsetTop +
+        (height * index + height * Math.min(3, index + 1)) / 2,
+    });
+  };
+
   const scrollSectionRef = useRef<any>(null);
 
   useEffect(() => {
@@ -176,41 +236,43 @@ export default function ScrollSection() {
   }, []);
 
   return (
-    <>
-      <div
-        ref={scrollSectionRef}
-        className="sticky top-0 bg-[#111111]"
-        style={{
-          height: `${items.length * 100}vh`,
-        }}
-      >
-        <div className="h-[100vh] overflow-hidden sticky top-0">
-          <AnimatePresence>
+    <div
+      ref={scrollSectionRef}
+      className="sticky top-0 bg-[#111111]"
+      style={{
+        height: `${items.length * 100}vh`,
+      }}
+    >
+      <div className="h-[100vh] overflow-hidden sticky top-0">
+        <NavbarScrollSection
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndexAndResetScroll}
+        />
+        <AnimatePresence>
+          <Section
+            key={items[selectedIndex].heading}
+            selectedIndex={selectedIndex}
+            index={selectedIndex}
+            item={items[selectedIndex]}
+          />
+          {selectedIndex > 0 && (
             <Section
-              key={items[selectedIndex].heading}
+              key={items[selectedIndex - 1].heading}
               selectedIndex={selectedIndex}
-              index={selectedIndex}
-              item={items[selectedIndex]}
+              index={selectedIndex - 1}
+              item={items[selectedIndex - 1]}
             />
-            {selectedIndex > 0 && (
-              <Section
-                key={items[selectedIndex - 1].heading}
-                selectedIndex={selectedIndex}
-                index={selectedIndex - 1}
-                item={items[selectedIndex - 1]}
-              />
-            )}
-            {selectedIndex < 3 && (
-              <Section
-                key={items[selectedIndex + 1].heading}
-                selectedIndex={selectedIndex}
-                index={selectedIndex + 1}
-                item={items[selectedIndex + 1]}
-              />
-            )}
-          </AnimatePresence>
-        </div>
+          )}
+          {selectedIndex < 3 && (
+            <Section
+              key={items[selectedIndex + 1].heading}
+              selectedIndex={selectedIndex}
+              index={selectedIndex + 1}
+              item={items[selectedIndex + 1]}
+            />
+          )}
+        </AnimatePresence>
       </div>
-    </>
+    </div>
   );
 }

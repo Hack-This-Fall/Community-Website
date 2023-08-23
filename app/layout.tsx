@@ -1,8 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Caveat, Inter, Poppins, Raleway } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+import { DM_Sans, Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,14 +8,10 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const raleway = Raleway({
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
-  variable: "--font-raleway",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
 });
 
 export const metadata: Metadata = {
@@ -32,9 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${raleway.variable} ${inter.variable} ${caveat.variable} ${poppins.variable}`}
-      >
+      <body className={`${poppins.variable} ${dmSans.variable}`}>
         {children}
       </body>
     </html>

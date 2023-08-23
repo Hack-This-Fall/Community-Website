@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import "./styles.css";
 import useWindowSize from "./hooks/useWindowDimension";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ScrollSection from "./components/ScrollSection";
+
+import "./styles.css";
 
 const colors = ["#FF8000", "#4E9DFF", "#A163FF"];
 
