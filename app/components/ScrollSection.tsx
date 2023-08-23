@@ -139,14 +139,11 @@ export default function ScrollSection() {
   const { innerHeight: height, innerWidth: width } = useWindowSize();
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     if (!height) return;
 
     const position = window.scrollY;
-    setScrollPosition(position);
-
     const scrolled = position - scrollSectionRef.current?.offsetTop;
 
     console.log(
@@ -176,41 +173,39 @@ export default function ScrollSection() {
   }, []);
 
   return (
-    <>
-      <div
-        ref={scrollSectionRef}
-        className="sticky top-0 bg-[#111111]"
-        style={{
-          height: `${items.length * 100}vh`,
-        }}
-      >
-        <div className="h-[100vh] overflow-hidden sticky top-0">
-          <AnimatePresence>
+    <div
+      ref={scrollSectionRef}
+      className="sticky top-0 bg-[#111111]"
+      style={{
+        height: `${items.length * 100}vh`,
+      }}
+    >
+      <div className="h-[100vh] overflow-hidden sticky top-0">
+        <AnimatePresence>
+          <Section
+            key={items[selectedIndex].heading}
+            selectedIndex={selectedIndex}
+            index={selectedIndex}
+            item={items[selectedIndex]}
+          />
+          {selectedIndex > 0 && (
             <Section
-              key={items[selectedIndex].heading}
+              key={items[selectedIndex - 1].heading}
               selectedIndex={selectedIndex}
-              index={selectedIndex}
-              item={items[selectedIndex]}
+              index={selectedIndex - 1}
+              item={items[selectedIndex - 1]}
             />
-            {selectedIndex > 0 && (
-              <Section
-                key={items[selectedIndex - 1].heading}
-                selectedIndex={selectedIndex}
-                index={selectedIndex - 1}
-                item={items[selectedIndex - 1]}
-              />
-            )}
-            {selectedIndex < 3 && (
-              <Section
-                key={items[selectedIndex + 1].heading}
-                selectedIndex={selectedIndex}
-                index={selectedIndex + 1}
-                item={items[selectedIndex + 1]}
-              />
-            )}
-          </AnimatePresence>
-        </div>
+          )}
+          {selectedIndex < 3 && (
+            <Section
+              key={items[selectedIndex + 1].heading}
+              selectedIndex={selectedIndex}
+              index={selectedIndex + 1}
+              item={items[selectedIndex + 1]}
+            />
+          )}
+        </AnimatePresence>
       </div>
-    </>
+    </div>
   );
 }
