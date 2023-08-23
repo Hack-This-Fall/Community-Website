@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "../assets/images/logo.svg";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const navbarItems = ["ABOUT ME", "EXPERIENCE", "COMMUNITIES", "INITIATIVES"];
 
   return (

@@ -21,7 +21,7 @@ const AnimatedText = (props: AnimatedTextProps) => {
   );
 };
 
-export default function Hero(props) {
+export default function Hero() {
   const [index, setIndex] = useState(0);
 
   const texts = [

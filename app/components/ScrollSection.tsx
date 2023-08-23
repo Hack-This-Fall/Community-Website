@@ -9,7 +9,54 @@ import Link from "next/link";
 import { useWindowSize } from "rooks";
 import { motion } from "framer-motion";
 
-const Section = ({ item, index, selectedIndex }) => {
+interface Item {
+  heading: string;
+  linkTo: string;
+  image: any;
+  text: string;
+  color: string;
+}
+
+const items: Item[] = [
+  {
+    heading: "Hackathon",
+    linkTo: "/hackathon",
+    image: DemoOne,
+    text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
+    color: "BBF149",
+  },
+  {
+    heading: "Meetups",
+    linkTo: "/hackathon",
+    image: DemoOne,
+    text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
+    color: "B281FE",
+  },
+  {
+    heading: "Build with",
+    linkTo: "/hackathon",
+    image: DemoOne,
+    text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
+    color: "4E9DFF",
+  },
+  {
+    heading: "Hacktoberfest",
+    linkTo: "/hackathon",
+    image: DemoOne,
+    text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
+    color: "F6902A",
+  },
+];
+
+const Section = ({
+  item,
+  index,
+  selectedIndex,
+}: {
+  item: Item;
+  index: number;
+  selectedIndex: number;
+}) => {
   const [exitY, setExitY] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -88,38 +135,7 @@ const Section = ({ item, index, selectedIndex }) => {
   );
 };
 
-export default function ScrollSection(props) {
-  const items = [
-    {
-      heading: "Hackathon",
-      linkTo: "/hackathon",
-      image: DemoOne,
-      text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
-      color: "BBF149",
-    },
-    {
-      heading: "Meetups",
-      linkTo: "/hackathon",
-      image: DemoOne,
-      text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
-      color: "B281FE",
-    },
-    {
-      heading: "Build with",
-      linkTo: "/hackathon",
-      image: DemoOne,
-      text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
-      color: "4E9DFF",
-    },
-    {
-      heading: "Hacktoberfest",
-      linkTo: "/hackathon",
-      image: DemoOne,
-      text: "Hack This Fall began with a mindset of encouraging beginner hackers to build unique projects regardless of  the tech or field; the only focus was to create something  meaningful and enjoy building while also solving the shared struggles of our surroundings.",
-      color: "F6902A",
-    },
-  ];
-
+export default function ScrollSection() {
   const { innerHeight: height, innerWidth: width } = useWindowSize();
 
   const [selectedIndex, setSelectedIndex] = useState(0);

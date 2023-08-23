@@ -1,18 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import {
-  Caveat,
-  Inter,
-  Nanum_Pen_Script,
-  Poppins,
-  Raleway,
-} from "next/font/google";
-
-const nanumPen = Nanum_Pen_Script({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-nanum-pen",
-});
+import { Caveat, Inter, Poppins, Raleway } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -45,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nanumPen.variable} ${raleway.variable} ${inter.variable} ${caveat.variable} ${poppins.variable}`}
+        className={`${raleway.variable} ${inter.variable} ${caveat.variable} ${poppins.variable}`}
       >
         {children}
       </body>
