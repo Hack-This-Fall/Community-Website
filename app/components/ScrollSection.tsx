@@ -48,7 +48,7 @@ export default function ScrollSection(props) {
       }}
     >
       {navbarItems.map((item, index) => (
-        <Section image={item.image} />
+        <Section key={item.heading} image={item.image} />
       ))}
     </div>
   );
