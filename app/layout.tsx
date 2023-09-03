@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Providers } from './providers';
 import { DM_Sans, Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${dmSans.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
