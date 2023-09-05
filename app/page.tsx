@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import ScrollSection from "./components/ScrollSection";
 
 import "./styles.css";
+import CommunityGlipses from "./components/HomePage/CommunityGlipmses";
+import Sponsors from "./components/HomePage/Sponsors";
 
 const colors = ["#FF8000", "#4E9DFF", "#A163FF"];
 
@@ -64,6 +66,8 @@ export default function Geek() {
         <Hero />
       </div>
       <ScrollSection />
+      <CommunityGlipses />
+      <Sponsors />
       <Footer />
     </div>
   );
