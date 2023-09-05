@@ -11,7 +11,10 @@ import {
   Tab,
   TabPanel,
   SimpleGrid,
+  Text,
+  Select,
 } from '@chakra-ui/react';
+import moment from 'moment';
 import HeroContainer from '../components/EventsPage/HeroContainer';
 import EventContainer from '../components/EventsPage/EventContainer';
 import eventsData from './data';
@@ -52,6 +55,12 @@ const config: config = {
 
 const EventsPage = () => {
   const [currentExpanded, setCurrentExpanded] = useState(0);
+  const [selectValue, setSelectValue] = useState('ALL');
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectValue(event.target.value);
+  };
+
   return (
     <div className="relative">
       <div className="relative top-0 left-0 w-full pointer-events-none">
@@ -92,22 +101,61 @@ const EventsPage = () => {
                 );
               })}
             </TabList>
-            <TabPanels mt='3rem'>
+            <TabPanels mt="3rem">
               {Object.keys(eventsData.tabs).map((tab, index) => (
-                <TabPanel p='0' key={index}>
-                  <SimpleGrid columns={4} columnGap='1rem' rowGap='1rem'>
+                <TabPanel p="0" key={index}>
+                  <SimpleGrid columns={4} columnGap="1rem" rowGap="1rem">
                     {eventsData.events
                       .filter((data) =>
                         eventsData.tabs[tab].filterFunction(data),
                       )
                       .map((event, index) => (
-                          <EventContainer eventData={event} key={index} />
+                        <EventContainer eventData={event} key={index} />
                       ))}
                   </SimpleGrid>
                 </TabPanel>
               ))}
             </TabPanels>
           </Tabs>
+          <Flex flexDir="column" mt="5rem">
+            <Flex w="full" justifyContent="space-between">
+              <Box
+                bg="black"
+                color="white"
+                borderRadius="full"
+                px="2rem"
+                py="1rem"
+              >
+                Past Events
+              </Box>
+              <Flex gap="1rem" alignItems="center" justifyContent="center">
+                <Text fontFamily="var(--dm-sans)">Filter&nbsp;By</Text>
+                <Select
+                  onChange={handleSelectChange}
+                  value={selectValue}
+                  bgColor="#F2F2F2"
+                  borderRadius="full"
+                  size="md"
+                >
+                  <option value="ALL">All Events</option>
+                  <option value="EVENT_CITY_MEETUP">City Meetups</option>
+                  <option value="EVENT_HACKTOBERFEST">Hacktoberfest</option>
+                  <option value="EVENT_BUILD_WITH">Build With</option>
+                </Select>
+              </Flex>
+            </Flex>
+            <SimpleGrid mt="3rem" columns={4} columnGap="1rem" rowGap="1rem">
+              {eventsData.events
+                .filter(
+                  (data) =>
+                    moment().diff(data.startTimestamp) > 0 &&
+                    (selectValue === 'ALL' || data.type === selectValue),
+                )
+                .map((event, index) => (
+                  <EventContainer eventData={event} key={index} />
+                ))}
+            </SimpleGrid>
+          </Flex>
         </Box>
       </Box>
       <Footer />
