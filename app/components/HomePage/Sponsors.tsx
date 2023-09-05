@@ -82,7 +82,7 @@ export default function Sponsors() {
       <div className="font-poppins font-bold text-4xl">Sponsors</div>
       <div className="grid grid-cols-6 px-4 gap-x-4 gap-y-4 mt-8">
         {sponsors.map((s, i) => (
-          <div className="border p-4 rounded-xl">
+          <div className="border p-4 rounded-xl" key={i}>
             <Image
               src={s.image}
               alt="Community"
