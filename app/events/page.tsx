@@ -66,7 +66,7 @@ const EventsPage = () => {
       <div className="relative top-0 left-0 w-full pointer-events-none">
         <Navbar />
       </div>
-      <Box w="full" pt="15rem" pb="6">
+      <Box w="full" pt="12rem" pb="6">
         <Flex w="full" gap="1.5rem" h="451px">
           {[0, 1, 2].map((item, index) => (
             <HeroContainer
