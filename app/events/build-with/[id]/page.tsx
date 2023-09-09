@@ -17,6 +17,8 @@ import eventsData from '../../data';
 import HeroSection from '@/app/components/IndividualEventsPage/Hero';
 import AgendaSection from '@/app/components/IndividualEventsPage/Agenda';
 import WorkshopSection from '@/app/components/IndividualEventsPage/Workshop';
+import CommunicationSection from '@/app/components/IndividualEventsPage/Communication';
+import CodeOfConductSection from '@/app/components/IndividualEventsPage/COC';
 
 const sections = [
   'Agenda',
@@ -87,6 +89,8 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
         </Flex>
         <AgendaSection agenda={agenda} description={description} />
         <WorkshopSection />
+        <CommunicationSection />
+        <CodeOfConductSection />
       </Flex>
     </div>
   );

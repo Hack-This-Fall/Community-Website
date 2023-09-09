@@ -19,7 +19,7 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
       <Heading
         fontSize="3.5rem"
         fontFamily="var(--font-poppins)"
-        fontWeight="700"
+        fontWeight="600"
         color="black"
         textAlign="center"
         lineHeight="150%"
