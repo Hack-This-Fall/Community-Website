@@ -64,7 +64,7 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
               {startTimestamp.get('date')}
             </Flex>
           </Box>
-          <Flex gap='0.2rem' flexDir="column" justifyContent="center">
+          <Flex gap="0.2rem" flexDir="column" justifyContent="center">
             <Text
               fontFamily="var(--font-poppins)"
               fontSize="1rem"
@@ -73,7 +73,7 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
               lineHeight="normal"
               color="#656565"
             >
-              {startTimestamp.format('dddd, H:mm')} -{' '}
+              {startTimestamp.format('dddd, H:mm')} -
               {endTimestamp.format('H:mm A z')}
             </Text>
             <Text
