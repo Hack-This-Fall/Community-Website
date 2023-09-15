@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import DemoOne from "../assets/images/demo1.svg";
+import DemoOne from "../../assets/images/demo1.svg";
 import { useEffect, useRef, useState } from "react";
 // import useWindowSize from "../hooks/useWindowDimension";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useWindowSize } from "rooks";
 import { motion } from "framer-motion";
-import { sleepForSeconds } from "../utils";
+import { sleepForSeconds } from "../../utils";
 
 interface Item {
   heading: string;

@@ -1,6 +1,7 @@
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "../styles.css";
+import { calc } from "@chakra-ui/react";
 
 interface AnimatedTextProps {
   text: string;
@@ -21,7 +22,7 @@ const AnimatedText = (props: AnimatedTextProps) => {
   );
 };
 
-export default function Hero() {
+export default function Hero({ navbarHeight }: { navbarHeight: number }) {
   const [index, setIndex] = useState(0);
 
   const texts = [
@@ -39,16 +40,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="flex flex-col h-[100vh] w-fit justify-center">
-      <div className="flex flex-col items-center text-center">
+    <div
+      className="flex flex-col w-fit justify-center h-[100vh] mt cc"
+      style={{
+        marginTop: `-${navbarHeight}px`,
+      }}
+    >
+      <div className="flex flex-col items-center text-center ">
         <div className="w-[60%] font-poppins font-semibold text-6xl text-[#151515] leading-snug ">
           <LayoutGroup>
-            A Diverse Hacker Community Encouraging{" "}
+            A Thriving Hacker Community Encouraging{" "}
             <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden ">
-              <span className=" left-0 top-0 text-transparent">
+              <span className="left-0 top-0 text-transparent">
                 {texts[index % 3].text}
               </span>
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <AnimatedText
                   key={index}
                   text={texts[index % 3].text}

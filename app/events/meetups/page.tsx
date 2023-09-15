@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import {
   Button,
   Flex,
@@ -14,15 +14,15 @@ import {
   Text,
   Heading,
   Image,
-} from '@chakra-ui/react';
-import EventContainer from '../../components/EventsPage/EventContainer';
-import eventsData from '../data';
+} from "@chakra-ui/react";
+import EventContainer from "../../components/EventsPage/EventContainer";
+import eventsData from "../data";
 
 const CityMeetupsPage = () => {
   return (
     <div className="relative">
       <div className="relative top-0 left-0 w-full pointer-events-none">
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
       <Flex flexDir="column" w="full" pt="12rem" pb="6">
         <Flex mb="3rem" gap="1.5rem">
@@ -64,8 +64,8 @@ const CityMeetupsPage = () => {
               fontSize="1.1rem"
               fontWeight="700"
               _hover={{
-                background: '#9F6BF0',
-                color: 'white',
+                background: "#9F6BF0",
+                color: "white",
               }}
             >
               Coming Soon
@@ -83,9 +83,9 @@ const CityMeetupsPage = () => {
                   py="1rem"
                   transition="all 0.25s ease-in-out"
                   _selected={{
-                    bg: 'black',
-                    color: 'white',
-                    borderRadius: 'full',
+                    bg: "black",
+                    color: "white",
+                    borderRadius: "full",
                   }}
                 >
                   {eventsData.individualEventTabs[item].heading}
@@ -101,8 +101,8 @@ const CityMeetupsPage = () => {
                     .filter((data) =>
                       eventsData.individualEventTabs[tab].filterFunction(
                         data,
-                        'EVENT_CITY_MEETUP',
-                      ),
+                        "EVENT_CITY_MEETUP"
+                      )
                     )
                     .map((event, index) => (
                       <EventContainer eventData={event} key={index} />
