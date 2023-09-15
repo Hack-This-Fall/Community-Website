@@ -9,7 +9,7 @@ export default function Navbar({
   setNavbarHeight: Function;
   setIsNavbarOpen: Function;
 }) {
-  const ref = useRef();
+  const ref = useRef<any>();
 
   useEffect(() => {
     setNavbarHeight(ref.current?.clientHeight);
