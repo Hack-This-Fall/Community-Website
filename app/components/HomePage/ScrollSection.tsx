@@ -238,7 +238,7 @@ export default function ScrollSection() {
   return (
     <div
       ref={scrollSectionRef}
-      className="bg-[#111111] hidden"
+      className="bg-[#111111] "
       style={{
         height: `${items.length * 100}vh`,
       }}
