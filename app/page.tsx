@@ -89,7 +89,7 @@ export default function Geek() {
         setNavbarHeight={setNavbarHeight}
         setIsNavbarOpen={setIsNavbarOpen}
       />
-      <div className="relative top-0 left-0 w-full pointer-events-none">
+      <div className="relative top-0 left-0 w-full">
         <Hero navbarHeight={navbarHeight} />
         <ScrollSection />
         <CommunityGlipses />
