@@ -1,4 +1,4 @@
-const InstagramIcon = (color: string) => (
+const InstagramIcon = ({ color }: { color: string }) => (
   <svg
     width="28"
     height="27"

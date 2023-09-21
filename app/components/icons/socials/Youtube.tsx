@@ -1,4 +1,4 @@
-const YoutubeIcon = (color: string) => (
+const YoutubeIcon = ({ color }: { color: string }) => (
   <svg
     width="28"
     height="27"

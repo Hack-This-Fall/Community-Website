@@ -22,16 +22,16 @@ export default function Navbar({
   return (
     <div
       ref={ref}
-      className={`flex justify-between items-center px-14 py-10 z-50 block w-full absolute top-0  pointer-events-none sticky`}
+      className={`flex justify-between items-center px-4 md:px-14 py-4 md:py-10 z-50 block w-full absolute top-6 md:top-0 pointer-events-none sticky`}
     >
-      <Image src={Logo} className="w-40" alt="logo" />
+      <Image src={Logo} className="w-20 md:w-40" alt="logo" />
       <div className="flex font-raleway justify-between items-center font-semibold">
-        <span className="navbar-community py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer">
+        <span className="navbar-community py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer hidden md:inline-block">
           Join our community
         </span>
 
         <span
-          className="bg-black ml-4 py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer"
+          className="bg-black ml-0 md:ml-4 py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer"
           onClick={() => setIsNavbarOpen(true)}
         >
           ==

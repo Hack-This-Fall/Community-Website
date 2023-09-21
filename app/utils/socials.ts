@@ -7,19 +7,9 @@ import YoutubeIcon from "../components/icons/socials/Youtube";
 
 const socials = [
   {
-    icon: YoutubeIcon,
-    link: "//youtube.com",
-    name: "youtube",
-  },
-  {
     icon: DiscordIcon,
     link: "//discord.com",
     name: "discord",
-  },
-  {
-    icon: InstagramIcon,
-    link: "//instagram.com",
-    name: "instagram",
   },
   {
     icon: TwitterIcon,
@@ -27,14 +17,24 @@ const socials = [
     name: "twitter",
   },
   {
-    icon: EmailIcon,
-    link: "//email.com",
-    name: "email",
+    icon: InstagramIcon,
+    link: "//instagram.com",
+    name: "instagram",
+  },
+  {
+    icon: YoutubeIcon,
+    link: "//youtube.com",
+    name: "youtube",
   },
   {
     icon: LinkedinIcon,
     link: "//linkedin.com",
     name: "linkedin",
+  },
+  {
+    icon: EmailIcon,
+    link: "//email.com",
+    name: "email",
   },
 ];
 

@@ -1,4 +1,4 @@
-const EmailIcon = (color: string) => (
+const EmailIcon = ({ color }: { color: string }) => (
   <svg
     width="27"
     height="27"

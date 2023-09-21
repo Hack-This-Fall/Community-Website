@@ -1,4 +1,4 @@
-const DiscordIcon = (color: string) => (
+const DiscordIcon = ({ color }: { color: string }) => (
   <svg
     width="28"
     height="27"

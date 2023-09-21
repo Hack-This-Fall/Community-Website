@@ -1,4 +1,4 @@
-const LinkedinIcon = (color: string) => (
+const LinkedinIcon = ({ color }: { color: string }) => (
   <svg
     width="28"
     height="27"

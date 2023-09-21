@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Close from "../assets/images/navbar/close.svg";
 import socials, { SOCIAL_COLORS } from "../utils/socials";
+import YoutubeIcon from "./icons/socials/Youtube";
 
 const navbarItems = [
   { link: "/", text: "Home", conditions: [""] },
@@ -26,7 +27,7 @@ export default function OpenNavbar({
           zIndex: 11000,
           top: window.pageYOffset || document.documentElement.scrollTop,
         }}
-        className="bg-[#000000] h-[100vh] opacity-100 absolute min-w-[40vw] right-0 top-0 text-white rounded-l-2xl p-10 pl-10 flex flex-col justify-between"
+        className="bg-[#000000] h-[100vh] opacity-100 absolute min-w-[100vw] md:min-w-[40vw] right-0 top-0 text-white rounded-2xl md:rounded-l-2xl p-10 pl-10 flex flex-col justify-between"
       >
         <div className="flex justify-end">
           <Image
@@ -42,9 +43,9 @@ export default function OpenNavbar({
               onClick={() => setIsNavbarOpen(false)}
               href={item.link}
               key={item.text}
-              className={`italic opacity-80 text-3xl ${
+              className={`italic opacity-80 text-lg md:text-3xl ${
                 item.conditions.includes(url)
-                  ? "!text-5xl font-bold !opacity-100 underline"
+                  ? "!text-lg md:!text-5xl font-bold !opacity-100 underline"
                   : null
               } ${index != 0 ? "mt-4 " : null}`}
             >
@@ -52,16 +53,18 @@ export default function OpenNavbar({
             </Link>
           ))}
         </div>
-        <div>
-          HELLO
+        <div className="flex bg-[#191919] justify-between py-4 px-4 rounded-2xl ">
           {socials.map((s, i) => {
             const SpecificSocial = s.icon;
-
             return (
-              <div key={s.name} className="w-100 h-100 bg-red">
-                {/* Components(s.icon) */}
-                {/* <SpecificSocial color="#ffffff" /> */}
-              </div>
+              <Link
+                href={s.link}
+                target="_blank"
+                key={s.name}
+                className="w-[50px] h-[50px] bg-[#222222] gap-x-4 p-2 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <SpecificSocial color={SOCIAL_COLORS.NAVBAR} />
+              </Link>
             );
           })}
         </div>
@@ -69,7 +72,7 @@ export default function OpenNavbar({
       <div
         onClick={() => setIsNavbarOpen(false)}
         style={{ zIndex: 10000 }}
-        className="fixed bg-black  h-[100%] w-[100%] top-0 left-0 bottom-0 right-0 opacity-50"
+        className="fixed bg-black h-[100%] w-[100%] top-0 left-0 bottom-0 right-0 opacity-50"
       ></div>
     </>
   );

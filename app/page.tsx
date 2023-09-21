@@ -75,7 +75,7 @@ export default function Geek() {
 
   return (
     <div className="relative">
-      <div className="absolute top-0 overflow-hidden">
+      <div className="absolute top-0 overflow-hidden max-h-[100vh]">
         {Array.from({ length: rows }).map((_, rowIndex) => (
           <div key={rowIndex} className="flex ">
             {Array.from({ length: cols }).map((_, colIndex) => (
