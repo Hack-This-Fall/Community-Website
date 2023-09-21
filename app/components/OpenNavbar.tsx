@@ -27,7 +27,7 @@ export default function OpenNavbar({
           zIndex: 11000,
           top: window.pageYOffset || document.documentElement.scrollTop,
         }}
-        className="bg-[#000000] h-[100vh] opacity-100 absolute min-w-[100vw] md:min-w-[40vw] right-0 top-0 text-white rounded-2xl md:rounded-l-2xl p-10 pl-10 flex flex-col justify-between"
+        className="bg-[#000000] h-[100vh] opacity-100 absolute min-w-[100vw] md:min-w-[40vw] right-0 top-0 text-white rounded-2xl md:rounded-l-2xl md:rounded-r-none p-10 pl-10 flex flex-col justify-between"
       >
         <div className="flex justify-end">
           <Image

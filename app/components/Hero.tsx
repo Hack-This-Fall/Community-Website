@@ -41,7 +41,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
 
   return (
     <div
-      className="flex flex-col w-fit justify-center h-[100vh] mt cc"
+      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440"
       style={{
         marginTop: `-${navbarHeight}px`,
       }}
@@ -51,10 +51,10 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           <LayoutGroup>
             A Thriving Hacker Community Encouraging{" "}
             <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden -mt-4 md:mt-1 ">
-              <span className="left-0 top-0 text-transparent">
-                {texts[index % 3].text}
-              </span>
               <AnimatePresence>
+                <span className="left-0 top-0 text-transparent">
+                  {texts[index % 3].text}
+                </span>
                 <AnimatedText
                   key={index}
                   text={texts[index % 3].text}

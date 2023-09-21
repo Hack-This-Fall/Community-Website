@@ -74,29 +74,33 @@ export default function Geek() {
   const rows = Math.ceil(height / sideInPx);
 
   return (
-    <div className="relative">
-      <div className="absolute top-0 overflow-hidden max-h-[100vh]">
-        {Array.from({ length: rows }).map((_, rowIndex) => (
-          <div key={rowIndex} className="flex ">
-            {Array.from({ length: cols }).map((_, colIndex) => (
-              <Box sideInPx={sideInPx} key={`${rowIndex}-${colIndex}`} />
+    <>
+      <div className="relative">
+        <div className="container-1440">
+          <div className="absolute top-0 overflow-hidden max-h-[100vh] ">
+            {Array.from({ length: rows }).map((_, rowIndex) => (
+              <div key={rowIndex} className="flex ">
+                {Array.from({ length: cols }).map((_, colIndex) => (
+                  <Box sideInPx={sideInPx} key={`${rowIndex}-${colIndex}`} />
+                ))}
+              </div>
             ))}
           </div>
-        ))}
+        </div>
+        {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
+        <Navbar
+          setNavbarHeight={setNavbarHeight}
+          setIsNavbarOpen={setIsNavbarOpen}
+        />
+        <div className="relative top-0 left-0 w-full pointer-events-none">
+          <Hero navbarHeight={navbarHeight} />
+          <ScrollSection />
+          <CommunityGlipses />
+          <Narratives />
+          <Sponsors />
+          <Footer />
+        </div>
       </div>
-      {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
-      <Navbar
-        setNavbarHeight={setNavbarHeight}
-        setIsNavbarOpen={setIsNavbarOpen}
-      />
-      <div className="relative top-0 left-0 w-full pointer-events-none">
-        <Hero navbarHeight={navbarHeight} />
-        <ScrollSection />
-        <CommunityGlipses />
-        <Narratives />
-        <Sponsors />
-        <Footer />
-      </div>
-    </div>
+    </>
   );
 }
