@@ -92,7 +92,7 @@ const Socials = [
 
 const Footer = () => {
   return (
-    <Flex gap="1.5rem" mt="5rem" mb="5rem">
+    <Flex className='container-1440' gap="1.5rem" mt="5rem" mb="5rem">
       <Flex
         w="41%"
         alignItems="center"

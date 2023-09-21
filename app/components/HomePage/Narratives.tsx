@@ -120,7 +120,11 @@ export default function Narratives() {
       </div>
       <div className="relative gap-x-4 mt-8 marquee h-[200px] md:h-[300px] max-w-[100%] overflow-hidden hidden md:block">
         <div className="marquee--inner">
-          {[...sponsors.slice(0, 3), ...sponsors.slice(0, 3)].map((s, i) => (
+          {[
+            ...sponsors.slice(0, 3),
+            ...sponsors.slice(0, 3),
+            ...sponsors.slice(0, 3),
+          ].map((s, i) => (
             <div
               className="flex bg-white rounded-lg  min-w-[300px] max-w-[300px] md:min-w-[500px] md:max-w-[500px] h-[200px] md:h-[300px] ml-4"
               key={i}
@@ -139,7 +143,11 @@ export default function Narratives() {
       </div>
       <div className="relative gap-x-4 marquee-rev h-[200px] md:h-[300px] mt-4 hidden md:block">
         <div className="marquee-rev--inner">
-          {[...sponsors.slice(0, 3), ...sponsors.slice(0, 3)].map((s, i) => (
+          {[
+            ...sponsors.slice(0, 3),
+            ...sponsors.slice(0, 3),
+            ...sponsors.slice(0, 3),
+          ].map((s, i) => (
             <div
               className="flex bg-white rounded-lg min-w-[500px] max-w-[500px] max-h-[350px] ml-4"
               key={i}
