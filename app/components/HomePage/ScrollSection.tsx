@@ -148,16 +148,16 @@ const Section = ({
     <>
       <div className="flex flex-col mt-20">
         <div
-          variants={
-            index > selectedIndex
-              ? variantNext
-              : index < selectedIndex
-              ? variantPrev
-              : variantSelected
-          }
-          initial="initial"
-          animate="animate"
-          exit="exit"
+        // variants={
+        //   index > selectedIndex
+        //     ? variantNext
+        //     : index < selectedIndex
+        //     ? variantPrev
+        //     : variantSelected
+        // }
+        // initial="initial"
+        // animate="animate"
+        // exit="exit"
         >
           <Image
             src={item.image}
