@@ -92,27 +92,66 @@ const Socials = [
 
 const Footer = () => {
   return (
-    <Flex className='container-1440' gap="1.5rem" mt="5rem" mb="5rem">
+    <Flex
+      flexDir={{
+        base: 'column',
+        lg: 'row',
+      }}
+      className="container-1440"
+      gap="1.5rem"
+      mt="5rem"
+      mb={{ base: '2rem', md: '5rem' }}
+    >
       <Flex
-        w="41%"
+        w={{
+          base: '100%',
+          lg: '41%',
+        }}
         alignItems="center"
         justifyContent="center"
         borderRadius="2rem"
-        px='4rem'
+        px="4rem"
+        py={{
+          base: '4rem',
+          lg: '0',
+        }}
         background="#F0F0F0"
       >
         <Image src="/logo.png" alt="logo" />
       </Flex>
-      <Flex gap="1.5rem" w="59%" flexDir="column">
+      <Flex
+        gap="1.5rem"
+        w={{
+          base: '100%',
+          lg: '59%',
+        }}
+        flexDir="column"
+      >
         <Flex
+          flexDir={{
+            base: 'column',
+            md: 'row',
+          }}
           justifyContent="space-between"
+          alignItems="center"
           p="2rem"
           borderRadius="2rem"
           background="#F0F0F0"
         >
-          <Flex gap="2rem">
+          <Flex
+            gap="2rem"
+            flexDir={{
+              base: 'column',
+              md: 'row',
+            }}
+          >
             {Object.keys(footerData).map((key, index) => (
-              <Flex gap="1rem" flexDir="column" key={index}>
+              <Flex
+                gap="1rem"
+                flexDir="column"
+                alignItems={{ base: 'center', md: 'flex-start' }}
+                key={index}
+              >
                 <Text fontFamily="var(--font-dmsans)" fontWeight="600">
                   {key}
                 </Text>
@@ -131,7 +170,16 @@ const Footer = () => {
               </Flex>
             ))}
           </Flex>
-          <Flex gap="1rem" w="40%" flexDir="column">
+          <Flex
+            mt={{
+              base: '2rem',
+              md: 0,
+            }}
+            gap="1rem"
+            w={{ base: '80%', md: '40%' }}
+            flexDir="column"
+            alignItems="center"
+          >
             <Text fontWeight="600" fontFamily="var(--font-dmsans)">
               Stay updated about events
             </Text>
@@ -145,6 +193,7 @@ const Footer = () => {
             <Button
               borderRadius="full"
               py="1rem"
+              w="full"
               color="white"
               background="linear-gradient(0deg, #393939 0%, #393939 100%), #A163FF !important"
             >
@@ -157,8 +206,13 @@ const Footer = () => {
           alignItems="center"
           py="1rem"
           px="2rem"
-          borderRadius="full"
+          borderRadius={{ base: '2rem', md: 'full' }}
           background="#F0F0F0"
+          flexDir={{
+            base: 'column',
+            md: 'row',
+          }}
+          gap="2rem"
         >
           <Flex gap="1rem" alignItems="center">
             <Link fontFamily="var(--font-dmsans)" href="/">
@@ -167,10 +221,10 @@ const Footer = () => {
             <StarIcon />
             <Link fontFamily="var(--font-dmsans)">Data Policy</Link>
           </Flex>
-          <Flex gap="1rem">
+          <Flex gap={{ base: '0.5rem', sm: '1rem' }}>
             {Socials.map((item, index) => (
               <Link
-                p="0.5rem"
+                p={{ base: '0.4rem', sm: '0.5rem' }}
                 background="#E1E1E1"
                 borderRadius="full"
                 as={NextLink}

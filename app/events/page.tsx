@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import {
   Box,
   Flex,
@@ -13,41 +13,41 @@ import {
   SimpleGrid,
   Text,
   Select,
-} from "@chakra-ui/react";
-import moment from "moment";
-import HeroContainer from "../components/EventsPage/HeroContainer";
-import EventContainer from "../components/EventsPage/EventContainer";
-import eventsData from "./data";
-import { useState } from "react";
+} from '@chakra-ui/react';
+import moment from 'moment';
+import HeroContainer from '../components/EventsPage/HeroContainer';
+import EventContainer from '../components/EventsPage/EventContainer';
+import eventsData from './data';
+import { useState } from 'react';
 
 interface config {
   [key: number]: {
     heading: string;
     content: string;
-    sizes: ("sm" | "md" | "lg")[];
+    sizes: ('sm' | 'md' | 'lg')[];
     image: any;
   };
 }
 
 const config: config = {
   0: {
-    sizes: ["lg", "md", "sm"],
-    image: "/images/events/city.svg",
-    heading: "City Meetup",
+    sizes: ['lg', 'md', 'sm'],
+    image: '/images/events/city.svg',
+    heading: 'City Meetup',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
   1: {
-    sizes: ["md", "lg", "sm"],
-    heading: "Hacktoberfest",
-    image: "/images/events/hacktoberfest.svg",
+    sizes: ['md', 'lg', 'sm'],
+    heading: 'Hacktoberfest',
+    image: '/images/events/hacktoberfest.svg',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
   2: {
-    sizes: ["sm", "md", "lg"],
-    heading: "Build With",
-    image: "/images/events/buildwith.svg",
+    sizes: ['sm', 'md', 'lg'],
+    heading: 'Build With',
+    image: '/images/events/buildwith.svg',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -55,17 +55,17 @@ const config: config = {
 
 const EventsPage = () => {
   const [currentExpanded, setCurrentExpanded] = useState(0);
-  const [selectValue, setSelectValue] = useState("ALL");
+  const [selectValue, setSelectValue] = useState('ALL');
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectValue(event.target.value);
   };
 
   return (
-    <div className="relative">
-      <div className="relative top-0 left-0 w-full pointer-events-none">
+    <Box className="relative container-1440" px={{ base: '2rem', '2xl': '0' }}>
+      <Box className="relative top-0 left-0 w-full pointer-events-none">
         {/* <Navbar /> */}
-      </div>
+      </Box>
       <Box w="full" pt="12rem" pb="6">
         <Flex w="full" gap="1.5rem" h="451px">
           {[0, 1, 2].map((item, index) => (
@@ -91,9 +91,9 @@ const EventsPage = () => {
                     py="1rem"
                     transition="all 0.25s ease-in-out"
                     _selected={{
-                      bg: "black",
-                      color: "white",
-                      borderRadius: "full",
+                      bg: 'black',
+                      color: 'white',
+                      borderRadius: 'full',
                     }}
                   >
                     {eventsData.tabs[item].heading}
@@ -104,10 +104,19 @@ const EventsPage = () => {
             <TabPanels mt="3rem">
               {Object.keys(eventsData.tabs).map((tab, index) => (
                 <TabPanel p="0" key={index}>
-                  <SimpleGrid columns={4} columnGap="1rem" rowGap="1rem">
+                  <SimpleGrid
+                    columns={{
+                      base: 1,
+                      md: 2,
+                      lg: 3,
+                      '2xl': 4,
+                    }}
+                    columnGap="1rem"
+                    rowGap="1rem"
+                  >
                     {eventsData.events
                       .filter((data) =>
-                        eventsData.tabs[tab].filterFunction(data)
+                        eventsData.tabs[tab].filterFunction(data),
                       )
                       .map((event, index) => (
                         <EventContainer eventData={event} key={index} />
@@ -123,13 +132,21 @@ const EventsPage = () => {
                 bg="black"
                 color="white"
                 borderRadius="full"
-                px="2rem"
-                py="1rem"
+                px={{ base: '1rem', md: '2rem' }}
+                py={{ base: '0.6rem', md: '1rem' }}
               >
                 Past Events
               </Box>
               <Flex gap="1rem" alignItems="center" justifyContent="center">
-                <Text fontFamily="var(--dm-sans)">Filter&nbsp;By</Text>
+                <Text
+                  display={{
+                    base: 'none',
+                    md: 'unset',
+                  }}
+                  fontFamily="var(--dm-sans)"
+                >
+                  Filter&nbsp;By
+                </Text>
                 <Select
                   onChange={handleSelectChange}
                   value={selectValue}
@@ -144,12 +161,22 @@ const EventsPage = () => {
                 </Select>
               </Flex>
             </Flex>
-            <SimpleGrid mt="3rem" columns={4} columnGap="1rem" rowGap="1rem">
+            <SimpleGrid
+              mt="3rem"
+              columns={{
+                base: 1,
+                md: 2,
+                lg: 3,
+                '2xl': 4,
+              }}
+              columnGap="1rem"
+              rowGap="1rem"
+            >
               {eventsData.events
                 .filter(
                   (data) =>
                     moment().diff(data.startTimestamp) > 0 &&
-                    (selectValue === "ALL" || data.type === selectValue)
+                    (selectValue === 'ALL' || data.type === selectValue),
                 )
                 .map((event, index) => (
                   <EventContainer eventData={event} key={index} />
@@ -159,7 +186,7 @@ const EventsPage = () => {
         </Box>
       </Box>
       <Footer />
-    </div>
+    </Box>
   );
 };
 
