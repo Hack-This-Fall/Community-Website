@@ -133,7 +133,7 @@ const Footer = () => {
             md: 'row',
           }}
           justifyContent="space-between"
-          alignItems="center"
+          alignItems={{base: "center", md: "flex-start"}}
           p="2rem"
           borderRadius="2rem"
           background="#F0F0F0"
@@ -176,9 +176,9 @@ const Footer = () => {
               md: 0,
             }}
             gap="1rem"
-            w={{ base: '80%', md: '40%' }}
+            w={{ base: '90%', md: '40%' }}
             flexDir="column"
-            alignItems="center"
+            alignItems={{base: "center", md: 'flex-start'}}
           >
             <Text fontWeight="600" fontFamily="var(--font-dmsans)">
               Stay updated about events

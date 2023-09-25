@@ -13,49 +13,51 @@ import {
   SimpleGrid,
   Text,
   Select,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import moment from 'moment';
 import HeroContainer from '../components/EventsPage/HeroContainer';
 import EventContainer from '../components/EventsPage/EventContainer';
 import eventsData from './data';
 import { useState } from 'react';
+import SliderContainer from '../components/EventsPage/HeroSliderContainer';
 
 interface config {
-  [key: number]: {
-    heading: string;
-    content: string;
-    sizes: ('sm' | 'md' | 'lg')[];
-    image: any;
-  };
+  heading: string;
+  content: string;
+  sizes: ('sm' | 'md' | 'lg')[];
+  image: any;
 }
 
-const config: config = {
-  0: {
+const config: config[] = [
+  {
     sizes: ['lg', 'md', 'sm'],
     image: '/images/events/city.svg',
     heading: 'City Meetup',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
-  1: {
+  {
     sizes: ['md', 'lg', 'sm'],
     heading: 'Hacktoberfest',
     image: '/images/events/hacktoberfest.svg',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
-  2: {
+  {
     sizes: ['sm', 'md', 'lg'],
     heading: 'Build With',
     image: '/images/events/buildwith.svg',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
-};
+];
 
 const EventsPage = () => {
   const [currentExpanded, setCurrentExpanded] = useState(0);
   const [selectValue, setSelectValue] = useState('ALL');
+  const [currentTab, setCurrentTab] = useState(0);
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectValue(event.target.value);
@@ -66,23 +68,60 @@ const EventsPage = () => {
       <Box className="relative top-0 left-0 w-full pointer-events-none">
         {/* <Navbar /> */}
       </Box>
-      <Box w="full" pt="12rem" pb="6">
-        <Flex w="full" gap="1.5rem" h="451px">
-          {[0, 1, 2].map((item, index) => (
-            <HeroContainer
-              key={index}
-              index={index}
-              setCurrentExpanded={setCurrentExpanded}
-              imageSrc={config[index].image}
-              heading={config[index].heading}
-              content={config[index].content}
-              size={config[currentExpanded].sizes[index]}
-            />
-          ))}
-        </Flex>
+      <Box w="full" pt={{base: "6rem", md: "12rem"}} pb="6">
+        {isMobile ? (
+          <SliderContainer config={config} />
+        ) : (
+          <Flex w="full" gap="1.5rem" h="451px">
+            {config.map((item, index) => (
+              <HeroContainer
+                key={index}
+                index={index}
+                setCurrentExpanded={setCurrentExpanded}
+                imageSrc={item.image}
+                heading={item.heading}
+                content={item.content}
+                size={config[currentExpanded].sizes[index]}
+              />
+            ))}
+          </Flex>
+        )}
         <Box mt="5rem">
-          <Tabs position="relative" variant="unstyled">
-            <TabList borderRadius="full" bgColor="#ebebeb" width="fit-content">
+          <Select
+            onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+              setCurrentTab(parseInt(event.target.value, 10))
+            }
+            value={currentTab}
+            bgColor="#F2F2F2"
+            borderRadius="full"
+            size="md"
+            w="48%"
+            bg="black"
+            color="white"
+            outline="none"
+            border="none"
+            display={{ md: 'none' }}
+          >
+            {Object.keys(eventsData.tabs).map((item, index) => {
+              return (
+                <option key={index} value={index}>
+                  {eventsData.tabs[item].heading}
+                </option>
+              );
+            })}
+          </Select>
+          <Tabs
+            index={currentTab}
+            onChange={setCurrentTab}
+            position="relative"
+            variant="unstyled"
+          >
+            <TabList
+              display={{ base: 'none', md: 'flex' }}
+              borderRadius="full"
+              bgColor="#ebebeb"
+              width="fit-content"
+            >
               {Object.keys(eventsData.tabs).map((item, index) => {
                 return (
                   <Tab
@@ -153,6 +192,9 @@ const EventsPage = () => {
                   bgColor="#F2F2F2"
                   borderRadius="full"
                   size="md"
+                  _focusVisible={{
+                    borderColor: 'black',
+                  }}
                 >
                   <option value="ALL">All Events</option>
                   <option value="EVENT_CITY_MEETUP">City Meetups</option>
