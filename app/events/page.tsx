@@ -21,6 +21,7 @@ import EventContainer from '../components/EventsPage/EventContainer';
 import eventsData from './data';
 import { useState } from 'react';
 import SliderContainer from '../components/EventsPage/HeroSliderContainer';
+import dynamic from 'next/dynamic';
 
 interface config {
   heading: string;

@@ -99,8 +99,7 @@ const Footer = () => {
       }}
       className="container-1440"
       gap="1.5rem"
-      mt="5rem"
-      mb={{ base: '2rem', md: '5rem' }}
+      mb={{ base: '2rem', md: '3rem', lg: '5rem' }}
     >
       <Flex
         w={{

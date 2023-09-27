@@ -21,36 +21,53 @@ const HeroSection = ({
   description,
 }: HeroSectionProps) => {
   return (
-    <Flex w="60%" flexDir="column" alignItems="center" justifyContent="center">
+    <Flex
+      w={{ base: '100%', md: '90%', xl: '60%' }}
+      flexDir="column"
+      alignItems="center"
+      justifyContent="center"
+    >
       <Heading
-        fontSize="4.2rem"
+        fontSize={{ base: '3rem', md: '4.2rem' }}
         fontFamily="var(--font-poppins)"
-        fontWeight="600"
+        fontWeight="700"
         color="black"
         textAlign="center"
         lineHeight="150%"
       >
         Hack This Fall Chandigarh City Meetup
       </Heading>
-      <Flex alignItems="center" justifyContent="center" my="2rem" gap="0.5rem">
-        <CalIcon />
-        <Text>{startTimestamp?.format('Do MMMM,YYYY')}</Text>
+      <Flex
+        flexDir={{ base: 'column', md: 'row' }}
+        alignItems="center"
+        justifyContent="center"
+        my="2rem"
+        gap="0.5rem"
+      >
+        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
+          <CalIcon />
+          <Text>{startTimestamp?.format('Do MMMM,YYYY')}</Text>
+        </Flex>
         <StarIcon />
-        <ClockIcon />
-        <Text>
-          {`${startTimestamp?.format('H:mm A')} to
+        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
+          <ClockIcon />
+          <Text>
+            {`${startTimestamp?.format('H:mm A')} to
                 ${endTimestamp?.format('H:mm A')}`}
-        </Text>
+          </Text>
+        </Flex>
         <StarIcon />
-        <LocationIcon />
-        <Text>Venue: {location}</Text>
+        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
+          <LocationIcon />
+          <Text>Venue: {location}</Text>
+        </Flex>
       </Flex>
       <Text
         fontSize="1.15rem"
         fontFamily="var(--font-poppins)"
         fontWeight="400"
         color="black"
-        w="90%"
+        w={{ base: '90%', md: '70%', xl: '90%' }}
         align="center"
       >
         {description}

@@ -4,17 +4,16 @@ import DiscordIcon from '../icons/Discord';
 const CommunicationSection = () => {
   return (
     <Flex
-      mt="4rem"
-      w='full'
       mb="4rem"
+      w="full"
       alignItems="center"
       justifyContent="center"
       flexDir="column"
     >
       <Heading
-        fontSize="3.5rem"
+        fontSize={{ base: '2.5rem', md: '3.5rem' }}
         fontFamily="var(--font-poppins)"
-        fontWeight="600"
+        fontWeight="700"
         color="black"
         textAlign="center"
         lineHeight="150%"
@@ -26,13 +25,16 @@ const CommunicationSection = () => {
         justifyContent="space-between"
         borderRadius="30px"
         bgColor="#F0F0F0"
-        w='full'
+        w="full"
         mt="3rem"
-        px="6rem"
-        py="4rem"
+        px={{ base: '2rem', md: '4rem', lg: '6rem' }}
+        py={{ base: '2rem', md: '3rem', lg: '4rem' }}
+        flexDir={{ base: 'column', md: 'row' }}
+        gap={{ base: '2rem', md: '0rem' }}
       >
-        <Box w="40%">
+        <Box w={{ base: '100%', md: '40%' }}>
           <Text
+            textAlign={{ base: 'center', md: 'left' }}
             fontSize="1.2rem"
             fontFamily="var(--font-dmsans)"
             fontWeight="500"

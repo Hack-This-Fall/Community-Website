@@ -12,9 +12,10 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      my="4rem"
+      mb="4rem"
       w="full"
       flexDir="column"
+      display={{ base: 'none', md: 'flex' }}
     >
       <Heading
         fontSize="3.5rem"
@@ -27,19 +28,19 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
         Agenda
       </Heading>
       <Text
-        mt="1.5rem"
+        mt="3rem"
         mb="3.5rem"
         fontSize="1.15rem"
         fontFamily="var(--font-poppins)"
         fontWeight="400"
         color="black"
-        w="50%"
+        w={{ base: '60%', lg: '50%' }}
         align="center"
       >
         {description}
       </Text>
       <Flex>
-        <Flex gap="4rem" flexDir="column">
+        <Flex gap={{ base: '2rem', md: '4rem' }} flexDir="column">
           {agenda?.map((item, index) => {
             return (
               <Flex
@@ -56,7 +57,12 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
             );
           })}
         </Flex>
-        <Flex gap="4rem" mx="4rem" position="relative" flexDir="column">
+        <Flex
+          gap={{ base: '2rem', md: '4rem' }}
+          mx={{ base: '2rem', md: '4rem' }}
+          position="relative"
+          flexDir="column"
+        >
           {agenda?.map((_, index) => {
             return <TimelineIcon key={index} />;
           })}
@@ -69,7 +75,7 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
             zIndex="-1"
           />
         </Flex>
-        <Flex gap="4rem" flexDir="column">
+        <Flex gap={{ base: '2rem', md: '4rem' }} flexDir="column">
           {agenda?.map((item, index) => {
             return (
               <Flex
