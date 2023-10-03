@@ -48,29 +48,34 @@ const WorkshopSection = () => {
   return (
     <Flex flexDir="column">
       <Heading
-        fontSize="3.5rem"
+        fontSize={{ base: '2.5rem', md: '3.5rem' }}
         fontFamily="var(--font-poppins)"
-        fontWeight="600"
+        fontWeight="700"
         color="black"
         textAlign="center"
         lineHeight="150%"
       >
         Workshops
       </Heading>
-      <Wrap my="4rem" justify="center" spacing="1rem">
+      <Wrap
+        mb="4rem"
+        mt="3rem"
+        justify="center"
+        spacing="1.5rem"
+      >
         {data.map((item, index) => {
           return (
             <WrapItem
               borderRadius="20px"
               overflow="hidden"
               border="1px solid #9F6BF0"
-              w="30%"
+              w={{ base: '100%', md: '45%', lg: '30%' }}
               flexDir="column"
               key={index}
             >
-              <Box px="0.8rem" pt="0.8rem" position="relative">
+              <Box w="full" px="0.8rem" pt="0.8rem" position="relative">
                 <Background color="#9F6BF0" width="100%" height="100%" />
-                <Image src={item.image} alt={item.heading} />
+                <Image w="100%" src={item.image} alt={item.heading} />
               </Box>
               <Flex flexDir="column" mx="0.8rem" mt="1rem">
                 <Heading
@@ -90,8 +95,8 @@ const WorkshopSection = () => {
                   fontFamily="var(--font-poppins)"
                   fontWeight="400"
                   color="black"
-                  mb='0.8rem'
-                  w='95%'
+                  mb="0.8rem"
+                  w="95%"
                 >
                   {item.description}
                 </Text>

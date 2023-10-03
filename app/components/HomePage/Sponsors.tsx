@@ -78,9 +78,9 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <div className="flex flex-col align-center text-center">
+    <div className="flex flex-col align-center text-center container-1440">
       <div className="font-poppins font-bold text-4xl">Sponsors</div>
-      <div className="grid grid-cols-6 px-4 gap-x-4 gap-y-4 mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 px-4 gap-x-4 gap-y-4 mt-8">
         {sponsors.map((s, i) => (
           <div className="border p-4 rounded-xl" key={i}>
             <Image

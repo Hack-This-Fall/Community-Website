@@ -73,13 +73,13 @@ const NavbarScrollSection = ({
   };
 
   return (
-    <div className="flex justify-between items-center px-14 py-10 z-50 block w-full absolute">
-      <div className="flex font-poppins justify-between items-center font-medium text-white pointer-events-auto">
+    <div className="flex justify-between items-center px-4 md:px-14 py-12 md:py-10 z-50 block w-full absolute">
+      <div className="flex font-poppins justify-between items-center font-medium text-white pointer-events-auto text-xs md:text-base">
         {items.map(({ heading, color }, index) => {
           return (
             <div
               key={index}
-              className={`${index === 0 ? `` : `ml-8`} cursor-pointer ${
+              className={`${index === 0 ? `` : `ml-2 md:ml-8`} cursor-pointer ${
                 index === selectedIndex
                   ? `color-${color} underline underline-offset-4`
                   : null
@@ -107,7 +107,7 @@ const Section = ({
   const [exitY, setExitY] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const { innerHeight } = useWindowSize();
+  const { innerHeight, innerWidth } = useWindowSize();
 
   const exit = innerHeight || 0;
 
@@ -144,14 +144,53 @@ const Section = ({
     animate: { y: -2.25 * (innerHeight || 0), opacity: 1 },
   };
 
-  return (
+  return innerWidth && innerWidth < 400 ? (
+    <>
+      <div className="flex flex-col mt-20">
+        <div
+        // variants={
+        //   index > selectedIndex
+        //     ? variantNext
+        //     : index < selectedIndex
+        //     ? variantPrev
+        //     : variantSelected
+        // }
+        // initial="initial"
+        // animate="animate"
+        // exit="exit"
+        >
+          <Image
+            src={item.image}
+            alt="Community"
+            className="h-[40vh] object-cover rounded-l-2xl"
+          />
+        </div>
+        <>
+          <div className="flex flex-col justify-end px-6 mt-6 font-poppins ">
+            <h1 className={`text-4xl font-bold color-${item.color}`}>
+              {item.heading}
+            </h1>
+            <p className="mt-4 text-[#F9F9F9] font-dm-sans font-normal text-justify	">
+              {item.text}
+            </p>
+            <Link
+              href={item.linkTo}
+              className={`bg-${item.color} flex justify-center self-start px-10 py-4 rounded-full mt-10 w-[100%] font-dm-sans font-medium`}
+            >
+              Learn More
+            </Link>
+          </div>
+        </>
+      </div>
+    </>
+  ) : (
     <div
-      className={`grid grid-cols-2 h-[100vh] ${
+      className={`grid grid-cols-1 md:grid-cols-2 h-[100vh] ${
         index !== 3 ? "sticky top-0" : null
       } z-${(4 - index) * 10}`}
     >
       <div className="flex flex-col justify-end pb-16 px-10 font-poppins ">
-        <h1 className={`text-5xl font-bold color-${item.color}`}>
+        <h1 className={`text-xl md:text-5xl font-bold color-${item.color}`}>
           {item.heading}
         </h1>
         <p className="mt-6 text-[#F9F9F9] font-dm-sans font-normal">
@@ -243,7 +282,7 @@ export default function ScrollSection() {
         height: `${items.length * 100}vh`,
       }}
     >
-      <div className="h-[100vh] overflow-hidden sticky top-0">
+      <div className="h-[100vh] overflow-hidden sticky top-0 container-1440">
         <NavbarScrollSection
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndexAndResetScroll}

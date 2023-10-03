@@ -109,7 +109,7 @@ const HeroContainer = ({
     >
       <Flex pos="absolute" className="contentContainer">
         <Flex className="textContainer" flexDir="column" gap="1rem">
-          <Heading as="h2" color="white">
+          <Heading fontFamily="var(--font-dm-sans)" as="h2" color="white">
             {heading}
           </Heading>
           <Text

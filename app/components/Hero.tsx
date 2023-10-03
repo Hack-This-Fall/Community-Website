@@ -41,20 +41,20 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
 
   return (
     <div
-      className="flex flex-col w-fit justify-center h-[100vh] mt cc"
+      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440"
       style={{
         marginTop: `-${navbarHeight}px`,
       }}
     >
-      <div className="flex flex-col items-center text-center ">
-        <div className="w-[60%] font-poppins font-semibold text-6xl text-[#151515] leading-snug ">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-[90%] md:w-[60%] font-poppins font-semibold text-3xl md:text-6xl text-[#151515] leading-snug ">
           <LayoutGroup>
             A Thriving Hacker Community Encouraging{" "}
-            <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden ">
-              <span className="left-0 top-0 text-transparent">
-                {texts[index % 3].text}
-              </span>
+            <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden -mt-4 md:mt-1 ">
               <AnimatePresence>
+                <span className="left-0 top-0 text-transparent">
+                  {texts[index % 3].text}
+                </span>
                 <AnimatedText
                   key={index}
                   text={texts[index % 3].text}
@@ -65,7 +65,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           </LayoutGroup>
         </div>
 
-        <div className="w-[60%] mt-6">
+        <div className="w-[80%] md:w-[60%] mt-6">
           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
           consectetur, adipisci velit, sed quUt enim ad minima veniam, quis
           nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al.
