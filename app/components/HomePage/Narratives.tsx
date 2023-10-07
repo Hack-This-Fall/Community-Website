@@ -126,7 +126,7 @@ export function Carousel() {
 
   const totalSlides = testimonials.length / 2;
 
-  const setCurrentSlideHandler = (num) => {
+  const setCurrentSlideHandler = (num: number) => {
     setCurrentSlide(num);
   };
 
