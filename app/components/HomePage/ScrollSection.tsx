@@ -146,7 +146,7 @@ const Section = ({
 
   return innerWidth && innerWidth < 400 ? (
     <>
-      <div className="flex flex-col mt-20">
+      <div className="flex flex-col pt-20 h-[100vh] justify-between	pb-20">
         <div
         // variants={
         //   index > selectedIndex
@@ -236,18 +236,18 @@ export default function ScrollSection() {
     const position = window.scrollY;
     const scrolled = position - scrollSectionRef.current?.offsetTop;
 
-    console.log(
-      position,
-      scrollSectionRef.current?.offsetTop,
-      scrolled,
-      scrolled / height,
-      height,
-      width
-    );
+    // console.log(
+    //   position,
+    //   scrollSectionRef.current?.offsetTop,
+    //   scrolled,
+    //   scrolled / height,
+    //   height,
+    //   width
+    // );
 
     let index = 0;
 
-    if (scrolled >= 0) index = Math.min(Math.floor(scrolled / height), 3);
+    if (scrolled >= 0) index = Math.min(Math.floor(scrolled / (height / 2)), 3);
 
     setSelectedIndex(index);
   };
@@ -260,7 +260,8 @@ export default function ScrollSection() {
     window.scrollTo({
       top:
         scrollSectionRef.current?.offsetTop +
-        (height * index + height * Math.min(3, index + 1)) / 2,
+        ((height / 2) * index + (height / 2) * Math.min(3.001, index + 1.001)) /
+          2,
     });
   };
 
@@ -277,9 +278,9 @@ export default function ScrollSection() {
   return (
     <div
       ref={scrollSectionRef}
-      className="bg-[#111111]"
+      className="bg-[#111111] pointer-events-auto"
       style={{
-        height: `${items.length * 100}vh`,
+        height: `${(items.length + 1) * 50}vh`,
       }}
     >
       <div className="h-[100vh] overflow-hidden sticky top-0 container-1440">

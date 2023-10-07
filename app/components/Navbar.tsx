@@ -17,7 +17,7 @@ export default function Navbar({
   useEffect(() => {
     setNavbarHeight(ref.current?.clientHeight);
 
-    console.log(ref.current?.clientHeight);
+    // console.log(ref.current?.clientHeight);
   });
 
   const { innerHeight: height, innerWidth: width } = useWindowSize();
@@ -27,7 +27,7 @@ export default function Navbar({
 
     const position = window.scrollY;
 
-    console.log(position, height);
+    // console.log(position, height);
 
     if (position >= height) {
       navbarLogo.current.style.opacity = "0";

@@ -1,12 +1,12 @@
-import NextLink from 'next/link';
-import { Button, Flex, Image, Input, Link, Text } from '@chakra-ui/react';
-import StarIcon from './icons/Star';
-import DiscordIcon from './icons/socials/Discord';
-import TwitterIcon from './icons/socials/Twitter';
-import InstagramIcon from './icons/socials/Instagram';
-import YoutubeIcon from './icons/socials/Youtube';
-import LinkedinIcon from './icons/socials/Linkedin';
-import EmailIcon from './icons/socials/Email';
+import NextLink from "next/link";
+import { Button, Flex, Image, Input, Link, Text } from "@chakra-ui/react";
+import StarIcon from "./icons/Star";
+import DiscordIcon from "./icons/socials/Discord";
+import TwitterIcon from "./icons/socials/Twitter";
+import InstagramIcon from "./icons/socials/Instagram";
+import YoutubeIcon from "./icons/socials/Youtube";
+import LinkedinIcon from "./icons/socials/Linkedin";
+import EmailIcon from "./icons/socials/Email";
 
 interface footerData {
   [key: string]: {
@@ -19,45 +19,45 @@ interface footerData {
 const footerData: footerData = {
   Home: [
     {
-      name: 'Blogs',
-      link: '/blogs',
+      name: "Blogs",
+      link: "/blogs",
     },
     {
-      name: 'Press Kit',
-      link: '/press',
+      name: "Press Kit",
+      link: "/press",
     },
     {
-      name: 'Sponsor Us',
-      link: '/sponsor',
+      name: "Sponsor Us",
+      link: "/sponsor",
     },
     {
-      name: 'About Us',
-      link: '/about',
+      name: "About Us",
+      link: "/about",
     },
   ],
   Events: [
     {
-      name: 'Build with',
-      link: '/events/build-with',
+      name: "Build with",
+      link: "/events/build-with",
     },
     {
-      name: 'Hacktoberfest',
-      link: '/events/hacktoberfest',
+      name: "Hacktoberfest",
+      link: "/events/hacktoberfest",
     },
     {
-      name: 'Hackathon',
-      link: '/',
+      name: "Hackathon",
+      link: "/",
       isExternal: true,
     },
     {
-      name: 'City meetups',
-      link: '/events/meetups',
+      name: "City meetups",
+      link: "/events/meetups",
     },
   ],
-  'Contact Us': [
+  "Contact Us": [
     {
-      name: 'hi@hackthisfall.tech',
-      link: 'mailto:hi@hackthisfall.tech',
+      name: "hi@hackthisfall.tech",
+      link: "mailto:hi@hackthisfall.tech",
       isExternal: true,
     },
   ],
@@ -66,27 +66,27 @@ const footerData: footerData = {
 const Socials = [
   {
     icon: <DiscordIcon color="black" />,
-    link: 'https://discord.com',
+    link: "https://discord.com",
   },
   {
     icon: <TwitterIcon color="black" />,
-    link: 'twitter.com',
+    link: "twitter.com",
   },
   {
     icon: <InstagramIcon color="black" />,
-    link: 'instagram.com',
+    link: "instagram.com",
   },
   {
     icon: <YoutubeIcon color="black" />,
-    link: 'youtube.com',
+    link: "youtube.com",
   },
   {
     icon: <LinkedinIcon color="black" />,
-    link: 'linkedin.com',
+    link: "linkedin.com",
   },
   {
     icon: <EmailIcon color="black" />,
-    link: 'mailto:hi@hackthisfall.tech',
+    link: "mailto:hi@hackthisfall.tech",
   },
 ];
 
@@ -94,25 +94,25 @@ const Footer = () => {
   return (
     <Flex
       flexDir={{
-        base: 'column',
-        lg: 'row',
+        base: "column",
+        lg: "row",
       }}
       className="container-1440"
       gap="1.5rem"
-      mb={{ base: '2rem', md: '3rem', lg: '5rem' }}
+      mb={{ base: "2rem", md: "3rem", lg: "5rem" }}
     >
       <Flex
         w={{
-          base: '100%',
-          lg: '41%',
+          base: "100%",
+          lg: "41%",
         }}
         alignItems="center"
         justifyContent="center"
         borderRadius="2rem"
         px="4rem"
         py={{
-          base: '4rem',
-          lg: '0',
+          base: "4rem",
+          lg: "0",
         }}
         background="#F0F0F0"
       >
@@ -121,18 +121,18 @@ const Footer = () => {
       <Flex
         gap="1.5rem"
         w={{
-          base: '100%',
-          lg: '59%',
+          base: "100%",
+          lg: "59%",
         }}
         flexDir="column"
       >
         <Flex
           flexDir={{
-            base: 'column',
-            md: 'row',
+            base: "column",
+            md: "row",
           }}
           justifyContent="space-between"
-          alignItems={{base: "center", md: "flex-start"}}
+          alignItems={{ base: "center", md: "flex-start" }}
           p="2rem"
           borderRadius="2rem"
           background="#F0F0F0"
@@ -140,15 +140,15 @@ const Footer = () => {
           <Flex
             gap="2rem"
             flexDir={{
-              base: 'column',
-              md: 'row',
+              base: "column",
+              md: "row",
             }}
           >
             {Object.keys(footerData).map((key, index) => (
               <Flex
                 gap="1rem"
                 flexDir="column"
-                alignItems={{ base: 'center', md: 'flex-start' }}
+                alignItems={{ base: "center", md: "flex-start" }}
                 key={index}
               >
                 <Text fontFamily="var(--font-dmsans)" fontWeight="600">
@@ -161,7 +161,7 @@ const Footer = () => {
                     isExternal={!!item.isExternal}
                     href={item.link}
                     key={index}
-                    target={item.isExternal ? '_blank' : '_self'}
+                    target={item.isExternal ? "_blank" : "_self"}
                   >
                     {item.name}
                   </Link>
@@ -171,13 +171,13 @@ const Footer = () => {
           </Flex>
           <Flex
             mt={{
-              base: '2rem',
+              base: "2rem",
               md: 0,
             }}
             gap="1rem"
-            w={{ base: '90%', md: '40%' }}
+            w={{ base: "90%", md: "40%" }}
             flexDir="column"
-            alignItems={{base: "center", md: 'flex-start'}}
+            alignItems={{ base: "center", md: "flex-start" }}
           >
             <Text fontWeight="600" fontFamily="var(--font-dmsans)">
               Stay updated about events
@@ -205,11 +205,11 @@ const Footer = () => {
           alignItems="center"
           py="1rem"
           px="2rem"
-          borderRadius={{ base: '2rem', md: 'full' }}
+          borderRadius={{ base: "2rem", md: "full" }}
           background="#F0F0F0"
           flexDir={{
-            base: 'column',
-            md: 'row',
+            base: "column",
+            md: "row",
           }}
           gap="2rem"
         >
@@ -220,10 +220,10 @@ const Footer = () => {
             <StarIcon />
             <Link fontFamily="var(--font-dmsans)">Data Policy</Link>
           </Flex>
-          <Flex gap={{ base: '0.5rem', sm: '1rem' }}>
+          <Flex gap={{ base: "0.5rem", sm: "1rem" }}>
             {Socials.map((item, index) => (
               <Link
-                p={{ base: '0.4rem', sm: '0.5rem' }}
+                p={{ base: "0.4rem", sm: "0.5rem" }}
                 background="#E1E1E1"
                 borderRadius="full"
                 as={NextLink}
