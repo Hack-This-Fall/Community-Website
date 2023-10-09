@@ -34,6 +34,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % 3);
+      console.log("WOHOO");
     }, 5000);
 
     return () => clearInterval(timer);
@@ -41,9 +42,10 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
 
   return (
     <div
-      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440"
+      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440 pointer-events-none"
       style={{
         marginTop: `-${navbarHeight}px`,
+        zIndex: 1000000000,
       }}
     >
       <div className="flex flex-col items-center text-center">
@@ -51,10 +53,10 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           <LayoutGroup>
             A Thriving Hacker Community Encouraging{" "}
             <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden -mt-4 md:mt-1 ">
+              <span className="left-0 top-0 text-transparent">
+                {texts[index % 3].text}
+              </span>
               <AnimatePresence>
-                <span className="left-0 top-0 text-transparent">
-                  {texts[index % 3].text}
-                </span>
                 <AnimatedText
                   key={index}
                   text={texts[index % 3].text}

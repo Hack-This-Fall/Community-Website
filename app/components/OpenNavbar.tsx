@@ -43,9 +43,9 @@ export default function OpenNavbar({
               onClick={() => setIsNavbarOpen(false)}
               href={item.link}
               key={item.text}
-              className={`italic opacity-80 text-lg md:text-3xl ${
+              className={`italic opacity-80 text-2xl md:text-3xl ${
                 item.conditions.includes(url)
-                  ? "!text-lg md:!text-5xl font-bold !opacity-100 underline"
+                  ? "!text-4xl md:!text-5xl font-bold !opacity-100 underline"
                   : null
               } ${index != 0 ? "mt-4 " : null}`}
             >
@@ -53,7 +53,7 @@ export default function OpenNavbar({
             </Link>
           ))}
         </div>
-        <div className="flex bg-[#191919] justify-between py-4 px-4 rounded-2xl ">
+        <div className="grid gap-4 grid-cols-3 md:grid-cols-6 grid bg-[#191919] justify-between py-4 px-4 rounded-2xl ">
           {socials.map((s, i) => {
             const SpecificSocial = s.icon;
             return (
@@ -61,7 +61,7 @@ export default function OpenNavbar({
                 href={s.link}
                 target="_blank"
                 key={s.name}
-                className="w-[50px] h-[50px] bg-[#222222] gap-x-4 p-2 rounded-full flex justify-center items-center cursor-pointer"
+                className="w-[50px] h-[50px] bg-[#222222] p-2 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <SpecificSocial color={SOCIAL_COLORS.NAVBAR} />
               </Link>
