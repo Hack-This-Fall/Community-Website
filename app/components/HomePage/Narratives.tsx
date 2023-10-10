@@ -9,7 +9,7 @@ import { useWindowSize } from "rooks";
 const testimonials = [
   {
     image: Person,
-    text: `1This is the original component. Edit me to make global changes to all. 🎉
+    text: `This is the original component. Edit me to make global changes to all. 🎉
 You can hide the `,
   },
   {
