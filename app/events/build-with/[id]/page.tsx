@@ -14,6 +14,7 @@ import CommunicationSection from '@/app/components/IndividualEventsPage/Communic
 import CodeOfConductSection from '@/app/components/IndividualEventsPage/COC';
 import SponsorSection from '@/app/components/IndividualEventsPage/SponsorSection';
 import NavbarDesktop from '@/app/components/NavbarDesktop';
+import OpenNavbar from '@/app/components/OpenNavbar';
 
 const sections = [
   {
@@ -81,6 +82,9 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
   return (
     <Box className="relative container-1440" px={{ base: '2rem', '2xl': '0' }}>
       <Box className="sticky top-0 left-0 w-full" zIndex={4}>
+        {isMobile && isNavbarOpen && (
+          <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />
+        )}
         {isMobile ? (
           <Navbar
             setIsNavbarOpen={setIsNavbarOpen}

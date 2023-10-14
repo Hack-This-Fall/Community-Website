@@ -14,6 +14,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import NavbarDesktop from '../components/NavbarDesktop';
 import '../styles.css';
+import OpenNavbar from '../components/OpenNavbar';
 
 const teamMembers = [
   {
@@ -171,15 +172,21 @@ const TeamsPage = () => {
 
   sideInPx += extraWidth / cols;
 
-  const rows = Math.ceil((height + 120) / sideInPx);
+  const rows = Math.ceil((height + 200) / sideInPx);
 
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   return (
     <Box className="container-1440" px={{ base: '2rem', '2xl': '0' }}>
       <Box className="relative top-0 left-0 w-full" zIndex={4}>
+        {isMobile && isNavbarOpen && (
+          <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />
+        )}
         {isMobile ? (
-          <Navbar setIsNavbarOpen={setIsNavbarOpen} setNavbarHeight={setNavbarHeight} />
+          <Navbar
+            setIsNavbarOpen={setIsNavbarOpen}
+            setNavbarHeight={setNavbarHeight}
+          />
         ) : (
           <NavbarDesktop />
         )}
@@ -242,7 +249,7 @@ const TeamsPage = () => {
           </SimpleGrid>
         </Box>
       </Box>
-      <Footer />
+      <Footer bg='white' />
     </Box>
   );
 };

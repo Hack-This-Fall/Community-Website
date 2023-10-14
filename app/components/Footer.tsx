@@ -90,7 +90,7 @@ const Socials = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ bg } : {bg?: string}) => {
   return (
     <Flex
       flexDir={{
@@ -100,6 +100,9 @@ const Footer = () => {
       className="container-1440"
       gap="1.5rem"
       mb={{ base: "2rem", md: "3rem", lg: "5rem" }}
+      position='relative'
+      zIndex='10'
+      bg={bg || 'transparent'}
     >
       <Flex
         w={{

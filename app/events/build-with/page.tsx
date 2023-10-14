@@ -1,7 +1,8 @@
-"use client";
+'use client';
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from '../../components/Navbar';
+import { useState } from 'react';
+import Footer from '../../components/Footer';
 import {
   Box,
   Button,
@@ -15,15 +16,49 @@ import {
   Text,
   Heading,
   Image,
-} from "@chakra-ui/react";
-import EventContainer from "../../components/EventsPage/EventContainer";
-import eventsData from "../data";
+  useBreakpointValue,
+} from '@chakra-ui/react';
+import EventContainer from '../../components/EventsPage/EventContainer';
+import eventsData from '../data';
+import NavbarDesktop from '@/app/components/NavbarDesktop';
+import OpenNavbar from '@/app/components/OpenNavbar';
 
 const CityMeetupsPage = () => {
+  const [isNavbarOpen, setNavbarOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(149);
+
+  const setIsNavbarOpen = (state: boolean) => {
+    setNavbarOpen(state);
+
+    if (state && window) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft =
+        window.pageXOffset || document.documentElement.scrollLeft;
+
+      window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+      };
+    } else {
+      window.onscroll = function () {};
+    }
+  };
+
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
   return (
     <Box className="relative container-1440" px={{ base: '2rem', '2xl': '0' }}>
-      <Box className="relative top-0 left-0 w-full pointer-events-none">
-        {/* <Navbar /> */}
+      <Box className="sticky top-0 left-0 w-full" zIndex={4}>
+        {isMobile && isNavbarOpen && (
+          <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />
+        )}
+        {isMobile ? (
+          <Navbar
+            setIsNavbarOpen={setIsNavbarOpen}
+            setNavbarHeight={setNavbarHeight}
+          />
+        ) : (
+          <NavbarDesktop />
+        )}
       </Box>
       <Flex flexDir="column" w="full" pt={{ base: '6rem', md: '12rem' }} pb="6">
         <Flex flexDir={{ base: 'column', lg: 'row' }} mb="3rem" gap="1.5rem">
