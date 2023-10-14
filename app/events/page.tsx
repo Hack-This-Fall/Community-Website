@@ -22,12 +22,15 @@ import eventsData from './data';
 import { useState } from 'react';
 import SliderContainer from '../components/EventsPage/HeroSliderContainer';
 import dynamic from 'next/dynamic';
+import OpenNavbar from '../components/OpenNavbar';
+import NavbarDesktop from '../components/NavbarDesktop';
 
 interface config {
   heading: string;
   content: string;
   sizes: ('sm' | 'md' | 'lg')[];
   image: any;
+  link: string;
 }
 
 const config: config[] = [
@@ -35,6 +38,7 @@ const config: config[] = [
     sizes: ['lg', 'md', 'sm'],
     image: '/images/events/city.svg',
     heading: 'City Meetup',
+    link: '/events/meetups',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -42,6 +46,7 @@ const config: config[] = [
     sizes: ['md', 'lg', 'sm'],
     heading: 'Hacktoberfest',
     image: '/images/events/hacktoberfest.svg',
+    link: '/events/hacktoberfest',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -49,6 +54,7 @@ const config: config[] = [
     sizes: ['sm', 'md', 'lg'],
     heading: 'Build With',
     image: '/images/events/buildwith.svg',
+    link: '/events/build-with',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -64,12 +70,42 @@ const EventsPage = () => {
     setSelectValue(event.target.value);
   };
 
+  const [isNavbarOpen, setNavbarOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(149);
+
+  const setIsNavbarOpen = (state: boolean) => {
+    setNavbarOpen(state);
+
+    if (state && window) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft =
+        window.pageXOffset || document.documentElement.scrollLeft;
+
+      window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+      };
+    } else {
+      window.onscroll = function () {};
+    }
+  };
+
   return (
     <Box className="relative container-1440" px={{ base: '2rem', '2xl': '0' }}>
-      <Box className="relative top-0 left-0 w-full pointer-events-none">
-        {/* <Navbar /> */}
+      <Box className="sticky top-0 left-0 w-full" zIndex={4}>
+        {isMobile && isNavbarOpen && (
+          <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />
+        )}
+        {isMobile ? (
+          <Navbar
+            setIsNavbarOpen={setIsNavbarOpen}
+            setNavbarHeight={setNavbarHeight}
+          />
+        ) : (
+          <NavbarDesktop />
+        )}
       </Box>
-      <Box w="full" pt={{base: "6rem", md: "12rem"}} pb="6">
+      <Box w="full" pt={{ base: '2rem', md: '12rem' }} pb={{ base: '4rem', md: '4rem', lg: '7rem' }}>
         {isMobile ? (
           <SliderContainer config={config} />
         ) : (
@@ -83,6 +119,7 @@ const EventsPage = () => {
                 heading={item.heading}
                 content={item.content}
                 size={config[currentExpanded].sizes[index]}
+                link={item.link}
               />
             ))}
           </Flex>

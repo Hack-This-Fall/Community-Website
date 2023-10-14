@@ -1,4 +1,6 @@
 import { Box, Flex, Text, Heading, Button } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   imageSrc: any;
@@ -7,6 +9,7 @@ interface Props {
   content: string;
   setCurrentExpanded: (index: number) => void;
   size: 'sm' | 'md' | 'lg';
+  link: string;
 }
 
 interface colourConfig {
@@ -19,8 +22,11 @@ const HeroContainer = ({
   index,
   content,
   size,
+  link,
   setCurrentExpanded,
 }: Props) => {
+  const router = useRouter();
+
   const colourMap: colourConfig = {
     'City Meetup': '#A163FF',
     Hacktoberfest: '#F6902A',
@@ -121,7 +127,13 @@ const HeroContainer = ({
             {content}
           </Text>
         </Flex>
-        <Button alignSelf="end" hidden={size === 'md' || size === 'sm'}>
+        <Button
+          onClick={() => {
+            router.push(link);
+          }}
+          alignSelf="end"
+          hidden={size === 'md' || size === 'sm'}
+        >
           Explore
         </Button>
       </Flex>

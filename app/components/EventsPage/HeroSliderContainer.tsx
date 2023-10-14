@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import Slider from 'react-slick';
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   config: {
@@ -10,6 +11,7 @@ interface Props {
     content: string;
     sizes: ('sm' | 'md' | 'lg')[];
     image: any;
+    link: string;
   }[];
 }
 
@@ -18,6 +20,8 @@ interface colourConfig {
 }
 
 const SliderContainer = ({ config }: Props) => {
+  const router = useRouter();
+
   const settings = {
     dots: true,
     arrows: false,
@@ -56,6 +60,9 @@ const SliderContainer = ({ config }: Props) => {
           <Heading color="white">{item.heading}</Heading>
           <Text color="white">{item.content}</Text>
           <Button
+            onClick={() => {
+              router.push(item.link);
+            }}
             w="50%"
             borderRadius="1.875rem"
             background={`${colourMap[item.heading]} !important`}
