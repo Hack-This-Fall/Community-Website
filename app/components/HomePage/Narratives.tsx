@@ -216,7 +216,7 @@ export function Carousel() {
 export default function Narratives() {
   const { innerHeight, innerWidth } = useWindowSize();
 
-  return innerWidth && innerWidth < 400 ? (
+  return innerWidth && innerWidth < 500 ? (
     <div className="pointer-events-auto flex flex-col align-center justify-center text-center bg-black overflow-x-hidden justify-evenly">
       <div className="font-poppins font-bold text-4xl md:text-4xl text-white mt-10">
         Narratives
