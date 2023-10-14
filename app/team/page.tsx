@@ -170,6 +170,7 @@ const TeamsPage = () => {
 
 	return (
 		<div className="max-w-screen-xl">
+			{/* interactive background */}
 			<div className="container-1440">
 				<div className="absolute top-0 overflow-hidden max-h-[100vh]">
 					{Array.from({ length: rows }).map((_, rowIndex) => (
@@ -181,6 +182,7 @@ const TeamsPage = () => {
 					))}
 				</div>
 			</div>
+			{/* teams section */}
 			<div className="relative top-0 left-0 w-full pointer-events-none">
 				<header>
 					<nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -249,6 +251,7 @@ const TeamsPage = () => {
 					<h1 className="leading-snug m-20 text-4xl font-bold text-center">
 						Hack This Fall Team
 					</h1>
+					{/* teams grid */}
 					<div className="w-full px-10 mb-20">
 						<div className="grid place-content-center sm:grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-8 grid-cols-1 mx-auto">
 							{teamMembers.map((item, index) => (
