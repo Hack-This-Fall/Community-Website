@@ -139,13 +139,13 @@ export function Carousel() {
     let newSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
     setCurrentSlide(newSlide);
   };
-  useEffect(() => {
-    const intervalInMS = 5000;
+  // useEffect(() => {
+  //   const intervalInMS = 5000;
 
-    const timer = setInterval(() => handleNextSlide(), intervalInMS);
+  //   // const timer = setInterval(() => handleNextSlide(), intervalInMS);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className="relative container-1440 px-4 mt-10">
@@ -216,7 +216,7 @@ export function Carousel() {
 export default function Narratives() {
   const { innerHeight, innerWidth } = useWindowSize();
 
-  return innerWidth && innerWidth < 400 ? (
+  return innerWidth && innerWidth < 500 ? (
     <div className="pointer-events-auto flex flex-col align-center justify-center text-center bg-black overflow-x-hidden justify-evenly">
       <div className="font-poppins font-bold text-4xl md:text-4xl text-white mt-10">
         Narratives
