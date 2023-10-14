@@ -1,8 +1,28 @@
 import { Box, Flex, Image, Text, Link } from '@chakra-ui/react';
 import { usePathname } from 'next/navigation';
+import { useEffect, useRef } from 'react';
 
 const Header = () => {
   const pathName = usePathname();
+  const LogoRef: React.RefObject<HTMLImageElement> = useRef(null);
+  const handleScroll = () => {
+    if (!LogoRef || !LogoRef.current) return;
+    const position = window.scrollY;
+
+    if (position >= 150) {
+      LogoRef.current.style.height = '2.5rem';
+    } else {
+      LogoRef.current.style.height = '3.5rem';
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <Box>
       <Flex
@@ -13,7 +33,12 @@ const Header = () => {
         py="1rem"
       >
         <Link href="/">
-          <Image src="/logo.png" h="2.5rem" alt="HackThisFall Logo" />
+          <Image
+            ref={LogoRef}
+            src="/logo.png"
+            h="3.5rem"
+            alt="HackThisFall Logo"
+          />
         </Link>
         <Flex direction="row" fontWeight="medium" columnGap="2rem">
           <Link
@@ -40,10 +65,20 @@ const Header = () => {
             >
               Blogs
             </Link> */}
-          <Link href="/team" py={2} color={pathName == '/team' ? 'black' : '#676767'} _hover={{ color: 'black' }}>
+          <Link
+            href="/team"
+            py={2}
+            color={pathName == '/team' ? 'black' : '#676767'}
+            _hover={{ color: 'black' }}
+          >
             Team
           </Link>
-          <Link href="/swag" py={2} color={pathName == '/swag' ? 'black' : '#676767'} _hover={{ color: 'black' }}>
+          <Link
+            href="/swag"
+            py={2}
+            color={pathName == '/swag' ? 'black' : '#676767'}
+            _hover={{ color: 'black' }}
+          >
             Swag
           </Link>
           {/* <Link

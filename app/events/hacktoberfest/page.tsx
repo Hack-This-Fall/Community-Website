@@ -88,25 +88,6 @@ const CityMeetupsPage = () => {
               sessions, hands-on demos, and networking opportunities. Experience
               the latest announcements from
             </Text>
-            <Button
-              w="fit-content"
-              px="2rem"
-              borderRadius="1.875rem"
-              backgroundColor="#ED8E2F !important"
-              color="white"
-              display="inline-flex"
-              height="3.2rem"
-              justifyContent="center"
-              alignItems="center"
-              fontSize="1.1rem"
-              fontWeight="700"
-              _hover={{
-                background: '#ED8E2F',
-                color: 'white',
-              }}
-            >
-              Coming Soon
-            </Button>
           </Flex>
           <Image src="/images/events/city-meetup-hero.png" alt="city meetup" />
         </Flex>
