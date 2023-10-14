@@ -139,13 +139,13 @@ export function Carousel() {
     let newSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
     setCurrentSlide(newSlide);
   };
-  useEffect(() => {
-    const intervalInMS = 5000;
+  // useEffect(() => {
+  //   const intervalInMS = 5000;
 
-    // const timer = setInterval(() => handleNextSlide(), intervalInMS);
+  //   // const timer = setInterval(() => handleNextSlide(), intervalInMS);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className="relative container-1440 px-4 mt-10">
