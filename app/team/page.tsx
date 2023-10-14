@@ -147,7 +147,7 @@ const TeamsPage = () => {
   const [isNavbarOpen, setNavbarOpen] = useState(false);
     const [navbarHeight, setNavbarHeight] = useState(149);
 
-  const setIsNavbarOpen = (state) => {
+  const setIsNavbarOpen = (state: boolean) => {
     setNavbarOpen(state);
 
     if (state && window) {
