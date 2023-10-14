@@ -98,7 +98,7 @@ export default function Geek() {
           <CommunityGlipses />
           <Narratives />
           <Sponsors />
-          <Footer />
+          <Footer paddingX={{ base: '1rem', '2xl': '0' }} />
         </div>
       </div>
     </>

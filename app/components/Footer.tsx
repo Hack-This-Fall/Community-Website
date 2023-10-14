@@ -90,32 +90,33 @@ const Socials = [
   },
 ];
 
-const Footer = ({ bg } : {bg?: string}) => {
+const Footer = ({ bg, paddingX }: { bg?: string; paddingX?: any }) => {
   return (
     <Flex
       flexDir={{
-        base: "column",
-        lg: "row",
+        base: 'column',
+        lg: 'row',
       }}
       className="container-1440"
       gap="1.5rem"
-      mb={{ base: "2rem", md: "3rem", lg: "5rem" }}
-      position='relative'
-      zIndex='10'
+      mb={{ base: '2rem', md: '3rem', lg: '5rem' }}
+      position="relative"
+      zIndex="10"
       bg={bg || 'transparent'}
+      px={paddingX || '0'}
     >
       <Flex
         w={{
-          base: "100%",
-          lg: "41%",
+          base: '100%',
+          lg: '41%',
         }}
         alignItems="center"
         justifyContent="center"
         borderRadius="2rem"
         px="4rem"
         py={{
-          base: "4rem",
-          lg: "0",
+          base: '4rem',
+          lg: '0',
         }}
         background="#F0F0F0"
       >
@@ -124,18 +125,18 @@ const Footer = ({ bg } : {bg?: string}) => {
       <Flex
         gap="1.5rem"
         w={{
-          base: "100%",
-          lg: "59%",
+          base: '100%',
+          lg: '59%',
         }}
         flexDir="column"
       >
         <Flex
           flexDir={{
-            base: "column",
-            md: "row",
+            base: 'column',
+            md: 'row',
           }}
           justifyContent="space-between"
-          alignItems={{ base: "center", md: "flex-start" }}
+          alignItems={{ base: 'center', md: 'flex-start' }}
           p="2rem"
           borderRadius="2rem"
           background="#F0F0F0"
@@ -143,15 +144,15 @@ const Footer = ({ bg } : {bg?: string}) => {
           <Flex
             gap="2rem"
             flexDir={{
-              base: "column",
-              md: "row",
+              base: 'column',
+              md: 'row',
             }}
           >
             {Object.keys(footerData).map((key, index) => (
               <Flex
                 gap="1rem"
                 flexDir="column"
-                alignItems={{ base: "center", md: "flex-start" }}
+                alignItems={{ base: 'center', md: 'flex-start' }}
                 key={index}
               >
                 <Text fontFamily="var(--font-dmsans)" fontWeight="600">
@@ -164,7 +165,7 @@ const Footer = ({ bg } : {bg?: string}) => {
                     isExternal={!!item.isExternal}
                     href={item.link}
                     key={index}
-                    target={item.isExternal ? "_blank" : "_self"}
+                    target={item.isExternal ? '_blank' : '_self'}
                   >
                     {item.name}
                   </Link>
@@ -174,13 +175,13 @@ const Footer = ({ bg } : {bg?: string}) => {
           </Flex>
           <Flex
             mt={{
-              base: "2rem",
+              base: '2rem',
               md: 0,
             }}
             gap="1rem"
-            w={{ base: "90%", md: "40%" }}
+            w={{ base: '90%', md: '40%' }}
             flexDir="column"
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems={{ base: 'center', md: 'flex-start' }}
           >
             <Text fontWeight="600" fontFamily="var(--font-dmsans)">
               Stay updated about events
@@ -208,11 +209,11 @@ const Footer = ({ bg } : {bg?: string}) => {
           alignItems="center"
           py="1rem"
           px="2rem"
-          borderRadius={{ base: "2rem", md: "full" }}
+          borderRadius={{ base: '2rem', md: 'full' }}
           background="#F0F0F0"
           flexDir={{
-            base: "column",
-            md: "row",
+            base: 'column',
+            md: 'row',
           }}
           gap="2rem"
         >
@@ -223,10 +224,10 @@ const Footer = ({ bg } : {bg?: string}) => {
             <StarIcon />
             <Link fontFamily="var(--font-dmsans)">Data Policy</Link>
           </Flex>
-          <Flex gap={{ base: "0.5rem", sm: "1rem" }}>
+          <Flex gap={{ base: '0.5rem', sm: '1rem' }}>
             {Socials.map((item, index) => (
               <Link
-                p={{ base: "0.4rem", sm: "0.5rem" }}
+                p={{ base: '0.4rem', sm: '0.5rem' }}
                 background="#E1E1E1"
                 borderRadius="full"
                 as={NextLink}

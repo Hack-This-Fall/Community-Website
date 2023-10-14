@@ -30,6 +30,7 @@ interface config {
   content: string;
   sizes: ('sm' | 'md' | 'lg')[];
   image: any;
+  link: string;
 }
 
 const config: config[] = [
@@ -37,6 +38,7 @@ const config: config[] = [
     sizes: ['lg', 'md', 'sm'],
     image: '/images/events/city.svg',
     heading: 'City Meetup',
+    link: '/events/meetups',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -44,6 +46,7 @@ const config: config[] = [
     sizes: ['md', 'lg', 'sm'],
     heading: 'Hacktoberfest',
     image: '/images/events/hacktoberfest.svg',
+    link: '/events/hacktoberfest',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -51,6 +54,7 @@ const config: config[] = [
     sizes: ['sm', 'md', 'lg'],
     heading: 'Build With',
     image: '/images/events/buildwith.svg',
+    link: '/events/build-with',
     content:
       "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
   },
@@ -101,7 +105,7 @@ const EventsPage = () => {
           <NavbarDesktop />
         )}
       </Box>
-      <Box w="full" pt={{ base: '6rem', md: '12rem' }} pb="6">
+      <Box w="full" pt={{ base: '2rem', md: '12rem' }} pb={{ base: '4rem', md: '4rem', lg: '7rem' }}>
         {isMobile ? (
           <SliderContainer config={config} />
         ) : (
@@ -115,6 +119,7 @@ const EventsPage = () => {
                 heading={item.heading}
                 content={item.content}
                 size={config[currentExpanded].sizes[index]}
+                link={item.link}
               />
             ))}
           </Flex>

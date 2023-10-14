@@ -61,7 +61,7 @@ const CityMeetupsPage = () => {
           <NavbarDesktop />
         )}
       </Box>
-      <Flex flexDir="column" w="full" pt={{ base: '6rem', md: '12rem' }} pb="6">
+      <Flex flexDir="column" w="full" pt={{ base: '2rem', md: '12rem' }} pb="6">
         <Flex flexDir={{ base: 'column', lg: 'row' }} mb="3rem" gap="1.5rem">
           <Flex
             flexDir="column"
@@ -111,7 +111,11 @@ const CityMeetupsPage = () => {
           </Flex>
           <Image src="/images/events/city-meetup-hero.png" alt="city meetup" />
         </Flex>
-        <Tabs position="relative" variant="unstyled">
+        <Tabs
+          position="relative"
+          variant="unstyled"
+          mb={{ base: '2rem', md: '4rem', lg: '7rem' }}
+        >
           <TabList borderRadius="full" bgColor="#ebebeb" width="fit-content">
             {Object.keys(eventsData.individualEventTabs).map((item, index) => {
               return (

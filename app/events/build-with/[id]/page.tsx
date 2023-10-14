@@ -103,7 +103,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
           w="full"
           alignItems="center"
           justifyContent="center"
-          pb={{ base: '2rem', md: '4rem', lg: '7rem' }}
+          pb={{ base: '4rem', md: '4rem', lg: '7rem' }}
           pt={{ base: '0', md: '4rem', lg: '7rem' }}
         >
           <HeroSection
