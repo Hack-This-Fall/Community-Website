@@ -105,7 +105,7 @@ const EventsPage = () => {
           <NavbarDesktop />
         )}
       </Box>
-      <Box w="full" pt={{ base: '2rem', md: '12rem' }} pb={{ base: '4rem', md: '4rem', lg: '7rem' }}>
+      <Box w="full" pt={{ base: '2rem', md: '6rem' }} pb={{ base: '4rem', md: '4rem', lg: '7rem' }}>
         {isMobile ? (
           <SliderContainer config={config} />
         ) : (

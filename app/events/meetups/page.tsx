@@ -61,7 +61,7 @@ const CityMeetupsPage = () => {
           <NavbarDesktop />
         )}
       </Box>
-      <Flex flexDir="column" w="full" pt={{ base: '2rem', md: '12rem' }} pb="6">
+      <Flex flexDir="column" w="full" pt={{ base: '2rem', md: '6rem' }} pb="6">
         <Flex flexDir={{ base: 'column', lg: 'row' }} mb="3rem" gap="1.5rem">
           <Flex
             flexDir="column"
