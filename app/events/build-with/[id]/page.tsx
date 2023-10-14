@@ -2,7 +2,7 @@
 
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useBreakpointValue } from '@chakra-ui/react';
 import { InView } from 'react-intersection-observer';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -13,6 +13,7 @@ import WorkshopSection from '@/app/components/IndividualEventsPage/Workshop';
 import CommunicationSection from '@/app/components/IndividualEventsPage/Communication';
 import CodeOfConductSection from '@/app/components/IndividualEventsPage/COC';
 import SponsorSection from '@/app/components/IndividualEventsPage/SponsorSection';
+import NavbarDesktop from '@/app/components/NavbarDesktop';
 
 const sections = [
   {
@@ -55,10 +56,39 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
     agenda,
   } = eventData || {};
 
+  const [isNavbarOpen, setNavbarOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(149);
+
+  const setIsNavbarOpen = (state: boolean) => {
+    setNavbarOpen(state);
+
+    if (state && window) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft =
+        window.pageXOffset || document.documentElement.scrollLeft;
+
+      window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+      };
+    } else {
+      window.onscroll = function () {};
+    }
+  };
+
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
+
   return (
     <Box className="relative container-1440" px={{ base: '2rem', '2xl': '0' }}>
-      <Box className="relative top-0 left-0 w-full pointer-events-none">
-        {/* <Navbar /> */}
+      <Box className="sticky top-0 left-0 w-full" zIndex={4}>
+        {isMobile ? (
+          <Navbar
+            setIsNavbarOpen={setIsNavbarOpen}
+            setNavbarHeight={setNavbarHeight}
+          />
+        ) : (
+          <NavbarDesktop />
+        )}
       </Box>
       <Flex
         flexDir="column"
