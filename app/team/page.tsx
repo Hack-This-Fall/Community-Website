@@ -250,7 +250,7 @@ const TeamsPage = () => {
 						Hack This Fall Team
 					</h1>
 					<div className="w-full px-10 mb-20">
-						<div className="grid place-content-center sm:grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-8 grid-cols-5 mx-auto">
+						<div className="grid place-content-center sm:grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-8 grid-cols-1 mx-auto">
 							{teamMembers.map((item, index) => (
 								<div key={index} className="box relative">
 									<Image
