@@ -142,7 +142,7 @@ export function Carousel() {
   useEffect(() => {
     const intervalInMS = 5000;
 
-    const timer = setInterval(() => handleNextSlide(), intervalInMS);
+    // const timer = setInterval(() => handleNextSlide(), intervalInMS);
 
     return () => clearInterval(timer);
   }, []);

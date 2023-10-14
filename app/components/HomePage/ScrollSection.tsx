@@ -144,7 +144,7 @@ const Section = ({
     animate: { y: -2.25 * (innerHeight || 0), opacity: 1 },
   };
 
-  return innerWidth && innerWidth < 400 ? (
+  return innerWidth && innerWidth < 500 ? (
     <>
       <div className="flex flex-col pt-20 h-[100vh] justify-between	pb-20">
         <div
