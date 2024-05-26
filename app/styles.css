@@ -126,3 +126,36 @@
     rgba(255, 255, 255, 1) 100%
   );
 }
+
+.text-w-outline {
+  color: black;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff,
+    1px -1px 0 #fff;
+}
+
+footer {
+  z-index: -100;
+}
+
+.grids:before {
+  border-right: 1px solid #fff;
+  content: "";
+  display: block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.grids:after {
+  border-bottom: 1px solid #fff;
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.child {
+  border: 1px solid #000;
+  border-width: 0 1px 1px 0;
+}

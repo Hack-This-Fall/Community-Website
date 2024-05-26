@@ -42,13 +42,13 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
 
   return (
     <div
-      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440 pointer-events-none"
+      className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440 pointer-events-none bg-white z-[10]"
       style={{
         marginTop: `-${navbarHeight}px`,
         zIndex: 1000000000,
       }}
     >
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center ">
         <div className="w-[90%] md:w-[60%] font-poppins font-semibold text-3xl md:text-6xl text-[#151515] leading-snug ">
           <LayoutGroup>
             A Thriving Hacker Community Encouraging{" "}

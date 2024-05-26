@@ -6,17 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
-  /* max-width: 1440px; */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0; */
-    /* max-width: 1440px; */
-    margin: auto;
-  }
+  margin: auto;
 }
 
 body {
@@ -47,10 +37,16 @@ body {
   margin-right: auto;
 }
 
-.slick-slide>div {
-    margin: 0 5px;
+.container-1200 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-slide > div {
+  margin: 0 5px;
 }
 /* the parent */
 .slick-list {
-    margin: 0 -5px;
+  margin: 0 -5px;
 }

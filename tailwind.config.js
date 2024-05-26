@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         poppins: "var(--font-poppins)",
         dmSans: "var(--font-dm-sans)",
+        outfit: "var(--font-outfit)",
+        inter: "var(--font-inter)",
+        againstHistory: "var(--font-against-history)",
       },
     },
   },

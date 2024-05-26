@@ -23,7 +23,7 @@ const glipmses = [
 
 export default function CommunityGlipses() {
   return (
-    <div className="flex flex-col justify-center w-full text-center h-[100vh] container-1440">
+    <div className="flex flex-col justify-center w-full text-center h-[100vh] container-1440 ">
       <h1 className="font-poppins text-3xl md:text-6xl font-bold ">
         Community Glipmses
       </h1>
