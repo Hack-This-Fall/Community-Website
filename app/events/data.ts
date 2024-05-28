@@ -8,21 +8,24 @@ export interface eventData {
   heading: string;
   description: string;
   startTimestamp: moment.Moment;
-  endTimestamp: moment.Moment;
+  endTimestamp: moment.Moment | null;
   location: string;
+  eventMode: string;
   color: string;
   secondaryColor: string;
-  type: 'EVENT_CITY_MEETUP' | 'EVENT_HACKTOBERFEST' | 'EVENT_BUILD_WITH';
+  type:
+    | 'CITY MEETUP'
+    | 'HACKTOBERFEST'
+    | 'BUILD WITH'
+    | 'HACKATHONS';
   agenda: string[][];
 }
 
 interface eventsData {
   tabs: {
-    [key: string]: {
-      heading: string;
-      filterFunction: (eventData: eventData) => boolean;
-    };
-  };
+    heading: string;
+    filterFunction: (eventData: eventData) => boolean;
+  }[];
   individualEventTabs: {
     [key: string]: {
       heading: string;
@@ -33,28 +36,21 @@ interface eventsData {
 }
 
 const eventsData: eventsData = {
-  tabs: {
-    EVENT_UPCOMING: {
-      heading: 'Upcoming',
+  tabs: [
+    {
+      heading: 'ALL',
       filterFunction: (eventData: eventData) =>
-        moment().diff(eventData.startTimestamp) < 0,
+        true,
     },
-    EVENT_CITY_MEETUP: {
-      heading: 'City Meetup',
-      filterFunction: (eventData: eventData) =>
-        eventData.type === 'EVENT_CITY_MEETUP',
+    {
+      heading: 'HACKATHONS',
+      filterFunction: (eventData: eventData) => eventData.type === 'HACKATHONS',
     },
-    EVENT_HACKTOBERFEST: {
-      heading: 'Hacktoberfest',
-      filterFunction: (eventData: eventData) =>
-        eventData.type === 'EVENT_HACKTOBERFEST',
+    {
+      heading: 'EVENTS',
+      filterFunction: (eventData: eventData) => eventData.type !== 'HACKATHONS',
     },
-    EVENT_BUILD_WITH: {
-      heading: 'Build With',
-      filterFunction: (eventData: eventData) =>
-        eventData.type === 'EVENT_BUILD_WITH',
-    },
-  },
+  ],
   individualEventTabs: {
     EVENT_UPCOMING: {
       heading: 'Upcoming',
@@ -70,14 +66,16 @@ const eventsData: eventsData = {
   events: [
     {
       id: '1',
-      image: '/images/events/event_dummy.jpeg',
-      heading: 'City Meetup Chandigarh',
+      image:
+        'https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=1,quality=100,width=960,height=480/event-covers/mx/194dc7ba-58ab-4c01-8dd3-1f71f49b3988',
+      heading: 'Chandigarh City Meetup',
+      eventMode: 'IN PERSON',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(1, 'days'),
-      endTimestamp: moment().add(1, 'days').add('1', 'hour'),
+      endTimestamp: null,
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'CITY MEETUP',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -93,13 +91,14 @@ const eventsData: eventsData = {
     {
       id: '2',
       image: '/images/events/event_dummy.jpeg',
-      heading: 'City Meetup Chandigarh',
+      heading: 'Hack This Fall 2024',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
-      endTimestamp: moment().add(2, 'days').add('1', 'hour'),
+      endTimestamp: null,
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'HACKATHONS',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -116,12 +115,13 @@ const eventsData: eventsData = {
       id: '3',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'CITY MEETUP',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -138,12 +138,13 @@ const eventsData: eventsData = {
       id: '1',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'CITY MEETUP',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -160,12 +161,13 @@ const eventsData: eventsData = {
       id: '4',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'CITY MEETUP',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -182,12 +184,13 @@ const eventsData: eventsData = {
       id: '5',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_CITY_MEETUP',
+      type: 'CITY MEETUP',
       color: '#A163FF',
       secondaryColor: 'rgba(161, 99, 255, 0.30)',
       agenda: [
@@ -204,12 +207,13 @@ const eventsData: eventsData = {
       id: '6',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(1, 'days'),
       endTimestamp: moment().add(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -226,12 +230,13 @@ const eventsData: eventsData = {
       id: '7',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -248,12 +253,13 @@ const eventsData: eventsData = {
       id: '8',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -270,12 +276,13 @@ const eventsData: eventsData = {
       id: '9',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -292,12 +299,13 @@ const eventsData: eventsData = {
       id: '10',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -314,12 +322,13 @@ const eventsData: eventsData = {
       id: '11',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_BUILD_WITH',
+      type: 'BUILD WITH',
       color: '#A163FF',
       secondaryColor: 'rgba(161, 99, 255, 0.30)',
       agenda: [
@@ -336,12 +345,13 @@ const eventsData: eventsData = {
       id: '12',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(1, 'days'),
       endTimestamp: moment().add(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -358,12 +368,13 @@ const eventsData: eventsData = {
       id: '13',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -380,12 +391,13 @@ const eventsData: eventsData = {
       id: '14',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
       endTimestamp: moment().add(2, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -402,12 +414,13 @@ const eventsData: eventsData = {
       id: '15',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#4E9DFF',
       secondaryColor: 'rgba(78, 157, 255, 0.30)',
       agenda: [
@@ -424,12 +437,13 @@ const eventsData: eventsData = {
       id: '16',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().add(2, 'days'),
-      endTimestamp: moment().add(2, 'days').add('1', 'hour'),
+      endTimestamp: null,
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#F6902A',
       secondaryColor: 'rgba(246, 144, 42, 0.10)',
       agenda: [
@@ -446,12 +460,13 @@ const eventsData: eventsData = {
       id: '17',
       image: '/images/events/event_dummy.jpeg',
       heading: 'City Meetup Chandigarh',
+      eventMode: 'VIRTUAL',
       description:
         'Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O with technical sessions, hands-on demos, and networking opportunities. Experience the latest announcements from I/O.',
       startTimestamp: moment().subtract(1, 'days'),
       endTimestamp: moment().subtract(1, 'days').add('1', 'hour'),
       location: 'Magnet Cowork',
-      type: 'EVENT_HACKTOBERFEST',
+      type: 'HACKTOBERFEST',
       color: '#A163FF',
       secondaryColor: 'rgba(161, 99, 255, 0.30)',
       agenda: [

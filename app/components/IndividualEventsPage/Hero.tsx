@@ -7,7 +7,7 @@ import ScrollIcon from '../icons/Scroll';
 
 interface HeroSectionProps {
   startTimestamp: moment.Moment | undefined;
-  endTimestamp: moment.Moment | undefined;
+  endTimestamp: moment.Moment | undefined | null;
   heading: string | undefined;
   location: string | undefined;
   description: string | undefined;

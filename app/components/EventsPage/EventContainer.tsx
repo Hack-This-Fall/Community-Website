@@ -1,91 +1,116 @@
 import { Flex, Image, Heading, Box, Text } from '@chakra-ui/react';
 import { eventData } from '@/app/events/data';
+import AngleArrow from '../icons/AngleArrow';
 
 const EventContainer = ({ eventData }: { eventData: eventData }) => {
   const {
     heading,
     startTimestamp,
     location,
-    image,
     endTimestamp,
     color,
     secondaryColor,
+    type,
+    eventMode,
   } = eventData;
   return (
     <Flex
-      border={`2px solid ${color}`}
+      border="1px solid #00000033"
       borderRadius="20px"
-      overflow="hidden"
       flexDir="column"
+      justifyContent="space-between"
       pos="relative"
-      height="fit-content"
+      height="full"
+      bgColor="#FAFAFA"
+      p="1rem"
     >
-      <Image height="55%" fit="cover" src={image} alt={heading} />
-      <Flex px="1rem" py="1.25rem" flexDir="column">
-        <Heading
-          fontSize="1.6rem"
-          lineHeight="115%"
-          fontFamily="var(--font-poppins)"
+      <Flex justifyContent="space-between" w="full">
+        <Box
+          p="0.3rem 0.7rem"
+          borderRadius="10px"
+          border={`1px solid ${color}`}
+          bgColor={secondaryColor}
+          fontFamily="var(--font-outfit)"
+          fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
           fontWeight="700"
+          color={color}
+        >
+          {type}
+        </Box>
+        <Box
+          p="0.3rem 0.7rem"
+          borderRadius="10px"
+          border={`1px solid #DC6E04`}
+          bgColor="#FFCC9B"
+          fontFamily="var(--font-outfit)"
+          fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
+          fontWeight="700"
+          color="#DC6E04"
+        >
+          {eventMode}
+        </Box>
+      </Flex>
+      <Flex pt="1.25rem" flexDir="column">
+        <Heading
+          fontSize={{ base: '2rem', md: '2.5rem', lg: '3rem' }}
+          lineHeight="115%"
+          fontFamily="var(--font-outfit)"
+          fontWeight="500"
+          maxWidth="70%"
         >
           {heading}
         </Heading>
-        <Flex gap="0.7rem" mt="0.5rem">
-          <Box borderRadius="xl" overflow="hidden">
-            <Flex
-              color="#FFF"
-              fontFamily="var(--font-poppins)"
-              fontSize="0.75rem"
-              fontStyle="normal"
+        <Flex justifyContent="space-between" mt="1rem" alignItems="end">
+          <Flex
+            flexDir={endTimestamp ? 'column-reverse' : 'row'}
+            flexFlow="wrap"
+            gap="0.5rem"
+            w="full"
+            h="-webkit-fit-content"
+          >
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
               fontWeight="700"
-              lineHeight="normal"
-              bgColor={color}
-              px="1.2rem"
-              py="0.4rem"
-              alignItems="center"
-              justifyContent="center"
+              color="#000000B2"
+              w="-webkit-fit-content"
             >
-              {startTimestamp.format('MMM').toUpperCase()}
-            </Flex>
-            <Flex
-              fontFamily="var(--font-poppins)"
-              fontSize="1.25rem"
-              fontStyle="normal"
-              fontWeight="800"
-              lineHeight="normal"
-              color={color}
-              bgColor={secondaryColor}
-              px="1.5rem"
-              pt="0.2rem"
-              pb="0.4rem"
-              alignItems="center"
-              justifyContent="center"
-            >
-              {startTimestamp.get('date')}
-            </Flex>
-          </Box>
-          <Flex gap="0.2rem" flexDir="column" justifyContent="center">
-            <Text
-              fontFamily="var(--font-poppins)"
-              fontSize="1rem"
-              fontStyle="normal"
-              fontWeight="600"
-              lineHeight="normal"
-              color="#656565"
-            >
-              {startTimestamp.format('dddd, H:mm')} -
-              {endTimestamp.format('H:mm A z')}
-            </Text>
-            <Text
-              fontFamily="var(--font-poppins)"
-              fontSize="1rem"
-              fontStyle="normal"
-              fontWeight="500"
-              lineHeight="normal"
-              color="#949494"
+              {endTimestamp
+                ? `${startTimestamp
+                    .format('MMM DD')
+                    .toUpperCase()} - ${endTimestamp
+                    .format('MMM DD, YYYY')
+                    .toUpperCase()}`
+                : startTimestamp.format('MMM DD, YYYY').toUpperCase()}
+            </Box>
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
             >
               {location}
-            </Text>
+            </Box>
+          </Flex>
+          <Flex
+            bgColor="#000"
+            alignItems="center"
+            justifyContent="center"
+            borderRadius="full"
+            w="40%"
+            aspectRatio="1"
+            color="white"
+          >
+            <AngleArrow />
           </Flex>
         </Flex>
       </Flex>

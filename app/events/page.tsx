@@ -14,6 +14,7 @@ import {
   Text,
   Select,
   useBreakpointValue,
+  Heading,
 } from '@chakra-ui/react';
 import moment from 'moment';
 import HeroContainer from '../components/EventsPage/HeroContainer';
@@ -24,6 +25,7 @@ import SliderContainer from '../components/EventsPage/HeroSliderContainer';
 import dynamic from 'next/dynamic';
 import OpenNavbar from '../components/OpenNavbar';
 import NavbarDesktop from '../components/NavbarDesktop';
+import PastEventContainer from '../components/EventsPage/PastEventContainer';
 
 interface config {
   heading: string;
@@ -33,43 +35,9 @@ interface config {
   link: string;
 }
 
-const config: config[] = [
-  {
-    sizes: ['lg', 'md', 'sm'],
-    image: '/images/events/city.svg',
-    heading: 'City Meetup',
-    link: '/events/meetups',
-    content:
-      "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
-  },
-  {
-    sizes: ['md', 'lg', 'sm'],
-    heading: 'Hacktoberfest',
-    image: '/images/events/hacktoberfest.svg',
-    link: '/events/hacktoberfest',
-    content:
-      "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
-  },
-  {
-    sizes: ['sm', 'md', 'lg'],
-    heading: 'Build With',
-    image: '/images/events/buildwith.svg',
-    link: '/events/build-with',
-    content:
-      "Join the vibrant city meetup of the tech community at 'Hack This Fall' – an exhilarating gathering where innovation and collaboration converge",
-  },
-];
-
 const EventsPage = () => {
-  const [currentExpanded, setCurrentExpanded] = useState(0);
-  const [selectValue, setSelectValue] = useState('ALL');
   const [currentTab, setCurrentTab] = useState(0);
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectValue(event.target.value);
-  };
-
   const [isNavbarOpen, setNavbarOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(149);
 
@@ -105,149 +73,57 @@ const EventsPage = () => {
           <NavbarDesktop />
         )}
       </Box>
-      <Box w="full" pt={{ base: '2rem', md: '6rem' }} pb={{ base: '4rem', md: '4rem', lg: '7rem' }}>
-        {isMobile ? (
-          <SliderContainer config={config} />
-        ) : (
-          <Flex w="full" gap="1.5rem" h="451px">
-            {config.map((item, index) => (
-              <HeroContainer
-                key={index}
-                index={index}
-                setCurrentExpanded={setCurrentExpanded}
-                imageSrc={item.image}
-                heading={item.heading}
-                content={item.content}
-                size={config[currentExpanded].sizes[index]}
-                link={item.link}
-              />
-            ))}
-          </Flex>
-        )}
-        <Box mt="5rem">
-          <Select
-            onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
-              setCurrentTab(parseInt(event.target.value, 10))
-            }
-            value={currentTab}
-            bgColor="#F2F2F2"
-            borderRadius="full"
-            size="md"
-            w="48%"
-            bg="black"
-            color="white"
-            outline="none"
-            border="none"
-            display={{ md: 'none' }}
-          >
-            {Object.keys(eventsData.tabs).map((item, index) => {
+      <Box
+        w="full"
+        pt={{ base: '2rem', md: '4rem' }}
+        pb={{ base: '4rem', md: '4rem', lg: '7rem' }}
+      >
+        <Heading
+          fontSize={{ base: '2.5rem', md: '3.5rem' }}
+          fontFamily="var(--font-outfit)"
+          fontWeight="400"
+        >
+          Events
+        </Heading>
+        <Box mt="2rem">
+          <Flex borderRadius="full" bgColor="transparent" width="fit-content">
+            {eventsData.tabs.map((item, index) => {
               return (
-                <option key={index} value={index}>
-                  {eventsData.tabs[item].heading}
-                </option>
+                <Flex
+                  key={index}
+                  px={{ base: '1rem', xl: '2rem' }}
+                  fontWeight="700"
+                  fontFamily="var(--font-outfit)"
+                  fontSize={{ base: '1rem', xl: '1.2rem' }}
+                  py={{ base: '0.4rem', xl: '0.7rem' }}
+                  transition="all 0.25s ease-in-out"
+                  textTransform="uppercase"
+                  bg={currentTab === index ? 'black' : 'white'}
+                  color={currentTab === index ? 'white' : 'black'}
+                  cursor="pointer"
+                  onClick={() => setCurrentTab(index)}
+                  borderRadius="full"
+                >
+                  {item.heading}
+                </Flex>
               );
             })}
-          </Select>
-          <Tabs
-            index={currentTab}
-            onChange={setCurrentTab}
-            position="relative"
-            variant="unstyled"
-          >
-            <TabList
-              display={{ base: 'none', md: 'flex' }}
-              borderRadius="full"
-              bgColor="#ebebeb"
-              width="fit-content"
+          </Flex>
+          <Flex flexDir="column" mt="2rem">
+            <Heading
+              fontSize={{ base: '2rem', md: '3rem' }}
+              fontFamily="var(--font-outfit)"
+              fontWeight="400"
+              mb="2rem"
             >
-              {Object.keys(eventsData.tabs).map((item, index) => {
-                return (
-                  <Tab
-                    key={index}
-                    px="2rem"
-                    py="1rem"
-                    transition="all 0.25s ease-in-out"
-                    _selected={{
-                      bg: 'black',
-                      color: 'white',
-                      borderRadius: 'full',
-                    }}
-                  >
-                    {eventsData.tabs[item].heading}
-                  </Tab>
-                );
-              })}
-            </TabList>
-            <TabPanels mt="3rem">
-              {Object.keys(eventsData.tabs).map((tab, index) => (
-                <TabPanel p="0" key={index}>
-                  <SimpleGrid
-                    columns={{
-                      base: 1,
-                      md: 2,
-                      lg: 3,
-                      '2xl': 4,
-                    }}
-                    columnGap="1rem"
-                    rowGap="1rem"
-                  >
-                    {eventsData.events
-                      .filter((data) =>
-                        eventsData.tabs[tab].filterFunction(data),
-                      )
-                      .map((event, index) => (
-                        <EventContainer eventData={event} key={index} />
-                      ))}
-                  </SimpleGrid>
-                </TabPanel>
-              ))}
-            </TabPanels>
-          </Tabs>
-          <Flex flexDir="column" mt="5rem">
-            <Flex w="full" justifyContent="space-between">
-              <Box
-                bg="black"
-                color="white"
-                borderRadius="full"
-                px={{ base: '1rem', md: '2rem' }}
-                py={{ base: '0.6rem', md: '1rem' }}
-              >
-                Past Events
-              </Box>
-              <Flex gap="1rem" alignItems="center" justifyContent="center">
-                <Text
-                  display={{
-                    base: 'none',
-                    md: 'unset',
-                  }}
-                  fontFamily="var(--dm-sans)"
-                >
-                  Filter&nbsp;By
-                </Text>
-                <Select
-                  onChange={handleSelectChange}
-                  value={selectValue}
-                  bgColor="#F2F2F2"
-                  borderRadius="full"
-                  size="md"
-                  _focusVisible={{
-                    borderColor: 'black',
-                  }}
-                >
-                  <option value="ALL">All Events</option>
-                  <option value="EVENT_CITY_MEETUP">City Meetups</option>
-                  <option value="EVENT_HACKTOBERFEST">Hacktoberfest</option>
-                  <option value="EVENT_BUILD_WITH">Build With</option>
-                </Select>
-              </Flex>
-            </Flex>
+              Upcoming
+            </Heading>
             <SimpleGrid
-              mt="3rem"
               columns={{
                 base: 1,
                 md: 2,
-                lg: 3,
-                '2xl': 4,
+                lg: 2,
+                '2xl': 3,
               }}
               columnGap="1rem"
               rowGap="1rem"
@@ -255,11 +131,33 @@ const EventsPage = () => {
               {eventsData.events
                 .filter(
                   (data) =>
-                    moment().diff(data.startTimestamp) > 0 &&
-                    (selectValue === 'ALL' || data.type === selectValue),
+                    moment().diff(data.startTimestamp) < 0 &&
+                    eventsData.tabs[currentTab].filterFunction(data),
                 )
                 .map((event, index) => (
                   <EventContainer eventData={event} key={index} />
+                ))}
+            </SimpleGrid>
+          </Flex>
+          <Flex flexDir="column" mt="2rem">
+            <Flex w="full" justifyContent="space-between">
+              <Heading
+                fontSize={{ base: '2rem', md: '3rem' }}
+                fontFamily="var(--font-outfit)"
+                fontWeight="400"
+              >
+                Past
+              </Heading>
+            </Flex>
+            <SimpleGrid mt="3rem" columns={1} columnGap="1rem" rowGap="1rem">
+              {eventsData.events
+                .filter(
+                  (data) =>
+                    moment().diff(data.startTimestamp) > 0 &&
+                    eventsData.tabs[currentTab].filterFunction(data),
+                )
+                .map((event, index) => (
+                  <PastEventContainer eventData={event} key={index} />
                 ))}
             </SimpleGrid>
           </Flex>
