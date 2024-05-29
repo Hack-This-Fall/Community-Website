@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../assets/images/logo.svg";
+import Logo from "../assets/images/logo.png";
 import Burger from "../assets/images/navbar/burger.svg";
 import { useEffect, useRef } from "react";
 import { useWindowSize } from "rooks";
@@ -51,20 +51,34 @@ export default function Navbar({
   return (
     <div
       ref={ref}
-      className={`flex justify-between items-center px-4 md:px-14 py-4 md:py-10 z-50 block w-full absolute top-0 md:top-0 pointer-events-none sticky container-1440`}
+      className={`flex justify-between items-center py-4 md:py-8 z-50 block w-full absolute top-0 md:top-0 pointer-events-none sticky container-1200`}
     >
-      <Image ref={navbarLogo} src={Logo} className="w-20 md:w-40" alt="logo" />
-      <div className="flex font-raleway justify-between items-center font-semibold">
-        <span className="navbar-community py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer hidden md:inline-block">
-          Join our community
+      <Image
+        ref={navbarLogo}
+        src={Logo}
+        className="w-20 md:w-[7.5rem]"
+        alt="logo"
+      />
+      <div className="flex gap-x-12 font-outfit justify-between items-center font-regular text-xl">
+        <span className="text-black pointer-events-auto cursor-pointer hidden md:inline-block">
+          Home
+        </span>
+        <span className="text-black pointer-events-auto cursor-pointer hidden md:inline-block">
+          About
+        </span>
+        <span className="text-black pointer-events-auto cursor-pointer hidden md:inline-block">
+          Events
+        </span>
+        <span className="text-black pointer-events-auto cursor-pointer hidden md:inline-block">
+          Blog
         </span>
 
-        <span
+        {/* <span
           className="bg-black ml-0 md:ml-4 py-2 px-6 rounded-full text-white pointer-events-auto cursor-pointer"
           onClick={() => setIsNavbarOpen(true)}
         >
           <Image src={Burger} className="w-5 md:w-10" alt="logo" />
-        </span>
+        </span> */}
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ import Numbers from "./components/HomePage/Numbers";
 
 const colors = ["#FF8000", "#4E9DFF", "#A163FF"];
 
-export default function Geek() {
+export default function Home() {
   const { height, width } = useWindowSize();
   const [navbarHeight, setNavbarHeight] = useState(149);
 
@@ -57,7 +57,7 @@ export default function Geek() {
           setNavbarHeight={setNavbarHeight}
           setIsNavbarOpen={setIsNavbarOpen}
         />
-        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl">
+        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-x-hidden">
           <Hero navbarHeight={navbarHeight} />
           {/* <ScrollSection /> */}
           <Numbers />

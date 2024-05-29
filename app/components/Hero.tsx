@@ -1,76 +1,39 @@
-import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "../styles.css";
-import { calc } from "@chakra-ui/react";
-
-interface AnimatedTextProps {
-  text: string;
-  color: string;
-}
-
-const AnimatedText = (props: AnimatedTextProps) => {
-  return (
-    <motion.span
-      className={`absolute color-${props.color.substring(1)}`}
-      initial={{ scale: 0.5, y: 100, opacity: 0.5 }}
-      animate={{ scale: 1, y: 0, opacity: 1 }}
-      exit={{ y: -100, opacity: 0.2 }}
-      transition={{ duration: 0.2 }}
-    >
-      {props.text}
-    </motion.span>
-  );
-};
 
 export default function Hero({ navbarHeight }: { navbarHeight: number }) {
-  const [index, setIndex] = useState(0);
-
-  const texts = [
-    { text: "Collaboration", color: "#A163FF" },
-    { text: "Inclusivity", color: "#D07280" },
-    { text: "Innovation", color: "#FF8000" },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % 3);
-      console.log("WOHOO");
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div
       className="flex flex-col w-fit justify-center items-center h-[100vh] cc container-1440 pointer-events-none bg-white z-[10]"
       style={{
-        marginTop: `-${navbarHeight}px`,
+        height: `calc(100vh - ${navbarHeight}px)`,
         zIndex: 1000000000,
       }}
     >
-      <div className="flex flex-col items-center text-center ">
-        <div className="w-[90%] md:w-[60%] font-poppins font-semibold text-3xl md:text-6xl text-[#151515] leading-snug ">
-          <LayoutGroup>
-            A Thriving Hacker Community Encouraging{" "}
-            <span className="inline-flex justify-start align-end items-center h-16 relative overflow-hidden -mt-4 md:mt-1 ">
-              <span className="left-0 top-0 text-transparent">
-                {texts[index % 3].text}
-              </span>
-              <AnimatePresence>
-                <AnimatedText
-                  key={index}
-                  text={texts[index % 3].text}
-                  color={texts[index % 3].color}
-                />
-              </AnimatePresence>
+      <div className="flex flex-col items-start container-1200">
+        <div className="font-outfit font-medium md:text-6xl ">
+          <div className="text-[5.6rem] leading-[7.5rem] flex flex-row align-center gap-x-6">
+            <span>Empowering </span>
+            <span className="font-againstHistory text-[#A64DFF] text-[10rem]">
+              Builders
             </span>
-          </LayoutGroup>
+          </div>
+          <div className="text-[5.5rem] tracking-wide leading-[7.5rem] flex flex-row align-center gap-x-6">
+            <span>Enabling </span>
+            <span className="font-againstHistory text-[#FF9933] text-[10rem]">
+              Innovation
+            </span>
+          </div>
         </div>
 
-        <div className="w-[80%] md:w-[60%] mt-6">
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quUt enim ad minima veniam, quis
-          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al.
+        <div className="w-[80%] md:w-[55%] mt-12 text-[1.6rem] leading-tight">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor
+        </div>
+
+        <div className="text-[10rem] leading-tight text-[#0000000A] whitespace-nowrap font-bold">
+          INNOVATE FOR GOOD
         </div>
       </div>
     </div>
