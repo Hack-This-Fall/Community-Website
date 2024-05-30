@@ -53,8 +53,8 @@ export default function StickyFooter() {
 
           <div className="container-1200 flex flex-col md:flex-row justify-between items-center mt-[3rem] md:mt-[7rem] mb-[3rem]">
             <Image src={logo} alt="logo" className="w-[70%] md:w-[10rem]" />
-            <div className="flex flex-col justify-between items-center md:items-end mt-12 md:mt-0 h-full gap-y-4 w-full">
-              <div className="flex flex-row items-center w-full justify-between w-[70%] md:w-unset mx-auto">
+            <div className="flex flex-col justify-between items-center md:items-end mt-12 md:mt-0 h-full gap-y-4 w-full md:w-auto">
+              <div className="flex flex-row items-center w-full justify-between md:justify-end gap-x-auto md:gap-x-6 w-[70%] md:w-unset mx-auto">
                 <Link href={"#"}>
                   <DiscordIcon color="white" />
                 </Link>
@@ -74,7 +74,7 @@ export default function StickyFooter() {
                   <EmailIcon color="white" />
                 </Link>
               </div>
-              <div className="flex flex-row gap-x-[0.5rem] md:gap-x-[2rem] text-[0.8rem] md:text-[1rem] items-center text-center justify-between w-full">
+              <div className="flex flex-row gap-x-[0.5rem] md:gap-x-[2rem] text-[0.8rem] md:text-[1rem] items-center text-center justify-between w-full md:w-unset">
                 <Link href="/sponsorship">Sponsorship</Link>
                 <Link href={"#"}>Data Policy</Link>
                 <Link href={"#"}>Privacy Policy</Link>
