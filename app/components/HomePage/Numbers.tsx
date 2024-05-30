@@ -65,7 +65,7 @@ const numbers = [
 
 export default function Numbers() {
   useEffect(() => {
-    const letter = document.querySelectorAll(".letter");
+    const letter = document.querySelectorAll<HTMLElement>(".letter");
     const numbers = document.getElementById("numbers");
 
     const scrollFromTop = numbers?.offsetTop || 0;
@@ -86,9 +86,9 @@ export default function Numbers() {
 
       letter.forEach((l, i) => {
         if (l) {
-          if (scrolled - i > 1) l.style.opacity = 1;
-          else if (scrolled - i < 0.2) l.style.opacity = 0.2;
-          else l.style.opacity = scrolled - i;
+          if (scrolled - i > 1) l.style.opacity = "1";
+          else if (scrolled - i < 0.2) l.style.opacity = "0.2";
+          else l.style.opacity = `${scrolled - i}`;
         }
       });
     });
