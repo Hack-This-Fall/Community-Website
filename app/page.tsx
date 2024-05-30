@@ -14,6 +14,8 @@ import { useEffect, useRef, useState } from "react";
 import OpenNavbar from "./components/OpenNavbar";
 import StickyFooter from "./components/StickyFooter";
 import Numbers from "./components/HomePage/Numbers";
+import About from "./components/About";
+import WhatWeDo from "./components/WhatWeDo";
 
 const colors = ["#FF8000", "#4E9DFF", "#A163FF"];
 
@@ -59,6 +61,8 @@ export default function Home() {
         />
         <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-x-hidden">
           <Hero navbarHeight={navbarHeight} />
+          <About />
+          <WhatWeDo />
           {/* <ScrollSection /> */}
           <Numbers />
           {/* <Narratives /> */}

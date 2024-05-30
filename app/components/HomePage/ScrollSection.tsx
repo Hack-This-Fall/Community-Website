@@ -236,15 +236,6 @@ export default function ScrollSection() {
     const position = window.scrollY;
     const scrolled = position - scrollSectionRef.current?.offsetTop;
 
-    // console.log(
-    //   position,
-    //   scrollSectionRef.current?.offsetTop,
-    //   scrolled,
-    //   scrolled / height,
-    //   height,
-    //   width
-    // );
-
     let index = 0;
 
     if (scrolled >= 0) index = Math.min(Math.floor(scrolled / (height / 2)), 3);

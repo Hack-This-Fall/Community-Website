@@ -59,7 +59,7 @@ export default function Navbar({
         className="w-20 md:w-[7.5rem]"
         alt="logo"
       />
-      <div className="flex gap-x-12 font-outfit justify-between items-center font-regular text-xl">
+      <div className="flex gap-x-12 font-outfit justify-between items-center font-regular text-xl mix-blend-exclusion	">
         <span className="text-black pointer-events-auto cursor-pointer hidden md:inline-block">
           Home
         </span>
