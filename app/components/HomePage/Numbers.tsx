@@ -142,7 +142,7 @@ export default function Numbers() {
         <span className="letter">i</span>
         <span className="letter">n</span>
         <span className="letter">g</span>{" "}
-        <span className="font-againstHistory text-[#FF9933] text-[2rem]">
+        <span className="font-againstHistory text-[#FF9933] text-[2rem] md:text-[5rem]">
           <span className="letter">s</span>
           <span className="letter">n</span>
           <span className="letter">o</span>
@@ -192,7 +192,7 @@ export default function Numbers() {
         <span className="letter">g</span>
         <span className="letter">s</span>
         <span className="letter">,</span>{" "}
-        <span className="font-againstHistory text-[#9933FF] text-[2rem]">
+        <span className="font-againstHistory text-[#9933FF] text-[2rem] md:text-[5rem]">
           <span className="letter">w</span>
           <span className="letter">o</span>
           <span className="letter">r</span>
