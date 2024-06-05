@@ -56,7 +56,6 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
           lineHeight="115%"
           fontFamily="var(--font-outfit)"
           fontWeight="500"
-          maxWidth="70%"
         >
           {heading}
         </Heading>

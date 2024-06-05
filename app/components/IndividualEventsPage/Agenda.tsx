@@ -1,139 +1,162 @@
-import { Box, Flex, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  useBreakpointValue,
+  Step,
+  StepDescription,
+  Text,
+  StepIndicator,
+  StepSeparator,
+  StepStatus,
+  StepTitle,
+  Stepper,
+  useSteps,
+} from '@chakra-ui/react';
 import TimelineIcon from '@/app/components/icons/Timeline';
+import moment from 'moment';
+import { agenda } from '@/app/events/data';
+import { useEffect } from 'react';
 
 interface AgendaSectionProps {
   description: string | undefined;
-  agenda: string[][] | undefined;
+  agenda: agenda[] | undefined;
 }
 
 const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
+
+  const { activeStep, setActiveStep } = useSteps({
+    index: 1,
+    count: agenda && agenda.length,
+  });
+
+  function findCurrentEventIndex(events: agenda[]): number {
+    const now = moment();
+
+    for (let i = 0; i < events.length; i++) {
+      if (now.isBetween(events[i].startTime, events[i].endTime)) {
+        return i;
+      }
+    }
+
+    return events.length;
+  }
+
+  useEffect(() => {
+    const updateEventIndex = () => {
+      setActiveStep(findCurrentEventIndex(agenda || []));
+    };
+
+    updateEventIndex(); // Initial check
+    const intervalId = setInterval(updateEventIndex, 60000); // Check every minute
+
+    return () => clearInterval(intervalId); // Clean up interval on component unmount
+  }, []);
+
   return (
     <Flex
+      flexDir={{ base: 'column', lg: 'row' }}
       alignItems="center"
       justifyContent="center"
+      gap="3rem"
       mb="4rem"
       w="full"
-      flexDir="column"
-      display="flex"
     >
       <Heading
         fontSize="3.5rem"
-        fontFamily="var(--font-poppins)"
-        fontWeight="600"
+        mt={{ base: '0', lg: '2rem' }}
+        fontFamily="var(--font-outfit)"
+        fontWeight="500"
         color="black"
         textAlign="center"
-        lineHeight="150%"
+        alignSelf="flex-start"
       >
         Agenda
       </Heading>
-      <Text
-        mt="3rem"
-        mb="3.5rem"
-        fontSize="1.15rem"
-        fontFamily="var(--font-poppins)"
-        fontWeight="400"
-        color="black"
-        w={{ base: '90%', lg: '50%' }}
-        align="center"
-      >
-        {description}
-      </Text>
-      {!isMobile ? (
-        <Flex>
-          <Flex gap={{ base: '2rem', md: '4rem' }} flexDir="column">
-            {agenda?.map((item, index) => {
-              return (
+      <Flex w="full">
+        <Stepper w="full" index={activeStep} orientation="vertical" gap="0">
+          {(agenda || []).map((step, index) => (
+            <Step w="full" className="agenda-sep" key={index}>
+              <StepIndicator
+                sx={{
+                  '[data-status=complete] &': {
+                    background: 'transparent',
+                    borderColor: 'transparent',
+                  },
+                  '[data-status=active] &': {
+                    background: 'transparent',
+                    borderColor: 'transparent',
+                  },
+                  '[data-status=incomplete] &': {
+                    background: 'transparent',
+                    borderColor: 'transparent',
+                  },
+                }}
+              >
+                <StepStatus
+                  complete={<TimelineIcon completed />}
+                  incomplete={<TimelineIcon />}
+                  active={<TimelineIcon completed />}
+                />
+              </StepIndicator>
+              {!isMobile ? (
                 <Flex
-                  fontSize="1rem"
-                  fontFamily="var(--font-poppins)"
-                  fontWeight="500"
-                  color="black"
-                  alignItems="center"
-                  h="37px"
-                  key={index}
+                  w="full"
+                  borderBottom="1px solid #00000073"
+                  gap="6rem"
+                  ml="3rem"
+                  mb="4rem"
+                  pb="2rem"
                 >
-                  {item[0]}
+                  <Text
+                    fontSize="1.2rem"
+                    fontWeight="500"
+                    fontFamily="var(--font-outfit)"
+                  >
+                    {step.startTime.format('LT')} to {step.endTime.format('LT')}
+                  </Text>
+                  <Text
+                    fontSize="1.2rem"
+                    fontWeight="500"
+                    fontFamily="var(--font-outfit)"
+                  >
+                    {step.title}
+                  </Text>
                 </Flex>
-              );
-            })}
-          </Flex>
-          <Flex
-            gap={{ base: '2rem', md: '4rem' }}
-            mx={{ base: '2rem', md: '4rem' }}
-            position="relative"
-            flexDir="column"
-          >
-            {agenda?.map((_, index) => {
-              return <TimelineIcon key={index} />;
-            })}
-            <Box
-              left="50%"
-              transform="translate(-50%, 0)"
-              position="absolute"
-              borderLeft="2px solid #CDCDCD"
-              h="full"
-              zIndex="-1"
-            />
-          </Flex>
-          <Flex gap={{ base: '2rem', md: '4rem' }} flexDir="column">
-            {agenda?.map((item, index) => {
-              return (
+              ) : (
                 <Flex
-                  fontSize="1rem"
-                  fontFamily="var(--font-poppins)"
-                  fontWeight="500"
-                  color="black"
-                  alignItems="center"
-                  h="37px"
-                  key={index}
+                  w="full"
+                  flexDir="column"
+                  borderBottom="1px solid #00000073"
+                  ml="2rem"
+                  mb="3rem"
+                  gap="0.2rem"
+                  pb="1.5rem"
                 >
-                  {item[1]}
+                  <Text
+                    fontSize="1.3rem"
+                    fontWeight="500"
+                    fontFamily="var(--font-outfit)"
+                  >
+                    {step.title}
+                  </Text>
+                  <Text
+                    fontSize="1.2rem"
+                    fontWeight="500"
+                    fontFamily="var(--font-outfit)"
+                    color="#3D3D3D"
+                  >
+                    {step.startTime.format('LT')} to {step.endTime.format('LT')}
+                  </Text>
                 </Flex>
-              );
-            })}
-          </Flex>
-        </Flex>
-      ) : (
-        <Flex gap='2rem' w='full' justifyContent='center'>
-          <Flex
-            gap={{ base: '2rem', md: '4rem' }}
-            position="relative"
-            flexDir="column"
-          >
-            {agenda?.map((_, index) => {
-              return <TimelineIcon key={index} />;
-            })}
-            <Box
-              left="50%"
-              transform="translate(-50%, 0)"
-              position="absolute"
-              borderLeft="2px solid #CDCDCD"
-              h="full"
-              zIndex="-1"
-            />
-          </Flex>
-          <Flex gap={{ base: '2rem', md: '4rem' }} flexDir="column">
-            {agenda?.map((item, index) => {
-              return (
-                <Flex
-                  fontSize="1rem"
-                  fontFamily="var(--font-poppins)"
-                  fontWeight="500"
-                  color="black"
-                  alignItems="center"
-                  h="37px"
-                  key={index}
-                >
-                  {item[0]}
-                  <br />
-                  {item[1]}
-                </Flex>
-              );
-            })}
-          </Flex>
-        </Flex>
-      )}
+              )}
+
+              <StepSeparator />
+            </Step>
+          ))}
+        </Stepper>
+      </Flex>
     </Flex>
   );
 };

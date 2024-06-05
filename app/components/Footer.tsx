@@ -155,13 +155,13 @@ const Footer = ({ bg, paddingX }: { bg?: string; paddingX?: any }) => {
                 alignItems={{ base: 'center', md: 'flex-start' }}
                 key={index}
               >
-                <Text fontFamily="var(--font-dmsans)" fontWeight="600">
+                <Text fontFamily="var(--font-outfit)" fontWeight="600">
                   {key}
                 </Text>
                 {footerData[key].map((item, index) => (
                   <Link
                     as={NextLink}
-                    fontFamily="var(--font-dmsans)"
+                    fontFamily="var(--font-outfit)"
                     isExternal={!!item.isExternal}
                     href={item.link}
                     key={index}
@@ -183,7 +183,7 @@ const Footer = ({ bg, paddingX }: { bg?: string; paddingX?: any }) => {
             flexDir="column"
             alignItems={{ base: 'center', md: 'flex-start' }}
           >
-            <Text fontWeight="600" fontFamily="var(--font-dmsans)">
+            <Text fontWeight="600" fontFamily="var(--font-outfit)">
               Stay updated about events
             </Text>
             <Input
@@ -218,11 +218,11 @@ const Footer = ({ bg, paddingX }: { bg?: string; paddingX?: any }) => {
           gap="2rem"
         >
           <Flex gap="1rem" alignItems="center">
-            <Link fontFamily="var(--font-dmsans)" href="/">
+            <Link fontFamily="var(--font-outfit)" href="/">
               Privacy Policy
             </Link>
             <StarIcon />
-            <Link fontFamily="var(--font-dmsans)">Data Policy</Link>
+            <Link fontFamily="var(--font-outfit)">Data Policy</Link>
           </Flex>
           <Flex gap={{ base: '0.5rem', sm: '1rem' }}>
             {Socials.map((item, index) => (

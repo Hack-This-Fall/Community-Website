@@ -80,7 +80,7 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
         <path
           d="M1 13L7 7L1 1"
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -156,7 +156,7 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
           <path
             d="M1 13L7 7L1 1"
             stroke="black"
-            stroke-width="2"
+            strokeWidth="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />

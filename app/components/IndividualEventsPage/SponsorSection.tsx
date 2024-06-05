@@ -81,8 +81,8 @@ const SponsorSection = () => {
     <Flex w="full" alignItems="center" justifyContent="center" flexDir="column">
       <Heading
         fontSize={{ base: '2.5rem', md: '3.5rem' }}
-        fontFamily="var(--font-poppins)"
-        fontWeight="700"
+        fontFamily="var(--font-outfit)"
+        fontWeight="500"
         color="black"
         textAlign="center"
         lineHeight="150%"

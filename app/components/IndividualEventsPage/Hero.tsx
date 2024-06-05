@@ -1,9 +1,18 @@
-import { Button, Flex, Heading, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Box,
+  IconButton,
+} from '@chakra-ui/react';
 import CalIcon from '../icons/Cal';
 import StarIcon from '../icons/Star';
 import ClockIcon from '../icons/Clock';
 import LocationIcon from '../icons/Location';
 import ScrollIcon from '../icons/Scroll';
+import AngleArrow from '../icons/AngleArrow';
 
 interface HeroSectionProps {
   startTimestamp: moment.Moment | undefined;
@@ -11,6 +20,7 @@ interface HeroSectionProps {
   heading: string | undefined;
   location: string | undefined;
   description: string | undefined;
+  eventMode: string | undefined;
 }
 
 const HeroSection = ({
@@ -19,80 +29,119 @@ const HeroSection = ({
   heading,
   location,
   description,
+  eventMode,
 }: HeroSectionProps) => {
   return (
-    <Flex
-      w={{ base: '100%', md: '90%', xl: '60%' }}
-      flexDir="column"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Heading
-        fontSize={{ base: '3rem', md: '4.2rem' }}
-        fontFamily="var(--font-poppins)"
-        fontWeight="700"
-        color="black"
-        textAlign="center"
-        lineHeight="150%"
-      >
-        Hack This Fall Chandigarh City Meetup
-      </Heading>
+    <Flex w="full" flexDir="column" alignItems="center" justifyContent="center">
       <Flex
-        flexDir={{ base: 'column', md: 'row' }}
-        alignItems="center"
-        justifyContent="center"
-        my="2rem"
-        gap="0.5rem"
+        flexDir={{ base: 'column-reverse', lg: 'row' }}
+        mb={{base: "4rem", lg: "3rem"}}
+        pt="2rem"
+        gap="2rem"
       >
-        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
-          <CalIcon />
-          <Text>{startTimestamp?.format('Do MMMM,YYYY')}</Text>
+        <Flex flexDir="column">
+          <Box
+            p="0.3rem 0.7rem"
+            borderRadius="10px"
+            border={`1px solid #DC6E04`}
+            bgColor="#FFCC9B"
+            fontFamily="var(--font-outfit)"
+            fontSize="1rem"
+            fontWeight="700"
+            color="#DC6E04"
+            w="fit-content"
+          >
+            {eventMode}
+          </Box>
+          <Heading
+            fontSize={{ base: '3rem', lg: '4.5rem' }}
+            fontFamily="var(--font-outfit)"
+            fontWeight="500"
+          >
+            {heading}
+          </Heading>
+          <Flex
+            flexDir="row"
+            gap="1rem"
+            mt={{ base: '1rem', lg: '1.5srem' }}
+            w="full"
+            h="-webkit-fit-content"
+          >
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
+            >
+              {endTimestamp && startTimestamp
+                ? `${startTimestamp
+                    .format('MMM DD')
+                    .toUpperCase()} - ${endTimestamp
+                    .format('MMM DD, YYYY')
+                    .toUpperCase()}`
+                : startTimestamp
+                ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
+                : ''}
+            </Box>
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
+            >
+              {location}
+            </Box>
+          </Flex>
+          <Flex
+            alignItems="center"
+            gap="0.7rem"
+            mt={{ base: '1rem', lg: '2rem' }}
+          >
+            <Button
+              px="2rem"
+              w="fit-content"
+              borderRadius="1.875rem"
+              backgroundColor="#B281FE !important"
+              color="white"
+              display="inline-flex"
+              height="3.2rem"
+              justifyContent="center"
+              alignItems="center"
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{
+                background: '#B281FE',
+                color: 'white',
+              }}
+            >
+              Explore Now
+            </Button>
+            <IconButton
+              height="3.2rem"
+              aspectRatio="1"
+              borderRadius="full"
+              backgroundColor="#B281FE !important"
+              aria-label="Event page"
+              icon={<AngleArrow />}
+            />
+          </Flex>
         </Flex>
-        <StarIcon />
-        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
-          <ClockIcon />
-          <Text>
-            {`${startTimestamp?.format('H:mm A')} to
-                ${endTimestamp?.format('H:mm A')}`}
-          </Text>
-        </Flex>
-        <StarIcon />
-        <Flex alignItems="center" justifyContent="center" gap="0.5rem">
-          <LocationIcon />
-          <Text>Venue: {location}</Text>
-        </Flex>
+        <Image
+          w={{ base: 'full', lg: '70%' }}
+          src="/images/events/city-meetup-hero.png"
+          alt="city meetup"
+        />
       </Flex>
-      <Text
-        fontSize="1.15rem"
-        fontFamily="var(--font-poppins)"
-        fontWeight="400"
-        color="black"
-        w={{ base: '90%', md: '70%', xl: '90%' }}
-        align="center"
-      >
-        {description}
-      </Text>
-      <Button
-        my="2rem"
-        px="2rem"
-        w="fit-content"
-        borderRadius="1.875rem"
-        backgroundColor="#B281FE !important"
-        color="white"
-        display="inline-flex"
-        height="3.2rem"
-        justifyContent="center"
-        alignItems="center"
-        fontSize="1.1rem"
-        fontWeight="700"
-        _hover={{
-          background: '#B281FE',
-          color: 'white',
-        }}
-      >
-        Register for the event
-      </Button>
-      <ScrollIcon />
     </Flex>
   );
 };
