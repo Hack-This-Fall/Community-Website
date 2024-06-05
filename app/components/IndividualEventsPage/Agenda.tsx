@@ -77,7 +77,7 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
       <Flex w="full">
         <Stepper w="full" index={activeStep} orientation="vertical" gap="0">
           {(agenda || []).map((step, index) => (
-            <Step w="full" className="agenda-sep" key={index}>
+            <Step className="agenda-sep w-full" key={index}>
               <StepIndicator
                 sx={{
                   '[data-status=complete] &': {
