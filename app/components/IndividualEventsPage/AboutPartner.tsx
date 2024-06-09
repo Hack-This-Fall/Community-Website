@@ -19,9 +19,9 @@ const AboutPartnerSection = ({ partnerDescription, partnerLogo, partnerName }: A
       <Image src={partnerLogo} alt="buildwith" />
       <Flex flexDir="column" maxW={{base: "full", lg:"45%"}}>
         <Heading
-          fontSize={{ base: '2rem', lg: '3.5rem' }}
+          fontSize={{ base: '2.5rem', lg: '3.5rem' }}
           fontFamily="var(--font-outfit)"
-          fontWeight="600"
+          fontWeight="500"
           w="fit-content"
           color="black"
           textAlign="center"

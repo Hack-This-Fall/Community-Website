@@ -1,7 +1,6 @@
 'use client';
 
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import {
   Box,
   Flex,
@@ -102,52 +101,53 @@ const EventsPage = () => {
                   );
                 })}
               </Flex>
-              <Flex flexDir="column" mt="2rem">
-                <Heading
-                  fontSize={{ base: '2rem', md: '3rem' }}
-                  fontFamily="var(--font-outfit)"
-                  fontWeight="400"
-                  mb="2rem"
-                >
-                  Upcoming
-                </Heading>
-                <SimpleGrid
-                  columns={{
-                    base: 1,
-                    md: 2,
-                    lg: 2,
-                    '2xl': 3,
-                  }}
-                  columnGap="1rem"
-                  rowGap="1rem"
-                >
-                  {eventsData.events
-                    .filter(
-                      (data) =>
-                        moment().diff(data.startTimestamp) < 0 &&
-                        eventsData.tabs[currentTab].filterFunction(data),
-                    )
-                    .map((event, index) => (
-                      <EventContainer eventData={event} key={index} />
-                    ))}
-                </SimpleGrid>
-              </Flex>
+              {eventsData.events.filter(
+                (data) =>
+                  moment().diff(data.startTimestamp) < 0 &&
+                  eventsData.tabs[currentTab].filterFunction(data),
+              ).length > 0 && (
+                <Flex flexDir="column" mt="2rem">
+                  <Heading
+                    fontSize={{ base: '1.8rem', md: '2.8rem' }}
+                    fontFamily="var(--font-outfit)"
+                    fontWeight="400"
+                    mb="2rem"
+                  >
+                    Upcoming
+                  </Heading>
+                  <SimpleGrid
+                    columns={{
+                      base: 1,
+                      md: 2,
+                      lg: 2,
+                      '2xl': 3,
+                    }}
+                    columnGap="1rem"
+                    rowGap="1rem"
+                  >
+                    {eventsData.events
+                      .filter(
+                        (data) =>
+                          moment().diff(data.startTimestamp) < 0 &&
+                          eventsData.tabs[currentTab].filterFunction(data),
+                      )
+                      .map((event, index) => (
+                        <EventContainer eventData={event} key={index} />
+                      ))}
+                  </SimpleGrid>
+                </Flex>
+              )}
               <Flex flexDir="column" mt="2rem">
                 <Flex w="full" justifyContent="space-between">
                   <Heading
-                    fontSize={{ base: '2rem', md: '3rem' }}
+                    fontSize={{ base: '1.8rem', md: '2.8rem' }}
                     fontFamily="var(--font-outfit)"
                     fontWeight="400"
                   >
                     Past
                   </Heading>
                 </Flex>
-                <SimpleGrid
-                  mt="3rem"
-                  columns={1}
-                  columnGap="1rem"
-                  rowGap="1rem"
-                >
+                <Flex mt="1rem" w="full" flexDir="column">
                   {eventsData.events
                     .filter(
                       (data) =>
@@ -157,7 +157,7 @@ const EventsPage = () => {
                     .map((event, index) => (
                       <PastEventContainer eventData={event} key={index} />
                     ))}
-                </SimpleGrid>
+                </Flex>
               </Flex>
             </Box>
           </Box>

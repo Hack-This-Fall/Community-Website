@@ -48,7 +48,7 @@ const WorkshopSection = () => {
       >
         Workshops
       </Heading>
-      <Wrap mb="4rem" mt="2rem" justify="center" spacing="1.5rem">
+      <Wrap mb="4rem" mt="2rem" justify="flex-start" spacing="1.5rem">
         {data.map((item, index) => {
           return (
             <WrapItem

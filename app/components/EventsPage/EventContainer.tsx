@@ -52,7 +52,7 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
       </Flex>
       <Flex pt="1.25rem" flexDir="column">
         <Heading
-          fontSize={{ base: '2rem', md: '2.5rem', lg: '3rem' }}
+          fontSize={{ base: '1.8rem', md: '2rem', lg: '2.5rem' }}
           lineHeight="115%"
           fontFamily="var(--font-outfit)"
           fontWeight="500"

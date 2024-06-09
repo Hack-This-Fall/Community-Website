@@ -47,7 +47,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
   const [currentSection, setCurrentSection] = useState('Overview');
   const router = useRouter();
   const eventId = params.id;
-  const eventData = eventsData.events.find((event) => event.id === eventId);
+  const eventData = eventsData.events.find((event) => event.id === eventId && event.individualPageActive);
   if (!eventData) {
     router.replace('/404');
   }
@@ -159,7 +159,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                             .querySelector(`#${section.id}`)!
                             .scrollIntoView({
                               behavior: 'smooth',
-                              block: 'end',
+                              block: 'center',
                               inline: 'nearest',
                             });
                         }}
@@ -174,7 +174,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 style={{ width: '100%' }}
                 id="Overview"
                 as="div"
-                threshold={0.5}
+                threshold={0.7}
                 onChange={(inView, entry) =>
                   inView && setCurrentSection('Overview')
                 }
@@ -185,7 +185,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 id="AboutPartner"
                 style={{ width: '100%' }}
                 as="div"
-                threshold={0.5}
+                threshold={1}
                 onChange={(inView, entry) =>
                   inView && setCurrentSection('AboutPartner')
                 }
@@ -200,7 +200,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 id="Agenda"
                 style={{ width: '100%' }}
                 as="div"
-                threshold={0.5}
+                threshold={0.7}
                 onChange={(inView, entry) =>
                   inView && setCurrentSection('Agenda')
                 }
@@ -211,7 +211,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 id="Workshops"
                 style={{ width: '100%' }}
                 as="div"
-                threshold={0.5}
+                threshold={0.8}
                 onChange={(inView, entry) =>
                   inView && setCurrentSection('Workshops')
                 }
