@@ -131,6 +131,9 @@ const EventsPage = () => {
                           moment().diff(data.startTimestamp) < 0 &&
                           eventsData.tabs[currentTab].filterFunction(data),
                       )
+                      .sort((a, b) =>
+                        a.startTimestamp.diff(b.startTimestamp) > 0 ? 1 : -1,
+                      )
                       .map((event, index) => (
                         <EventContainer eventData={event} key={index} />
                       ))}
@@ -153,6 +156,9 @@ const EventsPage = () => {
                       (data) =>
                         moment().diff(data.startTimestamp) > 0 &&
                         eventsData.tabs[currentTab].filterFunction(data),
+                    )
+                    .sort((a, b) =>
+                      a.startTimestamp.diff(b.startTimestamp) < 0 ? 1 : -1,
                     )
                     .map((event, index) => (
                       <PastEventContainer eventData={event} key={index} />
