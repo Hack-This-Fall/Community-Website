@@ -143,6 +143,7 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
             fontWeight="700"
             color="#DC6E04"
             mr="2rem"
+            textTransform="uppercase"
           >
             {eventMode}
           </Box>
