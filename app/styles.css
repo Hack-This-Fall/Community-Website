@@ -127,16 +127,6 @@
   );
 }
 
-.text-w-outline {
-  color: black;
-  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff,
-    1px -1px 0 #fff;
-}
-
-footer {
-  z-index: -100;
-}
-
 .grids:before {
   border-right: 1px solid #fff;
   content: "";

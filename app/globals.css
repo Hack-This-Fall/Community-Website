@@ -66,7 +66,16 @@ body {
   opacity: 0.2;
 }
 
-
 .agenda-sep[data-status="complete"] .chakra-step__separator {
   background-color: #a163ff;
+}
+
+.text-w-outline {
+  color: black;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff,
+    1px -1px 0 #fff;
+}
+
+footer {
+  z-index: -100;
 }

@@ -12,9 +12,14 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
     const handleScroll = () => {
       let scroll = window.scrollY;
       const heightToKickOut = window.innerHeight / 2;
+      const windowWidth = window.innerWidth;
 
       if (joinBtn) {
-        joinBtn.style.right = `${10 - (scroll / heightToKickOut) * 30}%`;
+        if (windowWidth < 600) {
+          joinBtn.style.right = `${10 - (scroll / heightToKickOut) * 30}%`;
+        } else {
+          joinBtn.style.right = `${0 - (scroll / heightToKickOut) * 30}%`;
+        }
         joinBtn.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
       }
 
