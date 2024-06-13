@@ -1,5 +1,5 @@
 import { Flex, Heading, Box, useBreakpointValue, Link } from '@chakra-ui/react';
-import { eventData } from '@/app/events/data';
+import { eventData, colorsMap } from '@/app/events/data';
 
 const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
   const isMobile = useBreakpointValue({
@@ -12,12 +12,13 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
     heading,
     startTimestamp,
     endTimestamp,
-    color,
-    secondaryColor,
     type,
     eventMode,
     link,
   } = eventData;
+
+  const { color, secondaryColor } = colorsMap[type];
+
   return isMobile ? (
     <Flex
       borderBottom="1px solid #00000033"

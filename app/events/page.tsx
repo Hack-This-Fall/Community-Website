@@ -49,7 +49,10 @@ const EventsPage = () => {
 
   return (
     <Box className="relative">
-      <Box zIndex="100" className="relative w-full bg-white top-0 left-0">
+      <Box
+        zIndex="100"
+        className="relative w-full bg-white top-0 left-0 rounded-b-3xl"
+      >
         <Box
           className="relative container-1200 bg-white"
           px={{ base: '2rem', '2xl': '0' }}

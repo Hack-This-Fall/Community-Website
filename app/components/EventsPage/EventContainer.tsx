@@ -1,5 +1,5 @@
 import { Flex, Image, Heading, Box, Text } from '@chakra-ui/react';
-import { eventData } from '@/app/events/data';
+import { colorsMap, eventData } from '@/app/events/data';
 import AngleArrow from '../icons/AngleArrow';
 
 const EventContainer = ({ eventData }: { eventData: eventData }) => {
@@ -8,11 +8,12 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
     startTimestamp,
     location,
     endTimestamp,
-    color,
-    secondaryColor,
     type,
     eventMode,
   } = eventData;
+
+  const { color, secondaryColor } = colorsMap[type];
+
   return (
     <Flex
       border="1px solid #00000033"
