@@ -132,7 +132,7 @@ const EventsPage = () => {
                 mb="1rem"
                 mt="2rem"
               >
-                Expected Behaviour
+                Expected Behavior
               </Heading>
               <Text
                 fontSize="1.3rem"
@@ -177,7 +177,7 @@ const EventsPage = () => {
                 mb="1rem"
                 mt="2rem"
               >
-                Unacceptable Behaviour
+                Unacceptable Behavior
               </Heading>
               <Text
                 fontSize="1.3rem"
@@ -253,7 +253,7 @@ const EventsPage = () => {
                 mb="1rem"
                 mt="2rem"
               >
-                Consequences of Unacceptable Behaviour
+                Consequences of Unacceptable Behavior
               </Heading>
               <Text
                 fontSize="1.3rem"

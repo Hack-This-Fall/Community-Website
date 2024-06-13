@@ -8,14 +8,8 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
     md: true,
     xl: false,
   });
-  const {
-    heading,
-    startTimestamp,
-    endTimestamp,
-    type,
-    eventMode,
-    link,
-  } = eventData;
+  const { heading, startTimestamp, endTimestamp, type, eventMode, link } =
+    eventData;
 
   const { color, secondaryColor } = colorsMap[type];
 
@@ -103,6 +97,8 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
             fontSize="1rem"
             fontWeight="700"
             color={color}
+            minW="160px"
+            textAlign="center"
           >
             {type}
           </Box>
@@ -115,25 +111,43 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
           </Heading>
         </Flex>
         <Flex gap="1rem" alignItems="center">
-          <Box
-            p="0.3rem 0.7rem"
-            borderRadius="10px"
-            border="1px solid #00000033"
-            bgColor="transparent"
-            fontFamily="var(--font-outfit)"
-            fontSize="1rem"
-            fontWeight="700"
-            color="#000000B2"
-            w="-webkit-fit-content"
-          >
-            {endTimestamp
-              ? `${startTimestamp
-                  .format('MMM DD')
-                  .toUpperCase()} - ${endTimestamp
-                  .format('MMM DD, YYYY')
-                  .toUpperCase()}`
-              : startTimestamp.format('MMM DD, YYYY').toUpperCase()}
-          </Box>
+          {endTimestamp ? (
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize="1rem"
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
+              minW="190px"
+              textAlign="center"
+            >
+              {`${startTimestamp
+                .format('MMM DD')
+                .toUpperCase()} - ${endTimestamp
+                .format('MMM DD, YYYY')
+                .toUpperCase()}`}
+            </Box>
+          ) : (
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize="1rem"
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
+              minW="130px"
+              textAlign="center"
+            >
+              {startTimestamp.format('MMM DD, YYYY').toUpperCase()}
+            </Box>
+          )}
           <Box
             p="0.3rem 0.7rem"
             borderRadius="10px"
@@ -144,7 +158,9 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
             fontWeight="700"
             color="#DC6E04"
             mr="2rem"
+            minW="110px"
             textTransform="uppercase"
+            textAlign="center"
           >
             {eventMode}
           </Box>
