@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { Image } from '@chakra-ui/react';
 
 const sponsors = [
   {
@@ -89,15 +89,14 @@ export default function Sponsors() {
       <div className="font-outfit font-semibold text-[2.2rem] md:text-[3.9rem] text-black">
         Partners in doing good
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-2 md:gap-x-4 md:gap-y-4 mt-8 container-1200 mx-auto mb-24">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-2 md:gap-x-4 md:gap-y-4 mt-8 container-1200 mx-auto">
         {sponsors.map((s, i) => (
-          <a href={s.linkTo} className="border p-2 md:p-4 rounded-xl flex justify-center items-center cursor-pointer" key={i}>
-            <Image
-              objectFit="cover"
-              maxH="70%"
-              src={s.image}
-              alt="Community"
-            />
+          <a
+            href={s.linkTo}
+            className="border p-2 md:p-4 rounded-xl flex justify-center items-center cursor-pointer h-[70px] md:h-[100px] lg:h-[120px]"
+            key={i}
+          >
+            <Image maxH="60%" src={s.image} alt="Community" />
           </a>
         ))}
       </div>

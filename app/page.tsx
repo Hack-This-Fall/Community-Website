@@ -59,7 +59,7 @@ export default function Home() {
           setNavbarHeight={setNavbarHeight}
           setIsNavbarOpen={setIsNavbarOpen}
         />
-        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-x-hidden pointer-events-auto">
+        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-hidden pointer-events-auto pb-24">
           <Hero navbarHeight={navbarHeight} />
           <About />
           <WhatWeDo />
