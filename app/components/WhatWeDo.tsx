@@ -34,7 +34,7 @@ export default function WhatWeDo() {
               <span className="text-lg bg-white px-10 py-3 rounded-full flex align-center justify-center">
                 Explore Now
               </span>
-              <span className="flex bg-white rounded-full h-parent px-5">
+              <span className="flex bg-white rounded-full h-parent px-5 align-center justify-center">
                 <Image src={btnArrow} alt="Arrow" />
               </span>
             </a>
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
               <span className="text-lg bg-white px-10 py-3 rounded-full flex align-center justify-center">
                 Explore Now
               </span>
-              <span className="flex bg-white rounded-full h-parent px-5">
+              <span className="flex bg-white rounded-full h-parent px-5 align-center justify-center">
                 <Image src={btnArrow} alt="Arrow" />
               </span>
             </a>

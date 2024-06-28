@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import debounce from 'debounce';
 
 const numbers = [
   {
@@ -77,7 +78,7 @@ export default function Numbers() {
       (numbers?.offsetHeight || 0) / (windowWidth < 640 ? 2 : 2);
     const numberOfPixelsForAnimation = 300;
 
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', debounce((e) => {
       let scroll = window.scrollY;
 
       let scrolled =
@@ -91,7 +92,7 @@ export default function Numbers() {
           else l.style.opacity = `${scrolled - i}`;
         }
       });
-    });
+    }, 10));
   }, []);
   return (
     <div
