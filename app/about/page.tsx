@@ -47,36 +47,36 @@ const values = [
 
 const team = [
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/apoorv.jpg',
+    name: 'Apoorv Dwivedi',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/dennis.jpeg',
+    name: 'Dennis D\'mello',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/paras.jpeg',
+    name: 'Paras Gupta',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/rohan.jpg',
+    name: 'Rohan Kambli',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/sahilsen.webp',
+    name: 'Sahil Sen',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/shitiz.jpg',
+    name: 'Shitiz Aggarwal',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/siddharth.jpg',
+    name: 'Siddharth Dayalwal',
   },
   {
-    image: '/images/about/team1.png',
-    name: 'Name Surname',
+    image: '/images/team/vaibhav.jpeg',
+    name: 'Vaibhav Toshniwal',
   },
 ];
 
@@ -362,7 +362,7 @@ const EventsPage = () => {
             </Heading>
             <Grid
               templateColumns={{
-                base: 'repeat(1, 1fr)',
+                base: 'repeat(2, 1fr)',
                 md: 'repeat(2, 1fr)',
                 lg: 'repeat(3, 1fr)',
                 xl: 'repeat(4, 1fr)',
@@ -376,7 +376,7 @@ const EventsPage = () => {
                   flexDir="column"
                   gap="1.5rem"
                 >
-                  <Image src={member.image} alt={member.name} />
+                  <Image objectFit="cover" borderRadius="1rem" src={member.image} alt={member.name} />
                   <Heading
                     fontSize="1.5rem"
                     mt="-10px"
