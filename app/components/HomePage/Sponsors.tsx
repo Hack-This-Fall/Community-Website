@@ -1,66 +1,85 @@
-import Image from "next/image";
-import Logo from "../../assets/images/logo.svg";
+import { Image } from "@chakra-ui/react";
 
 const sponsors = [
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://appwrite.io',
+    image: '/images/partners/appwrite.svg',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://github.com',
+    image: '/images/partners/github.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://devlibrary.withgoogle.com',
+    image: '/images/partners/googleDev.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.linode.com',
+    image: '/images/partners/linode.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.logitech.com',
+    image: '/images/partners/logitech.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://azure.microsoft.com',
+    image: '/images/partners/azure.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://mlh.io',
+    image: '/images/partners/mlh.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.mongodb.com',
+    image: '/images/partners/mongodb.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.neurelo.com',
+    image: '/images/partners/neurelo.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://orkes.io',
+    image: '/images/partners/orkes.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://peerlist.io',
+    image: '/images/partners/peerlist.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://polygon.technology',
+    image: '/images/partners/polygon.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.postman.com',
+    image: '/images/partners/postman.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://www.quicknode.com',
+    image: '/images/partners/quicknode.png',
   },
   {
-    linkTo: "/#",
-    image: Logo,
+    linkTo: 'https://replit.com',
+    image: '/images/partners/replit.png',
+  },
+  {
+    linkTo: 'https://solana.com',
+    image: '/images/partners/solana.png',
+  },
+  {
+    linkTo: 'https://www.storyblok.com',
+    image: '/images/partners/storyblok.png',
+  },
+  {
+    linkTo: 'https://www.twilio.com',
+    image: '/images/partners/twilio.png',
+  },
+  {
+    linkTo: 'https://www.getunleash.io',
+    image: '/images/partners/unleash.png',
+  },
+  {
+    linkTo: 'https://www.vonage.com',
+    image: '/images/partners/vonage.png',
   },
 ];
 
@@ -72,13 +91,14 @@ export default function Sponsors() {
       </div>
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-2 md:gap-x-4 md:gap-y-4 mt-8 container-1200 mx-auto mb-24">
         {sponsors.map((s, i) => (
-          <div className="border p-2 md:p-4 rounded-xl" key={i}>
+          <a href={s.linkTo} className="border p-2 md:p-4 rounded-xl flex justify-center items-center cursor-pointer" key={i}>
             <Image
+              objectFit="cover"
+              maxH="70%"
               src={s.image}
               alt="Community"
-              className=" object-cover rounded-l-2xl"
             />
-          </div>
+          </a>
         ))}
       </div>
     </div>

@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import "../styles.css";
-import Image from "next/image";
-import btnTxt from "@/app/assets/images/button-text.svg";
-import btnArrow from "@/app/assets/images/arrow-up-right.png";
+import { useEffect, useState } from 'react';
+import '../styles.css';
+import Image from 'next/image';
+import btnTxt from '@/app/assets/images/button-text.svg';
+import btnArrow from '@/app/assets/images/arrow-up-right.png';
 
 export default function Hero({ navbarHeight }: { navbarHeight: number }) {
   useEffect(() => {
-    const joinBtn = document.getElementById("join-btn");
-    const bannerText = document.getElementById("banner-text");
+    const joinBtn = document.getElementById('join-btn');
+    const bannerText = document.getElementById('banner-text');
 
     const handleScroll = () => {
       let scroll = window.scrollY;
@@ -20,7 +20,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
         } else {
           joinBtn.style.right = `${0 - (scroll / heightToKickOut) * 30}%`;
         }
-        joinBtn.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
+        joinBtn.style.transform = 'rotate(' + window.pageYOffset / 2 + 'deg)';
       }
 
       if (bannerText) {
@@ -28,16 +28,16 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, true);
+    window.addEventListener('scroll', handleScroll, true);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll, true);
+      window.removeEventListener('scroll', handleScroll, true);
     };
   }, []);
 
   return (
     <div
-      className="flex flex-col w-fit justify-center items-center cc container-1440 pointer-events-none bg-white z-[10]"
+      className="flex flex-col w-fit justify-center items-center cc container-1440 bg-white z-[10]"
       style={{
         maxHeight: `calc(100vh - ${navbarHeight}px)`,
         height: `calc(100vh - ${navbarHeight}px)`,
@@ -46,7 +46,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
     >
       <div
         className="font-outfit flex flex-col items-start container-1200 w-full relative h-full md:h-auto justify-between"
-        style={{ maxWidth: "min(100vw, 1200px)" }}
+        style={{ maxWidth: 'min(100vw, 1200px)' }}
       >
         <div className="font-outfit font-medium md:text-6xl w-full">
           <div className="text-[3rem] md:text-[5.5rem] leading-[5rem] md:leading-[7.5rem] flex flex-col md:flex-row items-center gap-x-6">
@@ -63,10 +63,11 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           </div>
         </div>
 
-        <div className="w-[80%] md:w-[58%] mt-12 text-[1.6rem] leading-tight hidden md:block">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor
+        <div className="w-[80%] md:w-[58%] mt-12 text-[1.6rem] leading-tight md:block mt-[-2rem] md:mt-0">
+          Welcome to Hack This Fall! Join one of India&apos;s most thriving
+          hacker communities to build groundbreaking solutions, inspire
+          problem-solvers, and grow together in a diverse, supportive
+          environment.
         </div>
 
         <div
@@ -76,15 +77,17 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           INNOVATE FOR GOOD
         </div>
 
-        <div
+        <a
+          href="https://discord.hackthisfall.tech"
+          target="_blank"
           id="join-btn"
-          className="absolute bg-[#FF9933] rounded-full w-[12rem] h-[12rem] md:w-[16rem] md:h-[16rem] right-[10%] bottom-[10%] md:right-0 md:bottom-0 z-20 p-3 cursor-pointer pointer-events-auto"
+          className="absolute bg-[#FF9933] rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] right-[10%] bottom-[10%] md:right-0 md:bottom-0 z-20 p-3 cursor-pointer pointer-events-auto"
         >
           <div className="relative w-full h-full">
             <Image
               src={btnTxt}
               alt="Join the community"
-              className="w-full h-full hidden md:block"
+              className="w-full h-full md:block"
             />
             <Image
               src={btnArrow}
@@ -92,7 +95,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
               className="absolute w-full h-full z-30 top-0"
             />
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

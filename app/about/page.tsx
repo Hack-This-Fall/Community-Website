@@ -293,17 +293,21 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            mb={{ base: '4rem', md: '4rem', lg: '4rem' }}
             flexDir={{ base: 'column', lg: 'row' }}
             gap="4rem"
           >
-            <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
-              fontFamily="var(--font-outfit)"
-              fontWeight="500"
-            >
-              Our Values
-            </Heading>
+            <Flex flexDir="column" minH={{base: "unset", lg: "56rem"}} pos="relative">
+              <Heading
+                pos={{base: "unset", lg:"sticky"}}
+                top="10px"
+                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontFamily="var(--font-outfit)"
+                fontWeight="500"
+              >
+                Our Values
+              </Heading>
+            </Flex>
             <Grid
               templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
               gap="1.5rem"

@@ -51,7 +51,7 @@ export default function Navbar({
   return (
     <div
       ref={ref}
-      className={`flex justify-between items-center py-4 md:py-8 z-50 block w-full absolute top-0 md:top-0 pointer-events-none sticky container-1200`}
+      className={`flex justify-between items-center py-4 md:py-8 z-50 block w-full absolute top-0 md:top-0 sticky container-1200`}
     >
       <Image
         ref={navbarLogo}
