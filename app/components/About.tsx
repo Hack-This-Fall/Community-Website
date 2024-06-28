@@ -62,7 +62,7 @@ export default function About() {
           <div className="text-[2rem] md:text-[6.6rem] leading-[7.5rem] tracking-wide flex flex-row align-center font-semibold">
             <span>We are not just a</span>
           </div>
-          <div className="tracking-wide leading-[0rem] md:leading-[7.5rem] flex flex-row align-center self-end pr-2 md:pr-36 mt-2 md:mt-8 ">
+          <div className="tracking-wide leading-[0rem] md:leading-[7.5rem] flex flex-row align-center self-end pr-0 md:pr-36 mt-0 md:mt-8">
             <span className="font-againstHistory text-[#FF9933] text-[4rem] md:text-[10rem]">
               Hacker community
             </span>

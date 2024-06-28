@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useBreakpointValue } from '@chakra-ui/react';
 import '../styles.css';
 import Image from 'next/image';
 import btnTxt from '@/app/assets/images/button-text.svg';
 import btnArrow from '@/app/assets/images/arrow-up-right.png';
 
 export default function Hero({ navbarHeight }: { navbarHeight: number }) {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   useEffect(() => {
     const joinBtn = document.getElementById('join-btn');
     const bannerText = document.getElementById('banner-text');
@@ -63,16 +65,19 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           </div>
         </div>
 
-        <div className="w-[80%] md:w-[58%] mt-12 text-[1.6rem] leading-tight md:block mt-[-2rem] md:mt-0">
-          Welcome to Hack This Fall! Join one of India&apos;s most thriving
+        <div className="w-[80%] md:w-[58%] mt-12 text-[1.6rem] leading-tight md:block mt-[-2rem] md:mt-0 pb-[1.5rem] md:pb-0">
+          {!isMobile
+            ? `Welcome to Hack This Fall! Join one of India' most thriving
           hacker communities to build groundbreaking solutions, inspire
           problem-solvers, and grow together in a diverse, supportive
-          environment.
+          environment.`
+            : `Welcome to Hack This Fall! Join one of India' most thriving
+          hacker communities.`}
         </div>
 
         <div
           id="banner-text"
-          className="text-[3rem] md:text-[10rem] leading-tight text-[#0000000A] whitespace-nowrap font-bold pb-[2rem] md:pb-auto"
+          className="text-[3rem] md:text-[10rem] leading-tight text-[#0000000A] whitespace-nowrap font-bold pb-2 md:pb-auto"
         >
           INNOVATE FOR GOOD
         </div>
@@ -81,7 +86,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           href="https://discord.hackthisfall.tech"
           target="_blank"
           id="join-btn"
-          className="absolute bg-[#FF9933] rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] right-[10%] bottom-[10%] md:right-0 md:bottom-0 z-20 p-3 cursor-pointer pointer-events-auto"
+          className="absolute bg-[#FF9933] rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] right-[6%] bottom-[6%] md:right-0 md:bottom-0 z-20 p-3 cursor-pointer pointer-events-auto"
         >
           <div className="relative w-full h-full">
             <Image
