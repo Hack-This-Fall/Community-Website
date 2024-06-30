@@ -1,16 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import Close from "../assets/images/navbar/close.svg";
+import Banner from "../assets/images/banner.png";
 import socials, { SOCIAL_COLORS } from "../utils/socials";
-import YoutubeIcon from "./icons/socials/Youtube";
 
 const navbarItems = [
   { link: "/", text: "Home", conditions: [""] },
+  { link: "about", text: "About", conditions: ["team"] },
   { link: "events", text: "Events", conditions: ["event", "events"] },
   { link: "Blogs", text: "Blogs", conditions: ["blog", "blogs"] },
-  { link: "Team", text: "Team", conditions: ["team"] },
-  { link: "Swags", text: "Swags", conditions: ["swag", "swags"] },
-  { link: "Contact", text: "Contact", conditions: ["contact"] },
 ];
 
 export default function OpenNavbar({
@@ -27,9 +25,9 @@ export default function OpenNavbar({
           zIndex: 11000,
           top: window.pageYOffset || document.documentElement.scrollTop,
         }}
-        className="bg-[#000000] h-[100vh] opacity-100 absolute min-w-[100vw] md:min-w-[40vw] right-0 top-0 text-white rounded-2xl md:rounded-l-2xl md:rounded-r-none p-10 pl-10 flex flex-col justify-between"
+        className="bg-[#ffffff] h-[100vh] opacity-100 absolute min-w-[100vw]  text-white rounded-2xl flex flex-col justify-between py-6"
       >
-        <div className="flex justify-end">
+        <div className="flex justify-end px-10">
           <Image
             className="cursor-pointer"
             onClick={() => setIsNavbarOpen(false)}
@@ -37,23 +35,40 @@ export default function OpenNavbar({
             alt="close"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-black gap-y-4 px-10">
           {navbarItems.map((item, index) => (
             <Link
               onClick={() => setIsNavbarOpen(false)}
               href={item.link}
               key={item.text}
-              className={`italic opacity-80 text-2xl md:text-3xl ${
-                item.conditions.includes(url)
-                  ? "!text-4xl md:!text-5xl font-bold !opacity-100 underline"
-                  : null
-              } ${index != 0 ? "mt-4 " : null}`}
+              className={`text-2xl md:text-3xl ${"!text-4xl md:!text-5xl"} ${
+                index != 0 ? "mt-4 " : null
+              }`}
             >
               {item.text}
             </Link>
           ))}
         </div>
-        <div className="grid gap-4 grid-cols-3 md:grid-cols-6 grid bg-[#191919] justify-between py-4 px-4 rounded-2xl ">
+        <div>
+          <Image src={Banner} className="w-[100%] px-10" alt="banner" />
+        </div>
+        <div className="flex flex-col font-outfit overflow-hidden mt-8 md:mt-12 w-[100%] text-black opacity-30">
+          <div className="flex flex-row text-[1.8rem] md:text-[5.5rem] font-extrabold text-nowrap whitespace-nowrap gap-x-2 w-[100vw] ml-[-65%] md:ml-[-46%] leading-none	">
+            <span>INNOVATE FOR GOOD</span>
+            <span className="text-w-outline-nav">INNOVATE FOR GOOD</span>
+            <span>INNOVATE FOR GOOD</span>
+            <span className="text-w-outline-nav">INNOVATE FOR GOOD</span>
+            <span>INNOVATE FOR GOOD</span>
+          </div>
+          <div className="flex flex-row text-[1.8rem] md:text-[5.5rem] font-extrabold text-nowrap whitespace-nowrap gap-x-2 w-[100vw] ml-[-83%] md:ml-[-58%] leading-none ">
+            <span className="text-w-outline-nav">INNOVATE FOR GOOD</span>
+            <span>INNOVATE FOR GOOD</span>
+            <span className="text-w-outline-nav">INNOVATE FOR GOOD</span>
+            <span>INNOVATE FOR GOOD</span>
+            <span className="text-w-outline-nav">INNOVATE FOR GOOD</span>
+          </div>
+        </div>
+        <div className="flex gap-0 justify-between rounded-2xl px-10">
           {socials.map((s, i) => {
             const SpecificSocial = s.icon;
             return (
@@ -61,7 +76,7 @@ export default function OpenNavbar({
                 href={s.link}
                 target="_blank"
                 key={s.name}
-                className="w-[50px] h-[50px] bg-[#222222] p-2 rounded-full flex justify-center items-center cursor-pointer"
+                className="w-[50px] h-[50px] p-2 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <SpecificSocial color={SOCIAL_COLORS.NAVBAR} />
               </Link>

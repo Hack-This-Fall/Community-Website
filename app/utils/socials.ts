@@ -39,7 +39,7 @@ const socials = [
 ];
 
 export const SOCIAL_COLORS = {
-  NAVBAR: "#A3A3A3",
+  NAVBAR: "#000000",
   FOOTER: "#000000",
 };
 

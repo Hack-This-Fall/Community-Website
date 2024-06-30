@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Navbar from '../components/Navbar';
+import Navbar from "../components/Navbar";
 import {
   Box,
   useBreakpointValue,
@@ -10,73 +10,73 @@ import {
   Image,
   Grid,
   GridItem,
-} from '@chakra-ui/react';
-import { useScroll, useTransform } from 'framer-motion';
-import { useState, useRef } from 'react';
-import OpenNavbar from '../components/OpenNavbar';
-import StickyFooter from '../components/StickyFooter';
-import JourneySection from '../components/AboutPage/Journey';
-import JourneySectionMobile from '../components/AboutPage/JourneyMobile';
+} from "@chakra-ui/react";
+import { useScroll, useTransform } from "framer-motion";
+import { useState, useRef } from "react";
+import OpenNavbar from "../components/OpenNavbar";
+import StickyFooter from "../components/StickyFooter";
+import JourneySection from "../components/AboutPage/Journey";
+import JourneySectionMobile from "../components/AboutPage/JourneyMobile";
 
 const values = [
   {
-    heading: 'Community First Approach',
+    heading: "Community First Approach",
     description:
-      'We prioritize the well-being and safety of our community members above all else. Our focus is to foster an environment where every participant feels valued, safe, and supported to proactively collaborate, seek (and give) constructive feedback, and consistently adapt to meet the evolving needs of the community to ensure a positive and fulfilling hackathon experience for all.',
-    logoUrl: '/images/about/values1.png',
+      "We prioritize the well-being and safety of our community members above all else. Our focus is to foster an environment where every participant feels valued, safe, and supported to proactively collaborate, seek (and give) constructive feedback, and consistently adapt to meet the evolving needs of the community to ensure a positive and fulfilling hackathon experience for all.",
+    logoUrl: "/images/about/values1.png",
   },
   {
-    heading: 'Adaptive Mindset',
+    heading: "Adaptive Mindset",
     description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We encourage members to consistently assess and adjust their approach based on previous learnings and feedback, embrace change, and build effective strategies upon both successes AND failures to foster a culture of resilience and innovation in the face of evolving challenges.',
-    logoUrl: '/images/about/values2.png',
+      "We emphasize the importance of cultivating a flexible and open approach to problem-solving. We encourage members to consistently assess and adjust their approach based on previous learnings and feedback, embrace change, and build effective strategies upon both successes AND failures to foster a culture of resilience and innovation in the face of evolving challenges.",
+    logoUrl: "/images/about/values2.png",
   },
   {
-    heading: 'Experience for All',
+    heading: "Experience for All",
     description:
-      'We strive to provide an inclusive, accessible, and enriching experience for every individual involved, be it participants, mentors, judges, speakers, partners, volunteers, organizers, or any contributor. At Hack This Fall, it is one of our goals to empower everyone to participate proactively in fostering a collaborative environment for collective success.',
-    logoUrl: '/images/about/values3.png',
+      "We strive to provide an inclusive, accessible, and enriching experience for every individual involved, be it participants, mentors, judges, speakers, partners, volunteers, organizers, or any contributor. At Hack This Fall, it is one of our goals to empower everyone to participate proactively in fostering a collaborative environment for collective success.",
+    logoUrl: "/images/about/values3.png",
   },
   {
-    heading: 'Distinguished Benchmark',
+    heading: "Distinguished Benchmark",
     description:
-      'We are committed to setting and upholding a high bar of excellence for the quality of our hackathon experience. We are dedicated towards creating an environment where excellence, innovation, and meaningful impact are not only encouraged but also expected from our team members and the broader community to deliver outstanding experiences consistently.',
-    logoUrl: '/images/about/values4.png',
+      "We are committed to setting and upholding a high bar of excellence for the quality of our hackathon experience. We are dedicated towards creating an environment where excellence, innovation, and meaningful impact are not only encouraged but also expected from our team members and the broader community to deliver outstanding experiences consistently.",
+    logoUrl: "/images/about/values4.png",
   },
 ];
 
 const team = [
   {
-    image: '/images/team/apoorv.jpg',
-    name: 'Apoorv Dwivedi',
+    image: "/images/team/apoorv.jpg",
+    name: "Apoorv Dwivedi",
   },
   {
-    image: '/images/team/dennis.jpeg',
-    name: 'Dennis D\'mello',
+    image: "/images/team/dennis.jpeg",
+    name: "Dennis D'mello",
   },
   {
-    image: '/images/team/paras.jpeg',
-    name: 'Paras Gupta',
+    image: "/images/team/paras.jpeg",
+    name: "Paras Gupta",
   },
   {
-    image: '/images/team/rohan.jpg',
-    name: 'Rohan Kambli',
+    image: "/images/team/rohan.jpg",
+    name: "Rohan Kambli",
   },
   {
-    image: '/images/team/sahilsen.webp',
-    name: 'Sahil Sen',
+    image: "/images/team/sahilsen.webp",
+    name: "Sahil Sen",
   },
   {
-    image: '/images/team/shitiz.jpg',
-    name: 'Shitiz Aggarwal',
+    image: "/images/team/shitiz.jpg",
+    name: "Shitiz Aggarwal",
   },
   {
-    image: '/images/team/siddharth.jpg',
-    name: 'Siddharth Dayalwal',
+    image: "/images/team/siddharth.jpg",
+    name: "Siddharth Dayalwal",
   },
   {
-    image: '/images/team/vaibhav.jpeg',
-    name: 'Vaibhav Toshniwal',
+    image: "/images/team/vaibhav.jpeg",
+    name: "Vaibhav Toshniwal",
   },
 ];
 
@@ -108,27 +108,25 @@ const EventsPage = () => {
         zIndex="100"
         className="relative w-full bg-white top-0 left-0 rounded-b-3xl"
       >
+        {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
+        <Navbar
+          setIsNavbarOpen={setIsNavbarOpen}
+          setNavbarHeight={setNavbarHeight}
+        />
         <Box
           className="relative container-1200 bg-white"
-          px={{ base: '2rem', '2xl': '0' }}
+          px={{ base: "2rem", "2xl": "0" }}
         >
-          <Box className="sticky top-0 left-0 w-full" zIndex={4}>
-            {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
-            <Navbar
-              setIsNavbarOpen={setIsNavbarOpen}
-              setNavbarHeight={setNavbarHeight}
-            />
-          </Box>
           <Flex
             w="full"
-            pt={{ base: '2rem', md: '4rem' }}
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
-            flexDir={{ base: 'column-reverse', lg: 'row' }}
+            pt={{ base: "2rem", md: "4rem" }}
+            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
+            flexDir={{ base: "column-reverse", lg: "row" }}
             gap="2rem"
           >
-            <Flex w={{ base: '100%', lg: '45%' }} flexDir="column">
+            <Flex w={{ base: "100%", lg: "45%" }} flexDir="column">
               <Heading
-                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontSize={{ base: "2.5rem", md: "3.5rem" }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -160,7 +158,7 @@ const EventsPage = () => {
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: '100%', lg: '55%' }}
+              w={{ base: "100%", lg: "55%" }}
             >
               <Image
                 w="full"
@@ -170,25 +168,25 @@ const EventsPage = () => {
             </Flex>
           </Flex>
           <Flex
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
             w="full"
             flexDir="column"
           >
             <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
+              fontSize={{ base: "2.5rem", md: "3.5rem" }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
             >
               Mission
             </Heading>
             <Flex
-              flexDir={{ base: 'column', lg: 'row' }}
+              flexDir={{ base: "column", lg: "row" }}
               mt="1.5rem"
               gap="2rem"
             >
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: '1.5rem', lg: '2.9rem' }}
+                p={{ base: "1.5rem", lg: "2.9rem" }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -200,7 +198,7 @@ const EventsPage = () => {
                     src="/images/about/mission1.png"
                   />
                   <Heading
-                    fontSize={{ base: '1.5rem', md: '2rem' }}
+                    fontSize={{ base: "1.5rem", md: "2rem" }}
                     fontFamily="var(--font-outfit)"
                     fontWeight="600"
                   >
@@ -215,7 +213,7 @@ const EventsPage = () => {
               </Flex>
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: '1.5rem', lg: '2.9rem' }}
+                p={{ base: "1.5rem", lg: "2.9rem" }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -227,7 +225,7 @@ const EventsPage = () => {
                     src="/images/about/mission2.png"
                   />
                   <Heading
-                    fontSize={{ base: '1.5rem', md: '2rem' }}
+                    fontSize={{ base: "1.5rem", md: "2rem" }}
                     fontFamily="var(--font-outfit)"
                     fontWeight="600"
                   >
@@ -245,14 +243,14 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
-            flexDir={{ base: 'column', lg: 'row' }}
+            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
+            flexDir={{ base: "column", lg: "row" }}
             gap="2rem"
           >
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: '100%', lg: '55%' }}
+              w={{ base: "100%", lg: "55%" }}
             >
               <Image
                 w="full"
@@ -262,11 +260,11 @@ const EventsPage = () => {
             </Flex>
             <Flex
               justifyContent="center"
-              w={{ base: '100%', lg: '45%' }}
+              w={{ base: "100%", lg: "45%" }}
               flexDir="column"
             >
               <Heading
-                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontSize={{ base: "2.5rem", md: "3.5rem" }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -293,15 +291,19 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            mb={{ base: '4rem', md: '4rem', lg: '4rem' }}
-            flexDir={{ base: 'column', lg: 'row' }}
+            mb={{ base: "4rem", md: "4rem", lg: "4rem" }}
+            flexDir={{ base: "column", lg: "row" }}
             gap="4rem"
           >
-            <Flex flexDir="column" minH={{base: "unset", lg: "56rem"}} pos="relative">
+            <Flex
+              flexDir="column"
+              minH={{ base: "unset", lg: "56rem" }}
+              pos="relative"
+            >
               <Heading
-                pos={{base: "unset", lg:"sticky"}}
+                pos={{ base: "unset", lg: "sticky" }}
                 top="10px"
-                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontSize={{ base: "2.5rem", md: "3.5rem" }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -309,7 +311,7 @@ const EventsPage = () => {
               </Heading>
             </Flex>
             <Grid
-              templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
+              templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
               gap="1.5rem"
             >
               {values.map(({ heading, description, logoUrl }, index) => {
@@ -317,7 +319,7 @@ const EventsPage = () => {
                   <GridItem
                     key={index}
                     border="1px solid #D9D9D9"
-                    p={{ base: '1.5rem', lg: '2rem' }}
+                    p={{ base: "1.5rem", lg: "2rem" }}
                     borderRadius="3xl"
                     w="full"
                     flexDir="column"
@@ -325,7 +327,7 @@ const EventsPage = () => {
                     <Flex flexDir="column" gap="1rem">
                       <Image w="15%" alt="mission" src={logoUrl} />
                       <Heading
-                        fontSize={{ base: '1.5rem', md: '2rem' }}
+                        fontSize={{ base: "1.5rem", md: "2rem" }}
                         fontFamily="var(--font-outfit)"
                         fontWeight="600"
                       >
@@ -350,10 +352,10 @@ const EventsPage = () => {
           <Flex
             flexDir="column"
             w="full"
-            pb={{ base: '4rem', md: '4rem', lg: '6rem' }}
+            pb={{ base: "4rem", md: "4rem", lg: "6rem" }}
           >
             <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
+              fontSize={{ base: "2.5rem", md: "3.5rem" }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
               mb="2rem"
@@ -362,10 +364,10 @@ const EventsPage = () => {
             </Heading>
             <Grid
               templateColumns={{
-                base: 'repeat(2, 1fr)',
-                md: 'repeat(2, 1fr)',
-                lg: 'repeat(3, 1fr)',
-                xl: 'repeat(4, 1fr)',
+                base: "repeat(2, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+                xl: "repeat(4, 1fr)",
               }}
               gap="2rem"
             >
@@ -376,7 +378,12 @@ const EventsPage = () => {
                   flexDir="column"
                   gap="1.5rem"
                 >
-                  <Image objectFit="cover" borderRadius="1rem" src={member.image} alt={member.name} />
+                  <Image
+                    objectFit="cover"
+                    borderRadius="1rem"
+                    src={member.image}
+                    alt={member.name}
+                  />
                   <Heading
                     fontSize="1.5rem"
                     mt="-10px"
