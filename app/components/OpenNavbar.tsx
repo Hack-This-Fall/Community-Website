@@ -8,7 +8,7 @@ const navbarItems = [
   { link: "/", text: "Home", conditions: [""] },
   { link: "about", text: "About", conditions: ["team"] },
   { link: "events", text: "Events", conditions: ["event", "events"] },
-  { link: "Blogs", text: "Blogs", conditions: ["blog", "blogs"] },
+  // { link: "Blogs", text: "Blogs", conditions: ["blog", "blogs"] },
 ];
 
 export default function OpenNavbar({

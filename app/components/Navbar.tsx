@@ -10,7 +10,7 @@ const navbarElementsDefault = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Events", link: "/events" },
-  { name: "Blog", link: "https://blog.hackthisfall.tech/" },
+  // { name: "Blog", link: "https://blog.hackthisfall.tech/" },
 ];
 
 export default function Navbar({
