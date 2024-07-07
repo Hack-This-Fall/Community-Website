@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import logo from '@/app/assets/images/logo-dark.png';
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import DiscordIcon from './icons/socials/Discord';
-import TwitterIcon from './icons/socials/Twitter';
-import LinkedinIcon from './icons/socials/Linkedin';
-import YoutubeIcon from './icons/socials/Youtube';
-import InstagramIcon from './icons/socials/Instagram';
-import EmailIcon from './icons/socials/Email';
+import Image from "next/image";
+import logo from "@/app/assets/images/logo-dark.png";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import DiscordIcon from "./icons/socials/Discord";
+import TwitterIcon from "./icons/socials/Twitter";
+import LinkedinIcon from "./icons/socials/Linkedin";
+import YoutubeIcon from "./icons/socials/Youtube";
+import InstagramIcon from "./icons/socials/Instagram";
+import EmailIcon from "./icons/socials/Email";
 
 export default function StickyFooter() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ export default function StickyFooter() {
 
     try {
       (
-        document.getElementById('footer-transparent') as HTMLDivElement
+        document.getElementById("footer-transparent") as HTMLDivElement
       ).style.height = `${h}px`;
     } catch (error) {
       console.log(error);
@@ -30,9 +30,9 @@ export default function StickyFooter() {
     <>
       <div
         id="footer-transparent"
-        className="bg-transparent container-1200"
+        className="bg-transparent container-1200 pointer-events-none"
       ></div>
-      <footer className="flex flex-col bg-black text-white fixed bottom-0 w-full">
+      <footer className="flex flex-col bg-black text-white fixed bottom-0 w-full pointer-events-none z-60">
         <div ref={ref} className="mt-[3rem]">
           <div className="ifg flex flex-col font-outfit overflow-hidden mt-8 md:mt-12">
             <div className="flex flex-row text-[1.8rem] md:text-[5.5rem] font-extrabold text-nowrap whitespace-nowrap gap-x-2 w-[100vw] ml-[-65%] md:ml-[-46%] leading-none	">
@@ -55,9 +55,9 @@ export default function StickyFooter() {
             <Image src={logo} alt="logo" className="w-[70%] md:w-[10rem]" />
             <div className="flex flex-col justify-between items-center md:items-end mt-12 md:mt-0 h-full gap-y-4 w-full md:w-auto">
               <div className="flex flex-row items-center w-full justify-between md:justify-end gap-x-auto md:gap-x-6 w-[70%] md:w-unset mx-auto">
-                <Link href="https://twitter.com/hackthisfall/" target="_blank">
+                <a href="https://twitter.com/hackthisfall/" target="_blank">
                   <TwitterIcon color="white" />
-                </Link>
+                </a>
                 <Link href="https://discord.hackthisfall.tech/" target="_blank">
                   <DiscordIcon color="white" />
                 </Link>

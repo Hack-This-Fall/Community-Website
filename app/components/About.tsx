@@ -64,20 +64,20 @@ export default function About() {
           </div>
           <div className="tracking-wide leading-[0rem] md:leading-[7.5rem] flex flex-row align-center self-end pr-0 md:pr-36 mt-0 md:mt-8">
             <span className="font-againstHistory text-[#FF9933] text-[4rem] md:text-[10rem]">
-              Hacker community
+              Hacker Community
             </span>
           </div>
         </div>
 
         <div className="w-full md:w-[55%] mt-28 text-[1.3rem] md:text-[1.6rem] leading-tight self-end mb-24">
-          Welcome to Hack This Fall! We&apos;re not your typical hacker community -
-          we&apos;re a vibrant mix of innovators and problem-solvers with a vision to
-          redefine hacking. With inclusivity and creativity at our core, we&apos;re
-          more than just project builders. Join us in rewriting the hacking
-          narrative, where collaboration, learning, and meaningful connections
-          thrive. At Hack This Fall, we&apos;re building more than just ideas - we&apos;re
-          building a thriving community that welcomes you with open arms.
-          Welcome aboard!
+          Welcome to Hack This Fall! We&apos;re not your typical hacker
+          community - we&apos;re a vibrant mix of innovators and problem-solvers
+          with a vision to redefine hacking. With inclusivity and creativity at
+          our core, we&apos;re more than just project builders. Join us in
+          rewriting the hacking narrative, where collaboration, learning, and
+          meaningful connections thrive. At Hack This Fall, we&apos;re building
+          more than just ideas - we&apos;re building a thriving community that
+          welcomes you with open arms. Welcome aboard!
         </div>
 
         <div

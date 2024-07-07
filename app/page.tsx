@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative pointer-events-none">
         {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
         <Navbar
           setNavbarHeight={setNavbarHeight}
