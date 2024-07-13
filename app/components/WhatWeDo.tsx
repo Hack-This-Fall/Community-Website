@@ -29,12 +29,12 @@ export default function WhatWeDo() {
             <a
               href="http://hackathon.hackthisfall.tech/"
               target="_blank"
-              className="flex flex-row text-black align-center justify-center w-fit mt-6 gap-x-1"
+              className="explore-button flex flex-row text-black align-center justify-center w-fit mt-6 gap-x-1"
             >
               <span className="text-lg bg-white px-10 py-3 rounded-full flex align-center justify-center">
                 Explore Now
               </span>
-              <span className="flex bg-white rounded-full h-parent px-5 items-center justify-center">
+              <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
                 <Image src={btnArrow} alt="Arrow" />
               </span>
             </a>
@@ -82,12 +82,12 @@ export default function WhatWeDo() {
             <a
               href="https://hackthisfall.tech/events"
               target="_blank"
-              className="flex flex-row text-black align-center justify-center w-fit mt-6 gap-x-1"
+              className="explore-button flex flex-row text-black align-center justify-center w-fit mt-6 gap-x-1"
             >
               <span className="text-lg bg-white px-10 py-3 rounded-full flex align-center justify-center">
                 Explore Now
               </span>
-              <span className="flex bg-white rounded-full h-parent px-5 items-center justify-center">
+              <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
                 <Image src={btnArrow} alt="Arrow" />
               </span>
             </a>
