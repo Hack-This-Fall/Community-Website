@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="root-html">
       <body
         className={`${poppins.variable} ${dmSans.variable} ${againstHistory.variable} ${outfit.variable} ${inter.variable}`}
       >

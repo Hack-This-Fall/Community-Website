@@ -53,13 +53,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative pointer-events-none">
+      <div className="relative">
         {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
         <Navbar
           setNavbarHeight={setNavbarHeight}
           setIsNavbarOpen={setIsNavbarOpen}
         />
-        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-hidden pointer-events-auto pb-24">
+        <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-hidden pb-24">
           <Hero navbarHeight={navbarHeight} />
           <About />
           <WhatWeDo />

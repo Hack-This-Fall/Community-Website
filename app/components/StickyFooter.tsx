@@ -19,8 +19,8 @@ export default function StickyFooter() {
 
     try {
       (
-        document.getElementById("footer-transparent") as HTMLDivElement
-      ).style.height = `${h}px`;
+        document.getElementById("root-html") as HTMLDivElement
+      ).style.paddingBottom = `${h}px`;
     } catch (error) {
       console.log(error);
     }
@@ -28,11 +28,11 @@ export default function StickyFooter() {
 
   return (
     <>
-      <div
+      {/* <div
         id="footer-transparent"
         className="bg-transparent container-1200 pointer-events-none"
-      ></div>
-      <footer className="flex flex-col bg-black text-white fixed bottom-0 w-full pointer-events-none z-60">
+      ></div> */}
+      <footer className="flex flex-col bg-black text-white fixed bottom-0 w-full z-60">
         <div ref={ref} className="mt-[3rem]">
           <div className="ifg flex flex-col font-outfit overflow-hidden mt-8 md:mt-12">
             <div className="flex flex-row text-[1.8rem] md:text-[5.5rem] font-extrabold text-nowrap whitespace-nowrap gap-x-2 w-[100vw] ml-[-65%] md:ml-[-46%] leading-none	">
