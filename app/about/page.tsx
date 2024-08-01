@@ -11,8 +11,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import { useScroll, useTransform } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import OpenNavbar from "../components/OpenNavbar";
 import StickyFooter from "../components/StickyFooter";
 import JourneySection from "../components/AboutPage/Journey";
@@ -115,23 +114,50 @@ const EventsPage = () => {
         />
         <Box
           className="relative container-1200 bg-white"
-          px={{ base: "2rem", "2xl": "0" }}
+          px={{ base: '2rem', '2xl': '0' }}
         >
           <Flex
             w="full"
-            pt={{ base: "2rem", md: "4rem" }}
-            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
-            flexDir={{ base: "column-reverse", lg: "row" }}
+            pt={{ base: '2rem', md: '4rem' }}
+            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            flexDir={{ base: 'column-reverse', lg: 'row' }}
             gap="2rem"
           >
-            <Flex w={{ base: "100%", lg: "45%" }} flexDir="column">
-              <Heading
-                fontSize={{ base: "2.5rem", md: "3.5rem" }}
-                fontFamily="var(--font-outfit)"
-                fontWeight="500"
-              >
-                Catchy title line that spans till here
-              </Heading>
+            <Flex w={{ base: '100%', lg: '45%' }} flexDir="column">
+              <Flex gap="1rem" alignItems="center">
+                <Heading
+                  fontSize={{ base: '3rem', md: '4.5rem' }}
+                  fontFamily="var(--font-against-history)"
+                  fontWeight="500"
+                  color="#A64DFF"
+                >
+                  Hackathon
+                </Heading>
+                <Heading
+                  fontSize={{ base: '2rem', md: '3.5rem' }}
+                  fontFamily="var(--font-outfit)"
+                  fontWeight="500"
+                >
+                  you knew,
+                </Heading>
+              </Flex>
+              <Flex mt="-1rem" gap="1rem" alignItems="center">
+                <Heading
+                  fontSize={{ base: '3rem', md: '4.5rem' }}
+                  fontFamily="var(--font-against-history)"
+                  fontWeight="500"
+                  color="#FF9933"
+                >
+                  Community
+                </Heading>
+                <Heading
+                  fontSize={{ base: '2rem', md: '3.5rem' }}
+                  fontFamily="var(--font-outfit)"
+                  fontWeight="500"
+                >
+                  you didn&apos;t!
+                </Heading>
+              </Flex>
               <Text
                 mt="1.5rem"
                 fontSize="1.125rem"
@@ -158,35 +184,38 @@ const EventsPage = () => {
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: "100%", lg: "55%" }}
+              w={{ base: '100%', lg: '55%' }}
             >
               <Image
                 w="full"
+                h="full"
+                objectFit="cover"
                 alt="City Meetup"
-                src="/images/events/city-meetup-hero.png"
+                src="/images/about/hero.png"
+                borderRadius="2rem"
               />
             </Flex>
           </Flex>
           <Flex
-            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
+            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
             w="full"
             flexDir="column"
           >
             <Heading
-              fontSize={{ base: "2.5rem", md: "3.5rem" }}
+              fontSize={{ base: '2.5rem', md: '3.5rem' }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
             >
               Mission
             </Heading>
             <Flex
-              flexDir={{ base: "column", lg: "row" }}
+              flexDir={{ base: 'column', lg: 'row' }}
               mt="1.5rem"
               gap="2rem"
             >
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: "1.5rem", lg: "2.9rem" }}
+                p={{ base: '1.5rem', lg: '2.9rem' }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -198,9 +227,9 @@ const EventsPage = () => {
                     src="/images/about/mission1.png"
                   />
                   <Heading
-                    fontSize={{ base: "1.5rem", md: "2rem" }}
+                    fontSize={{ base: '1.5rem', md: '2rem' }}
                     fontFamily="var(--font-outfit)"
-                    fontWeight="600"
+                    fontWeight="500"
                   >
                     Empower Builders to Excel and Innovate
                   </Heading>
@@ -213,7 +242,7 @@ const EventsPage = () => {
               </Flex>
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: "1.5rem", lg: "2.9rem" }}
+                p={{ base: '1.5rem', lg: '2.9rem' }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -225,9 +254,9 @@ const EventsPage = () => {
                     src="/images/about/mission2.png"
                   />
                   <Heading
-                    fontSize={{ base: "1.5rem", md: "2rem" }}
+                    fontSize={{ base: '1.5rem', md: '2rem' }}
                     fontFamily="var(--font-outfit)"
-                    fontWeight="600"
+                    fontWeight="500"
                   >
                     Enable Innovation for the Greater Good
                   </Heading>
@@ -243,28 +272,31 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            pb={{ base: "4rem", md: "4rem", lg: "4rem" }}
-            flexDir={{ base: "column", lg: "row" }}
+            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            flexDir={{ base: 'column', lg: 'row' }}
             gap="2rem"
           >
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: "100%", lg: "55%" }}
+              w={{ base: '100%', lg: '55%' }}
             >
               <Image
                 w="full"
                 alt="City Meetup"
-                src="/images/about/vision.png"
+                src="/images/about/vision.jpg"
+                borderRadius="1.5rem"
+                aspectRatio="1.8"
+                objectFit="cover"
               />
             </Flex>
             <Flex
               justifyContent="center"
-              w={{ base: "100%", lg: "45%" }}
+              w={{ base: '100%', lg: '45%' }}
               flexDir="column"
             >
               <Heading
-                fontSize={{ base: "2.5rem", md: "3.5rem" }}
+                fontSize={{ base: '2.5rem', md: '3.5rem' }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -291,19 +323,19 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            mb={{ base: "4rem", md: "4rem", lg: "4rem" }}
-            flexDir={{ base: "column", lg: "row" }}
+            mb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            flexDir={{ base: 'column', lg: 'row' }}
             gap="4rem"
           >
             <Flex
               flexDir="column"
-              minH={{ base: "unset", lg: "56rem" }}
+              minH={{ base: 'unset', lg: '56rem' }}
               pos="relative"
             >
               <Heading
-                pos={{ base: "unset", lg: "sticky" }}
+                pos={{ base: 'unset', lg: 'sticky' }}
                 top="10px"
-                fontSize={{ base: "2.5rem", md: "3.5rem" }}
+                fontSize={{ base: '2.5rem', md: '3.5rem' }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -311,7 +343,7 @@ const EventsPage = () => {
               </Heading>
             </Flex>
             <Grid
-              templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
+              templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
               gap="1.5rem"
             >
               {values.map(({ heading, description, logoUrl }, index) => {
@@ -319,7 +351,7 @@ const EventsPage = () => {
                   <GridItem
                     key={index}
                     border="1px solid #D9D9D9"
-                    p={{ base: "1.5rem", lg: "2rem" }}
+                    p={{ base: '1.5rem', lg: '2rem' }}
                     borderRadius="3xl"
                     w="full"
                     flexDir="column"
@@ -327,7 +359,7 @@ const EventsPage = () => {
                     <Flex flexDir="column" gap="1rem">
                       <Image w="15%" alt="mission" src={logoUrl} />
                       <Heading
-                        fontSize={{ base: "1.5rem", md: "2rem" }}
+                        fontSize={{ base: '1.5rem', md: '2rem' }}
                         fontFamily="var(--font-outfit)"
                         fontWeight="600"
                       >
@@ -352,10 +384,10 @@ const EventsPage = () => {
           <Flex
             flexDir="column"
             w="full"
-            pb={{ base: "4rem", md: "4rem", lg: "6rem" }}
+            pb={{ base: '4rem', md: '4rem', lg: '6rem' }}
           >
             <Heading
-              fontSize={{ base: "2.5rem", md: "3.5rem" }}
+              fontSize={{ base: '2.5rem', md: '3.5rem' }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
               mb="2rem"
@@ -364,10 +396,10 @@ const EventsPage = () => {
             </Heading>
             <Grid
               templateColumns={{
-                base: "repeat(2, 1fr)",
-                md: "repeat(2, 1fr)",
-                lg: "repeat(3, 1fr)",
-                xl: "repeat(4, 1fr)",
+                base: 'repeat(2, 1fr)',
+                md: 'repeat(2, 1fr)',
+                lg: 'repeat(3, 1fr)',
+                xl: 'repeat(4, 1fr)',
               }}
               gap="2rem"
             >
