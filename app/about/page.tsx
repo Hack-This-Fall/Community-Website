@@ -46,35 +46,35 @@ const values = [
 
 const team = [
   {
-    image: "/images/team/apoorv.jpg",
+    image: "/images/team/apoorv.png",
     name: "Apoorv Dwivedi",
   },
   {
-    image: "/images/team/dennis.jpeg",
+    image: "/images/team/dennis.png",
     name: "Dennis D'mello",
   },
   {
-    image: "/images/team/paras.jpeg",
+    image: "/images/team/paras.png",
     name: "Paras Gupta",
   },
   {
-    image: "/images/team/rohan.jpg",
+    image: "/images/team/rohan.png",
     name: "Rohan Kambli",
   },
   {
-    image: "/images/team/sahilsen.webp",
+    image: "/images/team/sahil.png",
     name: "Sahil Sen",
   },
   {
-    image: "/images/team/shitiz.jpg",
+    image: "/images/team/shitiz.png",
     name: "Shitiz Aggarwal",
   },
   {
-    image: "/images/team/siddharth.jpg",
+    image: "/images/team/siddharth.png",
     name: "Siddharth Dayalwal",
   },
   {
-    image: "/images/team/vaibhav.jpeg",
+    image: "/images/team/vaibhav.png",
     name: "Vaibhav Toshniwal",
   },
 ];
@@ -119,7 +119,7 @@ const EventsPage = () => {
           <Flex
             w="full"
             pt={{ base: '2rem', md: '4rem' }}
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
             flexDir={{ base: 'column-reverse', lg: 'row' }}
             gap="2rem"
           >
@@ -197,7 +197,7 @@ const EventsPage = () => {
             </Flex>
           </Flex>
           <Flex
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
             w="full"
             flexDir="column"
           >
@@ -272,7 +272,7 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
             flexDir={{ base: 'column', lg: 'row' }}
             gap="2rem"
           >
@@ -323,7 +323,7 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            mb={{ base: '4rem', md: '4rem', lg: '4rem' }}
+            mb={{ base: '4rem', md: '6rem', lg: '8rem' }}
             flexDir={{ base: 'column', lg: 'row' }}
             gap="4rem"
           >
@@ -361,7 +361,7 @@ const EventsPage = () => {
                       <Heading
                         fontSize={{ base: '1.5rem', md: '2rem' }}
                         fontFamily="var(--font-outfit)"
-                        fontWeight="600"
+                        fontWeight="500"
                       >
                         {heading}
                       </Heading>
@@ -417,7 +417,7 @@ const EventsPage = () => {
                     alt={member.name}
                   />
                   <Heading
-                    fontSize="1.5rem"
+                    fontSize={{base: "0.9rem", md: "1.5rem"}}
                     mt="-10px"
                     fontWeight="500"
                     fontFamily="var(--font-outfit)"

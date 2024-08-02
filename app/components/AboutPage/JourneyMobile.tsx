@@ -30,14 +30,27 @@ const JourneySectionMobile = () => {
           mb={{ base: '2rem', lg: '5rem' }}
           gap={{ base: '2rem', lg: '10rem' }}
         >
-          <Heading
+          <Flex
+            gap="1rem"
+            alignItems="center"
             w={{ base: '100%', lg: '29%', xl: '25%' }}
-            fontSize={{ base: '2rem', md: '3rem' }}
-            fontFamily="var(--font-outfit)"
-            fontWeight="500"
           >
-            Our Journey so far...
-          </Heading>
+            <Heading
+              fontFamily="var(--font-against-history)"
+              fontWeight="500"
+              color="#A64DFF"
+              fontSize={{ base: '3rem', md: '4rem' }}
+            >
+              Journey
+            </Heading>
+            <Heading
+              fontSize={{ base: '2rem', md: '3rem' }}
+              fontFamily="var(--font-outfit)"
+              fontWeight="500"
+            >
+              so far...
+            </Heading>
+          </Flex>
           <Text
             textAlign={{ base: 'left', lg: 'right' }}
             w={{ base: '100%', lg: '45%' }}
@@ -78,6 +91,7 @@ const JourneySectionMobile = () => {
                       fontWeight="500"
                       fontFamily="var(--font-outfit)"
                       mb="1rem"
+                      color="#939191"
                     >
                       {title}
                     </Heading>

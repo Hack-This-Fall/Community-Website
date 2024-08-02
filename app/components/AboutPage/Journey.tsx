@@ -30,7 +30,7 @@ const JourneySection = () => {
         position="sticky"
         h="fit-content"
         pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
-        top="9vh"
+        top="3vh"
       >
         <Flex
           flexDir={{ base: 'column', lg: 'row' }}
@@ -41,14 +41,27 @@ const JourneySection = () => {
           gap={{ base: '2rem', lg: '10rem' }}
           maxW={{ base: '85vw', lg: 'min(1200px, 92.2vw)' }}
         >
-          <Heading
+          <Flex
+            gap="1rem"
+            alignItems="center"
             w={{ base: '100%', lg: '29%', xl: '25%' }}
-            fontSize={{ base: '2rem', md: '3rem' }}
-            fontFamily="var(--font-outfit)"
-            fontWeight="500"
           >
-            Our Journey so far...
-          </Heading>
+            <Heading
+              fontFamily="var(--font-against-history)"
+              fontWeight="500"
+              color="#A64DFF"
+              fontSize={{ base: '3rem', md: '4rem' }}
+            >
+              Journey
+            </Heading>
+            <Heading
+              fontSize={{ base: '2rem', md: '3rem' }}
+              fontFamily="var(--font-outfit)"
+              fontWeight="500"
+            >
+              so far...
+            </Heading>
+          </Flex>
           <Text
             textAlign={{ base: 'left', lg: 'right' }}
             w={{ base: '100%', lg: '40%' }}

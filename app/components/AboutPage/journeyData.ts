@@ -11,7 +11,7 @@ const journey = [
   },
   {
     title: 'June 2021',
-    eventName: 'The Pilot',
+    eventName: 'Foundations',
     eventImage: '/images/about/journey/3.png',
     teamImage: '/images/about/journey/6.png',
     emoji1: '✨',
