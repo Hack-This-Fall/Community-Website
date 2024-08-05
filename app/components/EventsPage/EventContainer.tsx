@@ -3,14 +3,8 @@ import { colorsMap, eventData } from '@/app/events/data';
 import AngleArrow from '../icons/AngleArrow';
 
 const EventContainer = ({ eventData }: { eventData: eventData }) => {
-  const {
-    heading,
-    startTimestamp,
-    location,
-    endTimestamp,
-    type,
-    eventMode,
-  } = eventData;
+  const { heading, startTimestamp, location, endTimestamp, type, eventMode } =
+    eventData;
 
   const { color, secondaryColor } = colorsMap[type];
 
@@ -79,27 +73,31 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
               color="#000000B2"
               w="-webkit-fit-content"
             >
-              {endTimestamp
+              {endTimestamp && startTimestamp
                 ? `${startTimestamp
                     .format('MMM DD')
                     .toUpperCase()} - ${endTimestamp
                     .format('MMM DD, YYYY')
                     .toUpperCase()}`
-                : startTimestamp.format('MMM DD, YYYY').toUpperCase()}
+                : startTimestamp
+                ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
+                : 'TO BE ANNOUNCED'}
             </Box>
-            <Box
-              p="0.3rem 0.7rem"
-              borderRadius="10px"
-              border="1px solid #00000033"
-              bgColor="transparent"
-              fontFamily="var(--font-outfit)"
-              fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
-              fontWeight="700"
-              color="#000000B2"
-              w="-webkit-fit-content"
-            >
-              {location}
-            </Box>
+            {location && (
+              <Box
+                p="0.3rem 0.7rem"
+                borderRadius="10px"
+                border="1px solid #00000033"
+                bgColor="transparent"
+                fontFamily="var(--font-outfit)"
+                fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
+                fontWeight="700"
+                color="#000000B2"
+                w="-webkit-fit-content"
+              >
+                {location}
+              </Box>
+            )}
           </Flex>
           <Flex
             bgColor="#000"

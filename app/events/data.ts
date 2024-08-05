@@ -10,8 +10,8 @@ export interface eventData {
   partnerName?: string;
   partnerLogo?: string;
   partnerDescription?: string;
-  startTimestamp: moment.Moment;
-  endTimestamp: moment.Moment | null;
+  startTimestamp?: moment.Moment;
+  endTimestamp?: moment.Moment | null;
   location?: string;
   eventMode: string;
   type: 'CITY MEETUP' | 'HACKTOBERFEST' | 'BUILD WITH' | 'HACKATHONS';
@@ -301,6 +301,22 @@ const eventsData: eventsData = {
       eventMode: 'In Person',
       type: 'HACKATHONS',
       link: 'https://s4.hackthisfall.tech/',
+    },
+    {
+      id: '24',
+      heading: 'Hack This Fall 2024 - Virtual',
+      startTimestamp: moment('2024-11-08 00:00 AM', 'YYYY-MM-DD hh:mm A'),
+      endTimestamp: moment('2024-11-10 00:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'Virtual',
+      type: 'HACKATHONS',
+      link: 'https://hackathon.hackthisfall.tech/virtual',
+    },
+    {
+      id: '25',
+      heading: 'Hack This Fall 2025',
+      eventMode: 'In Person',
+      type: 'HACKATHONS',
+      link: 'https://hackathon.hackthisfall.tech/',
     },
   ],
 };
