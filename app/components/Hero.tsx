@@ -67,7 +67,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
 
         <div className="w-[80%] md:w-[58%] mt-12 text-[1.6rem] leading-tight md:block mt-[-2rem] md:mt-12 pb-[1.5rem] md:pb-0">
           {!isMobile
-            ? `Welcome to Hack This Fall! Join one of India' most thriving
+            ? `Welcome to Hack This Fall! Join one of India's most thriving
           hacker communities to build groundbreaking solutions, inspire
           problem-solvers, and grow together in a diverse, supportive
           environment.`

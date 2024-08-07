@@ -14,65 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-
-const journey = [
-  {
-    title: 'February 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February2 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February3 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February4 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February5 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February6 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-  {
-    title: 'February7 2024',
-    eventName: 'Hack This Fall 2024',
-    eventImage: '/images/about/journeyEvent.png',
-    teamImage: '/images/about/journeyTeam.png',
-    description:
-      'We emphasize the importance of cultivating a flexible and open approach to problem-solving. We emphasize the importance of cultivating a flexible and open approach to problem-solving.',
-  },
-];
+import journey from './journeyData';
 
 const JourneySectionMobile = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -88,23 +30,36 @@ const JourneySectionMobile = () => {
           mb={{ base: '2rem', lg: '5rem' }}
           gap={{ base: '2rem', lg: '10rem' }}
         >
-          <Heading
+          <Flex
+            gap="1rem"
+            alignItems="center"
             w={{ base: '100%', lg: '29%', xl: '25%' }}
-            fontSize={{ base: '2rem', md: '3rem' }}
-            fontFamily="var(--font-outfit)"
-            fontWeight="500"
           >
-            Our Journey so far...
-          </Heading>
+            <Heading
+              fontFamily="var(--font-against-history)"
+              fontWeight="500"
+              color="#A64DFF"
+              fontSize={{ base: '3rem', md: '4rem' }}
+            >
+              Journey
+            </Heading>
+            <Heading
+              fontSize={{ base: '2rem', md: '3rem' }}
+              fontFamily="var(--font-outfit)"
+              fontWeight="500"
+            >
+              so far...
+            </Heading>
+          </Flex>
           <Text
             textAlign={{ base: 'left', lg: 'right' }}
             w={{ base: '100%', lg: '45%' }}
             fontSize="1.125rem"
             fontWeight="400"
           >
-            We emphasize the importance of cultivating a flexible and open
-            approach to problem-solving. We emphasize the importance of
-            cultivating a flexible and open approach to problem-solving.
+            From our humble beginnings in 2020 to a thriving hub of innovation
+            today, join us as we celebrate every milestone and dream bigger for
+            the future!
           </Text>
         </Flex>
         <Flex w="full" gap="1.5rem" flexDir="column">
@@ -112,7 +67,15 @@ const JourneySectionMobile = () => {
             <TabPanels>
               {journey.map(
                 (
-                  { title, eventName, eventImage, teamImage, description },
+                  {
+                    title,
+                    eventName,
+                    eventImage,
+                    teamImage,
+                    description,
+                    emoji1,
+                    emoji2,
+                  },
                   index,
                 ) => (
                   <TabPanel
@@ -121,12 +84,14 @@ const JourneySectionMobile = () => {
                     w="full"
                     key={index}
                     flexDir="column"
+                    overflow="hidden"
                   >
                     <Heading
                       fontSize="1.5rem"
                       fontWeight="500"
                       fontFamily="var(--font-outfit)"
                       mb="1rem"
+                      color="#939191"
                     >
                       {title}
                     </Heading>
@@ -147,9 +112,15 @@ const JourneySectionMobile = () => {
                           right="-8px"
                           transform="rotate(-15deg)"
                         >
-                          🧡
+                          {emoji1}
                         </Flex>
-                        <Image src={eventImage} alt={eventName} />
+                        <Image
+                          aspectRatio="0.984"
+                          objectFit="cover"
+                          borderRadius="1rem"
+                          src={eventImage}
+                          alt={eventName}
+                        />
                       </GridItem>
                       <GridItem
                         display="flex"
@@ -166,32 +137,30 @@ const JourneySectionMobile = () => {
                         </Heading>
                       </GridItem>
                     </Grid>
-                    <Flex mt="-2rem" flexDir="column">
+                    <Flex mt="1rem" flexDir="column" position="relative">
                       <Flex
-                        justifyContent="flex-end"
+                        h="41px"
+                        w="41px"
+                        borderRadius="full"
+                        justifyContent="center"
                         alignItems="center"
-                        mb="0.5rem"
+                        bg="#FFF1D1"
+                        position="absolute"
+                        top="-10px"
+                        right="-8px"
+                        transform="rotate(15deg)"
                       >
-                        <Flex
-                          h="41px"
-                          w="41px"
-                          borderRadius="full"
-                          justifyContent="center"
-                          alignItems="center"
-                          bg="#FFF1D1"
-                        >
-                          🙌
-                        </Flex>
-                        <Heading
-                          fontSize="1.5rem"
-                          fontWeight="500"
-                          fontFamily="var(--font-outfit)"
-                          ml="0.5rem"
-                        >
-                          Team
-                        </Heading>
+                        {emoji2}
                       </Flex>
-                      <Image w="full" src={teamImage} alt={eventName} />
+                      <Image
+                        borderRadius="1rem"
+                        objectFit="cover"
+                        aspectRatio="1.78"
+                        h="full"
+                        w="full"
+                        src={teamImage}
+                        alt={eventName}
+                      />
                     </Flex>
                   </TabPanel>
                 ),
