@@ -13,7 +13,7 @@ const journey = [
     title: 'June 2021',
     eventName: 'Foundations',
     eventImage: '/images/about/journey/3.png',
-    teamImage: '/images/about/journey/6.png',
+    teamImage: '/images/about/journey/4.png',
     emoji1: '✨',
     emoji2: '🚀',
     description:
