@@ -56,7 +56,9 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
             color="#000000B2"
             w="-webkit-fit-content"
           >
-            {startTimestamp.format('MMM DD, YYYY').toUpperCase()}
+            {startTimestamp
+              ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
+              : 'TO BE ANNOUNCED'}
           </Box>
         </Flex>
       </Flex>
@@ -111,43 +113,29 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
           </Heading>
         </Flex>
         <Flex gap="1rem" alignItems="center">
-          {endTimestamp ? (
-            <Box
-              p="0.3rem 0.7rem"
-              borderRadius="10px"
-              border="1px solid #00000033"
-              bgColor="transparent"
-              fontFamily="var(--font-outfit)"
-              fontSize="1rem"
-              fontWeight="700"
-              color="#000000B2"
-              w="-webkit-fit-content"
-              minW="190px"
-              textAlign="center"
-            >
-              {`${startTimestamp
-                .format('MMM DD')
-                .toUpperCase()} - ${endTimestamp
-                .format('MMM DD, YYYY')
-                .toUpperCase()}`}
-            </Box>
-          ) : (
-            <Box
-              p="0.3rem 0.7rem"
-              borderRadius="10px"
-              border="1px solid #00000033"
-              bgColor="transparent"
-              fontFamily="var(--font-outfit)"
-              fontSize="1rem"
-              fontWeight="700"
-              color="#000000B2"
-              w="-webkit-fit-content"
-              minW="130px"
-              textAlign="center"
-            >
-              {startTimestamp.format('MMM DD, YYYY').toUpperCase()}
-            </Box>
-          )}
+          <Box
+            p="0.3rem 0.7rem"
+            borderRadius="10px"
+            border="1px solid #00000033"
+            bgColor="transparent"
+            fontFamily="var(--font-outfit)"
+            fontSize="1rem"
+            fontWeight="700"
+            color="#000000B2"
+            w="-webkit-fit-content"
+            minW="190px"
+            textAlign="center"
+          >
+            {endTimestamp && startTimestamp
+              ? `${startTimestamp
+                  .format('MMM DD')
+                  .toUpperCase()} - ${endTimestamp
+                  .format('MMM DD, YYYY')
+                  .toUpperCase()}`
+              : startTimestamp
+              ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
+              : 'TO BE ANNOUNCED'}
+          </Box>
           <Box
             p="0.3rem 0.7rem"
             borderRadius="10px"
