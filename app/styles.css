@@ -150,8 +150,21 @@
   border-width: 0 1px 1px 0;
 }
 
-
 .explore-button:hover .arrow {
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
+}
+
+@keyframes move-to-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.moving-animation {
+  /* animation: move-to-left 10s alternate-reverse linear infinite; */
+  transform: translateX(calc(-50%));
 }

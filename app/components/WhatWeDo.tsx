@@ -1,8 +1,31 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
-import Image from "next/image";
 import btnArrow from "@/app/assets/images/arrow-black.svg";
 import randomImg from "@/app/assets/images/random.png";
+import { Image } from "@chakra-ui/react";
+
+const card1Images = [
+  "/images/home/card1/1.png",
+  "/images/home/card1/2.png",
+  "/images/home/card1/3.png",
+  "/images/home/card1/4.png",
+  "/images/home/card1/5.png",
+  "/images/home/card1/6.png",
+  "/images/home/card1/7.png",
+];
+
+const card2Images = [
+  "/images/home/card2/1.png",
+  "/images/home/card2/2.png",
+  "/images/home/card2/3.png",
+  "/images/home/card2/4.png",
+  "/images/home/card2/5.png",
+  "/images/home/card2/6.png",
+  "/images/home/card2/7.png",
+  "/images/home/card2/8.png",
+  "/images/home/card2/9.png",
+  "/images/home/card2/10.png",
+];
 
 export default function WhatWeDo() {
   return (
@@ -40,26 +63,21 @@ export default function WhatWeDo() {
               <Image src={btnArrow} alt="Arrow" />
             </span>
           </a>
-          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8">
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
+          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8 moving-animation">
+            {card1Images.map((image) => (
+              <Image
+                key={image}
+                src={image}
+                // width={200}
+                // height={200}
+                alt="Random"
+                className="h-[8rem] md:h-[15rem] w-auto rounded-2xl"
+              />
+            ))}
           </div>
         </div>
       </div>
-      <div className="bg-[#9933FF] container-1200 px-12 rounded-3xl mt-12 overflow-hidden">
+      <div className="bg-[#9933FF] container-1200 px-12 rounded-3xl mt-12 ">
         <div className=" py-16 flex flex-col">
           <span className="font-medium text-4xl md:text-6xl">
             Beyond Hackathons
@@ -86,22 +104,17 @@ export default function WhatWeDo() {
               <Image src={btnArrow} alt="Arrow" />
             </span>
           </a>
-          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8">
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
-            <Image
-              src={randomImg}
-              alt="Random"
-              className="h-[8rem] md:h-[15rem] w-auto "
-            />
+          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8 w-fit moving-animation">
+            {card2Images.map((image) => (
+              <Image
+                key={image}
+                src={image}
+                // width={256}
+                // height={256}
+                alt="Random"
+                className="h-[8rem] md:h-[15rem] w-[auto] rounded-2xl"
+              />
+            ))}
           </div>
         </div>
       </div>
