@@ -104,7 +104,7 @@ export default function WhatWeDo() {
               <Image src={btnArrow} alt="Arrow" />
             </span>
           </a>
-          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8 w-fit moving-animation">
+          <div className="mt-12 gap-x-4 md:gap-x-8 moving-animation">
             {card2Images.map((image) => (
               <Image
                 key={image}
