@@ -77,7 +77,7 @@ export default function WhatWeDo() {
           </div>
         </div>
       </div>
-      <div className="bg-[#9933FF] container-1200 px-12 rounded-3xl mt-12 ">
+      <div className="bg-[#9933FF] container-1200 px-12 rounded-3xl mt-12 items-start overflow-hidden">
         <div className=" py-16 flex flex-col">
           <span className="font-medium text-4xl md:text-6xl">
             Beyond Hackathons

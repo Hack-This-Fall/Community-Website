@@ -166,5 +166,8 @@
 
 .moving-animation {
   /* animation: move-to-left 10s alternate-reverse linear infinite; */
-  transform: translateX(calc(-50%));
+  /* transform: translateX(calc(-50%)); */
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
 }
