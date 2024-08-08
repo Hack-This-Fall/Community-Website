@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
-import btnArrow from "@/app/assets/images/arrow-black.svg";
 import randomImg from "@/app/assets/images/random.png";
 import { Image } from "@chakra-ui/react";
 
@@ -60,7 +59,7 @@ export default function WhatWeDo() {
               Explore Now
             </span>
             <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
-              <Image src={btnArrow} alt="Arrow" />
+              <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
           <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8 moving-animation">
@@ -101,7 +100,7 @@ export default function WhatWeDo() {
               Explore Now
             </span>
             <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
-              <Image src={btnArrow} alt="Arrow" />
+              <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
           <div className="mt-12 gap-x-4 md:gap-x-8 moving-animation">
