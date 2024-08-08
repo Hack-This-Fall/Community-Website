@@ -1,10 +1,17 @@
-import { Flex, Image, Heading, Box, Text } from '@chakra-ui/react';
+import { Flex, Heading, Box, Link } from '@chakra-ui/react';
 import { colorsMap, eventData } from '@/app/events/data';
 import AngleArrow from '../icons/AngleArrow';
 
 const EventContainer = ({ eventData }: { eventData: eventData }) => {
-  const { heading, startTimestamp, location, endTimestamp, type, eventMode } =
-    eventData;
+  const {
+    heading,
+    startTimestamp,
+    location,
+    endTimestamp,
+    type,
+    eventMode,
+    link,
+  } = eventData;
 
   const { color, secondaryColor } = colorsMap[type];
 
@@ -45,7 +52,12 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
           {eventMode}
         </Box>
       </Flex>
-      <Flex pt="1.25rem" flexDir="column">
+      <Flex
+        grow="1"
+        justifyContent="space-between"
+        pt="1.25rem"
+        flexDir="column"
+      >
         <Heading
           fontSize={{ base: '1.8rem', md: '2rem', lg: '2.5rem' }}
           lineHeight="115%"
@@ -100,6 +112,10 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
             )}
           </Flex>
           <Flex
+            as={Link}
+            href={link}
+            _hover={{ textDecoration: 'none' }}
+            target="_blank"
             bgColor="#000"
             alignItems="center"
             justifyContent="center"

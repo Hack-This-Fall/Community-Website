@@ -14,70 +14,72 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
   const { color, secondaryColor } = colorsMap[type];
 
   return isMobile ? (
-    <Flex
-      borderBottom="1px solid #00000033"
-      justifyContent="space-between"
-      pos="relative"
-      w="full"
-      py="1.4rem"
-      alignItems="center"
-      cursor="pointer"
-      _hover={{ backgroundColor: '#F0F0F0' }}
-    >
-      <Flex flexDir="column" gap="1rem">
-        <Heading
-          fontSize="1.5rem"
-          fontFamily="var(--font-outfit)"
-          fontWeight="500"
-        >
-          {heading}
-        </Heading>
-        <Flex gap="1rem">
-          <Box
-            p="0.3rem 0.7rem"
-            borderRadius="10px"
-            border={`1px solid ${color}`}
-            bgColor={secondaryColor}
-            fontFamily="var(--font-outfit)"
-            fontSize="0.7rem"
-            fontWeight="700"
-            color={color}
-          >
-            {type}
-          </Box>
-          <Box
-            p="0.3rem 0.7rem"
-            borderRadius="10px"
-            border="1px solid #00000033"
-            bgColor="transparent"
-            fontFamily="var(--font-outfit)"
-            fontSize="0.7rem"
-            fontWeight="700"
-            color="#000000B2"
-            w="-webkit-fit-content"
-          >
-            {startTimestamp
-              ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
-              : 'TO BE ANNOUNCED'}
-          </Box>
-        </Flex>
-      </Flex>
-      <svg
-        width="8"
-        height="14"
-        viewBox="0 0 8 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <Link href={link} _hover={{ textDecoration: 'none' }} target="_blank">
+      <Flex
+        borderBottom="1px solid #00000033"
+        justifyContent="space-between"
+        pos="relative"
+        w="full"
+        py="1.4rem"
+        alignItems="center"
+        cursor="pointer"
+        _hover={{ backgroundColor: '#F0F0F0' }}
       >
-        <path
-          d="M1 13L7 7L1 1"
-          stroke="black"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </Flex>
+        <Flex flexDir="column" gap="1rem">
+          <Heading
+            fontSize="1.5rem"
+            fontFamily="var(--font-outfit)"
+            fontWeight="500"
+          >
+            {heading}
+          </Heading>
+          <Flex gap="1rem">
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border={`1px solid ${color}`}
+              bgColor={secondaryColor}
+              fontFamily="var(--font-outfit)"
+              fontSize="0.7rem"
+              fontWeight="700"
+              color={color}
+            >
+              {type}
+            </Box>
+            <Box
+              p="0.3rem 0.7rem"
+              borderRadius="10px"
+              border="1px solid #00000033"
+              bgColor="transparent"
+              fontFamily="var(--font-outfit)"
+              fontSize="0.7rem"
+              fontWeight="700"
+              color="#000000B2"
+              w="-webkit-fit-content"
+            >
+              {startTimestamp
+                ? startTimestamp.format('MMM DD, YYYY').toUpperCase()
+                : 'TO BE ANNOUNCED'}
+            </Box>
+          </Flex>
+        </Flex>
+        <svg
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 13L7 7L1 1"
+            stroke="black"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </Flex>
+    </Link>
   ) : (
     <Link href={link} _hover={{ textDecoration: 'none' }} target="_blank">
       <Flex

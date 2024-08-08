@@ -139,8 +139,8 @@ const EventsPage = () => {
                         a.startTimestamp &&
                         b.startTimestamp &&
                         a.startTimestamp.diff(b.startTimestamp) > 0
-                          ? 1
-                          : -1,
+                          ? -1
+                          : 1,
                       )
                       .map((event, index) => (
                         <EventContainer eventData={event} key={index} />
