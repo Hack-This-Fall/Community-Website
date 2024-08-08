@@ -157,18 +157,22 @@
 
 @keyframes move-to-left {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(calc(-100% + min(1200px, calc(100vw - 2rem))));
   }
 }
 
 .moving-animation {
-  /* animation: move-to-left 10s alternate-reverse linear infinite; */
-  /* transform: translateX(calc(-50%)); */
+  animation: move-to-left 15s alternate linear infinite;
+  /* transform: translateX(calc(-100%)); */
   display: inline-flex;
   /* overflow-x: auto; */
   white-space: nowrap;
   width: max-content;
+}
+
+.moving-animation:hover {
+  animation-play-state: paused;
 }
