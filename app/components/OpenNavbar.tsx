@@ -50,7 +50,11 @@ export default function OpenNavbar({
           ))}
         </div>
         <div>
-          <Image src={Banner} className="w-[100%] px-10" alt="banner" />
+          <Image
+            src={Banner}
+            className="w-[100%] px-10 opacity-0"
+            alt="banner"
+          />
         </div>
         <div className="flex flex-col font-outfit overflow-hidden mt-8 md:mt-12 w-[100%] text-black opacity-30">
           <div className="flex flex-row text-[1.8rem] md:text-[5.5rem] font-extrabold text-nowrap whitespace-nowrap gap-x-2 w-[100vw] ml-[-65%] md:ml-[-46%] leading-none	">
