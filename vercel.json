@@ -1,6 +1,8 @@
 {
-    "redirects": {
-        "source": "/virtual",
-        "destination": "https://hackathon.hackthisfall.tech/virtual"
-    }
+    "redirects": [
+        {
+            "source": "/virtual",
+            "destination": "https://hackathon.hackthisfall.tech/virtual"
+        }
+    ]
 }
