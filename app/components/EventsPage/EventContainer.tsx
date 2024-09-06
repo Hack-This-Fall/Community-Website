@@ -17,6 +17,10 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
 
   return (
     <Flex
+      as={Link}
+      href={link}
+      _hover={{ textDecoration: 'none', cursor: 'pointer' }}
+      target="_blank"
       border="1px solid #00000033"
       borderRadius="20px"
       flexDir="column"
@@ -24,6 +28,12 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
       pos="relative"
       height="full"
       bgColor="#FAFAFA"
+      css={{ ":hover": {
+        ".circle": {
+          transform: "rotate(42deg)",
+          transition: "transform 0.3s ease-in-out",
+        }
+      }}}
       p="1rem"
     >
       <Flex justifyContent="space-between" w="full">
@@ -112,10 +122,6 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
             )}
           </Flex>
           <Flex
-            as={Link}
-            href={link}
-            _hover={{ textDecoration: 'none' }}
-            target="_blank"
             bgColor="#000"
             alignItems="center"
             justifyContent="center"
@@ -123,6 +129,7 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
             w="40%"
             aspectRatio="1"
             color="white"
+            className="circle"
           >
             <AngleArrow />
           </Flex>

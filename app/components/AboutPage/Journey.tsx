@@ -21,7 +21,9 @@ const JourneySection = () => {
   const xScroll = useTransform(
     scrollYProgress,
     [0, 1],
-    ['0%', isMd ? '-78.5%' : '-82.1%'],
+    ['0%', isMd ? '-78.5%' : '-82.1%'], {
+      
+    }
   );
   return (
     <Flex ref={scrollContainer} height="1800vh" position="relative" w="full">
@@ -30,14 +32,14 @@ const JourneySection = () => {
         position="sticky"
         h="fit-content"
         pb={{ base: '4rem', md: '4rem', lg: '4rem' }}
-        top="3vh"
+        top="7rem"
       >
         <Flex
           flexDir={{ base: 'column', lg: 'row' }}
           alignItems="center"
           h="fit-content"
           justifyContent="space-between"
-          mb={{ base: '4rem', lg: '5rem' }}
+          mb="3rem"
           gap={{ base: '2rem', lg: '10rem' }}
           maxW={{ base: '85vw', lg: 'min(1200px, 92.2vw)' }}
         >
@@ -73,7 +75,7 @@ const JourneySection = () => {
             the future!
           </Text>
         </Flex>
-        <motion.div style={{ x: xScroll }} className="flex gap-16">
+        <motion.div style={{ x: xScroll, scrollBehavior: "smooth" }} className="flex gap-16">
           {journey.map(
             (
               {

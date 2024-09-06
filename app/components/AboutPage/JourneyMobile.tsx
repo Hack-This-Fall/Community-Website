@@ -86,15 +86,45 @@ const JourneySectionMobile = () => {
                     flexDir="column"
                     overflow="hidden"
                   >
-                    <Heading
-                      fontSize="1.5rem"
-                      fontWeight="500"
-                      fontFamily="var(--font-outfit)"
+                    <Flex
+                      w="full"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      gap="1rem"
                       mb="1rem"
-                      color="#939191"
                     >
-                      {title}
-                    </Heading>
+                      <IconButton
+                        isDisabled={currentTab === 0}
+                        borderRadius="full"
+                        w="20px"
+                        bgColor="#000 !important"
+                        icon={<ArrowBackIcon color="white" />}
+                        onClick={() => {
+                          if (currentTab > 0) setCurrentTab(currentTab - 1);
+                        }}
+                        aria-label="Scroll"
+                      />
+                      <Heading
+                        fontSize="1.5rem"
+                        fontWeight="500"
+                        fontFamily="var(--font-outfit)"
+                        color="#939191"
+                      >
+                        {title}
+                      </Heading>
+                      <IconButton
+                        borderRadius="full"
+                        w="20px"
+                        bgColor="#000 !important"
+                        isDisabled={currentTab === journey.length - 1}
+                        onClick={() => {
+                          if (currentTab < journey.length - 1)
+                            setCurrentTab(currentTab + 1);
+                        }}
+                        icon={<ArrowForwardIcon color="white" />}
+                        aria-label="Scroll"
+                      />
+                    </Flex>
                     <Text mb="1rem" fontSize="1rem" fontWeight="400">
                       {description}
                     </Text>
@@ -167,31 +197,6 @@ const JourneySectionMobile = () => {
               )}
             </TabPanels>
           </Tabs>
-          <Flex w="full" justifyContent="center" alignItems="center" gap="1rem">
-            <IconButton
-              isDisabled={currentTab === 0}
-              borderRadius="full"
-              w="20px"
-              bgColor="#000 !important"
-              icon={<ArrowBackIcon color="white" />}
-              onClick={() => {
-                if (currentTab > 0) setCurrentTab(currentTab - 1);
-              }}
-              aria-label="Scroll"
-            />
-            <IconButton
-              borderRadius="full"
-              w="20px"
-              bgColor="#000 !important"
-              isDisabled={currentTab === journey.length - 1}
-              onClick={() => {
-                if (currentTab < journey.length - 1)
-                  setCurrentTab(currentTab + 1);
-              }}
-              icon={<ArrowForwardIcon color="white" />}
-              aria-label="Scroll"
-            />
-          </Flex>
         </Flex>
       </Flex>
     </Flex>
