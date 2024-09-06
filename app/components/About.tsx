@@ -80,7 +80,8 @@ export default function About() {
           welcomes you with open arms. Welcome aboard!
         </div>
 
-        <div
+        <a
+          href="/about"
           id="move-in-btn"
           className="absolute bg-[#FF9933] rounded-full w-[16rem] h-[16rem] -left-[50%] bottom-0 z-20 p-3 mb-16 hidden md:block"
         >
@@ -91,10 +92,11 @@ export default function About() {
               className="absolute w-full h-full z-30 top-0"
             />
           </div>
-        </div>
+        </a>
 
         <div className="relative w-[8rem] h-[8rem] block md:hidden">
-          <div
+          <a
+            href="/about"
             id="move-in-btn-mob"
             className="absolute bg-[#FF9933] rounded-full w-[8rem] h-[8rem] left-[0%] bottom-0 z-20 p-3 mb-16 block md:hidden"
           >
@@ -105,7 +107,7 @@ export default function About() {
                 className="absolute w-full h-full z-30 top-0"
               />
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

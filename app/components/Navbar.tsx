@@ -40,17 +40,22 @@ export default function Navbar({
 
     const position = window.scrollY;
 
-    if (position >= height) {
+    if (position >= 100) {
       navbarLogo.current.style.opacity = "0";
+    } else {
+      navbarLogo.current.style.opacity = `${(1 - position / 100) * 2}`;
+    }
+
+    if (position >= height) {
       if (!onceHidden) {
         onceHidden = true;
         setNavbarOpen(false);
       }
     } else if (position <= height / 2) {
-      navbarLogo.current.style.opacity = "1";
+      // navbarLogo.current.style.opacity = "1";
       onceHidden = false;
     } else {
-      navbarLogo.current.style.opacity = `${(1 - position / height) * 2}`;
+      // navbarLogo.current.style.opacity = `${(1 - position / height) * 2}`;
       onceHidden = false;
     }
 
@@ -75,12 +80,14 @@ export default function Navbar({
       ref={ref}
     >
       <div className={`flex justify-between items-center block w-full `}>
-        <Image
-          ref={navbarLogo}
-          src={Logo}
-          className="w-20 md:w-[7.5rem]"
-          alt="logo"
-        />
+        <Link href="/">
+          <Image
+            ref={navbarLogo}
+            src={Logo}
+            className="w-20 md:w-[7.5rem]"
+            alt="logo"
+          />
+        </Link>
         <div
           className={` gap-x-12 font-outfit justify-between items-center font-regular text-xl border-[0.5px] border-black  py-4 rounded-full transition-all duration-100 ease-in-out bg-white hidden md:flex ${
             isNavbarOpen ? "w-fit px-6" : "w-fit px-4"

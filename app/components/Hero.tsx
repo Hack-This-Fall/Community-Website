@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { useBreakpointValue } from '@chakra-ui/react';
-import '../styles.css';
-import Image from 'next/image';
-import btnTxt from '@/app/assets/images/button-text.svg';
-import btnArrow from '@/app/assets/images/arrow-up-right.png';
+import { useEffect, useState } from "react";
+import { useBreakpointValue } from "@chakra-ui/react";
+import "../styles.css";
+import Image from "next/image";
+import btnTxt from "@/app/assets/images/button-text.svg";
+import btnArrow from "@/app/assets/images/arrow-up-right.png";
 
 export default function Hero({ navbarHeight }: { navbarHeight: number }) {
   const isMobile = useBreakpointValue({ base: true, md: false });
   useEffect(() => {
-    const joinBtn = document.getElementById('join-btn');
-    const bannerText = document.getElementById('banner-text');
+    const joinBtn = document.getElementById("join-btn");
+    const bannerText = document.getElementById("banner-text");
 
     const handleScroll = () => {
       let scroll = window.scrollY;
@@ -22,7 +22,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
         } else {
           joinBtn.style.right = `${0 - (scroll / heightToKickOut) * 30}%`;
         }
-        joinBtn.style.transform = 'rotate(' + window.pageYOffset / 2 + 'deg)';
+        joinBtn.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
       }
 
       if (bannerText) {
@@ -30,10 +30,10 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, true);
+    window.addEventListener("scroll", handleScroll, true);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll, true);
+      window.removeEventListener("scroll", handleScroll, true);
     };
   }, []);
 
@@ -48,7 +48,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
     >
       <div
         className="font-outfit flex flex-col items-start container-1200 w-full relative h-full md:h-auto justify-between"
-        style={{ maxWidth: 'min(100vw, 1200px)' }}
+        style={{ maxWidth: "min(100vw, 1200px)" }}
       >
         <div className="font-outfit font-medium md:text-6xl w-full">
           <div className="text-[3rem] md:text-[5.5rem] leading-[5rem] md:leading-[7.5rem] flex flex-col md:flex-row items-center gap-x-6">
@@ -71,7 +71,7 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
           hacker communities to build groundbreaking solutions, inspire
           problem-solvers, and grow together in a diverse, supportive
           environment.`
-            : `Welcome to Hack This Fall! Join one of India' most thriving
+            : `Welcome to Hack This Fall! Join one of India's most thriving
           hacker communities.`}
         </div>
 
@@ -92,12 +92,12 @@ export default function Hero({ navbarHeight }: { navbarHeight: number }) {
             <Image
               src={btnTxt}
               alt="Join the community"
-              className="w-full h-full md:block"
+              className="w-full h-full md:block rotate-90"
             />
             <Image
               src={btnArrow}
               alt="Arrow"
-              className="absolute w-full h-full z-30 top-0"
+              className="absolute w-full h-full z-30 top-0 "
             />
           </div>
         </a>

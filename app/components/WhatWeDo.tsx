@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
-import btnArrow from "@/app/assets/images/arrow-black.svg";
-import randomImg from "@/app/assets/images/random.png";
 import { Image } from "@chakra-ui/react";
+import addAnimation from "../utils/animator";
 
 const card1Images = [
   "/images/home/card1/1.png",
@@ -28,6 +27,15 @@ const card2Images = [
 ];
 
 export default function WhatWeDo() {
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation(scrollers);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col w-full justify-center items-center cc bg-white z-[10] font-outfit text-white">
       {/* <div className="bg-[#FF9933] w-full rounded-t-3xl">
@@ -60,20 +68,22 @@ export default function WhatWeDo() {
               Explore Now
             </span>
             <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
-              <Image src={btnArrow} alt="Arrow" />
+              <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
-          <div className="flex flex-row mt-12 gap-x-4 md:gap-x-8 moving-animation">
-            {card1Images.map((image) => (
-              <Image
-                key={image}
-                src={image}
-                // width={200}
-                // height={200}
-                alt="Random"
-                className="h-[8rem] md:h-[15rem] w-auto rounded-2xl"
-              />
-            ))}
+          <div className="scroller mt-12" data-speed="fast">
+            <div className="scroller__inner">
+              {card1Images.map((image) => (
+                <Image
+                  key={image}
+                  src={image}
+                  // width={200}
+                  // height={200}
+                  alt="Random"
+                  className="h-[8rem] md:h-[15rem] w-auto rounded-2xl"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -101,20 +111,20 @@ export default function WhatWeDo() {
               Explore Now
             </span>
             <span className="arrow flex bg-white rounded-full h-parent px-5 items-center justify-center">
-              <Image src={btnArrow} alt="Arrow" />
+              <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
-          <div className="mt-12 gap-x-4 md:gap-x-8 moving-animation">
-            {card2Images.map((image) => (
-              <Image
-                key={image}
-                src={image}
-                // width={256}
-                // height={256}
-                alt="Random"
-                className="h-[8rem] md:h-[15rem] w-[auto] rounded-2xl"
-              />
-            ))}
+          <div className="scroller mt-12" data-speed="fast">
+            <div className="scroller__inner">
+              {card2Images.map((image) => (
+                <Image
+                  key={image}
+                  src={image}
+                  alt="Random"
+                  className="h-[8rem] md:h-[15rem] w-auto rounded-2xl"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
