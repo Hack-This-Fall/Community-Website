@@ -6,6 +6,10 @@ const sponsors = [
     image: '/images/partners/appwrite.svg',
   },
   {
+    linkTo: 'https://devfolio.co',
+    image: '/images/partners/devfolio.png',
+  },
+  {
     linkTo: 'https://github.com',
     image: '/images/partners/github.png',
   },
@@ -16,10 +20,6 @@ const sponsors = [
   {
     linkTo: 'https://www.linode.com',
     image: '/images/partners/linode.png',
-  },
-  {
-    linkTo: 'https://devfolio.co',
-    image: '/images/partners/devfolio.png',
   },
   {
     linkTo: 'https://azure.microsoft.com',
