@@ -18,8 +18,8 @@ const sponsors = [
     image: '/images/partners/linode.png',
   },
   {
-    linkTo: 'https://www.logitech.com',
-    image: '/images/partners/logitech.png',
+    linkTo: 'https://devfolio.co',
+    image: '/images/partners/devfolio.png',
   },
   {
     linkTo: 'https://azure.microsoft.com',
