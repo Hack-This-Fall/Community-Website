@@ -93,6 +93,7 @@ export default function Sponsors() {
         {sponsors.map((s, i) => (
           <a
             href={s.linkTo}
+            target='_blank'
             className="border p-2 md:p-4 rounded-xl flex justify-center items-center cursor-pointer h-[70px] md:h-[100px] lg:h-[120px]"
             key={i}
           >
