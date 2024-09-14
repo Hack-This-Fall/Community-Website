@@ -1,20 +1,18 @@
 "use client";
 
-import About from "../components/About";
 import BlogCard from "../components/BlogCard";
-import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import OpenNavbar from "../components/OpenNavbar";
 import StickyFooter from "../components/StickyFooter";
 import useWindowSize from "../hooks/useWindowDimension";
 import "../styles.css";
-import { useEffect, useRef, useState } from "react";
-import { data as season4Blog } from "./season-4-recap/page";
-import { data as experiencesToNotMiss } from "./9-experiences-not-to-miss-at-hack-this-fall-hackathon/page";
-import { data as inclusiveInnovation } from "./inclusive-innovation-why-diversity-matters-at-the-hackathon/page";
-import { data as season3Blog } from "./season-3-recap/page";
-import { data as season2Blog } from "./season-2-recap/page";
-import { data as season1Blog } from "./season-1-recap/page";
+import { useState } from "react";
+import season4Blog from "./season-4-recap/data";
+import experiencesToNotMiss from "./9-experiences-not-to-miss-at-hack-this-fall-hackathon/data";
+import inclusiveInnovation from "./inclusive-innovation-why-diversity-matters-at-the-hackathon/data";
+import season3Blog from "./season-3-recap/data";
+import season2Blog from "./season-2-recap/data";
+import season1Blog from "./season-1-recap/data";
 
 const blogs = [
   season4Blog,
@@ -91,7 +89,7 @@ export default function Blogs() {
             </div>
             <div className="grid grid-cols-2 justify-evenly w-full gap-x-20 gap-y-10 mt-20">
               {blogs.map((blog) => (
-                <BlogCard {...blog} />
+                <BlogCard key={blog.slug} {...blog} />
               ))}
             </div>
           </div>

@@ -7,36 +7,7 @@ import OpenNavbar from "@/app/components/OpenNavbar";
 import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
-
-export const data = {
-  slug: "season-3-recap",
-
-  description:
-    "In this recap blog, we'll delve into the highlights, the 3-day journey, and the unique elements that made Hack This Fall 3.0 a memorable experience! \nRead out more....",
-  title:
-    "Hack This Fall 3.0 Recap: A Remarkable Journey of Innovation, Collaboration & Experience",
-  image: "https://a.storyblok.com/f/182824/2000x1333/0300e95675/htf-neon.png",
-  date: "2023-02-06 18:30",
-  author: {
-    name: "Siddharth Dayalwal",
-    content: {
-      _uid: "17047774-36a0-4bbe-893f-4d28d8376040",
-      company: "Hack This Fall",
-      picture:
-        "https://a.storyblok.com/f/182824/1946x1808/5c476c582e/mlh-sid-0.jpeg",
-      twitter: {
-        id: "",
-        url: "https://twitter.com/siddharth_hacks",
-        linktype: "url",
-        fieldtype: "multilink",
-        cached_url: "https://twitter.com/siddharth_hacks",
-      },
-      component: "author",
-      designation: "Organizer",
-    },
-  },
-  tags: ["Hackathon", "Recap"],
-};
+import data from "./data";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -132,15 +103,15 @@ export default function Blog() {
                 <p>
                   Hack This Fall 3.0, hosted at Karnavati University, was a
                   36-hour in-person hackathon marked a significant departure
-                  from its online predecessors. With the tagline "Innovate For
-                  Good" and an impressive lineup of sponsors, partners, and a
-                  record-breaking number of participants, this event left an
-                  indelible mark on everyone involved.
+                  from its online predecessors. With the tagline &quot;Innovate
+                  For Good&quot; and an impressive lineup of sponsors, partners,
+                  and a record-breaking number of participants, this event left
+                  an indelible mark on everyone involved.
                 </p>
                 <p>
-                  In this recap blog, we'll delve into the highlights, the 3-day
-                  journey, and the unique elements that made "Hack This Fall
-                  3.0" a memorable experience.
+                  In this recap blog, we&apos;ll delve into the highlights, the
+                  3-day journey, and the unique elements that made &quot;Hack
+                  This Fall 3.0&quot; a memorable experience.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <Image src="https://a.storyblok.com/f/182824/2000x1333/98855801b5/hacker-hall-1.png" />
@@ -150,13 +121,14 @@ export default function Blog() {
                   <span className="font-semibold">
                     A Shift from Virtual to In-Person -{" "}
                   </span>
-                  The first and second editions of "Hack This Fall" were
-                  conducted online, but the third edition marked a significant
-                  change. It became the first-ever in-person edition, and the
-                  impact of this transition was palpable throughout the event.
-                  Participants had the unique opportunity to meet, collaborate,
-                  and learn from each other in a physical setting, fostering a
-                  tangible sense of community and camaraderie.
+                  The first and second editions of &quot;Hack This Fall&quot;
+                  were conducted online, but the third edition marked a
+                  significant change. It became the first-ever in-person
+                  edition, and the impact of this transition was palpable
+                  throughout the event. Participants had the unique opportunity
+                  to meet, collaborate, and learn from each other in a physical
+                  setting, fostering a tangible sense of community and
+                  camaraderie.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/d7c4c7a56d/2-1.png" />
@@ -166,8 +138,8 @@ export default function Blog() {
                 </div>
                 <p className="text-lg font-semibold">The Event in Numbers</p>
                 <p>
-                  Before we dive into the details, let's set the stage with some
-                  milestones we are proud of:
+                  Before we dive into the details, let&apos;s set the stage with
+                  some milestones we are proud of:
                   <ul className="list-disc list-inside">
                     <li>
                       Hack This Fall 3.0 was proudly affiliated with Major
@@ -182,8 +154,8 @@ export default function Blog() {
                     </li>
                     <li>
                       An incredible 144 projects were built during the 36-hour
-                      hackathon, showcasing the participants' creativity and
-                      skills.
+                      hackathon, showcasing the participants&apos; creativity
+                      and skills.
                     </li>
                   </ul>
                 </p>
@@ -229,8 +201,8 @@ export default function Blog() {
                   ensuring that participants had the support they needed. The
                   day featured a unique MLH mini-event, a cup-stacking
                   challenge, followed by the engaging Snyk Cyber Security
-                  Challenge. The final mentorship round wrapped up the day's
-                  activities.
+                  Challenge. The final mentorship round wrapped up the
+                  day&apos;s activities.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/32e375b916/5-1.png" />
@@ -247,7 +219,7 @@ export default function Blog() {
                   rewarded with a well-deserved breakfast. The judging process
                   began, where experts assessed the innovative projects. The
                   winners were carefully chosen, and the Closing Ceremony marked
-                  the event's conclusion. Participants bid farewell to each
+                  the event&apos;s conclusion. Participants bid farewell to each
                   other, capturing the memorable moments through photographs
                   that would serve as cherished mementos.
                 </p>
@@ -289,8 +261,9 @@ export default function Blog() {
                   incredible talent and enthusiasm of the participants. Beyond
                   coding and learning, the event fostered friendships, memories,
                   and an enduring spirit of innovation and camaraderie. As we
-                  bid adieu to "Hack This Fall Season 3", we eagerly look
-                  forward to more hackathons, collaborations, and innovations.
+                  bid adieu to &quot;Hack This Fall Season 3&quot;, we eagerly
+                  look forward to more hackathons, collaborations, and
+                  innovations.
                 </p>
                 <p>Happy Hacking! 🧡</p>
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/f2fa00b527/end.png" />

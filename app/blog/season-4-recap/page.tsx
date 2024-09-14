@@ -7,35 +7,7 @@ import OpenNavbar from "@/app/components/OpenNavbar";
 import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
-
-export const data = {
-  slug: "season-4-recap",
-  description:
-    'Welcome to the exhilarating world of "Hack This Fall Season 4", where innovation knows no bounds and collaboration transcends borders. From 9th to 11th February 2024, Karnavati University in Gandhinagar, Gujarat, India, played host to a gathering of tech enthusiasts, innovators, and problem-solvers from across India. ',
-  title:
-    "Hack This Fall 2024 Recap: Journey of Innovation & Collaboration Beyond Borders",
-  image: "https://a.storyblok.com/f/182824/1690x966/2eb1b6b52f/1.png",
-  date: "2024-02-14 14:30",
-  author: {
-    name: "Siddharth Dayalwal",
-    content: {
-      _uid: "17047774-36a0-4bbe-893f-4d28d8376040",
-      company: "Hack This Fall",
-      picture:
-        "https://a.storyblok.com/f/182824/1946x1808/5c476c582e/mlh-sid-0.jpeg",
-      twitter: {
-        id: "",
-        url: "https://twitter.com/siddharth_hacks",
-        linktype: "url",
-        fieldtype: "multilink",
-        cached_url: "https://twitter.com/siddharth_hacks",
-      },
-      component: "author",
-      designation: "Organizer",
-    },
-  },
-  tags: ["Hackathon", "Recap"],
-};
+import data from "./data";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -129,14 +101,14 @@ export default function Blog() {
                 </p>
                 <Image src="https://a.storyblok.com/f/182824/1690x966/2eb1b6b52f/1.png" />
                 <p>
-                  With its motto "Innovate For Good" serving as a north star,
-                  this 36-hour in-person hackathon was powered by partner Orkes
-                  and backed by platinum partner Vonage. It set the stage for a
-                  whirlwind of creativity and camaraderie and was a testament to
-                  the power of creativity and community. Join us as we embark on
-                  a journey to relive the highlights, delve into the daily
-                  schedules, and cherish the unforgettable moments of this
-                  extraordinary event.
+                  With its motto &quot;Innovate For Good&quot; serving as a
+                  north star, this 36-hour in-person hackathon was powered by
+                  partner Orkes and backed by platinum partner Vonage. It set
+                  the stage for a whirlwind of creativity and camaraderie and
+                  was a testament to the power of creativity and community. Join
+                  us as we embark on a journey to relive the highlights, delve
+                  into the daily schedules, and cherish the unforgettable
+                  moments of this extraordinary event.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/952ee81b02/2-2.png" />
@@ -145,8 +117,8 @@ export default function Blog() {
                 <p>
                   <span className="font-semibold">A Global Phenomenon -</span>{" "}
                   Hack This Fall Season 4 broke new ground by bringing people
-                  from across the globe under one roof. Here's a glimpse into
-                  the diverse participation and achievements:
+                  from across the globe under one roof. Here&apos;s a glimpse
+                  into the diverse participation and achievements:
                 </p>
                 <ul className="list-disc list-inside">
                   <li>
@@ -232,12 +204,12 @@ export default function Blog() {
                   commenced, guiding participants through the ideation stage.
                   The first checkpoint encouraged teams to add basic project
                   details, ensuring progress and accountability. Midnight snacks
-                  from Balaji and a playful "head, shoulders, knees, and toes"
-                  game added a fun twist to the late-night hacking sessions. The
-                  day began with a hearty breakfast, followed by workshops from
-                  partners Postman, MLH, and Logitech. Orkes took the stage to
-                  showcase their product, inspiring participants with its
-                  potential.
+                  from Balaji and a playful &quot;head, shoulders, knees, and
+                  toes&quot; game added a fun twist to the late-night hacking
+                  sessions. The day began with a hearty breakfast, followed by
+                  workshops from partners Postman, MLH, and Logitech. Orkes took
+                  the stage to showcase their product, inspiring participants
+                  with its potential.
                 </p>
                 <p>
                   The second checkpoint prompted teams to submit their GitHub

@@ -7,35 +7,7 @@ import OpenNavbar from "@/app/components/OpenNavbar";
 import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
-
-export const data = {
-  slug: "9-experiences-not-to-miss-at-hack-this-fall-hackathon",
-  description:
-    "Dive into the ultimate guide to maximizing your experience at Hack This Fall Hackathon! From team collaboration to networking with industry experts, discover 9 epic experiences that will take your hacking journey to the next level.",
-  title: "9 experiences not to miss at Hack This Fall Hackathon",
-  image:
-    "https://a.storyblok.com/f/182824/600x338/3eb1a699b5/experiences-not-to-miss.png",
-  date: "2023-01-31 14:30",
-  author: {
-    name: "Siddharth Dayalwal",
-    content: {
-      _uid: "17047774-36a0-4bbe-893f-4d28d8376040",
-      company: "Hack This Fall",
-      picture:
-        "https://a.storyblok.com/f/182824/1946x1808/5c476c582e/mlh-sid-0.jpeg",
-      twitter: {
-        id: "",
-        url: "https://twitter.com/siddharth_hacks",
-        linktype: "url",
-        fieldtype: "multilink",
-        cached_url: "https://twitter.com/siddharth_hacks",
-      },
-      component: "author",
-      designation: "Organizer",
-    },
-  },
-  tags: ["Hackathon", "Checklist"],
-};
+import data from "./data";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -124,24 +96,25 @@ export default function Blog() {
                   world of innovation, collaboration, and limitless
                   possibilities? Brace yourselves because Hack This Fall is
                   about to take you on an unforgettable adventure like never
-                  before! Whether you're a seasoned hacker or a newbie eager to
-                  dive in, we've curated the ultimate guide to help you make the
-                  most out of your hackathon experience.
+                  before! Whether you&apos;re a seasoned hacker or a newbie
+                  eager to dive in, we&apos;ve curated the ultimate guide to
+                  help you make the most out of your hackathon experience.
                 </p>
                 <p>
-                  In this blog, we'll walk you through everything you need to
-                  know to ensure you're fully equipped to thrive at Hack This
-                  Fall. From team collaboration and workshops by industry
+                  In this blog, we&apos;ll walk you through everything you need
+                  to know to ensure you&apos;re fully equipped to thrive at Hack
+                  This Fall. From team collaboration and workshops by industry
                   experts to building groundbreaking projects and networking
-                  with key players in the tech community, we've got you covered
-                  every step of the way.
+                  with key players in the tech community, we&apos;ve got you
+                  covered every step of the way.
                 </p>
                 <p>
                   Get ready to unleash your potential and seize every
                   opportunity that comes your way as we dive deep into the heart
                   of what makes Hack This Fall the must-attend event of the
-                  year. So, grab your laptops, pack your enthusiasm, and let's
-                  dive into this electrifying hackathon experience together!
+                  year. So, grab your laptops, pack your enthusiasm, and
+                  let&apos;s dive into this electrifying hackathon experience
+                  together!
                 </p>
                 <p>
                   <span className="font-semibold">
@@ -155,7 +128,7 @@ export default function Blog() {
                   <span className="font-semibold">
                     2. Immerse in Workshops by Industry Experts:
                   </span>{" "}
-                  Don't miss out on the opportunity to learn from industry
+                  Don&apos;t miss out on the opportunity to learn from industry
                   experts and sponsors who are eager to share their knowledge
                   and insights. These workshops are golden nuggets of wisdom
                   that can help take your projects to the next level.
@@ -163,25 +136,27 @@ export default function Blog() {
                 <p>
                   <span className="font-semibold">3. Innovate and Build:</span>{" "}
                   Let your creativity run wild and build something awesome!
-                  Whether it's a mobile app, a web platform, or a hardware hack,
-                  Hack This Fall is the perfect playground to turn your ideas
-                  into reality.
+                  Whether it&apos;s a mobile app, a web platform, or a hardware
+                  hack, Hack This Fall is the perfect playground to turn your
+                  ideas into reality.
                 </p>
                 <p>
                   <span className="font-semibold">
                     4. Engage with Experienced Mentors:
                   </span>{" "}
-                  Stuck on a problem? Don't fret! Our experienced mentors are
-                  here to lend a helping hand. Don't hesitate to reach out, ask
-                  questions, and seek guidance whenever you hit a roadblock.
+                  Stuck on a problem? Don&apos;t fret! Our experienced mentors
+                  are here to lend a helping hand. Don&apos;t hesitate to reach
+                  out, ask questions, and seek guidance whenever you hit a
+                  roadblock.
                 </p>
                 <p>
                   <span className="font-semibold">
                     5. Take a Break, Have Fun:
                   </span>{" "}
-                  It's not all about coding! Take a break, unwind, and enjoy
-                  some fun games and activities lined up just for you. After
-                  all, a little bit of play can spark some serious creativity.
+                  It&apos;s not all about coding! Take a break, unwind, and
+                  enjoy some fun games and activities lined up just for you.
+                  After all, a little bit of play can spark some serious
+                  creativity.
                 </p>
                 <p>
                   <span className="font-semibold">6. Expand Your Network:</span>{" "}
@@ -195,33 +170,33 @@ export default function Blog() {
                     7. Seize Every Opportunity:
                   </span>{" "}
                   Keep your eyes peeled for various opportunities that come your
-                  way during the hackathon. Whether it's a chance to showcase
-                  your skills, participate in challenges, or win exciting
-                  prizes, seize every opportunity that comes knocking.
+                  way during the hackathon. Whether it&apos;s a chance to
+                  showcase your skills, participate in challenges, or win
+                  exciting prizes, seize every opportunity that comes knocking.
                 </p>
                 <p>
                   <span className="font-semibold">
                     8. Score Swag and Flaunt It:
                   </span>{" "}
-                  Who doesn't love some swag? Score cool merchandise and flaunt
-                  it like a badge of honor. Not only does it make for great
-                  souvenirs, but it's also a testament to your participation and
-                  hard work.
+                  Who doesn&apos;t love some swag? Score cool merchandise and
+                  flaunt it like a badge of honor. Not only does it make for
+                  great souvenirs, but it&apos;s also a testament to your
+                  participation and hard work.
                 </p>
                 <p>
                   <span className="font-semibold">
                     9. Savor Delicious Free Food:
                   </span>{" "}
                   Hungry for success? Fuel up with delicious food and snacks
-                  provided on the house. Because let's face it, a well-fed
+                  provided on the house. Because let&apos;s face it, a well-fed
                   hacker is a happy hacker!
                 </p>
                 <p>
                   With all these fantastic opportunities and experiences
-                  awaiting you at Hack This Fall, there's no doubt that you're
-                  in for an adrenaline-fueled ride. So, gear up, get ready to
-                  code your heart out, and let's make this hackathon an epic
-                  adventure to remember!
+                  awaiting you at Hack This Fall, there&apos;s no doubt that
+                  you&apos;re in for an adrenaline-fueled ride. So, gear up, get
+                  ready to code your heart out, and let&apos;s make this
+                  hackathon an epic adventure to remember!
                 </p>
                 <p>See you at Hack This Fall Hackathon. Happy Hacking! 🧡</p>
               </div>
