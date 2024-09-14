@@ -54,6 +54,23 @@ body {
   }
 }
 
+.container-1080 {
+  max-width: 1080px;
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .container-1080 {
+    max-width: 95%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .slick-slide > div {
   margin: 0 5px;
 }
@@ -84,4 +101,8 @@ body {
 
 footer {
   z-index: -100;
+}
+
+.blog-main {
+  border: 1px solid #d2d2d2;
 }
