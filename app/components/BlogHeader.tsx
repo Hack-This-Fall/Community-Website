@@ -17,7 +17,7 @@ export default function BlogHeader({
         {tags.map((tag) => (
           <span
             key={tag}
-            className="bg-purple-200 text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase"
+            className="bg-purple-200 tag text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase"
           >
             {tag}
           </span>

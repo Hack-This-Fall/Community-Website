@@ -1,42 +1,20 @@
-'use client';
-
-import Navbar from '../components/Navbar';
 import {
   Box,
   Flex,
   Heading,
   Text,
-  List,
   ListItem,
-  ListIcon,
-  OrderedList,
   UnorderedList,
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import OpenNavbar from '../components/OpenNavbar';
-import StickyFooter from '../components/StickyFooter';
+} from "@chakra-ui/react";
+import StickyFooter from "../components/StickyFooter";
+import NavbarWrapper from "../components/NavbarWrapper";
+import { Metadata } from "next";
 
-const EventsPage = () => {
-  const [isNavbarOpen, setNavbarOpen] = useState(false);
-  const [navbarHeight, setNavbarHeight] = useState(149);
+export const metadata: Metadata = {
+  title: "Code of Conduct | Hack This Fall Community",
+};
 
-  const setIsNavbarOpen = (state: boolean) => {
-    setNavbarOpen(state);
-
-    if (state && window) {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const scrollLeft =
-        window.pageXOffset || document.documentElement.scrollLeft;
-
-      window.onscroll = function () {
-        window.scrollTo(scrollLeft, scrollTop);
-      };
-    } else {
-      window.onscroll = function () {};
-    }
-  };
-
+const CodeOfConduct = () => {
   return (
     <Box className="relative">
       <Box
@@ -44,26 +22,22 @@ const EventsPage = () => {
         className="relative w-full bg-white top-0 left-0 rounded-b-3xl"
       >
         <Box
-          borderBottomRadius={{ base: '1.5rem', xl: '0' }}
+          borderBottomRadius={{ base: "1.5rem", xl: "0" }}
           className="relative container-1200 bg-white"
-          px={{ base: '2rem', '2xl': '0' }}
+          px={{ base: "2rem", "2xl": "0" }}
         >
           <Box className="sticky top-0 left-0 w-full" zIndex={4}>
-            {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
-            <Navbar
-              setIsNavbarOpen={setIsNavbarOpen}
-              setNavbarHeight={setNavbarHeight}
-            />
+            <NavbarWrapper />
           </Box>
           <Flex
             flexDir="column"
             alignItems="center"
             w="full"
-            pt={{ base: '2rem', md: '4rem' }}
-            pb={{ base: '4rem', md: '4rem', lg: '7rem' }}
+            pt={{ base: "2rem", md: "4rem" }}
+            pb={{ base: "4rem", md: "4rem", lg: "7rem" }}
           >
             <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
+              fontSize={{ base: "2.5rem", md: "3.5rem" }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
             >
@@ -315,4 +289,4 @@ const EventsPage = () => {
   );
 };
 
-export default EventsPage;
+export default CodeOfConduct;
