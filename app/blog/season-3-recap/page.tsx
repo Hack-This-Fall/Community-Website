@@ -8,6 +8,7 @@ import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
 import data from "./data";
+import BlogHeader from "@/app/components/BlogHeader";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -62,33 +63,13 @@ export default function Blog() {
                 objectFit="cover"
               />
             </div>
-            <div className="flex flex-col -mt-10 bg-white container-1080 rounded-2xl p-10 blog-main">
-              <div className="flex space-x-2">
-                {data.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-purple-200 text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <span className="font-outfit font-medium text-3xl mt-4">
-                {data.title}
-              </span>
-              <div className="mt-4 flex gap-x-10 font-outfit">
-                <span>
-                  <span className="text-[#767676]"> Author </span>
-                  <span>
-                    {data.author.name}, {data.author.content.designation}{" "}
-                    {data.author.content.company}
-                  </span>
-                </span>
-                <span>
-                  <span className="text-[#767676]"> Published on </span>{" "}
-                  {Date.parse(data.date).toLocaleString()}
-                </span>
-              </div>
+            <div className="flex flex-col -mt-20 bg-white container-1080 rounded-2xl p-10 blog-main">
+              <BlogHeader
+                date={data.date}
+                title={data.title}
+                tags={data.tags}
+                author={data.author}
+              />
               <hr className="mt-6" />
               <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
                 <p className="text-lg font-semibold">Overview</p>
@@ -113,7 +94,7 @@ export default function Blog() {
                   3-day journey, and the unique elements that made &quot;Hack
                   This Fall 3.0&quot; a memorable experience.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/2000x1333/98855801b5/hacker-hall-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/2000x1333/bc339cdff3/hacker-hall-2.png" />
                 </div>
@@ -130,7 +111,7 @@ export default function Blog() {
                   setting, fostering a tangible sense of community and
                   camaraderie.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/d7c4c7a56d/2-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/9a1cc1d2d8/2-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/ee7a27e152/2-3.png" />
@@ -177,7 +158,7 @@ export default function Blog() {
                   where participants received guidance and refined their project
                   ideas.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/0d05bc900a/4-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/25e5ba823f/4-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/a632c4d96e/4-3.png" />
@@ -204,7 +185,7 @@ export default function Blog() {
                   Challenge. The final mentorship round wrapped up the
                   day&apos;s activities.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/32e375b916/5-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/9ed706ee31/5-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/9e051f4568/5-3.png" />
@@ -234,7 +215,7 @@ export default function Blog() {
                   breakfast, lunch, evening snacks, and dinner, ensuring
                   participants were well-fed throughout the hackathon.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1811x1207/45aa7035ba/7-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/4cbc1c7f6d/7-2.png" />
                 </div>
@@ -246,7 +227,7 @@ export default function Blog() {
                   memories of the event through photo booths, and many giveaways
                   added an element of excitement to the overall experience.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1811x1207/fb208de190/8-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1602x1068/32d923708a/8-2.png" />
                 </div>

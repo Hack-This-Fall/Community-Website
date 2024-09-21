@@ -13,6 +13,7 @@ import inclusiveInnovation from "./inclusive-innovation-why-diversity-matters-at
 import season3Blog from "./season-3-recap/data";
 import season2Blog from "./season-2-recap/data";
 import season1Blog from "./season-1-recap/data";
+import FeaturedBlogCard from "../components/FeaturedBlogCard";
 
 const blogs = [
   season4Blog,
@@ -66,31 +67,31 @@ export default function Blogs() {
         <div className="relative top-0 left-0 w-full bg-white rounded-b-3xl overflow-hidden pb-24">
           <div
             id="blog-header"
-            className="flex flex-col w-fit justify-center items-center cc container-1200 bg-white z-[10]"
+            className="flex flex-col w-fit justify-center items-center cc container-1200 bg-white z-[10] mt-10 md:mt-0"
           >
             <div>THE BLOG</div>
-            <div className="flex gap-x-2">
-              <span className="font-againstHistory text-[#A64DFF] text-[5rem] md:text-[8rem] self-end md:self-center">
+            <div className="flex gap-x-2 items-center md:-mt-8">
+              <span className="font-againstHistory text-[#A64DFF] text-[4rem] md:text-[8rem] self-center md:self-center">
                 Ideas
               </span>
 
-              <span className="font-outfit text-[#000000] text-[5rem] md:text-[5rem] self-end md:self-center">
+              <span className="font-outfit text-[#000000] text-[3rem] md:text-[5rem] self-center md:self-center">
                 that
               </span>
 
-              <span className="font-againstHistory text-[#FF9933] text-[5rem] md:text-[8rem] self-end md:self-center">
+              <span className="font-againstHistory text-[#FF9933] text-[4rem] md:text-[8rem] self-center md:self-center">
                 Inspire
               </span>
             </div>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor
-            </div>
-            <div className="grid grid-cols-2 justify-evenly w-full gap-x-20 gap-y-10 mt-20">
-              {blogs.map((blog) => (
-                <BlogCard key={blog.slug} {...blog} />
-              ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 md:justify-evenly w-full gap-x-20 gap-y-10 mt-10">
+              {blogs.map((blog, index) =>
+                index ? (
+                  <BlogCard key={blog.slug} {...blog} />
+                ) : (
+                  <FeaturedBlogCard key={blog.slug} {...blog} />
+                )
+              )}
             </div>
           </div>
         </div>

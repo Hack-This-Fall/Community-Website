@@ -2,7 +2,7 @@ import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { formatDate } from "../utils/date";
 
-export default function BlogCard({
+export default function FeaturedBlogCard({
   slug,
   title,
   tags,
@@ -18,20 +18,27 @@ export default function BlogCard({
   image: string;
 }) {
   return (
-    <Link href={`/blog/${slug}`}>
-      <div className="w-full h-full flex flex-col overflow-hidden rounded-lg blog-card">
+    <Link
+      href={`/blog/${slug}`}
+      className={"col-span-1 md:col-span-2 font-outfit"}
+    >
+      <div
+        className={
+          "w-full h-full flex flex-col md:flex-row-reverse overflow-hidden rounded-lg blog-card"
+        }
+      >
         {/* Image Section */}
-        <div className="relative h-full md:h-full w-full overflow-hidden ">
-          <Image
-            className="rounded-b-lg md:rounded-b-xl"
-            src={image}
-            alt="Card Image"
-            objectFit="cover"
-          />
-        </div>
+        {/* <div className="relative w-full md:w-[200%] h-full overflow-hidden rounded-b-lg md:rounded-l-lg"> */}
+        <Image
+          className="relative min-w-full w-full md:min-w-[40vw] h-full overflow-hidden rounded-b-lg md:rounded-l-lg"
+          src={image}
+          alt="Card Image"
+          objectFit="cover"
+        />
+        {/* </div> */}
 
         {/* Content Section */}
-        <div className="p-4 flex flex-col justify-between grow">
+        <div className="p-4 flex flex-col justify-between">
           {/* Tags */}
           <div>
             <div className="mb-2 flex space-x-2">
@@ -46,10 +53,10 @@ export default function BlogCard({
             </div>
 
             {/* Title */}
-            <h2 className="text-lg font-semibold ">{title}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mt-6">{title}</h2>
 
             {/* Description */}
-            <p className=" text-sm mt-2">{description.slice(0, 150)}</p>
+            <p className="text-sm mt-6 md:mt-2">{description}</p>
           </div>
 
           {/* Date */}

@@ -8,6 +8,7 @@ import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
 import data from "./data";
+import BlogHeader from "@/app/components/BlogHeader";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -62,33 +63,13 @@ export default function Blog() {
                 objectFit="cover"
               />
             </div>
-            <div className="flex flex-col -mt-10 bg-white container-1080 rounded-2xl p-10 blog-main">
-              <div className="flex space-x-2">
-                {data.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-purple-200 text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <span className="font-outfit font-medium text-3xl mt-4">
-                {data.title}
-              </span>
-              <div className="mt-4 flex gap-x-10 font-outfit">
-                <span>
-                  <span className="text-[#767676]"> Author </span>
-                  <span>
-                    {data.author.name}, {data.author.content.designation}{" "}
-                    {data.author.content.company}
-                  </span>
-                </span>
-                <span>
-                  <span className="text-[#767676]"> Published on </span>{" "}
-                  {Date.parse(data.date).toLocaleString()}
-                </span>
-              </div>
+            <div className="flex flex-col -mt-20 bg-white container-1080 rounded-2xl p-10 blog-main">
+              <BlogHeader
+                date={data.date}
+                title={data.title}
+                tags={data.tags}
+                author={data.author}
+              />
               <hr className="mt-6" />
               <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
                 <p className="text-lg font-semibold">Overview</p>
@@ -110,7 +91,7 @@ export default function Blog() {
                   into the daily schedules, and cherish the unforgettable
                   moments of this extraordinary event.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/952ee81b02/2-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/0a8684fb0e/2-1.png" />
                 </div>
@@ -166,7 +147,7 @@ export default function Blog() {
                   collaboration, diversity, and collective ingenuity in shaping
                   the future of technology.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/fb5915f7c1/3-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1126/80ff96870b/3-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/4c1da1aed0/3-3.png" />
@@ -189,7 +170,7 @@ export default function Blog() {
                   their inspiring startup journey, fueling the spirit of
                   entrepreneurship among participants.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/ced68f4d75/4-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/5acc4677c3/4-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/304265f116/4-3.png" />
@@ -222,7 +203,7 @@ export default function Blog() {
                   The evening concluded with the final mentorship round,
                   providing teams with valuable feedback and guidance.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/340ec79b24/5-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/bd4049dec6/5-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/8750bc94ca/5-3.png" />
@@ -250,7 +231,7 @@ export default function Blog() {
                   farewell to each other, capturing the memories of an
                   unforgettable experience.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/14b05c4bf4/6-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/c5a9abeb98/6-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1128/21689f7708/6-3.png" />
@@ -269,7 +250,7 @@ export default function Blog() {
                   with industry professionals and showcasing innovative
                   products.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/5e133ec604/7-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/633f000647/7-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/d66fc3ce58/7-3.png" />
@@ -289,7 +270,7 @@ export default function Blog() {
                   create a vibrant and enriching experience for all involved in
                   Hack This Fall 2024.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2 md:gap-6">
                   <Image src="https://a.storyblok.com/f/182824/1690x1131/92481d968c/8-1.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/3d48cab2f0/8-2.png" />
                   <Image src="https://a.storyblok.com/f/182824/1690x1127/145d1532d3/8-3.png" />

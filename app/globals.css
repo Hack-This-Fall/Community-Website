@@ -106,3 +106,25 @@ footer {
 .blog-main {
   border: 1px solid #d2d2d2;
 }
+
+.blog-body img {
+  border-radius: 1rem;
+}
+
+.blog-body p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 640px) {
+  .blog-body img {
+    border-radius: 0.5rem;
+  }
+}
+
+.tag {
+  border: 0.75px solid #9933ff66;
+}
+
+.blog-card {
+  border: 1px solid #cccccc;
+}

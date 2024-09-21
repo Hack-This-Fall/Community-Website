@@ -4,7 +4,7 @@ const data = {
     "Dive into the ultimate guide to maximizing your experience at Hack This Fall Hackathon! From team collaboration to networking with industry experts, discover 9 epic experiences that will take your hacking journey to the next level.",
   title: "9 experiences not to miss at Hack This Fall Hackathon",
   image:
-    "https://a.storyblok.com/f/182824/600x338/3eb1a699b5/experiences-not-to-miss.png",
+    "https://a.storyblok.com/f/182824/1280x720/fd5bad2b6e/experiences-not-to-miss.png",
   date: "2023-01-31 14:30",
   author: {
     name: "Siddharth Dayalwal",

@@ -8,6 +8,7 @@ import Navbar from "@/app/components/Navbar";
 import StickyFooter from "@/app/components/StickyFooter";
 import { Image } from "@chakra-ui/react";
 import data from "./data";
+import BlogHeader from "@/app/components/BlogHeader";
 
 export default function Blog() {
   const { height, width } = useWindowSize();
@@ -62,33 +63,13 @@ export default function Blog() {
                 objectFit="cover"
               />
             </div>
-            <div className="flex flex-col -mt-10 bg-white container-1080 rounded-2xl p-10 blog-main">
-              <div className="flex space-x-2">
-                {data.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-purple-200 text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <span className="font-outfit font-medium text-3xl mt-4">
-                {data.title}
-              </span>
-              <div className="mt-4 flex gap-x-10 font-outfit">
-                <span>
-                  <span className="text-[#767676]"> Author </span>
-                  <span>
-                    {data.author.name}, {data.author.content.designation}{" "}
-                    {data.author.content.company}
-                  </span>
-                </span>
-                <span>
-                  <span className="text-[#767676]"> Published on </span>{" "}
-                  {Date.parse(data.date).toLocaleString()}
-                </span>
-              </div>
+            <div className="flex flex-col -mt-20 bg-white container-1080 rounded-2xl p-10 blog-main">
+              <BlogHeader
+                date={data.date}
+                title={data.title}
+                tags={data.tags}
+                author={data.author}
+              />
               <hr className="mt-6" />
               <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
                 <p>
