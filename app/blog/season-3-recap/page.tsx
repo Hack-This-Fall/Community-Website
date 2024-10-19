@@ -39,8 +39,8 @@ export default function Blog() {
             />
             <hr className="mt-6" />
             <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
-              <p className="text-lg font-semibold">Overview</p>
-              <p>
+              <p className="text-xl font-semibold">Overview</p>
+              <p className="text-lg">
                 In the heart of Gandhinagar, India, from 3rd to 5th February
                 2023, a unique tech experience unfolded that brought together a
                 diverse group of innovators, problem-solvers, and hackers to
@@ -48,7 +48,7 @@ export default function Blog() {
                 the spirit of collaboration.
               </p>
               <Image src="https://a.storyblok.com/f/182824/2000x1333/0300e95675/htf-neon.png" />
-              <p>
+              <p className="text-lg">
                 Hack This Fall 3.0, hosted at Karnavati University, was a
                 36-hour in-person hackathon marked a significant departure from
                 its online predecessors. With the tagline &quot;Innovate For
@@ -56,7 +56,7 @@ export default function Blog() {
                 record-breaking number of participants, this event left an
                 indelible mark on everyone involved.
               </p>
-              <p>
+              <p className="text-lg">
                 In this recap blog, we&apos;ll delve into the highlights, the
                 3-day journey, and the unique elements that made &quot;Hack This
                 Fall 3.0&quot; a memorable experience.
@@ -65,7 +65,7 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/2000x1333/98855801b5/hacker-hall-1.png" />
                 <Image src="https://a.storyblok.com/f/182824/2000x1333/bc339cdff3/hacker-hall-2.png" />
               </div>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   A Shift from Virtual to In-Person -{" "}
                 </span>
@@ -83,8 +83,8 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/ee7a27e152/2-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/x/bc4cdd1adc/2-4.png" />
               </div>
-              <p className="text-lg font-semibold">The Event in Numbers</p>
-              <p>
+              <p className="text-xl font-semibold">The Event in Numbers</p>
+              <p className="text-lg">
                 Before we dive into the details, let&apos;s set the stage with
                 some milestones we are proud of:
                 <ul className="list-disc list-inside">
@@ -106,13 +106,13 @@ export default function Blog() {
                   </li>
                 </ul>
               </p>
-              <p>
+              <p className="text-lg">
                 The unanimous sentiment among participants was that they had an
                 amazing experience.
               </p>
               <Image src="https://a.storyblok.com/f/182824/1602x1068/a4f1e001ce/3.png" />
-              <p className="text-lg font-semibold">Day 1: A Grand Kick-off</p>
-              <p>
+              <p className="text-xl font-semibold">Day 1: A Grand Kick-off</p>
+              <p className="text-lg">
                 The journey began with the check-in of eager hackers, who were
                 greeted with welcome swag kits, setting the tone for the event.
                 Light snacks and icebreakers provided an ideal platform for
@@ -129,10 +129,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/a632c4d96e/4-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/a0dea19d00/4-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Day 2: A Mix of Learning and Fun
               </p>
-              <p>
+              <p className="text-lg">
                 The second day added a touch of fun and relaxation to the
                 intense hacking. Midnight snacks added a delightful twist to the
                 late-night coding sessions. The unexpected highlight was a
@@ -141,7 +141,7 @@ export default function Blog() {
                 by a hearty breakfast. GitHub, ApyHub, and Postman, as sponsors,
                 conducted workshops to equip participants with essential skills.
               </p>
-              <p>
+              <p className="text-lg">
                 The second mentorship round focused on project implementation,
                 ensuring that participants had the support they needed. The day
                 featured a unique MLH mini-event, a cup-stacking challenge,
@@ -154,8 +154,8 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/9e051f4568/5-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1811x1207/ebcfecd60b/5-4.png" />
               </div>
-              <p className="text-lg font-semibold">Day 3: The Final Showdown</p>
-              <p>
+              <p className="text-xl font-semibold">Day 3: The Final Showdown</p>
+              <p className="text-lg">
                 As the soft submission deadline approached, excitement reached
                 its peak. Hacking concluded at 8 a.m., and participants were
                 rewarded with a well-deserved breakfast. The judging process
@@ -166,10 +166,10 @@ export default function Blog() {
                 would serve as cherished mementos.
               </p>
               <Image src="https://a.storyblok.com/f/182824/1602x817/aa5c422b70/6.png" />
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Beyond Hacking: The Extra Mile
               </p>
-              <p>
+              <p className="text-lg">
                 In addition to the intense hacking sessions, Hack This Fall 3.0
                 offered several additional amenities to make the event
                 comfortable and enjoyable. These included a steady supply of
@@ -180,7 +180,7 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1811x1207/45aa7035ba/7-1.png" />
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/4cbc1c7f6d/7-2.png" />
               </div>
-              <p>
+              <p className="text-lg">
                 Sleeping areas providing quick recharge and sponsor booths
                 allowed participants to explore and engage with companies.
                 Coffee machines energized everyone, and a fun game corner
@@ -192,8 +192,8 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1811x1207/fb208de190/8-1.png" />
                 <Image src="https://a.storyblok.com/f/182824/1602x1068/32d923708a/8-2.png" />
               </div>
-              <p className="text-lg font-semibold">Conclusion</p>
-              <p>
+              <p className="text-xl font-semibold">Conclusion</p>
+              <p className="text-lg">
                 Hack This Fall 3.0 at Karnavati University was a landmark event
                 celebrating innovation, collaboration, and community. The
                 hackathon showcased the growing importance of hackathons in the
@@ -206,7 +206,7 @@ export default function Blog() {
                 Fall Season 3&quot;, we eagerly look forward to more hackathons,
                 collaborations, and innovations.
               </p>
-              <p>Happy Hacking! 🧡</p>
+              <p className="text-lg"> Happy Hacking! 🧡</p>
               <Image src="https://a.storyblok.com/f/182824/1602x1068/f2fa00b527/end.png" />
             </div>
           </div>

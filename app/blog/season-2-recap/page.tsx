@@ -36,13 +36,13 @@ export default function Blog() {
             />
             <hr className="mt-6" />
             <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
-              <p>
+              <p className="text-lg">
                 Hack This Fall began with a mindset of encouraging new hackers
                 to build unique projects regardless of the tech or field; the
                 only focus was to create something meaningful and enjoy building
                 while also solving the shared struggles of our surroundings.
               </p>
-              <p>
+              <p className="text-lg">
                 We hosted our first edition in 2020 which was an experiment as
                 we were organizing a hackathon for the first time and it turned
                 out to be a successful event. We received a great response from
@@ -55,7 +55,7 @@ export default function Blog() {
               </p>
               <Image src="https://a.storyblok.com/f/182824/1243x698/3d1d0a5ac8/season-2-recap.png" />
 
-              <p>
+              <p className="text-lg">
                 Hack This Fall Season 2 was meant to exceed the digital
                 hackathon experiences for our hacker community members and guess
                 what, it went over the top. It was a 48 Hours Virtual Hackathon
@@ -64,7 +64,7 @@ export default function Blog() {
                 us from 55+ countries across the globe which all ended up
                 showcasing 320+ amazing ideas and project submissions.
               </p>
-              <p>
+              <p className="text-lg">
                 Hack This Fall became an MLH member event, which means that
                 Major League Hacking verified us as a high-quality event by
                 evaluating the event’s progress in key areas such as
@@ -73,7 +73,7 @@ export default function Blog() {
                 the value of our motto and showed their excellent piece of
                 innovation and problem-solving skills.
               </p>
-              <p>
+              <p className="text-lg">
                 Apart from having a great time hacking, our community got an
                 opportunity to collaborate in so many meaningful ways. We use to
                 have #HTFConnect hacker hangouts every week on our discord where
@@ -83,7 +83,7 @@ export default function Blog() {
                 get more aware and understand things they didn’t know before.
               </p>
               <Image src="https://a.storyblok.com/f/182824/1600x944/93c4d8c286/htfconnect.png" />
-              <p>
+              <p className="text-lg">
                 One of the great things about Hack This Fall was its pre-event
                 workshops, we ran over 45+ sessions on our Youtube on multiple
                 domains and topics which could ultimately help hackers learn new
@@ -95,7 +95,7 @@ export default function Blog() {
                 way before the hackathon allowed them to give it some time and
                 grasp it.
               </p>
-              <p>
+              <p className="text-lg">
                 Hackers also had a lot of fun time participating in super cool
                 mini-events we scheduled for them. This way, hackers get to take
                 some time off from hacking and relax their minds to enjoy and
@@ -105,7 +105,7 @@ export default function Blog() {
                 Werewolf mini-event which was again an awesome one and lastly,
                 we played Sketchful mini-event to draw and guess the same!
               </p>
-              <p>
+              <p className="text-lg">
                 This year, we also initiated a new program named Hack This Fall
                 Hackathon Evangelist. Evangelists are extended Hack This Fall
                 team members who are passionate about Hackathons and
@@ -118,7 +118,7 @@ export default function Blog() {
               </p>
 
               <Image src="https://a.storyblok.com/f/182824/1280x720/421b8dad08/hackathon-evangelists.png" />
-              <p>
+              <p className="text-lg">
                 We encourage Inclusion and Diversity at the core of our
                 community core and have various activities around the same to
                 keep hackers engaged in a meaningful way. All in all, we wanted
@@ -128,7 +128,7 @@ export default function Blog() {
                 people participate in a hackathon not just to win but to
                 upskill, network, learn, build and share.
               </p>
-              <p>
+              <p className="text-lg">
                 Lastly, would just want to conclude by mentioning that, Season 2
                 was such a blast and it leveled up the true hackathon digital
                 experience for the hackers in the region. A huge shoutout to all
@@ -138,7 +138,7 @@ export default function Blog() {
               </p>
               <Image src="https://a.storyblok.com/f/182824/1600x900/590f51ebba/htf-pizza.png" />
 
-              <p>
+              <p className="text-lg">
                 I can’t thank enough my outstanding team who selflessly worked
                 together and brought the idea of running a successful digital
                 hackathon to life. With that being said, please take a sip of
@@ -147,7 +147,7 @@ export default function Blog() {
                 bring to you Hack This Fall 3.0 and that too in person! Head
                 over to hackthisfall.tech to know more!
               </p>
-              <p>Happy Hacking! 🧡</p>
+              <p className="text-lg"> Happy Hacking! 🧡</p>
             </div>
           </div>
         </div>

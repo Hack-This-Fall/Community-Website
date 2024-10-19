@@ -36,20 +36,20 @@ export default function Blog() {
             />
             <hr className="mt-6" />
             <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
-              <p>
+              <p className="text-lg">
                 Hack This Fall began with a mindset of encouraging new hackers
                 to build unique projects regardless of the tech or field; the
                 only focus was to create something meaningful and enjoy building
                 while also solving the shared struggles of our surroundings.
               </p>
-              <p>
+              <p className="text-lg">
                 Hack This Fall Season 1 was a 24 Hours Virtual Hackathon
                 organized on Oct 31st - Nov 1st, 2020. We organized this event
                 during the global COVID-19 crisis, when the entire world was
                 suffering from a pandemic. The event allowed participants to
                 join from the safety and comfort of their homes.
               </p>
-              <p>
+              <p className="text-lg">
                 In Season 1, we were joined by 500+ superb hackers from 170+
                 cities, who all were motivated to build towards solving
                 society’s everyday problems, and ended up building 50+ projects,
@@ -61,7 +61,7 @@ export default function Blog() {
                 with other hackers in a meaningful way.
               </p>
               <Image src="https://a.storyblok.com/f/181818/1500x844/31dc503747/nopath-copy-8-2x.png" />
-              <p>
+              <p className="text-lg">
                 While we are talking about hackathons and especially about Hack
                 This Fall, it was not just limited to Coding and Building stuff.
                 Hackers also had a ton of fun learning new skills and
@@ -72,7 +72,7 @@ export default function Blog() {
                 Learning, App Development, and whatnot; all these sessions were
                 indeed so insightful for all our hackers.
               </p>
-              <p>
+              <p className="text-lg">
                 While the hackers were busy building their hacks, we also
                 arranged multiple mini-events for all, where anyone could join,
                 relax and enjoy their presence at the hackathon. Some of the
@@ -85,7 +85,7 @@ export default function Blog() {
                 hackers could interact with mentors and get feedback on their
                 ideas/hacks.
               </p>
-              <p>
+              <p className="text-lg">
                 All in all, Season 1 was a huge success, thanks to all the
                 fantastic hackers for joining and building with us. We couldn’t
                 have made the process of running a hackathon at such a scale
@@ -97,7 +97,7 @@ export default function Blog() {
                 team, who worked dedicatedly for about 4+ months and put
                 everything together.
               </p>
-              <p>
+              <p className="text-lg">
                 In the end, we bagged a lot of memories worth remembering. With
                 that being said, to level up the energy and enthusiasm within
                 the hacker community, we are excited to announce the next
@@ -105,7 +105,7 @@ export default function Blog() {
                 experience in learning, building, and sharing your ideas. Head
                 over to hackthisfall.tech to know more!
               </p>
-              <p>Happy Hacking! 🧡</p>
+              <p className="text-lg"> Happy Hacking! 🧡</p>
             </div>
           </div>
         </div>
