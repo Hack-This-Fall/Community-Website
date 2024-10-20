@@ -62,6 +62,104 @@ export default function Blog() {
                 thanks to hackathons!
               </p>
 
+              <div>
+                <p className="font-semibold text-xl -mb-4 ">
+                  <a className="underline" href="https://x.com/pritisinghhhh">
+                    Priti
+                  </a>
+                  , Software Engineer at Phidata
+                </p>
+                <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-8">
+                  <Image
+                    className="h-36 w-36"
+                    src="https://a.storyblok.com/f/182824/400x400/e00151e94e/priti.jpg"
+                  />
+                  <div className="italic border-l-0 md:border-l-2 pl-0 md:pl-4 flex flex-col justify-center">
+                    <p>
+                      As a product of hackathons myself, I can confidently say
+                      they were a game changer. It began with a spontaneous
+                      decision to join, where I met a group of people who were
+                      just as passionate about tech as I was. Together, we built
+                      something I had no prior experience in, but the
+                      high-pressure, collaborative environment pushed me beyond
+                      my comfort zone. Seeing my team’s energy and drive
+                      motivated me to push harder.
+                    </p>
+                    <br />
+                    <p>
+                      Not only did I gain new technical skills, but I was also
+                      introduced to a network of peers that later opened doors
+                      for me—everything from new learning opportunities to
+                      valuable referrals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p className="font-semibold text-xl -mb-4 mt-4">
+                  <a className="underline" href="https://x.com/WilfredAlmeida_">
+                    Wilfred Almeida
+                  </a>
+                  , Backend Developer at Triton One
+                </p>
+                <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-8">
+                  <Image
+                    className="h-36 w-36"
+                    src="https://a.storyblok.com/f/182824/x/a03c44f944/wilfred.avif"
+                  />
+                  <div className="italic border-l-0 md:border-l-2 pl-0 md:pl-4 flex flex-col justify-center">
+                    <p>
+                      I met the kindest and most talented people at hackathons.
+                      My growth has been exponential since I met them.
+                    </p>
+                    <br />
+                    <p>
+                      A hackathon project I built got me noticed and helped me
+                      get my current job. Hackathons also have taught me that
+                      along with writing code, presentation and user feedback is
+                      also important.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p className="font-semibold text-xl -mb-4 mt-4">
+                  <a className="underline" href="https://x.com/KlausCodes">
+                    Satyam Singh
+                  </a>
+                  , SWE FCC at Push Protocol | 26x Hackathon Winner
+                </p>
+                <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-8">
+                  <Image
+                    className="h-36 w-36"
+                    src="https://a.storyblok.com/f/182824/400x400/7897d22a07/satyam.jpg"
+                  />
+                  <div className="italic border-l-0 md:border-l-2 pl-0 md:pl-4 flex flex-col justify-center">
+                    <p>
+                      I often say my tech journey began with a hackathon, but
+                      the truth is, I almost didn’t participate. I felt
+                      overwhelmed, doubting whether I was skilled enough to
+                      compete. Despite the nerves, I dove in—watched some
+                      tutorials, picked up new skills, teamed up with others,
+                      and, to my surprise, won my very first hackathon.
+                    </p>
+                    <br />
+                    <p>
+                      Since that moment, I’ve made it a habit to join at least
+                      one hackathon every month. It’s my way of staying current
+                      with the latest tech trends, exploring new ideas, and
+                      pushing my limits. Whether I win or lose, each experience
+                      is exciting, and I love sharing these moments on my
+                      socials. Through hackathons, I've unlocked countless
+                      opportunities in tech, and I owe much of my growth to
+                      them.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <p className="font-semibold text-xl">
                 Actionable Steps to Leverage Hackathons for Career Growth
               </p>
@@ -159,6 +257,8 @@ export default function Blog() {
               </p>
 
               <p className="text-lg">Happy Hacking! 🧡</p>
+
+              <Image src="https://a.storyblok.com/f/182824/1726x1186/b9f9fd888d/img_8901-jpg.png" />
             </div>
           </div>
         </div>

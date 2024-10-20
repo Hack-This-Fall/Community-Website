@@ -5,7 +5,7 @@ const data = {
   title: "Leveraging Hackathon for Career Growth",
   image:
     "https://a.storyblok.com/f/182824/4000x2250/fc9df5af1f/leveraging-hackathon-for-career-growth.png",
-  date: "2024-10-15 14:30",
+  date: "2024-09-14 14:30",
   author: {
     name: "Pritipriya Singh",
     content: {
