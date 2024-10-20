@@ -2,6 +2,12 @@ import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { formatDate } from "../utils/date";
 
+const rmLastSpace = (str: string): string => {
+  const strSplit = str.split(" ");
+  strSplit.pop();
+  return strSplit.join(" ").trim();
+};
+
 export default function BlogCard({
   slug,
   title,
@@ -49,7 +55,11 @@ export default function BlogCard({
             <h2 className="text-lg font-semibold ">{title}</h2>
 
             {/* Description */}
-            <p className=" text-sm mt-2">{description.slice(0, 150)}</p>
+            <p className=" text-sm mt-2">
+              {description.slice(0, 150) == description
+                ? description
+                : rmLastSpace(description.slice(0, 150)) + " ..."}
+            </p>
           </div>
 
           {/* Date */}
