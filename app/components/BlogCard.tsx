@@ -21,9 +21,9 @@ export default function BlogCard({
     <Link href={`/blog/${slug}`}>
       <div className="w-full h-full flex flex-col overflow-hidden rounded-lg blog-card">
         {/* Image Section */}
-        <div className="relative h-full md:h-full w-full overflow-hidden ">
+        <div className="relative w-full overflow-hidden ">
           <Image
-            className="rounded-b-lg md:rounded-b-xl"
+            className="rounded-b-lg md:rounded-b-xl aspect-[16/9]"
             src={image}
             alt="Card Image"
             objectFit="cover"
