@@ -45,8 +45,8 @@ export default function Blog() {
                 individuals, helping them land jobs, learn emerging
                 technologies, expand their networks, and transform their
                 careers. However, hearing about these success stories can
-                sometimes feel overwhelming, especially if you're unsure how to
-                make hackathons work for you.
+                sometimes feel overwhelming, especially if you&apos;re unsure
+                how to make hackathons work for you.
               </p>
 
               <p className="text-lg">
@@ -152,7 +152,7 @@ export default function Blog() {
                       with the latest tech trends, exploring new ideas, and
                       pushing my limits. Whether I win or lose, each experience
                       is exciting, and I love sharing these moments on my
-                      socials. Through hackathons, I've unlocked countless
+                      socials. Through hackathons, I&apos;ve unlocked countless
                       opportunities in tech, and I owe much of my growth to
                       them.
                     </p>
@@ -245,8 +245,8 @@ export default function Blog() {
               </p>
 
               <p className="text-lg">
-                If you're looking for such experiences, check out our upcoming
-                hackathon on the events page and join us here:{" "}
+                If you&apos;re looking for such experiences, check out our
+                upcoming hackathon on the events page and join us here:{" "}
                 <a
                   href="https://hackthisfall.tech/events"
                   className="underline"

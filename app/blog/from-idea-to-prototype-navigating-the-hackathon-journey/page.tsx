@@ -60,9 +60,9 @@ export default function Blog() {
                     <span className="font-semibold">
                       Start with Problems You Care About:
                     </span>{" "}
-                    Think about issues you've encountered in your life or the
-                    world around you. Chances are, if it’s a problem for you,
-                    it’s a problem for others, too.
+                    Think about issues you&apos;ve encountered in your life or
+                    the world around you. Chances are, if it’s a problem for
+                    you, it’s a problem for others, too.
                   </li>
                   <li>
                     <span className="font-semibold">Play to the Theme:</span>{" "}
@@ -124,8 +124,8 @@ export default function Blog() {
                       Choose Tools You Know:
                     </span>{" "}
                     Stick to familiar tools and technologies. Using frameworks
-                    or languages you're comfortable with saves time and prevents
-                    a learning curve during the hackathon.
+                    or languages you&apos;re comfortable with saves time and
+                    prevents a learning curve during the hackathon.
                   </li>
                   <li>
                     <span className="font-semibold">Divide and Conquer:</span>{" "}

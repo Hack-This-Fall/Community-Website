@@ -43,10 +43,10 @@ export default function Blog() {
               <p className="text-lg">
                 Ah, hackathons! Those magical events where coffee fuels
                 creativity, code feels like a second language, and sleep becomes
-                a distant memory. If you're a beginner, the thought of jumping
-                into one might feel like being asked to perform brain surgery
-                with a spoon. But don’t worry—this guide is here to be your
-                hackathon lifeline!
+                a distant memory. If you&apos;re a beginner, the thought of
+                jumping into one might feel like being asked to perform brain
+                surgery with a spoon. But don’t worry—this guide is here to be
+                your hackathon lifeline!
               </p>
               <p className="text-lg">
                 Let’s dive into how you can ace your first hackathon, one step
@@ -97,8 +97,8 @@ export default function Blog() {
               </p>
               <div className="text-lg">
                 Hackathons can last anywhere from 12 hours to an entire weekend,
-                so you'll need more than just your laptop. Here's a quick
-                packing checklist:
+                so you&apos;ll need more than just your laptop. Here&apos;s a
+                quick packing checklist:
                 <ul className="list-disc list-inside">
                   <li>
                     <span className="font-semibold">Laptop & Charger:</span>{" "}
@@ -176,8 +176,8 @@ export default function Blog() {
                     Show your solution:{" "}
                     <span className="font-normal">
                       “Meet ForgetMeNot, the app that keeps track of your
-                      grocery list and reminds you of items when you're near a
-                      store.”
+                      grocery list and reminds you of items when you&apos;re
+                      near a store.”
                     </span>
                   </li>
                   <li>
