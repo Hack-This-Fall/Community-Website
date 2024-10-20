@@ -40,7 +40,7 @@ export default function Blog() {
             />
             <hr className="mt-6" />
             <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
-              <p>
+              <p className="text-lg">
                 Are you ready to embark on an exhilarating journey into the
                 world of innovation, collaboration, and limitless possibilities?
                 Brace yourselves because Hack This Fall is about to take you on
@@ -49,7 +49,7 @@ export default function Blog() {
                 we&apos;ve curated the ultimate guide to help you make the most
                 out of your hackathon experience.
               </p>
-              <p>
+              <p className="text-lg">
                 In this blog, we&apos;ll walk you through everything you need to
                 know to ensure you&apos;re fully equipped to thrive at Hack This
                 Fall. From team collaboration and workshops by industry experts
@@ -57,14 +57,14 @@ export default function Blog() {
                 players in the tech community, we&apos;ve got you covered every
                 step of the way.
               </p>
-              <p>
+              <p className="text-lg">
                 Get ready to unleash your potential and seize every opportunity
                 that comes your way as we dive deep into the heart of what makes
                 Hack This Fall the must-attend event of the year. So, grab your
                 laptops, pack your enthusiasm, and let&apos;s dive into this
                 electrifying hackathon experience together!
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   1. Team Up and Collaborate:
                 </span>{" "}
@@ -72,7 +72,7 @@ export default function Blog() {
                 teammates, brainstorm ideas, and divide tasks efficiently. The
                 power of collaboration can lead to groundbreaking innovations.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   2. Immerse in Workshops by Industry Experts:
                 </span>{" "}
@@ -81,14 +81,14 @@ export default function Blog() {
                 insights. These workshops are golden nuggets of wisdom that can
                 help take your projects to the next level.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">3. Innovate and Build:</span>{" "}
                 Let your creativity run wild and build something awesome!
                 Whether it&apos;s a mobile app, a web platform, or a hardware
                 hack, Hack This Fall is the perfect playground to turn your
                 ideas into reality.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   4. Engage with Experienced Mentors:
                 </span>{" "}
@@ -96,7 +96,7 @@ export default function Blog() {
                 here to lend a helping hand. Don&apos;t hesitate to reach out,
                 ask questions, and seek guidance whenever you hit a roadblock.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   5. Take a Break, Have Fun:
                 </span>{" "}
@@ -104,13 +104,13 @@ export default function Blog() {
                 some fun games and activities lined up just for you. After all,
                 a little bit of play can spark some serious creativity.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">6. Expand Your Network:</span>{" "}
                 Expand your horizons and connect with like-minded individuals.
                 Networking is key to building lasting relationships, discovering
                 new opportunities, and broadening your knowledge base.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   7. Seize Every Opportunity:
                 </span>{" "}
@@ -119,7 +119,7 @@ export default function Blog() {
                 your skills, participate in challenges, or win exciting prizes,
                 seize every opportunity that comes knocking.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   8. Score Swag and Flaunt It:
                 </span>{" "}
@@ -128,7 +128,7 @@ export default function Blog() {
                 souvenirs, but it&apos;s also a testament to your participation
                 and hard work.
               </p>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">
                   9. Savor Delicious Free Food:
                 </span>{" "}
@@ -136,14 +136,17 @@ export default function Blog() {
                 provided on the house. Because let&apos;s face it, a well-fed
                 hacker is a happy hacker!
               </p>
-              <p>
+              <p className="text-lg">
                 With all these fantastic opportunities and experiences awaiting
                 you at Hack This Fall, there&apos;s no doubt that you&apos;re in
                 for an adrenaline-fueled ride. So, gear up, get ready to code
                 your heart out, and let&apos;s make this hackathon an epic
                 adventure to remember!
               </p>
-              <p>See you at Hack This Fall Hackathon. Happy Hacking! 🧡</p>
+              <p className="text-lg">
+                {" "}
+                See you at Hack This Fall Hackathon. Happy Hacking! 🧡
+              </p>
             </div>
           </div>
         </div>

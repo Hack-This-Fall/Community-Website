@@ -36,8 +36,8 @@ export default function Blog() {
             />
             <hr className="mt-6" />
             <div className="blog-body text-[#000000] flex flex-col gap-y-6 mt-6">
-              <p className="text-lg font-semibold">Overview</p>
-              <p>
+              <p className="text-xl font-semibold">Overview</p>
+              <p className="text-lg">
                 Welcome to the magical world of Hack This Fall 2024, where some
                 beautiful folks came, hacked, and had a good time. Hack This
                 Fall 2024 was held from 9th to 11th February 2024 at Karnavati
@@ -45,7 +45,7 @@ export default function Blog() {
                 Hack This Fall was all about.
               </p>
               <Image src="https://a.storyblok.com/f/182824/1690x966/2eb1b6b52f/1.png" />
-              <p>
+              <p className="text-lg">
                 With its motto &quot;Innovate For Good&quot; serving as a north
                 star, this 36-hour in-person hackathon was powered by partner
                 Orkes and backed by platinum partner Vonage. It set the stage
@@ -59,15 +59,15 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/952ee81b02/2-2.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/0a8684fb0e/2-1.png" />
               </div>
-              <p>
+              <p className="text-lg">
                 <span className="font-semibold">A Global Phenomenon -</span>{" "}
                 Hack This Fall Season 4 broke new ground by bringing people from
                 across the globe under one roof. Here&apos;s a glimpse into the
                 diverse participation and achievements:
               </p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside text-lg">
                 <li>
-                  <span className="font-semibold">Registrations:</span> Over
+                  <span className="font-semibold ">Registrations:</span> Over
                   2500 enthusiasts eagerly signed up for the event, showcasing
                   the widespread interest and enthusiasm for innovation.
                 </li>
@@ -84,11 +84,11 @@ export default function Blog() {
                   their mark in the tech world.
                 </li>
                 <li>
-                  <span className="font-semibold">Projects:</span> Despite the
-                  intense competition, participants showcased their creativity
-                  by developing an impressive array of 132 projects, each
-                  addressing unique challenges and pushing the boundaries of
-                  innovation.
+                  <span className="font-semibold font-lg">Projects:</span>{" "}
+                  Despite the intense competition, participants showcased their
+                  creativity by developing an impressive array of 132 projects,
+                  each addressing unique challenges and pushing the boundaries
+                  of innovation.
                 </li>
                 <li>
                   <span className="font-semibold">Global Reach:</span> Hailing
@@ -103,7 +103,7 @@ export default function Blog() {
                   help teams navigate challenges and realize their visions.
                 </li>
               </ul>
-              <p>
+              <p className="text-lg">
                 In this dynamic environment, participants thrived and not only
                 showcased their technical prowess but also reflected their
                 passion for driving positive change through innovation. Hack
@@ -117,10 +117,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1128/4c1da1aed0/3-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1128/e940f5f6dc/3-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Day 1: Igniting the Spark of Creativity
               </p>
-              <p>
+              <p className="text-lg">
                 The excitement began with the check-in of hackers and the
                 distribution of welcome swag kits, setting the tone for the
                 event. Light snacks and icebreakers fostered a sense of
@@ -140,10 +140,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1128/304265f116/4-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/dad05e102e/4-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Day 2: Nurturing Ideas, Fostering Collaboration
               </p>
-              <p>
+              <p className="text-lg">
                 The second day was filled with learning opportunities and
                 collaborative moments. At midnight, the first mentorship round
                 commenced, guiding participants through the ideation stage. The
@@ -156,7 +156,7 @@ export default function Blog() {
                 the stage to showcase their product, inspiring participants with
                 its potential.
               </p>
-              <p>
+              <p className="text-lg">
                 The second checkpoint prompted teams to submit their GitHub
                 repos and select relevant partner tracks. Another round of
                 mentoring focused on project implementation, preparing teams for
@@ -173,10 +173,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/8750bc94ca/5-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/f30e6ec91a/5-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Day 3: Celebrating Innovation and Achievement
               </p>
-              <p>
+              <p className="text-lg">
                 As the hackathon entered its final hours, teams worked
                 tirelessly to put the finishing touches on their projects. The
                 third checkpoint marked the last opportunity to ensure
@@ -186,7 +186,7 @@ export default function Blog() {
                 Participants enjoyed a well-deserved breakfast before the
                 judging process began.
               </p>
-              <p>
+              <p className="text-lg">
                 The final lunch was a chance to relax and reflect on the
                 journey. The top 10 teams were announced, and each had the
                 opportunity to pitch their ideas on stage. The tension reached
@@ -201,10 +201,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1128/21689f7708/6-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/30ede7bd27/6-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Beyond Hacking: A World of Experience
               </p>
-              <p>
+              <p className="text-lg">
                 In addition to the hacking activities, Hack This Fall 2024
                 offered a diverse array of amenities and attractions to enhance
                 the overall experience for participants. The event catered to
@@ -219,7 +219,7 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/d66fc3ce58/7-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1128/8b16e1086f/7-4.png" />
               </div>
-              <p>
+              <p className="text-lg">
                 Fuel stations equipped with coffee machines ensured that
                 participants remained energized and focused throughout the
                 hackathon, while the fun-game corner provided a welcome
@@ -239,10 +239,10 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/145d1532d3/8-3.png" />
                 <Image src="https://a.storyblok.com/f/182824/1690x1127/675dd1f861/8-4.png" />
               </div>
-              <p className="text-lg font-semibold">
+              <p className="text-xl font-semibold">
                 Conclusion: A Legacy of Innovation and Collaboration
               </p>
-              <p>
+              <p className="text-lg">
                 As we bid adieu to Hack This Fall 2024, we reflect on the
                 remarkable journey of innovation, collaboration, and camaraderie
                 that defined this extraordinary event. From the vibrant
@@ -255,7 +255,7 @@ export default function Blog() {
                 editions of this incredible event, we invite you to join us on a
                 journey of innovation, collaboration, and endless possibilities.
               </p>
-              <p>Happy Hacking! 🧡</p>
+              <p className="text-lg"> Happy Hacking! 🧡</p>
               <Image src="https://a.storyblok.com/f/182824/2000x1298/b40f845c17/9.png" />
             </div>
           </div>
