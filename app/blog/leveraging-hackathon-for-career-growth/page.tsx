@@ -129,7 +129,7 @@ export default function Blog() {
                   <a className="underline" href="https://x.com/KlausCodes">
                     Satyam Singh
                   </a>
-                  , SWE FCC at Push Protocol | 26x Hackathon Winner
+                  , SDE at Offstreet | 30x Hackathon Winner
                 </p>
                 <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-8">
                   <Image
