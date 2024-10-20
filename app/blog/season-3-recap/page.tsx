@@ -84,7 +84,7 @@ export default function Blog() {
                 <Image src="https://a.storyblok.com/f/182824/x/bc4cdd1adc/2-4.png" />
               </div>
               <p className="text-xl font-semibold">The Event in Numbers</p>
-              <p className="text-lg">
+              <div className="text-lg">
                 Before we dive into the details, let&apos;s set the stage with
                 some milestones we are proud of:
                 <ul className="list-disc list-inside">
@@ -105,7 +105,7 @@ export default function Blog() {
                     skills.
                   </li>
                 </ul>
-              </p>
+              </div>
               <p className="text-lg">
                 The unanimous sentiment among participants was that they had an
                 amazing experience.
