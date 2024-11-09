@@ -10,7 +10,7 @@ const navbarElementsDefault = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Events", link: "/events" },
-  // { name: "Blog", link: "https://blog.hackthisfall.tech/" },
+  { name: "Blog", link: "/blog" },
 ];
 
 export default function Navbar({
@@ -40,6 +40,8 @@ export default function Navbar({
 
     const position = window.scrollY;
 
+    if (!navbarLogo.current) return;
+
     if (position >= 100) {
       navbarLogo.current.style.opacity = "0";
     } else {
@@ -52,10 +54,8 @@ export default function Navbar({
         setNavbarOpen(false);
       }
     } else if (position <= height / 2) {
-      // navbarLogo.current.style.opacity = "1";
       onceHidden = false;
     } else {
-      // navbarLogo.current.style.opacity = `${(1 - position / height) * 2}`;
       onceHidden = false;
     }
 
@@ -64,6 +64,8 @@ export default function Navbar({
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
+
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
