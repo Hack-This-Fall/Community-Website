@@ -14,7 +14,7 @@ export interface eventData {
   endTimestamp?: moment.Moment | null;
   location?: string;
   eventMode: string;
-  type: 'CITY MEETUP' | 'HACKTOBERFEST' | 'BUILD WITH' | 'HACKATHONS';
+  type: 'CITY MEETUP' | 'HACKTOBERFEST' | 'BUILD WITH' | 'HACKATHON';
   agenda?: agenda[];
   link?: string;
 }
@@ -52,7 +52,7 @@ export const colorsMap = {
     color: '#9933FF',
     secondaryColor: '#9933FF66',
   },
-  HACKATHONS: {
+  HACKATHON: {
     color: '#FF6633',
     secondaryColor: '#FF663366',
   },
@@ -66,11 +66,11 @@ const eventsData: eventsData = {
     },
     {
       heading: 'HACKATHONS',
-      filterFunction: (eventData: eventData) => eventData.type === 'HACKATHONS',
+      filterFunction: (eventData: eventData) => eventData.type === 'HACKATHON',
     },
     {
       heading: 'EVENTS',
-      filterFunction: (eventData: eventData) => eventData.type !== 'HACKATHONS',
+      filterFunction: (eventData: eventData) => eventData.type !== 'HACKATHON',
     },
   ],
   individualEventTabs: {
@@ -92,7 +92,7 @@ const eventsData: eventsData = {
       startTimestamp: moment('2020-10-31 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2020-11-01 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'Virtual',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://s1.hackthisfall.tech/',
     },
     {
@@ -101,7 +101,7 @@ const eventsData: eventsData = {
       startTimestamp: moment('2021-10-22 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2021-10-24 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'Virtual',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://s2.hackthisfall.tech/',
     },
     {
@@ -191,7 +191,7 @@ const eventsData: eventsData = {
       startTimestamp: moment('2023-02-03 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2023-02-05 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'In Person',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://s3.hackthisfall.tech/',
     },
     {
@@ -299,7 +299,7 @@ const eventsData: eventsData = {
       startTimestamp: moment('2024-02-09 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2024-02-11 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'In Person',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://s4.hackthisfall.tech/',
     },
     {
@@ -308,14 +308,14 @@ const eventsData: eventsData = {
       startTimestamp: moment('2024-11-08 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2024-11-10 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'Virtual',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://hackathon.hackthisfall.tech/virtual',
     },
     {
       id: '25',
       heading: 'Hack This Fall 2025',
       eventMode: 'In Person',
-      type: 'HACKATHONS',
+      type: 'HACKATHON',
       link: 'https://hackathon.hackthisfall.tech/',
     },
   ],
