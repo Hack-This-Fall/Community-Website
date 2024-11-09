@@ -304,7 +304,7 @@ const eventsData: eventsData = {
     },
     {
       id: '24',
-      heading: 'Hack This Fall 2024 - Virtual',
+      heading: 'Hack This Fall 2024',
       startTimestamp: moment('2024-11-08 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       endTimestamp: moment('2024-11-10 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'Virtual',

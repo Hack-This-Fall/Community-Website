@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import {
   Box,
   Flex,
   SimpleGrid,
   useBreakpointValue,
   Heading,
-} from "@chakra-ui/react";
-import moment from "moment";
-import EventContainer from "../components/EventsPage/EventContainer";
-import eventsData from "./data";
-import { useState } from "react";
-import OpenNavbar from "../components/OpenNavbar";
-import PastEventContainer from "../components/EventsPage/PastEventContainer";
-import StickyFooter from "../components/StickyFooter";
+} from '@chakra-ui/react';
+import moment from 'moment';
+import EventContainer from '../components/EventsPage/EventContainer';
+import eventsData, { eventData } from './data';
+import { useEffect, useState } from 'react';
+import OpenNavbar from '../components/OpenNavbar';
+import PastEventContainer from '../components/EventsPage/PastEventContainer';
+import StickyFooter from '../components/StickyFooter';
 
 interface config {
   heading: string;
   content: string;
-  sizes: ("sm" | "md" | "lg")[];
+  sizes: ('sm' | 'md' | 'lg')[];
   image: any;
   link: string;
 }
@@ -29,6 +29,43 @@ const EventsPage = () => {
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
   const [isNavbarOpen, setNavbarOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(149);
+  const [data, setData] = useState<{
+    pastEvents: eventData[];
+    currentEvents: eventData[];
+    upcomingEvents: eventData[];
+  }>({
+    pastEvents: [],
+    currentEvents: [],
+    upcomingEvents: [],
+  });
+
+  useEffect(() => {
+    const pastEvents: eventData[] = [],
+      upcomingEvents: eventData[] = [],
+      currentEvents: eventData[] = [];
+
+    eventsData.events.forEach((event) => {
+      if (event.startTimestamp === null || event.startTimestamp === undefined) {
+        upcomingEvents.push(event);
+      } else if (event.startTimestamp.diff(moment()) > 0) {
+        upcomingEvents.push(event);
+      } else if (event.startTimestamp.diff(moment()) < 0) {
+        if (event.endTimestamp && event.endTimestamp.diff(moment()) > 0) {
+          currentEvents.push(event);
+        } else {
+          pastEvents.push(event);
+        }
+      } else {
+        pastEvents.push(event);
+      }
+    });
+
+    setData({
+      pastEvents,
+      currentEvents,
+      upcomingEvents,
+    });
+  }, [eventsData]);
 
   const setIsNavbarOpen = (state: boolean) => {
     setNavbarOpen(state);
@@ -104,11 +141,48 @@ const EventsPage = () => {
                   );
                 })}
               </Flex>
-              {eventsData.events.filter(
-                (data) =>
-                  moment().diff(data.startTimestamp) < 0 &&
-                  eventsData.tabs[currentTab].filterFunction(data),
-              ).length > 0 && (
+              {data.currentEvents.filter((data) =>
+                        eventsData.tabs[currentTab].filterFunction(data),
+                      ).length > 0 && (
+                <Flex flexDir="column" mt="2rem">
+                  <Heading
+                    fontSize={{ base: '1.8rem', md: '2.8rem' }}
+                    fontFamily="var(--font-outfit)"
+                    fontWeight="400"
+                    mb="2rem"
+                  >
+                    Ongoing
+                  </Heading>
+                  <SimpleGrid
+                    columns={{
+                      base: 1,
+                      md: 2,
+                      lg: 2,
+                      '2xl': 3,
+                    }}
+                    columnGap="1rem"
+                    rowGap="1rem"
+                  >
+                    {data.currentEvents
+                      .filter((data) =>
+                        eventsData.tabs[currentTab].filterFunction(data),
+                      )
+                      .sort((a, b) =>
+                        a.startTimestamp &&
+                        b.startTimestamp &&
+                        a.startTimestamp.diff(b.startTimestamp) > 0
+                          ? -1
+                          : 1,
+                      )
+                      .map((event, index) => (
+                        <EventContainer eventData={event} key={index} />
+                      ))}
+                  </SimpleGrid>
+                </Flex>
+              )}
+              {data.upcomingEvents.filter((data) =>
+                        eventsData.tabs[currentTab].filterFunction(data),
+                      ).length > 0 && (
                 <Flex flexDir="column" mt="2rem">
                   <Heading
                     fontSize={{ base: '1.8rem', md: '2.8rem' }}
@@ -128,12 +202,9 @@ const EventsPage = () => {
                     columnGap="1rem"
                     rowGap="1rem"
                   >
-                    {eventsData.events
-                      .filter(
-                        (data) =>
-                          (moment().diff(data.startTimestamp) < 0 ||
-                            data.startTimestamp == undefined) &&
-                          eventsData.tabs[currentTab].filterFunction(data),
+                    {data.upcomingEvents
+                      .filter((data) =>
+                        eventsData.tabs[currentTab].filterFunction(data),
                       )
                       .sort((a, b) =>
                         a.startTimestamp &&
@@ -159,11 +230,9 @@ const EventsPage = () => {
                   </Heading>
                 </Flex>
                 <Flex mt="1rem" w="full" flexDir="column">
-                  {eventsData.events
-                    .filter(
-                      (data) =>
-                        moment().diff(data.startTimestamp) > 0 &&
-                        eventsData.tabs[currentTab].filterFunction(data),
+                  {data.pastEvents
+                    .filter((data) =>
+                      eventsData.tabs[currentTab].filterFunction(data),
                     )
                     .sort((a, b) =>
                       a.startTimestamp &&
