@@ -16,14 +16,6 @@ import OpenNavbar from '../components/OpenNavbar';
 import PastEventContainer from '../components/EventsPage/PastEventContainer';
 import StickyFooter from '../components/StickyFooter';
 
-interface config {
-  heading: string;
-  content: string;
-  sizes: ('sm' | 'md' | 'lg')[];
-  image: any;
-  link: string;
-}
-
 const EventsPage = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
