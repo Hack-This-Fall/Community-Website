@@ -315,7 +315,7 @@ const eventsData: eventsData = {
       id: '25',
       heading: 'Hack This Fall 2025',
       startTimestamp: moment('2025-03-21 00:00 AM', 'YYYY-MM-DD hh:mm A'),
-      endTimestamp: moment('2024-03-23 00:00 AM', 'YYYY-MM-DD hh:mm A'),
+      endTimestamp: moment('2025-03-23 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'In Person',
       type: 'HACKATHON',
       link: 'https://hackathon.hackthisfall.tech/',
