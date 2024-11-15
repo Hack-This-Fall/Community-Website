@@ -58,16 +58,8 @@ const team = [
     name: "Paras Gupta",
   },
   {
-    image: "/images/team/rohan.png",
-    name: "Rohan Kambli",
-  },
-  {
     image: "/images/team/sahil.png",
     name: "Sahil Sen",
-  },
-  {
-    image: "/images/team/shitiz.png",
-    name: "Shitiz Aggarwal",
   },
   {
     image: "/images/team/siddharth.png",
@@ -114,19 +106,19 @@ const EventsPage = () => {
         />
         <Box
           className="relative container-1200 bg-white"
-          px={{ base: '2rem', '2xl': '0' }}
+          px={{ base: "2rem", "2xl": "0" }}
         >
           <Flex
             w="full"
-            pt={{ base: '2rem', md: '4rem' }}
-            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
-            flexDir={{ base: 'column-reverse', lg: 'row' }}
+            pt={{ base: "2rem", md: "4rem" }}
+            pb={{ base: "4rem", md: "6rem", lg: "8rem" }}
+            flexDir={{ base: "column-reverse", lg: "row" }}
             gap="2rem"
           >
-            <Flex w={{ base: '100%', lg: '45%' }} flexDir="column">
+            <Flex w={{ base: "100%", lg: "45%" }} flexDir="column">
               <Flex gap="1rem" alignItems="center">
                 <Heading
-                  fontSize={{ base: '3rem', md: '4.5rem' }}
+                  fontSize={{ base: "3rem", md: "4.5rem" }}
                   fontFamily="var(--font-against-history)"
                   fontWeight="500"
                   color="#A64DFF"
@@ -134,7 +126,7 @@ const EventsPage = () => {
                   Hackathon
                 </Heading>
                 <Heading
-                  fontSize={{ base: '2rem', md: '3.5rem' }}
+                  fontSize={{ base: "2rem", md: "3.5rem" }}
                   fontFamily="var(--font-outfit)"
                   fontWeight="500"
                 >
@@ -143,7 +135,7 @@ const EventsPage = () => {
               </Flex>
               <Flex mt="-1rem" gap="1rem" alignItems="center">
                 <Heading
-                  fontSize={{ base: '3rem', md: '4.5rem' }}
+                  fontSize={{ base: "3rem", md: "4.5rem" }}
                   fontFamily="var(--font-against-history)"
                   fontWeight="500"
                   color="#FF9933"
@@ -151,7 +143,7 @@ const EventsPage = () => {
                   Community
                 </Heading>
                 <Heading
-                  fontSize={{ base: '2rem', md: '3.5rem' }}
+                  fontSize={{ base: "2rem", md: "3.5rem" }}
                   fontFamily="var(--font-outfit)"
                   fontWeight="500"
                 >
@@ -184,7 +176,7 @@ const EventsPage = () => {
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: '100%', lg: '55%' }}
+              w={{ base: "100%", lg: "55%" }}
             >
               <Image
                 w="full"
@@ -197,25 +189,25 @@ const EventsPage = () => {
             </Flex>
           </Flex>
           <Flex
-            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
+            pb={{ base: "4rem", md: "6rem", lg: "8rem" }}
             w="full"
             flexDir="column"
           >
             <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
+              fontSize={{ base: "2.5rem", md: "3.5rem" }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
             >
               Mission
             </Heading>
             <Flex
-              flexDir={{ base: 'column', lg: 'row' }}
+              flexDir={{ base: "column", lg: "row" }}
               mt="1.5rem"
               gap="2rem"
             >
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: '1.5rem', lg: '2.9rem' }}
+                p={{ base: "1.5rem", lg: "2.9rem" }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -227,7 +219,7 @@ const EventsPage = () => {
                     src="/images/about/mission1.png"
                   />
                   <Heading
-                    fontSize={{ base: '1.5rem', md: '2rem' }}
+                    fontSize={{ base: "1.5rem", md: "2rem" }}
                     fontFamily="var(--font-outfit)"
                     fontWeight="500"
                   >
@@ -242,7 +234,7 @@ const EventsPage = () => {
               </Flex>
               <Flex
                 border="1px solid #D9D9D9"
-                p={{ base: '1.5rem', lg: '2.9rem' }}
+                p={{ base: "1.5rem", lg: "2.9rem" }}
                 borderRadius="3xl"
                 w="full"
                 flexDir="column"
@@ -254,7 +246,7 @@ const EventsPage = () => {
                     src="/images/about/mission2.png"
                   />
                   <Heading
-                    fontSize={{ base: '1.5rem', md: '2rem' }}
+                    fontSize={{ base: "1.5rem", md: "2rem" }}
                     fontFamily="var(--font-outfit)"
                     fontWeight="500"
                   >
@@ -272,14 +264,14 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            pb={{ base: '4rem', md: '6rem', lg: '8rem' }}
-            flexDir={{ base: 'column', lg: 'row' }}
+            pb={{ base: "4rem", md: "6rem", lg: "8rem" }}
+            flexDir={{ base: "column", lg: "row" }}
             gap="2rem"
           >
             <Flex
               alignItems="center"
               justifyContent="center"
-              w={{ base: '100%', lg: '55%' }}
+              w={{ base: "100%", lg: "55%" }}
             >
               <Image
                 w="full"
@@ -292,11 +284,11 @@ const EventsPage = () => {
             </Flex>
             <Flex
               justifyContent="center"
-              w={{ base: '100%', lg: '45%' }}
+              w={{ base: "100%", lg: "45%" }}
               flexDir="column"
             >
               <Heading
-                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontSize={{ base: "2.5rem", md: "3.5rem" }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -323,19 +315,19 @@ const EventsPage = () => {
           </Flex>
           <Flex
             w="full"
-            mb={{ base: '4rem', md: '6rem', lg: '8rem' }}
-            flexDir={{ base: 'column', lg: 'row' }}
+            mb={{ base: "4rem", md: "6rem", lg: "8rem" }}
+            flexDir={{ base: "column", lg: "row" }}
             gap="4rem"
           >
             <Flex
               flexDir="column"
-              minH={{ base: 'unset', lg: '56rem' }}
+              minH={{ base: "unset", lg: "56rem" }}
               pos="relative"
             >
               <Heading
-                pos={{ base: 'unset', lg: 'sticky' }}
+                pos={{ base: "unset", lg: "sticky" }}
                 top="10px"
-                fontSize={{ base: '2.5rem', md: '3.5rem' }}
+                fontSize={{ base: "2.5rem", md: "3.5rem" }}
                 fontFamily="var(--font-outfit)"
                 fontWeight="500"
               >
@@ -343,7 +335,7 @@ const EventsPage = () => {
               </Heading>
             </Flex>
             <Grid
-              templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
+              templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
               gap="1.5rem"
             >
               {values.map(({ heading, description, logoUrl }, index) => {
@@ -351,7 +343,7 @@ const EventsPage = () => {
                   <GridItem
                     key={index}
                     border="1px solid #D9D9D9"
-                    p={{ base: '1.5rem', lg: '2rem' }}
+                    p={{ base: "1.5rem", lg: "2rem" }}
                     borderRadius="3xl"
                     w="full"
                     flexDir="column"
@@ -359,7 +351,7 @@ const EventsPage = () => {
                     <Flex flexDir="column" gap="1rem">
                       <Image w="15%" alt="mission" src={logoUrl} />
                       <Heading
-                        fontSize={{ base: '1.5rem', md: '2rem' }}
+                        fontSize={{ base: "1.5rem", md: "2rem" }}
                         fontFamily="var(--font-outfit)"
                         fontWeight="500"
                       >
@@ -384,10 +376,10 @@ const EventsPage = () => {
           <Flex
             flexDir="column"
             w="full"
-            pb={{ base: '4rem', md: '4rem', lg: '6rem' }}
+            pb={{ base: "4rem", md: "4rem", lg: "6rem" }}
           >
             <Heading
-              fontSize={{ base: '2.5rem', md: '3.5rem' }}
+              fontSize={{ base: "2.5rem", md: "3.5rem" }}
               fontFamily="var(--font-outfit)"
               fontWeight="500"
               mb="2rem"
@@ -396,12 +388,14 @@ const EventsPage = () => {
             </Heading>
             <Grid
               templateColumns={{
-                base: 'repeat(2, 1fr)',
-                md: 'repeat(2, 1fr)',
-                lg: 'repeat(3, 1fr)',
-                xl: 'repeat(4, 1fr)',
+                base: "repeat(2, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+                xl: "repeat(3, 1fr)",
               }}
               gap="2rem"
+              maxWidth="1000px"
+              mx="auto"
             >
               {team.map((member, index) => (
                 <GridItem
@@ -417,7 +411,7 @@ const EventsPage = () => {
                     alt={member.name}
                   />
                   <Heading
-                    fontSize={{base: "0.9rem", md: "1.5rem"}}
+                    fontSize={{ base: "0.9rem", md: "1.5rem" }}
                     mt="-10px"
                     fontWeight="500"
                     fontFamily="var(--font-outfit)"

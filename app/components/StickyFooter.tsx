@@ -80,17 +80,27 @@ export default function StickyFooter() {
                   <EmailIcon color="white" />
                 </Link>
               </div>
-              <div className="flex flex-row gap-x-[0.5rem] md:gap-x-[2rem] text-[0.8rem] md:text-[1rem] items-center text-center justify-between w-full md:w-unset">
+              <div className="flex flex-row gap-x-[0.5rem] md:gap-x-[2rem] text-[0.8rem] md:text-[1rem] items-center text-center  justify-between w-full md:w-unset">
                 <Link
+                  className="hover:underline hover:underline-offset-2	"
                   href="mailto:sponsorships@hackthisfall.tech"
                   target="_blank"
                 >
                   Partner with us
                 </Link>
-                <Link href="https://bit.ly/htf-brand" target="_blank">
+                <Link
+                  className="hover:underline hover:underline-offset-2	"
+                  href="https://bit.ly/htf-brand"
+                  target="_blank"
+                >
                   Brand Guidelines
                 </Link>
-                <Link href="/coc">Code of Conduct</Link>
+                <Link
+                  className="hover:underline hover:underline-offset-2	"
+                  href="/coc"
+                >
+                  Code of Conduct
+                </Link>
               </div>
             </div>
           </div>

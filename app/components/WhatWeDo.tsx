@@ -71,14 +71,12 @@ export default function WhatWeDo() {
               <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
-          <div className="scroller mt-12" data-speed="fast">
+          <div className="scroller mt-12" data-speed="fast" id="scroller1">
             <div className="scroller__inner">
               {card1Images.map((image) => (
                 <Image
                   key={image}
                   src={image}
-                  // width={200}
-                  // height={200}
                   alt="Random"
                   className="h-[8rem] md:h-[15rem] w-auto rounded-2xl"
                 />
@@ -114,7 +112,7 @@ export default function WhatWeDo() {
               <Image src="/images/arrow-black.svg" alt="Arrow" />
             </span>
           </a>
-          <div className="scroller mt-12" data-speed="fast">
+          <div className="scroller mt-12" data-speed="" id="scroller2">
             <div className="scroller__inner">
               {card2Images.map((image) => (
                 <Image
