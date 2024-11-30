@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: "https://hackthisfall.tech/og.png",
         width: 2000,
         height: 1000,
-        alt: "Hack This Fall 2024",
+        alt: "Hack This Fall Community",
       },
     ],
   },
