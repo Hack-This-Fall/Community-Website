@@ -36,11 +36,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Hack This Fall Community",
   description:
-    "Hack This Fall 2024 is a virtual hackathon scheduled to happen virtually! 🧡",
+    "Hack This Fall is one of India's most thriving hacker communities. Join us to build groundbreaking solutions, inspire problem-solvers, and grow together in a diverse, supportive environment",
   openGraph: {
     title: "Hack This Fall Community",
     description:
-      "Hack This Fall 2024 is a virtual hackathon scheduled to happen virtually! 🧡",
+      "Hack This Fall is one of India's most thriving hacker communities. Join us to build groundbreaking solutions, inspire problem-solvers, and grow together in a diverse, supportive environment",
     siteName: "Hack This Fall Community",
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Hack This Fall Community",
     description:
-      "Hack This Fall 2024 is a virtual hackathon scheduled to happen virtually! 🧡",
+      "Hack This Fall is one of India's most thriving hacker communities. Join us to build groundbreaking solutions, inspire problem-solvers, and grow together in a diverse, supportive environment",
     images: [
       {
         url: "https://hackthisfall.tech/og.png",
