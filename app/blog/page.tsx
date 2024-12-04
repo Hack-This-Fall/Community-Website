@@ -5,6 +5,7 @@ import StickyFooter from "../components/StickyFooter";
 import useWindowSize from "../hooks/useWindowDimension";
 import "../styles.css";
 import season4Blog from "./season-4-recap/data";
+import recap2024Vitual from "./hack-this-fall-2024-virtual-reflecting-on-a-global-celebration-of-innovation/data";
 import navigatingTheHackathonJourney from "./from-idea-to-prototype-navigating-the-hackathon-journey/data";
 import leveragingHackathonForCareerGrowth from "./leveraging-hackathon-for-career-growth/data";
 import preparingForAHackathon from "./preparing-for-a-hackathon-a-beginners-guide/data";
@@ -20,6 +21,7 @@ import { title } from "process";
 import { Metadata } from "next";
 
 const blogs = [
+  recap2024Vitual,
   season4Blog,
   navigatingTheHackathonJourney,
   leveragingHackathonForCareerGrowth,
