@@ -27,7 +27,7 @@ export default function Blog() {
               objectFit="cover"
             />
           </div>
-          <div className="flex flex-col -mt-20 bg-white container-1080 rounded-2xl p-10 blog-main">
+          <div className="flex flex-col -mt-16 bg-white container-1080 rounded-2xl p-10 blog-main">
             <BlogHeader
               date={data.date}
               title={data.title}
@@ -195,7 +195,7 @@ export default function Blog() {
                 here:{" "}
                 <a
                   target="_blank"
-                  href="https://hackathon.hackthisfall.tech/events"
+                  href="https://hackthisfall.tech/events"
                   className="underline"
                 >
                   hackthisfall.tech/events

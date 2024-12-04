@@ -21,8 +21,8 @@ import { title } from "process";
 import { Metadata } from "next";
 
 const blogs = [
-  recap2024Vitual,
   season4Blog,
+  recap2024Vitual,
   navigatingTheHackathonJourney,
   leveragingHackathonForCareerGrowth,
   preparingForAHackathon,
