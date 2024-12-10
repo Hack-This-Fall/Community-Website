@@ -37,6 +37,17 @@ const blogs = [
 
 export const metadata: Metadata = {
   title: "Blog | Hack This Fall Community",
+  openGraph: {
+    title: "Blog | Hack This Fall Community",
+    description:
+      "Hack This Fall is one of India's most thriving hacker communities. Join us to build groundbreaking solutions, inspire problem-solvers, and grow together in a diverse, supportive environment",
+    siteName: "Blog | Hack This Fall Community",
+  },
+  twitter: {
+    title: "Blog | Hack This Fall Community",
+    description:
+      "Hack This Fall is one of India's most thriving hacker communities. Join us to build groundbreaking solutions, inspire problem-solvers, and grow together in a diverse, supportive environment",
+  },
 };
 
 export default function BlogPage() {
