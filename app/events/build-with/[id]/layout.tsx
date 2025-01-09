@@ -21,7 +21,7 @@ export async function generateMetadata({
           siteName: `${eventData?.heading} | Hack This Fall Community`,
           images: [
             {
-              url: `https://hackthisfall.tech/${eventData?.heroImage}`,
+              url: `${eventData?.heroImage}`,
               width: 2000,
               height: 1000,
               alt: 'Hack This Fall Community',
@@ -33,7 +33,7 @@ export async function generateMetadata({
           description: eventData?.partnerDescription,
           images: [
             {
-              url: `https://hackthisfall.tech/${eventData?.heroImage}`,
+              url: `${eventData?.heroImage}`,
               width: 2000,
               height: 1000,
               alt: 'Hack This Fall Community',
@@ -50,7 +50,7 @@ export async function generateMetadata({
           siteName: 'Events | Hack This Fall Community',
           images: [
             {
-              url: 'https://hackthisfall.tech/og.png',
+              url: '/logo.png',
               width: 2000,
               height: 1000,
               alt: 'Hack This Fall Community',
@@ -61,7 +61,7 @@ export async function generateMetadata({
           title: 'Events | Hack This Fall Community',
           images: [
             {
-              url: 'https://hackthisfall.tech/og.png',
+              url: '/logo.png',
               width: 2000,
               height: 1000,
               alt: 'Hack This Fall Community',
