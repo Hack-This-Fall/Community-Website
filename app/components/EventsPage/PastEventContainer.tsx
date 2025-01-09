@@ -8,13 +8,25 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
     md: true,
     xl: false,
   });
-  const { heading, startTimestamp, endTimestamp, type, eventMode, link } =
-    eventData;
+  const {
+    individualPageLink,
+    heading,
+    startTimestamp,
+    endTimestamp,
+    type,
+    eventMode,
+    link,
+    individualPageActive,
+  } = eventData;
 
   const { color, secondaryColor } = colorsMap[type];
 
   return isMobile ? (
-    <Link href={link} _hover={{ textDecoration: 'none' }} target="_blank">
+    <Link
+      href={individualPageActive ? individualPageLink : link}
+      _hover={{ textDecoration: 'none' }}
+      target={individualPageActive ? '_self' : '_blank'}
+    >
       <Flex
         borderBottom="1px solid #00000033"
         justifyContent="space-between"
@@ -81,7 +93,11 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
       </Flex>
     </Link>
   ) : (
-    <Link href={link} _hover={{ textDecoration: 'none' }} target="_blank">
+    <Link
+      href={individualPageActive ? individualPageLink : link}
+      _hover={{ textDecoration: 'none' }}
+      target={individualPageActive ? '_self' : '_blank'}
+    >
       <Flex
         borderBottom="1px solid #00000033"
         justifyContent="space-between"

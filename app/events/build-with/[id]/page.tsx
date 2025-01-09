@@ -1,57 +1,57 @@
-"use client";
+'use client';
 
-import Navbar from "../../../components/Navbar";
-import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
-import { InView } from "react-intersection-observer";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import eventsData from "../../data";
-import HeroSection from "@/app/components/IndividualEventsPage/Hero";
-import AgendaSection from "@/app/components/IndividualEventsPage/Agenda";
-import WorkshopSection from "@/app/components/IndividualEventsPage/Workshop";
-import EventsEssentialSection from "@/app/components/IndividualEventsPage/EventEssential";
-import OpenNavbar from "@/app/components/OpenNavbar";
-import OverviewSection from "@/app/components/IndividualEventsPage/Overview";
-import AboutPartnerSection from "@/app/components/IndividualEventsPage/AboutPartner";
-import FAQSection from "@/app/components/IndividualEventsPage/FAQ";
-import StickyFooter from "@/app/components/StickyFooter";
+import Navbar from '../../../components/Navbar';
+import { Box, Flex, useBreakpointValue } from '@chakra-ui/react';
+import { InView } from 'react-intersection-observer';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import eventsData from '../../data';
+import HeroSection from '@/app/components/IndividualEventsPage/Hero';
+import AgendaSection from '@/app/components/IndividualEventsPage/Agenda';
+import WorkshopSection from '@/app/components/IndividualEventsPage/Workshop';
+import EventsEssentialSection from '@/app/components/IndividualEventsPage/EventEssential';
+import OpenNavbar from '@/app/components/OpenNavbar';
+import OverviewSection from '@/app/components/IndividualEventsPage/Overview';
+import AboutPartnerSection from '@/app/components/IndividualEventsPage/AboutPartner';
+import FAQSection from '@/app/components/IndividualEventsPage/FAQ';
+import StickyFooter from '@/app/components/StickyFooter';
 
 const sections = [
   {
-    heading: "Overview",
-    id: "Overview",
+    heading: 'Overview',
+    id: 'Overview',
   },
   {
-    heading: "About Partner",
-    id: "AboutPartner",
+    heading: 'About Partner',
+    id: 'AboutPartner',
   },
   {
-    heading: "Agenda",
-    id: "Agenda",
+    heading: 'Agenda',
+    id: 'Agenda',
   },
   {
-    heading: "Workshops",
-    id: "Workshops",
+    heading: 'Workshops',
+    id: 'Workshops',
   },
   {
-    heading: "Event Essentials",
-    id: "EventEssentials",
+    heading: 'Event Essentials',
+    id: 'EventEssentials',
   },
-  {
-    heading: "FAQs",
-    id: "FAQ",
-  },
+  // {
+  //   heading: "FAQs",
+  //   id: "FAQ",
+  // },
 ];
 
 const IndividualEventPage = ({ params }: { params: { id: string } }) => {
-  const [currentSection, setCurrentSection] = useState("Overview");
+  const [currentSection, setCurrentSection] = useState('Overview');
   const router = useRouter();
   const eventId = params.id;
   const eventData = eventsData.events.find(
-    (event) => event.id === eventId && event.individualPageActive
+    (event) => event.id === eventId && event.individualPageActive,
   );
   if (!eventData) {
-    router.replace("/404");
+    router.replace('/404');
   }
 
   const {
@@ -59,12 +59,21 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
     endTimestamp,
     heading,
     location,
+    locationLink,
+    mapView,
+    link,
+    discordChannel,
     description,
     partnerDescription,
     partnerLogo,
     partnerName,
     agenda,
+    resources,
+    workshopDetails,
+    faqs,
     eventMode,
+    heroImage,
+    images,
   } = eventData || {};
 
   const [navbarHeight, setNavbarHeight] = useState(149);
@@ -95,7 +104,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
       <Box zIndex="100" className="relative w-full bg-white top-0 left-0">
         <Box
           className="relative container-1200 bg-white"
-          px={{ base: "2rem", "2xl": "0" }}
+          px={{ base: '2rem', '2xl': '0' }}
         >
           <Box className="sticky top-0 left-0 w-full" zIndex={4}>
             {isNavbarOpen && <OpenNavbar setIsNavbarOpen={setIsNavbarOpen} />}
@@ -113,6 +122,8 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 location={location}
                 description={description}
                 eventMode={eventMode}
+                heroImage={heroImage}
+                link={link}
               />
             </Flex>
             <Flex position="relative" alignItems="center" flexDir="column">
@@ -125,7 +136,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 py="1rem"
                 bg="white"
                 zIndex={100}
-                display={{ base: "none", lg: "flex" }}
+                display={{ base: 'none', lg: 'flex' }}
               >
                 <Flex
                   border="1px solid black"
@@ -139,11 +150,11 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                       <Flex
                         bgColor={
                           currentSection === section.id
-                            ? "black"
-                            : "transparent"
+                            ? 'black'
+                            : 'transparent'
                         }
                         color={
-                          currentSection === section.id ? "white" : "black"
+                          currentSection === section.id ? 'white' : 'black'
                         }
                         fontFamily="var(--font-outfit)"
                         borderRadius="full"
@@ -151,7 +162,7 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                         alignItems="center"
                         justifyContent="center"
                         fontWeight="500"
-                        px={{ md: "1rem", lg: "2rem", "2xl": "2rem" }}
+                        px={{ md: '1rem', lg: '2rem', '2xl': '2rem' }}
                         py="1rem"
                         key={index}
                         cursor="pointer"
@@ -160,9 +171,9 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                           document
                             .querySelector(`#${section.id}`)!
                             .scrollIntoView({
-                              behavior: "smooth",
-                              block: "center",
-                              inline: "nearest",
+                              behavior: 'smooth',
+                              block: 'center',
+                              inline: 'nearest',
                             });
                         }}
                       >
@@ -173,23 +184,23 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
                 </Flex>
               </Flex>
               <InView
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 id="Overview"
                 as="div"
                 threshold={0.7}
                 onChange={(inView, entry) =>
-                  inView && setCurrentSection("Overview")
+                  inView && setCurrentSection('Overview')
                 }
               >
-                <OverviewSection description={description} />
+                <OverviewSection images={images} description={description} />
               </InView>
               <InView
                 id="AboutPartner"
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 as="div"
                 threshold={1}
                 onChange={(inView, entry) =>
-                  inView && setCurrentSection("AboutPartner")
+                  inView && setCurrentSection('AboutPartner')
                 }
               >
                 <AboutPartnerSection
@@ -200,46 +211,51 @@ const IndividualEventPage = ({ params }: { params: { id: string } }) => {
               </InView>
               <InView
                 id="Agenda"
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 as="div"
                 threshold={0.7}
                 onChange={(inView, entry) =>
-                  inView && setCurrentSection("Agenda")
+                  inView && setCurrentSection('Agenda')
                 }
               >
-                <AgendaSection description="" agenda={agenda} />
+                <AgendaSection agenda={agenda} />
               </InView>
               <InView
                 id="Workshops"
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 as="div"
                 threshold={0.8}
                 onChange={(inView, entry) =>
-                  inView && setCurrentSection("Workshops")
+                  inView && setCurrentSection('Workshops')
                 }
               >
-                <WorkshopSection />
+                <WorkshopSection workshopDetails={workshopDetails} />
               </InView>
               <InView
                 id="EventEssentials"
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 as="div"
                 threshold={0.5}
                 onChange={(inView, entry) =>
-                  inView && setCurrentSection("EventEssentials")
+                  inView && setCurrentSection('EventEssentials')
                 }
               >
-                <EventsEssentialSection />
+                <EventsEssentialSection
+                  locationLink={locationLink}
+                  discordChannel={discordChannel}
+                  resources={resources}
+                  mapView={mapView}
+                />
               </InView>
-              <InView
+              {/* <InView
                 id="FAQ"
                 style={{ width: "100%" }}
                 as="div"
                 threshold={0.5}
                 onChange={(inView, entry) => inView && setCurrentSection("FAQ")}
               >
-                <FAQSection />
-              </InView>
+                <FAQSection faqs={faqs} />
+              </InView> */}
             </Flex>
           </Flex>
         </Box>

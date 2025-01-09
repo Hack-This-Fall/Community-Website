@@ -7,36 +7,17 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import Background from '../icons/Background';
 
-const data = [
-  {
-    heading: 'Flutter + Firebase: The Dynamic Duo',
-    speaker: 'Aditya Thakur',
-    speakerImage: '/images/workshops/speaker-dummy.png',
-    speakerTagline: 'Developer Advocate, 100ms',
-  },
-  {
-    heading: 'Flutter + Firebase: The Dynamic Duo',
-    speaker: 'Aditya Thakur',
-    speakerImage: '/images/workshops/speaker-dummy.png',
-    speakerTagline: 'Developer Advocate, 100ms',
-  },
-  {
-    heading: 'Flutter + Firebase: The Dynamic Duo',
-    speaker: 'Aditya Thakur',
-    speakerImage: '/images/workshops/speaker-dummy.png',
-    speakerTagline: 'Developer Advocate, 100ms',
-  },
-  {
-    heading: 'Flutter + Firebase: The Dynamic Duo',
-    speaker: 'Aditya Thakur',
-    speakerImage: '/images/workshops/speaker-dummy.png',
-    speakerTagline: 'Developer Advocate, 100ms',
-  },
-];
+interface WorkshopSectionProps {
+  workshopDetails: {
+    heading: string;
+    speaker: string;
+    speakerImage: string;
+    speakerTagline: string;
+  }[] | undefined;
+}
 
-const WorkshopSection = () => {
+const WorkshopSection = ({ workshopDetails } : WorkshopSectionProps) => {
   return (
     <Flex flexDir="column">
       <Heading
@@ -49,7 +30,7 @@ const WorkshopSection = () => {
         Workshops
       </Heading>
       <Wrap mb="4rem" mt="2rem" justify="flex-start" spacing="1.5rem">
-        {data.map((item, index) => {
+        {workshopDetails?.map((item, index) => {
           return (
             <WrapItem
               borderRadius="20px"
@@ -76,14 +57,14 @@ const WorkshopSection = () => {
               <Flex flexDir="column" mt="1rem">
                 <Heading
                   fontFamily="var(--font-outfit)"
-                  fontSize="2.2rem"
+                  fontSize="2.1rem"
                   fontWeight="500"
                   color="black"
                 >
                   {item.heading}
                 </Heading>
                 <Flex gap="1rem" alignItems="center" mt="1rem">
-                  <Image w="30%" src={item.speakerImage} alt={item.speaker} />
+                  <Image w="30%" borderRadius="full" src={item.speakerImage} alt={item.speaker} />
                   <Flex flexDir="column">
                     <Text
                       fontFamily="var(--font-outfit)"

@@ -19,11 +19,10 @@ import { agenda } from '@/app/events/data';
 import { useEffect } from 'react';
 
 interface AgendaSectionProps {
-  description: string | undefined;
   agenda: agenda[] | undefined;
 }
 
-const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
+const AgendaSection = ({ agenda }: AgendaSectionProps) => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
 
   const { activeStep, setActiveStep } = useSteps({
@@ -60,7 +59,6 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
       alignItems="center"
       justifyContent="center"
       gap="3rem"
-      mb="4rem"
       w="full"
     >
       <Heading
@@ -113,6 +111,7 @@ const AgendaSection = ({ description, agenda }: AgendaSectionProps) => {
                     fontSize="1.2rem"
                     fontWeight="500"
                     fontFamily="var(--font-outfit)"
+                    minW="12rem"
                   >
                     {step.startTime.format('LT')} to {step.endTime.format('LT')}
                   </Text>

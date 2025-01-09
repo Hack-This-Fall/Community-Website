@@ -1,6 +1,18 @@
-import { Flex, Heading, Text, Button, Box } from '@chakra-ui/react';
+import { Flex, Heading, Text, Button, Box, Image, Link } from '@chakra-ui/react';
 
-const EventsEssentialSection = () => {
+interface EventEssentialSectionProps {
+  discordChannel: string | undefined;
+  resources: string | undefined;
+  locationLink: string | undefined;
+  mapView: string | undefined;
+}
+
+const EventsEssentialSection = ({
+  discordChannel,
+  resources,
+  locationLink,
+  mapView,
+}: EventEssentialSectionProps) => {
   return (
     <Flex mb="4rem" w="full" flexDir="column">
       <Heading
@@ -22,9 +34,9 @@ const EventsEssentialSection = () => {
         px={{ base: '2rem', lg: '4rem' }}
         py={{ base: '2rem', lg: '3rem' }}
         flexDir={{ base: 'column', lg: 'row' }}
-        gap={{ base: '2rem', lg: '0rem' }}
+        gap={{ base: '2rem', lg: '2rem' }}
       >
-        <Box w={{ base: '100%', lg: '55%' }}>
+        <Box w={{ base: '100%', lg: '90%' }}>
           <Heading
             fontSize={{ base: '2rem', lg: '3rem' }}
             fontFamily="var(--font-outfit)"
@@ -41,15 +53,19 @@ const EventsEssentialSection = () => {
             fontFamily="var(--font-outfit)"
             fontWeight="500"
           >
-            ​You can join Hack This Fall Discord Server to chat with other
+            You can join Hack This Fall Discord Server to chat with other
             community members and event attendees.
             <br />
             <br />
-            We have a special channel for your city on our discord: #chandigarh
+            We have a special channel for your this event on our discord:
+            {discordChannel}
           </Text>
         </Box>
-        <Flex w="45%" justifyContent="center">
+        <Flex justifyContent="center">
           <Button
+            as={Link}
+            href="https://discord.hackthisfall.tech"
+            target="_blank"
             px="3rem"
             w="fit-content"
             backgroundColor="#000000 !important"
@@ -90,18 +106,7 @@ const EventsEssentialSection = () => {
           >
             Resources
           </Heading>
-          <Text
-            textAlign="left"
-            fontSize="1.3rem"
-            fontFamily="var(--font-outfit)"
-            fontWeight="500"
-          >
-            ​You can join Hack This Fall Discord Server to chat with other
-            community members and event attendees.
-            <br />
-            <br />
-            We have a special channel for your city on our discord: #chandigarh
-          </Text>
+          {resources}
         </Flex>
         <Flex
           borderRadius="30px"
@@ -122,6 +127,24 @@ const EventsEssentialSection = () => {
           >
             Venue
           </Heading>
+          <Box position="relative" textAlign="right" w="100%" height="200px">
+            <Box
+              overflow="hidden"
+              borderRadius="1rem"
+              bg="none"
+              w="100%"
+              height="200px"
+            >
+              <Link href={locationLink} target="_blank">
+                <Image
+                  width="100%"
+                  objectFit="cover"
+                  alt="Map View"
+                  src={mapView}
+                />
+              </Link>
+            </Box>
+          </Box>
         </Flex>
       </Flex>
     </Flex>

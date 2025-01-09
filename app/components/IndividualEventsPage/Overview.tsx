@@ -2,9 +2,10 @@ import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
 interface AgendaSectionProps {
   description: string | undefined;
+  images: string[] | undefined;
 }
 
-const OverviewSection = ({ description }: AgendaSectionProps) => {
+const OverviewSection = ({ description, images }: AgendaSectionProps) => {
   return (
     <Flex mb="4rem" flexDir="column">
       <Flex
@@ -46,9 +47,16 @@ const OverviewSection = ({ description }: AgendaSectionProps) => {
         gap="1.5rem"
         overflowX="auto"
       >
-        <Image src="/images/events/buildwith-3.png" alt="buildwith images" />
-        <Image src="/images/events/buildwith-2.png" alt="buildwith images" />
-        <Image src="/images/events/buildwith-1.png" alt="buildwith images" />
+        {images?.map((image, index) => (
+          <Image
+            maxW={{ base: '100%', md: '31.6%', xl: '32%' }}
+            objectFit="cover"
+            borderRadius="1rem"
+            key={index}
+            src={image}
+            alt="buildwith images"
+          />
+        ))}
       </Flex>
     </Flex>
   );

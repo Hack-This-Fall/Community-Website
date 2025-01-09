@@ -16,7 +16,7 @@ const AboutPartnerSection = ({ partnerDescription, partnerLogo, partnerName }: A
       mb="4rem"
       w="full"
     >
-      <Image src={partnerLogo} alt="buildwith" />
+      <Image src={partnerLogo} maxW="50%" alt="buildwith" />
       <Flex flexDir="column" maxW={{base: "full", lg:"45%"}}>
         <Heading
           fontSize={{ base: '2.5rem', lg: '3.5rem' }}

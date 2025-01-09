@@ -6,12 +6,8 @@ import {
   Image,
   Box,
   IconButton,
+  Link,
 } from '@chakra-ui/react';
-import CalIcon from '../icons/Cal';
-import StarIcon from '../icons/Star';
-import ClockIcon from '../icons/Clock';
-import LocationIcon from '../icons/Location';
-import ScrollIcon from '../icons/Scroll';
 import AngleArrow from '../icons/AngleArrow';
 
 interface HeroSectionProps {
@@ -21,6 +17,8 @@ interface HeroSectionProps {
   location: string | undefined;
   description: string | undefined;
   eventMode: string | undefined;
+  heroImage: string | undefined;
+  link: string | undefined;
 }
 
 const HeroSection = ({
@@ -29,13 +27,15 @@ const HeroSection = ({
   heading,
   location,
   description,
+  link,
+  heroImage,
   eventMode,
 }: HeroSectionProps) => {
   return (
     <Flex w="full" flexDir="column" alignItems="center" justifyContent="center">
       <Flex
         flexDir={{ base: 'column-reverse', lg: 'row' }}
-        mb={{base: "4rem", lg: "3rem"}}
+        mb={{ base: '4rem', lg: '3rem' }}
         pt="2rem"
         gap="2rem"
       >
@@ -108,6 +108,9 @@ const HeroSection = ({
             mt={{ base: '1rem', lg: '2rem' }}
           >
             <Button
+              as={Link}
+              href={link}
+              target="_blank"
               px="2rem"
               w="fit-content"
               borderRadius="1.875rem"
@@ -123,23 +126,34 @@ const HeroSection = ({
                 background: '#B281FE',
                 color: 'white',
               }}
+              onMouseEnter={(e) => {
+                document.getElementById('eventPageArrow')!.style.transform =
+                  'rotate(43deg)';
+              }}
+              onMouseLeave={(e) => {
+                document.getElementById('eventPageArrow')!.style.transform =
+                  'rotate(0deg)';
+              }}
             >
               Explore Now
             </Button>
             <IconButton
+              id="eventPageArrow"
               height="3.2rem"
               aspectRatio="1"
               borderRadius="full"
               backgroundColor="#B281FE !important"
               aria-label="Event page"
+              transition='transform 0.3s ease-in-out'
               icon={<AngleArrow />}
             />
           </Flex>
         </Flex>
         <Image
-          w={{ base: 'full', lg: '70%' }}
-          src="/images/events/city-meetup-hero.png"
+          w={{ base: 'full', lg: '60%' }}
+          src={heroImage}
           alt="city meetup"
+          borderRadius="2rem"
         />
       </Flex>
     </Flex>
