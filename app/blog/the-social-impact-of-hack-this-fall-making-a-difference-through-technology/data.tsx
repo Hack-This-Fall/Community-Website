@@ -1,5 +1,5 @@
 const data = {
-  slug: "the-social-impact-of-hack-this -fall-making-a-difference-through-technology",
+  slug: "the-social-impact-of-hack-this-fall-making-a-difference-through-technology",
   description:
     "Discover the social impact of Hack This Fall, where technology meets purpose. This blog explores how participants create solutions for real-world issues, foster diverse collaboration, and build projects that drive positive change. Join the movement and see how hackathons can make a difference!",
   title:
@@ -8,7 +8,7 @@ const data = {
     "https://a.storyblok.com/f/182824/4000x2250/b2068fca1a/the-social-impact-of-hack-this-fall-making-a-difference-through-technology.png",
   date: "2024-11-06 14:30",
   author: {
-    name: "Siddharth Dayalwal",
+    name: "Sneha Farkya",
     content: {
       _uid: "17047774-36a0-4bbe-893f-4d28d8376040",
       company: "Hack This Fall",
@@ -25,7 +25,7 @@ const data = {
       designation: "Organizer",
     },
   },
-  tags: ["Hackathon", "Recap"],
+  tags: ["Social Impact", "Hackathon"],
 };
 
 export default data;
