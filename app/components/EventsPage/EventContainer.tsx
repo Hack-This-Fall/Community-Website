@@ -28,12 +28,14 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
       pos="relative"
       height="full"
       bgColor="#FAFAFA"
-      css={{ ":hover": {
-        ".circle": {
-          transform: "rotate(42deg)",
-          transition: "transform 0.3s ease-in-out",
-        }
-      }}}
+      css={{
+        ':hover': {
+          '.circle': {
+            transform: 'rotate(42deg)',
+            transition: 'transform 0.3s ease-in-out',
+          },
+        },
+      }}
       p="1rem"
     >
       <Flex justifyContent="space-between" w="full">
@@ -52,12 +54,14 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
         <Box
           p="0.3rem 0.7rem"
           borderRadius="10px"
-          border={`1px solid #DC6E04`}
-          bgColor="#FFCC9B"
+          border={
+            eventMode === 'VIRTUAL' ? '1px solid #9933FF' : `1px solid #DC6E04`
+          }
+          bgColor={eventMode === 'VIRTUAL' ? '#9933FF66' : '#FFCC9B'}
           fontFamily="var(--font-outfit)"
           fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
           fontWeight="700"
-          color="#DC6E04"
+          color={eventMode === 'VIRTUAL' ? '#9933FF' : '#DC6E04'}
         >
           {eventMode}
         </Box>

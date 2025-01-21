@@ -157,15 +157,18 @@ const PastEventContainer = ({ eventData }: { eventData: eventData }) => {
           <Box
             p="0.3rem 0.7rem"
             borderRadius="10px"
-            border={`1px solid #DC6E04`}
-            bgColor="#FFCC9B"
+            border={
+              eventMode === 'VIRTUAL'
+                ? '1px solid #9933FF'
+                : `1px solid #DC6E04`
+            }
+            bgColor={eventMode === 'VIRTUAL' ? '#9933FF66' : '#FFCC9B'}
             fontFamily="var(--font-outfit)"
             fontSize="1rem"
             fontWeight="700"
-            color="#DC6E04"
+            color={eventMode === 'VIRTUAL' ? '#9933FF' : "#DC6E04"}
             mr="2rem"
             minW="110px"
-            textTransform="uppercase"
             textAlign="center"
           >
             {eventMode}
