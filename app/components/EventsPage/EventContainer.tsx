@@ -55,13 +55,13 @@ const EventContainer = ({ eventData }: { eventData: eventData }) => {
           p="0.3rem 0.7rem"
           borderRadius="10px"
           border={
-            eventMode === 'VIRTUAL' ? '1px solid #9933FF' : `1px solid #DC6E04`
+            eventMode !== 'VIRTUAL' ? '1px solid #FEB266' : `1px solid #DC6E04`
           }
-          bgColor={eventMode === 'VIRTUAL' ? '#9933FF66' : '#FFCC9B'}
+          bgColor={eventMode !== 'VIRTUAL' ? '#FFF5EA' : '#FFCC9B'}
+          color={eventMode !== 'VIRTUAL' ? '#FB8713' : '#DC6E04'}
           fontFamily="var(--font-outfit)"
           fontSize={{ base: '0.7rem', md: '0.8rem', lg: '1rem' }}
           fontWeight="700"
-          color={eventMode === 'VIRTUAL' ? '#9933FF' : '#DC6E04'}
         >
           {eventMode}
         </Box>

@@ -557,7 +557,15 @@ const eventsData: eventsData = {
       link: 'https://lu.ma/5dcx1ipq',
     },
     {
-      id: '26',
+      id: '28',
+      heading: 'Build With TON Society India',
+      eventMode: 'IN PERSON',
+      type: 'BUILD WITH',
+      startTimestamp: moment('2025-01-25 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      link: 'https://lu.ma/wlk4sari',
+    },
+    {
+      id: '27',
       heading: 'Hack This Fall 2025',
       eventMode: 'VIRTUAL',
       type: 'HACKATHON',
