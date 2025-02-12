@@ -540,15 +540,6 @@ const eventsData: eventsData = {
       link: 'https://hackathon.hackthisfall.tech/virtual',
     },
     {
-      id: '25',
-      heading: 'Hack This Fall 2025',
-      startTimestamp: moment('2025-03-21 00:00 AM', 'YYYY-MM-DD hh:mm A'),
-      endTimestamp: moment('2025-03-23 00:00 AM', 'YYYY-MM-DD hh:mm A'),
-      eventMode: 'IN PERSON',
-      type: 'HACKATHON',
-      link: 'https://hackathon.hackthisfall.tech/',
-    },
-    {
       id: '26',
       heading: "Builder 's Meetup with Devfolio",
       startTimestamp: moment('2024-12-15 11:00 AM', 'YYYY-MM-DD hh:mm A'),
