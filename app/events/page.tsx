@@ -205,6 +205,7 @@ const EventsPage = () => {
                           ? -1
                           : 1,
                       )
+                      .reverse()
                       .map((event, index) => (
                         <EventContainer eventData={event} key={index} />
                       ))}
