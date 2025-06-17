@@ -564,8 +564,8 @@ const eventsData: eventsData = {
     },
     {
       id: '28',
-      heading: 'Hack This Fall x BuildShip : DevDay Hackathon',
-      startTimestamp: moment('2025-05-17 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      heading: 'BuildShip x DevDay Hackathon',
+      startTimestamp: moment('2025-06-21 10:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'IN PERSON',
       type: 'HACKATHON',
       link: 'https://lu.ma/ekumfiam',
