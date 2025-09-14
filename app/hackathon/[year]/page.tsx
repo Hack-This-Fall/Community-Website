@@ -1,20 +1,19 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 
-interface VirtualPageProps {
+interface HackathonPageProps {
   params: {
     year: string;
   };
 }
 
-export default function VirtualPage({ params }: VirtualPageProps) {
+export default function HackathonPage({ params }: HackathonPageProps) {
   const { year } = params;
 
   // Map years to their corresponding URLs
   const yearToUrl: Record<string, string> = {
-    '2020': 'https://s1.hackthisfall.tech',
-    '2021': 'https://s2.hackthisfall.tech',
-    '2024': 'https://hackathon.hackthisfall.tech/virtual'
+    '2023': 'https://s3.hackthisfall.tech',
+    '2024': 'https://s4.hackthisfall.tech',
   };
 
   const url = yearToUrl[year];
@@ -33,7 +32,7 @@ export default function VirtualPage({ params }: VirtualPageProps) {
           height: '100vh',
           border: 'none',
           margin: 0,
-          padding: 0
+          padding: 0,
         }}
       />
     </div>
