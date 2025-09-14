@@ -1,5 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { DM_Sans, Poppins, Outfit, Inter } from "next/font/google";
@@ -76,6 +78,8 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${dmSans.variable} ${againstHistory.variable} ${outfit.variable} ${inter.variable}`}
       >
+        <Analytics />
+        <SpeedInsights />
         <Providers>{children}</Providers>
       </body>
     </html>
