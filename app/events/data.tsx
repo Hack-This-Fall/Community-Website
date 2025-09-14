@@ -113,7 +113,7 @@ const eventsData: eventsData = {
       endTimestamp: moment('2020-11-01 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'VIRTUAL',
       type: 'HACKATHON',
-      link: 'https://s1.hackthisfall.tech/',
+      link: 'https://hackthisfall.tech/virtual/2020',
     },
     {
       id: '1',
@@ -122,7 +122,7 @@ const eventsData: eventsData = {
       endTimestamp: moment('2021-10-24 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'VIRTUAL',
       type: 'HACKATHON',
-      link: 'https://s2.hackthisfall.tech/',
+      link: 'https://hackthisfall.tech/virtual/2021',
     },
     {
       id: '2',
@@ -420,7 +420,7 @@ const eventsData: eventsData = {
       endTimestamp: moment('2023-02-05 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'IN PERSON',
       type: 'HACKATHON',
-      link: 'https://s3.hackthisfall.tech/',
+      link: 'https://hackthisfall.tech/hackathon/2023',
     },
     {
       id: '12',
@@ -528,7 +528,7 @@ const eventsData: eventsData = {
       endTimestamp: moment('2024-02-11 12:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'IN PERSON',
       type: 'HACKATHON',
-      link: 'https://s4.hackthisfall.tech/',
+      link: 'https://hackthisfall.tech/hackathon/2024',
     },
     {
       id: '24',
@@ -537,7 +537,7 @@ const eventsData: eventsData = {
       endTimestamp: moment('2024-11-10 00:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'VIRTUAL',
       type: 'HACKATHON',
-      link: 'https://hackathon.hackthisfall.tech/virtual',
+      link: 'https://hackthisfall.tech/virtual/2024',
     },
     {
       id: '26',
@@ -560,7 +560,7 @@ const eventsData: eventsData = {
       heading: 'Hack This Fall 2025',
       eventMode: 'VIRTUAL',
       type: 'HACKATHON',
-      link: 'https://hackathon.hackthisfall.tech/virtual',
+      link: 'https://hackathon.hackthisfall.tech',
     },
     {
       id: '28',
