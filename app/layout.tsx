@@ -78,8 +78,8 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${dmSans.variable} ${againstHistory.variable} ${outfit.variable} ${inter.variable}`}
       >
-        <div className="flex justify-center text-white bg-[#180629] py-1 px-4">
-          <span>
+        <div className="flex justify-center text-white bg-[#180629] py-2 px-4">
+          <span className="text-center">
             Hack This Fall turns 5 🎉 and you’re invited to attend our milestone
             edition -{" "}
             <a
