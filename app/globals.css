@@ -128,3 +128,7 @@ footer {
 .blog-card {
   border: 1px solid #cccccc;
 }
+
+.top-banner {
+  background-image: linear-gradient(to right, #9f36f6, #fea32b);
+}
