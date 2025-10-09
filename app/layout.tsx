@@ -1,7 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { DM_Sans, Poppins, Outfit, Inter } from "next/font/google";
@@ -78,6 +78,17 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${dmSans.variable} ${againstHistory.variable} ${outfit.variable} ${inter.variable}`}
       >
+        <div className="flex justify-center gap-x-1 text-white bg-[#180629] py-1">
+          Hack This Fall turns 5 🎉 and you’re invited to attend our milestone
+          edition -
+          <a
+            href="https://5yo.hackthisfall.tech"
+            target="_blank"
+            className="underline"
+          >
+            Find more details!
+          </a>
+        </div>
         <Analytics />
         <SpeedInsights />
         <Providers>{children}</Providers>

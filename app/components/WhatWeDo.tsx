@@ -60,7 +60,7 @@ export default function WhatWeDo() {
             solve problems in an environment conducive to innovation.
           </span>
           <a
-            href="http://hackathon.hackthisfall.tech/"
+            href="http://5yo.hackthisfall.tech/"
             target="_blank"
             className="explore-button flex flex-row text-black align-center justify-center w-fit mt-6 gap-x-1"
           >
