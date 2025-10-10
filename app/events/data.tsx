@@ -28,7 +28,7 @@ export interface eventData {
   resources?: any;
   discordChannel?: string;
   eventMode: string;
-  type: 'CITY MEETUP' | 'HACKTOBERFEST' | 'BUILD WITH' | 'HACKATHON';
+  type: 'CITY MEETUP' | 'HACKTOBERFEST' | 'BUILD WITH' | 'HACKATHON' | 'BUILD STATION';
   agenda?: agenda[];
   link?: string;
   faqs?: faq[];
@@ -69,6 +69,10 @@ export const colorsMap = {
     secondaryColor: '#FAFAFA',
   },
   'BUILD WITH': {
+    color: '#9933FF',
+    secondaryColor: '#9933FF66',
+  },
+  'BUILD STATION': {
     color: '#9933FF',
     secondaryColor: '#9933FF66',
   },
@@ -548,19 +552,12 @@ const eventsData: eventsData = {
       link: 'https://lu.ma/5dcx1ipq',
     },
     {
-      id: '28',
+      id: '27',
       heading: 'Build With TON Society India',
       eventMode: 'IN PERSON',
       type: 'BUILD WITH',
       startTimestamp: moment('2025-01-25 10:00 AM', 'YYYY-MM-DD hh:mm A'),
       link: 'https://lu.ma/wlk4sari',
-    },
-    {
-      id: '27',
-      heading: 'Hack This Fall 2025',
-      eventMode: 'VIRTUAL',
-      type: 'HACKATHON',
-      link: 'https://hackathon.hackthisfall.tech',
     },
     {
       id: '28',
@@ -569,6 +566,55 @@ const eventsData: eventsData = {
       eventMode: 'IN PERSON',
       type: 'HACKATHON',
       link: 'https://lu.ma/ekumfiam',
+    },
+    {
+      id: '29',
+      heading: 'Hack This Fall 2025',
+      startTimestamp: moment('2025-11-01 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      endTimestamp: moment('2025-11-30 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'VIRTUAL',
+      type: 'HACKATHON',
+      link: 'https://hackthisfall.devfolio.co/overview',
+    },
+    {
+      id: '30',
+      heading: 'Mumbai City Build Station',
+      startTimestamp: moment('2025-11-08 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'BUILD STATION',
+      link: 'https://luma.com/6kk2l88e',
+    },
+    {
+      id: '31',
+      heading: 'Ahmedabad City Build Station',
+      startTimestamp: moment('2025-11-09 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'BUILD STATION',
+      link: 'https://luma.com/wghku6rh',
+    },
+    {
+      id: '32',
+      heading: 'Delhi NCR City Build Station',
+      startTimestamp: moment('2025-11-15 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'BUILD STATION',
+      link: 'https://luma.com/hg0g2gwa',
+    },
+    {
+      id: '33',
+      heading: 'Kolkata City Build Station',
+      startTimestamp: moment('2025-11-16 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'BUILD STATION',
+      link: 'https://luma.com/g2r1hz70',
+    },
+    {
+      id: '34',
+      heading: 'Hyderabad City Build Station',
+      startTimestamp: moment('2025-11-22 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'BUILD STATION',
+      link: 'https://luma.com/utv77z3v',
     },
   ],
 };
