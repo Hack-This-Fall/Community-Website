@@ -616,6 +616,14 @@ const eventsData: eventsData = {
       type: 'BUILD STATION',
       link: 'https://luma.com/utv77z3v',
     },
+    {
+      id: '35',
+      heading: 'Apify x DevDay Hackathon',
+      startTimestamp: moment('2025-12-05 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'HACKATHON',
+      link: 'https://luma.com/rvz8bst9',
+    },
   ],
 };
 
