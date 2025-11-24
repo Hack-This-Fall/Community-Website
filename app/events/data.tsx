@@ -545,7 +545,7 @@ const eventsData: eventsData = {
     },
     {
       id: '26',
-      heading: "Builder 's Meetup with Devfolio",
+      heading: "Builder's Meetup with Devfolio",
       startTimestamp: moment('2024-12-15 11:00 AM', 'YYYY-MM-DD hh:mm A'),
       eventMode: 'IN PERSON',
       type: 'BUILD WITH',
@@ -623,6 +623,23 @@ const eventsData: eventsData = {
       eventMode: 'IN PERSON',
       type: 'HACKATHON',
       link: 'https://luma.com/rvz8bst9',
+    },
+    {
+      id: '36',
+      heading: 'Hacker House & Demo Day',
+      startTimestamp: moment('2025-12-27 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      endTimestamp: moment('2025-12-28 5:00 PM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'HACKATHON',
+      link: 'https://5yo.hackthisfall.tech/',
+    },
+    {
+      id: '37',
+      heading: 'Award Ceremony & Community Celebration',
+      startTimestamp: moment('2025-12-28 10:00 AM', 'YYYY-MM-DD hh:mm A'),
+      eventMode: 'IN PERSON',
+      type: 'HACKATHON',
+      link: 'https://5yo.hackthisfall.tech/',
     },
   ],
 };
