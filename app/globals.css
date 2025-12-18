@@ -132,3 +132,52 @@ footer {
 .top-banner {
   background-image: linear-gradient(to right, #9f36f6, #fea32b);
 }
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF8000 0%, #A163FF 100%);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFA500 0%, #B281FE 100%);
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #FF8000 rgba(255, 255, 255, 0.05);
+}
+
+/* Modal specific scrollbar */
+.chakra-modal__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF8000 0%, #A163FF 100%);
+  border-radius: 10px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFA500 0%, #B281FE 100%);
+}
+
+.chakra-modal__body {
+  scrollbar-width: thin;
+  scrollbar-color: #FF8000 rgba(255, 255, 255, 0.05);
+}
