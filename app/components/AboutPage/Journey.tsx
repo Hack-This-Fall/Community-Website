@@ -30,8 +30,8 @@ const JourneySection = () => {
   const updateContainerWidth = useCallback(() => {
     if (horizontalRef.current) {
       const totalWidth = horizontalRef.current.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      setContainerWidth(Math.max(0, totalWidth - viewportWidth + 350));
+      const viewportWidth = Math.min(window.innerWidth, 1200);
+      setContainerWidth(Math.max(0, totalWidth - viewportWidth + 100));
     }
   }, []);
 
