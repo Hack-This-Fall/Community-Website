@@ -25,6 +25,215 @@ export interface ProjectData {
 }
 
 export const projectsData: ProjectData[] = [
+  {
+    id: "e503fefab259468f831d5cec206415e6",
+    name: "SafeMask",
+    tagline: "Privacy that disguises itself",
+    description:
+      "SafeMask is a privacy-focused crypto wallet that protects users by hiding real balances behind a normal-looking decoy interface. Designed for real-world safety, it prevents judgment, coercion, or unwanted attention by disguising sensitive wallet data while keeping everything securely encrypted. With features like hidden balances, decoy wallets, and secure key handling, SafeMask lets users manage crypto confidently and discreetly—even when someone else has access to their phone.",
+    images: [
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2Fff5aa750-2843-4234-a495-967e6e921fe9.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F67060e8f-1566-4aca-8bbd-655aa38e1aa4.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F29db17c2-ef03-4d6b-b7f7-f7fad666a04e.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F4d7b7f2c-b937-4789-abf3-3e1f8e8e7df6.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F9c3e6d5b-a386-4ea0-8201-d92683293ea6.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F99e2a174-f985-4386-b8a9-fd777f3c548c.png&w=1440&q=75",
+    ],
+    videoUrl: "https://youtube.com/embed/rnGMY664e8I",
+    team: [
+      {
+        name: "Kartik Vyas",
+        role: "Builder",
+      },
+      {
+        name: "Nisarg Xplores",
+        image:
+          "https://assets.devfolio.co/users/3d10b42cfb004204a67d71803c0487a2/avatar-872db2d5-3e6b-4af8-a3ff-4d394b1800ae.jpeg",
+        role: "Builder",
+      },
+    ],
+    technologies: [
+      "Ethereum",
+      "Solidity",
+      "TypeScript",
+      "JavaScript",
+      "Rust",
+      "Docker",
+      "Cryptography",
+    ],
+    sourceCodeUrl: "https://github.com/Kartikvyas1604/SafeMask",
+    devfolioUrl: "https://devfolio.co/projects/safemask-04d4",
+    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    eventLogo:
+      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
+    category: "Security & Privacy",
+    // winner: true,
+    // winnerPosition: "Ethereum Track Winner & Hacker House Finalist",
+  },
+  {
+    id: "0326835bf2fa4c188126c5383b0f2c83",
+    name: "Donna",
+    tagline: "Know what happened. Avoid what failed.",
+    description:
+      "Donna (Distributed Organizational Neural Network Assistant) helps teams prevent repeated mistakes by preserving institutional knowledge that’s usually lost across chats, tickets, docs, and employee turnover. It analyzes an organization’s codebase, project history, and communications to understand what worked, what failed, and why. By building a contextual map of past decisions and proactively warning teams when similar failure patterns reappear, Donna shortens onboarding, improves decision-making, and ensures hard-earned lessons are never forgotten.",
+    images: [
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2Fbf9ee9c9-ea7b-4d3f-947a-4685a437aadd.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F303402f9-b269-4eb4-a3e9-c966e8192d6b.png&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F566a49fa-549c-4b8c-9459-5dc3a132c07a.png&w=1440&q=75",
+    ],
+    videoUrl: "https://youtube.com/embed/3ZRISKYuPUU",
+    team: [
+      {
+        name: "Manas Nanivadekar",
+        image:
+          "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
+        role: "Builder",
+      },
+      {
+        name: "Jatin Khanijoan",
+        role: "Builder",
+      },
+      {
+        name: "Amaan Khan",
+        role: "Builder",
+      },
+    ],
+    technologies: ["Python", "LLMs", "AI Agents", "Knowledge Graphs"],
+    liveUrl: "https://donna.riverbridge.org.in/",
+    sourceCodeUrl: "https://github.com/Manas-Nanivadekar/DONNA",
+    devfolioUrl: "https://devfolio.co/projects/donna-b7cd",
+    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    eventLogo:
+      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
+    category: "Developer Tools",
+    // winner: true,
+    // winnerPosition: "Hacker House & Demo Day Finalist",
+  },
+  {
+    id: "dab0cb9a7e824b599b1cfcb47875b025",
+    name: "RudraOne",
+    tagline: "One platform, one screen, all of your data.",
+    description:
+      "RudraOne modernizes India’s emergency response operations by unifying telephony, live transcription, translation, mapping, and dispatch into a single real-time platform. It tackles fragmented systems, language barriers, high call volumes, and lack of situational awareness by providing dispatchers with live audio transcription, multilingual translation, accurate location tracking, and shared call state across teams. By reducing miscommunication and response delays, RudraOne enables faster, clearer, and more effective emergency response when every second matters.",
+    images: [
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F9d9d7ed8-d8ff-450d-b98b-1cca75a26d77.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F4af295f3-7cd4-42c1-b8df-88d277e868df.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F13c8d813-fc88-471b-9632-091a7277adea.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2Ff8141d50-287d-4af9-a46f-15048cc738f8.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F19b72b5b-d69c-434d-a78d-fa40ee62f408.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F218e92df-e341-43dc-a626-3f03e3913c74.jpeg&w=1440&q=75",
+    ],
+    videoUrl: "https://youtube.com/embed/Hbso7qwJCJk",
+    team: [
+      {
+        name: "Shreesha Aithal",
+        role: "Builder",
+      },
+      {
+        name: "Pranav S Salian",
+        role: "Builder",
+      },
+      {
+        name: "Siddharth Shetty",
+        role: "Builder",
+      },
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "PostgreSQL",
+      "Mapbox",
+      "AI/ML",
+      "WebSockets",
+      "Twilio",
+    ],
+    sourceCodeUrl: "https://github.com/shreesha345/Rudra-One",
+    devfolioUrl: "https://devfolio.co/projects/rudraone-c3ed",
+    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    eventLogo:
+      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
+    category: "Healthcare",
+    // winner: true,
+    // winnerPosition: "Vultr Cloud Track Runner-Up & Hacker House Finalist",
+  },
+  {
+    id: "5a32146075874a46a31ec880ab6ec3e5",
+    name: "4Diary",
+    tagline: "Catering to your note needs with privacy and style",
+    description:
+      "4Diary is a privacy-first, end-to-end encrypted note-taking web app built for people who value both security and simplicity. It ensures that not even the server can read user content, avoids storing passwords entirely, and remains fully open-source and self-hostable. Accessible from any browser and enhanced with features like Kanban boards, 4Diary lets users capture their thoughts securely without trusting opaque platforms or sacrificing usability.",
+    images: [
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F8c24101b-0885-421e-bff9-9e3ca1c6deda.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3d566945-eea9-4e4d-83a1-433d3a3947b5.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F1777c1cd-49fa-44bb-bc4d-b0ecdaf1ba7f.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2Fde27f416-81ae-4a3b-968a-320f15e9e69b.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3eff2075-b1cc-43c7-9b1e-4495321ca278.jpeg&w=1440&q=75",
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F7640e0f7-0374-46c4-a44a-c6f542dc78d0.jpeg&w=1440&q=75",
+    ],
+    videoUrl: "https://player.vimeo.com/video/1141388287",
+    team: [
+      {
+        name: "Harsha Bhattacharyya",
+        role: "Founder & Builder",
+      },
+    ],
+    technologies: [
+      "Next.js",
+      "JavaScript",
+      "MongoDB",
+      "Redis",
+      "Tailwind CSS",
+      "Vercel",
+      "End-to-End Encryption",
+    ],
+    liveUrl: "https://4diary.vercel.app/",
+    sourceCodeUrl: "https://github.com/Harsha-Bhattacharyya/4diary",
+    devfolioUrl: "https://devfolio.co/projects/diary-8fce",
+    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    eventLogo:
+      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
+    category: "Security & Privacy",
+    // winner: true,
+    // winnerPosition: "GitHub Track Winner & Hacker House Finalist",
+  },
+  {
+    id: "55f05d2d19a649ce882145f36fda3c2e",
+    name: "Wakarumade",
+    tagline: "Learn until it clicks.",
+    description:
+      "Wakarumade helps children truly understand math word problems by breaking them into small, guided reasoning steps instead of focusing only on answers. It targets the real failure point—language comprehension—by scaffolding how kids think through problems, giving immediate feedback, and generating new practice questions based on where they struggled. The result is less guessing, clearer reasoning, and a learning experience that supports both kids and parents without repetitive re-explanations.",
+    images: [
+      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F7be4df3280a9454aa33c706c7beeca13%2Feb7d9d09-cc91-4cff-aad6-a035fda116b0.png&w=1440&q=75",
+    ],
+    videoUrl: "https://youtube.com/embed/4-p-3T3RSig",
+    team: [
+      {
+        name: "Makiko Ohashi",
+        image:
+          "https://assets.devfolio.co/users/7be4df3280a9454aa33c706c7beeca13/avatar-07da63d7-89d5-457e-8858-ee1426b62254.jpeg",
+        role: "Founder & Builder",
+      },
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "AI/LLMs",
+    ],
+    liveUrl: "https://wakarumade.vercel.app",
+    sourceCodeUrl: "https://github.com/MakikoOhashi/wakarumade",
+    devfolioUrl: "https://devfolio.co/projects/wakarumade-f890",
+    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    eventLogo:
+      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
+    category: "Education",
+    // winner: true,
+    // winnerPosition: "Hacker House & Demo Day Finalist",
+  },
   // {
   //   id: "healthwise-ai",
   //   name: "HealthWise AI",
@@ -206,7 +415,7 @@ export const projectsData: ProjectData[] = [
     devfolioUrl: "https://devfolio.co/projects/securehome-ac03",
     builtAt: "Hack This Fall 2025 - Milestone Edition",
     eventLogo: "/assets/images/logo.png",
-    category: "Safety",
+    category: "Security & Privacy",
   },
 
   {
@@ -357,51 +566,7 @@ export const projectsData: ProjectData[] = [
     // winner: true,
     // winnerPosition: "Hacker House & Demo Day Finalist",
   },
-  {
-    id: "e503fefab259468f831d5cec206415e6",
-    name: "SafeMask",
-    tagline: "Privacy that disguises itself",
-    description:
-      "SafeMask is a privacy-focused crypto wallet that protects users by hiding real balances behind a normal-looking decoy interface. Designed for real-world safety, it prevents judgment, coercion, or unwanted attention by disguising sensitive wallet data while keeping everything securely encrypted. With features like hidden balances, decoy wallets, and secure key handling, SafeMask lets users manage crypto confidently and discreetly—even when someone else has access to their phone.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2Fff5aa750-2843-4234-a495-967e6e921fe9.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F67060e8f-1566-4aca-8bbd-655aa38e1aa4.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F29db17c2-ef03-4d6b-b7f7-f7fad666a04e.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F4d7b7f2c-b937-4789-abf3-3e1f8e8e7df6.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F9c3e6d5b-a386-4ea0-8201-d92683293ea6.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F99e2a174-f985-4386-b8a9-fd777f3c548c.png&w=1440&q=75",
-    ],
-    videoUrl: "https://youtube.com/embed/rnGMY664e8I",
-    team: [
-      {
-        name: "Kartik Vyas",
-        role: "Builder",
-      },
-      {
-        name: "Nisarg Xplores",
-        image:
-          "https://assets.devfolio.co/users/3d10b42cfb004204a67d71803c0487a2/avatar-872db2d5-3e6b-4af8-a3ff-4d394b1800ae.jpeg",
-        role: "Builder",
-      },
-    ],
-    technologies: [
-      "Ethereum",
-      "Solidity",
-      "TypeScript",
-      "JavaScript",
-      "Rust",
-      "Docker",
-      "Cryptography",
-    ],
-    sourceCodeUrl: "https://github.com/Kartikvyas1604/SafeMask",
-    devfolioUrl: "https://devfolio.co/projects/safemask-04d4",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
-    eventLogo:
-      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
-    category: "Security & Privacy",
-    // winner: true,
-    // winnerPosition: "Ethereum Track Winner & Hacker House Finalist",
-  },
+
   {
     id: "c58b42109ee245028f247d372d13e85e",
     name: "Playlistify AI",
@@ -450,170 +615,6 @@ export const projectsData: ProjectData[] = [
     category: "Productivity",
     // winner: true,
     // winnerPosition: "Apify Challenge Winner & Hacker House Finalist",
-  },
-  {
-    id: "55f05d2d19a649ce882145f36fda3c2e",
-    name: "Wakarumade",
-    tagline: "Learn until it clicks.",
-    description:
-      "Wakarumade helps children truly understand math word problems by breaking them into small, guided reasoning steps instead of focusing only on answers. It targets the real failure point—language comprehension—by scaffolding how kids think through problems, giving immediate feedback, and generating new practice questions based on where they struggled. The result is less guessing, clearer reasoning, and a learning experience that supports both kids and parents without repetitive re-explanations.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F7be4df3280a9454aa33c706c7beeca13%2Feb7d9d09-cc91-4cff-aad6-a035fda116b0.png&w=1440&q=75",
-    ],
-    videoUrl: "https://youtube.com/embed/4-p-3T3RSig",
-    team: [
-      {
-        name: "Makiko Ohashi",
-        image:
-          "https://assets.devfolio.co/users/7be4df3280a9454aa33c706c7beeca13/avatar-07da63d7-89d5-457e-8858-ee1426b62254.jpeg",
-        role: "Founder & Builder",
-      },
-    ],
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "AI/LLMs",
-    ],
-    liveUrl: "https://wakarumade.vercel.app",
-    sourceCodeUrl: "https://github.com/MakikoOhashi/wakarumade",
-    devfolioUrl: "https://devfolio.co/projects/wakarumade-f890",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
-    eventLogo:
-      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
-    category: "Education",
-    // winner: true,
-    // winnerPosition: "Hacker House & Demo Day Finalist",
-  },
-  {
-    id: "5a32146075874a46a31ec880ab6ec3e5",
-    name: "4Diary",
-    tagline: "Catering to your note needs with privacy and style",
-    description:
-      "4Diary is a privacy-first, end-to-end encrypted note-taking web app built for people who value both security and simplicity. It ensures that not even the server can read user content, avoids storing passwords entirely, and remains fully open-source and self-hostable. Accessible from any browser and enhanced with features like Kanban boards, 4Diary lets users capture their thoughts securely without trusting opaque platforms or sacrificing usability.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F8c24101b-0885-421e-bff9-9e3ca1c6deda.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3d566945-eea9-4e4d-83a1-433d3a3947b5.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F1777c1cd-49fa-44bb-bc4d-b0ecdaf1ba7f.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2Fde27f416-81ae-4a3b-968a-320f15e9e69b.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3eff2075-b1cc-43c7-9b1e-4495321ca278.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F7640e0f7-0374-46c4-a44a-c6f542dc78d0.jpeg&w=1440&q=75",
-    ],
-    videoUrl: "https://player.vimeo.com/video/1141388287",
-    team: [
-      {
-        name: "Harsha Bhattacharyya",
-        role: "Founder & Builder",
-      },
-    ],
-    technologies: [
-      "Next.js",
-      "JavaScript",
-      "MongoDB",
-      "Redis",
-      "Tailwind CSS",
-      "Vercel",
-      "End-to-End Encryption",
-    ],
-    liveUrl: "https://4diary.vercel.app/",
-    sourceCodeUrl: "https://github.com/Harsha-Bhattacharyya/4diary",
-    devfolioUrl: "https://devfolio.co/projects/diary-8fce",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
-    eventLogo:
-      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
-    category: "Security & Privacy",
-    // winner: true,
-    // winnerPosition: "GitHub Track Winner & Hacker House Finalist",
-  },
-  {
-    id: "0326835bf2fa4c188126c5383b0f2c83",
-    name: "Donna",
-    tagline: "Know what happened. Avoid what failed.",
-    description:
-      "Donna (Distributed Organizational Neural Network Assistant) helps teams prevent repeated mistakes by preserving institutional knowledge that’s usually lost across chats, tickets, docs, and employee turnover. It analyzes an organization’s codebase, project history, and communications to understand what worked, what failed, and why. By building a contextual map of past decisions and proactively warning teams when similar failure patterns reappear, Donna shortens onboarding, improves decision-making, and ensures hard-earned lessons are never forgotten.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2Fbf9ee9c9-ea7b-4d3f-947a-4685a437aadd.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F303402f9-b269-4eb4-a3e9-c966e8192d6b.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F566a49fa-549c-4b8c-9459-5dc3a132c07a.png&w=1440&q=75",
-    ],
-    videoUrl: "https://youtube.com/embed/3ZRISKYuPUU",
-    team: [
-      {
-        name: "Manas Nanivadekar",
-        image:
-          "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
-        role: "Builder",
-      },
-      {
-        name: "Jatin Khanijoan",
-        role: "Builder",
-      },
-      {
-        name: "Amaan Khan",
-        role: "Builder",
-      },
-    ],
-    technologies: ["Python", "LLMs", "AI Agents", "Knowledge Graphs"],
-    liveUrl: "https://donna.riverbridge.org.in/",
-    sourceCodeUrl: "https://github.com/Manas-Nanivadekar/DONNA",
-    devfolioUrl: "https://devfolio.co/projects/donna-b7cd",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
-    eventLogo:
-      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
-    category: "Developer Tools",
-    // winner: true,
-    // winnerPosition: "Hacker House & Demo Day Finalist",
-  },
-  {
-    id: "dab0cb9a7e824b599b1cfcb47875b025",
-    name: "RudraOne",
-    tagline: "One platform, one screen, all of your data.",
-    description:
-      "RudraOne modernizes India’s emergency response operations by unifying telephony, live transcription, translation, mapping, and dispatch into a single real-time platform. It tackles fragmented systems, language barriers, high call volumes, and lack of situational awareness by providing dispatchers with live audio transcription, multilingual translation, accurate location tracking, and shared call state across teams. By reducing miscommunication and response delays, RudraOne enables faster, clearer, and more effective emergency response when every second matters.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F9d9d7ed8-d8ff-450d-b98b-1cca75a26d77.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F4af295f3-7cd4-42c1-b8df-88d277e868df.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F13c8d813-fc88-471b-9632-091a7277adea.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2Ff8141d50-287d-4af9-a46f-15048cc738f8.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F19b72b5b-d69c-434d-a78d-fa40ee62f408.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F218e92df-e341-43dc-a626-3f03e3913c74.jpeg&w=1440&q=75",
-    ],
-    videoUrl: "https://youtube.com/embed/Hbso7qwJCJk",
-    team: [
-      {
-        name: "Shreesha Aithal",
-        role: "Builder",
-      },
-      {
-        name: "Pranav S Salian",
-        role: "Builder",
-      },
-      {
-        name: "Siddharth Shetty",
-        role: "Builder",
-      },
-    ],
-    technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Python",
-      "PostgreSQL",
-      "Mapbox",
-      "AI/ML",
-      "WebSockets",
-      "Twilio",
-    ],
-    sourceCodeUrl: "https://github.com/shreesha345/Rudra-One",
-    devfolioUrl: "https://devfolio.co/projects/rudraone-c3ed",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
-    eventLogo:
-      "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
-    category: "Healthcare",
-    // winner: true,
-    // winnerPosition: "Vultr Cloud Track Runner-Up & Hacker House Finalist",
   },
 ];
 
