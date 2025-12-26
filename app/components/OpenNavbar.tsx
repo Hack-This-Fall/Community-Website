@@ -8,6 +8,7 @@ const navbarItems = [
   { link: "/", text: "Home", conditions: [""] },
   { link: "about", text: "About", conditions: ["team"] },
   { link: "events", text: "Events", conditions: ["event", "events"] },
+  { link: "projects", text: "Projects", conditions: ["projects"] },
   { link: "blog", text: "Blog" },
 ];
 

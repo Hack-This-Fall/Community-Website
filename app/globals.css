@@ -125,10 +125,63 @@ footer {
   border: 0.75px solid #9933ff66;
 }
 
+.tag-orange {
+  border: 0.75px solid #ff6633;
+}
+
 .blog-card {
   border: 1px solid #cccccc;
 }
 
 .top-banner {
   background-image: linear-gradient(to right, #9f36f6, #fea32b);
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff8000 0%, #a163ff 100%);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffa500 0%, #b281fe 100%);
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #ff8000 rgba(255, 255, 255, 0.05);
+}
+
+/* Modal specific scrollbar */
+.chakra-modal__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff8000 0%, #a163ff 100%);
+  border-radius: 10px;
+}
+
+.chakra-modal__body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffa500 0%, #b281fe 100%);
+}
+
+.chakra-modal__body {
+  scrollbar-width: thin;
+  scrollbar-color: #ff8000 rgba(255, 255, 255, 0.05);
 }
