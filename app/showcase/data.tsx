@@ -63,7 +63,7 @@ export const projectsData: ProjectData[] = [
     ],
     sourceCodeUrl: "https://github.com/Kartikvyas1604/SafeMask",
     devfolioUrl: "https://devfolio.co/projects/safemask-04d4",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Security & Privacy",
@@ -85,8 +85,8 @@ export const projectsData: ProjectData[] = [
     team: [
       {
         name: "Manas Nanivadekar",
-        image:
-          "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
+        // image:
+        //   "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
         role: "Builder",
       },
       {
@@ -102,7 +102,7 @@ export const projectsData: ProjectData[] = [
     liveUrl: "https://donna.riverbridge.org.in/",
     sourceCodeUrl: "https://github.com/Manas-Nanivadekar/DONNA",
     devfolioUrl: "https://devfolio.co/projects/donna-b7cd",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Developer Tools",
@@ -151,7 +151,7 @@ export const projectsData: ProjectData[] = [
     ],
     sourceCodeUrl: "https://github.com/shreesha345/Rudra-One",
     devfolioUrl: "https://devfolio.co/projects/rudraone-c3ed",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Healthcare",
@@ -191,7 +191,7 @@ export const projectsData: ProjectData[] = [
     liveUrl: "https://4diary.vercel.app/",
     sourceCodeUrl: "https://github.com/Harsha-Bhattacharyya/4diary",
     devfolioUrl: "https://devfolio.co/projects/diary-8fce",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Security & Privacy",
@@ -227,7 +227,7 @@ export const projectsData: ProjectData[] = [
     liveUrl: "https://wakarumade.vercel.app",
     sourceCodeUrl: "https://github.com/MakikoOhashi/wakarumade",
     devfolioUrl: "https://devfolio.co/projects/wakarumade-f890",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Education",
@@ -413,7 +413,7 @@ export const projectsData: ProjectData[] = [
     technologies: ["React", "Node.js", "Flask", "OpenCV", "ESP8266 Wifi MCU"],
     sourceCodeUrl: "https://github.com/SudeepXR/Smart-Home-Security-System",
     devfolioUrl: "https://devfolio.co/projects/securehome-ac03",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo: "/assets/images/logo.png",
     category: "Security & Privacy",
   },
@@ -461,7 +461,7 @@ export const projectsData: ProjectData[] = [
     sourceCodeUrl: "https://github.com/Amon20044/3D-AI-Three21",
     devfolioUrl:
       "https://devfolio.co/projects/three-ai-assisted-d-visualizer-platform-7825",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Education",
@@ -510,7 +510,7 @@ export const projectsData: ProjectData[] = [
     ],
     sourceCodeUrl: "https://github.com/CodeFingers809/finsim-htf",
     devfolioUrl: "https://devfolio.co/projects/brnch-b9d1",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Productivity",
@@ -559,7 +559,7 @@ export const projectsData: ProjectData[] = [
     ],
     sourceCodeUrl: "https://github.com/gauravnetes/BotBlocks",
     devfolioUrl: "https://devfolio.co/projects/botblocks-77c8",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Developer Tools",
@@ -609,7 +609,7 @@ export const projectsData: ProjectData[] = [
     liveUrl: "https://playlistify-ai.up.railway.app/landing.html",
     sourceCodeUrl: "https://github.com/avanishkasar/Playlistify-AI",
     devfolioUrl: "https://devfolio.co/projects/playlistify-ai-fa85",
-    builtAt: "Hack This Fall 2025 - Milestone Edition",
+    builtAt: "Hack This Fall 2025",
     eventLogo:
       "https://assets.devfolio.co/hackathons/976fa65248ec49729382aebd38de94ab/assets/logo/832.png",
     category: "Productivity",
@@ -631,7 +631,7 @@ export const categories = [
 
 export const events = [
   "All Events",
-  "Hack This Fall 2025 - Milestone Edition",
+  "Hack This Fall 2025",
   // "Hack This Fall 2024",
   // "Hack This Fall 2023",
   // "Hack This Fall 2022",

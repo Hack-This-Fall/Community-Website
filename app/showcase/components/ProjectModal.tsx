@@ -49,16 +49,16 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     <Modal isOpen={isOpen} onClose={onClose} size="4xl" scrollBehavior="inside">
       <ModalOverlay bg="blackAlpha.800" backdropFilter="blur(10px)" />
       <ModalContent
-        bg="linear-gradient(180deg, #1a1a2e 0%, #16213e 100%)"
+        bg="white"
         borderRadius="24px"
-        border="1px solid rgba(255, 128, 0, 0.3)"
+        border="1px solid rgba(0, 0, 0, 0.3)"
         mx={{ base: "1rem", md: "2rem" }}
         my={{ base: "1rem", md: "2rem" }}
         maxH={{ base: "90vh", md: "85vh" }}
         overflow="hidden"
       >
         <ModalCloseButton
-          color="white"
+          color="orange"
           size="lg"
           top="1rem"
           right="1rem"
@@ -78,7 +78,10 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 bg="rgba(0,0,0,0.3)"
               >
                 <Image
-                  src={project.images[currentImageIndex] || "/placeholder-project.png"}
+                  src={
+                    project.images[currentImageIndex] ||
+                    "/placeholder-project.png"
+                  }
                   alt={project.name}
                   w="full"
                   h={{ base: "200px", md: "550px" }}
@@ -128,7 +131,11 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                           w="8px"
                           h="8px"
                           borderRadius="full"
-                          bg={idx === currentImageIndex ? "#FF8000" : "rgba(255,255,255,0.5)"}
+                          bg={
+                            idx === currentImageIndex
+                              ? "#FF8000"
+                              : "rgba(255,255,255,0.5)"
+                          }
                           cursor="pointer"
                           onClick={() => setCurrentImageIndex(idx)}
                           transition="all 0.2s"
@@ -156,14 +163,14 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       fontSize={{ base: "1.5rem", md: "2rem" }}
                       fontFamily="var(--font-outfit)"
                       fontWeight="600"
-                      color="white"
+                      color="black"
                     >
                       {project.name}
                     </Heading>
                     {project.winner && (
                       <Badge
                         bg="linear-gradient(135deg, #FF8000 0%, #FFA500 100%)"
-                        color="white"
+                        color="black"
                         px="0.75rem"
                         py="0.25rem"
                         borderRadius="full"
@@ -175,7 +182,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     )}
                   </Flex>
                   <Text
-                    color="rgba(255,255,255,0.8)"
+                    color="rgba(0, 0, 0, 0.8)"
                     fontSize={{ base: "0.9rem", md: "1.1rem" }}
                     fontFamily="var(--font-outfit)"
                   >
@@ -206,7 +213,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               {/* Team */}
               <Box mb="1.5rem">
                 <Text
-                  color="white"
+                  color="black"
                   fontWeight="600"
                   mb="0.75rem"
                   fontFamily="var(--font-outfit)"
@@ -220,20 +227,21 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       key={idx}
                       alignItems="center"
                       gap="0.5rem"
-                      bg="rgba(255,255,255,0.1)"
+                      bg="rgba(0, 0, 0, 0.1)"
                       px="0.75rem"
                       py="0.5rem"
                       borderRadius="full"
-                      border="1px solid rgba(255,255,255,0.15)"
+                      border="1px solid rgba(0, 0, 0, 0.15)"
                     >
                       <Avatar
+                        color={"white"}
                         size="xs"
                         name={member.name}
                         src={member.image}
                         bg="#A163FF"
                       />
                       <Text
-                        color="white"
+                        color="black"
                         fontSize="0.85rem"
                         fontFamily="var(--font-outfit)"
                       >
@@ -247,7 +255,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               {/* About */}
               <Box mb="1.5rem">
                 <Text
-                  color="white"
+                  color="black"
                   fontWeight="600"
                   mb="0.75rem"
                   fontFamily="var(--font-outfit)"
@@ -256,7 +264,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   About the Project
                 </Text>
                 <Text
-                  color="rgba(255,255,255,0.75)"
+                  color="rgba(0, 0, 0, 0.75)"
                   fontSize="0.95rem"
                   lineHeight="1.7"
                   fontFamily="var(--font-outfit)"
@@ -269,7 +277,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               {project.videoUrl && (
                 <Box mb="1.5rem">
                   <Text
-                    color="white"
+                    color="black"
                     fontWeight="600"
                     mb="0.75rem"
                     fontFamily="var(--font-outfit)"
@@ -277,7 +285,12 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   >
                     Demo Video
                   </Text>
-                  <AspectRatio ratio={16 / 9} maxW="full" borderRadius="16px" overflow="hidden">
+                  <AspectRatio
+                    ratio={16 / 9}
+                    maxW="full"
+                    borderRadius="16px"
+                    overflow="hidden"
+                  >
                     <iframe
                       src={project.videoUrl}
                       title={`${project.name} Demo`}
@@ -291,7 +304,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               {/* Technologies */}
               <Box mb="1.5rem">
                 <Text
-                  color="white"
+                  color="black"
                   fontWeight="600"
                   mb="0.75rem"
                   fontFamily="var(--font-outfit)"
@@ -326,9 +339,9 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     as={Link}
                     href={project.sourceCodeUrl}
                     isExternal
-                    bg="rgba(255,255,255,0.1)"
-                    color="white"
-                    border="1px solid rgba(255,255,255,0.2)"
+                    bg="rgba(0, 0, 0, 0.1)"
+                    color="black"
+                    border="1px solid rgba(0, 0, 0, 0.2)"
                     borderRadius="full"
                     px="1.5rem"
                     fontFamily="var(--font-outfit)"
@@ -338,8 +351,13 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       textDecoration: "none",
                     }}
                     leftIcon={
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                       </svg>
                     }
                   >
@@ -352,7 +370,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     href={project.liveUrl}
                     isExternal
                     bg="linear-gradient(135deg, #FF8000 0%, #FFA500 100%)"
-                    color="white"
+                    color="black"
                     borderRadius="full"
                     px="1.5rem"
                     fontFamily="var(--font-outfit)"
@@ -362,7 +380,14 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       textDecoration: "none",
                     }}
                     leftIcon={
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15 3 21 3 21 9"></polyline>
                         <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -378,7 +403,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     href={project.devfolioUrl}
                     isExternal
                     bg="#3770FF"
-                    color="white"
+                    color="black"
                     borderRadius="full"
                     px="1.5rem"
                     fontFamily="var(--font-outfit)"
@@ -388,7 +413,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       textDecoration: "none",
                     }}
                   >
-                    Devfolio Page
+                    Project Page
                   </Button>
                 )}
               </Flex>

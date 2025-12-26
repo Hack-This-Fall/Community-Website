@@ -25,7 +25,9 @@ import "../styles.css";
 const ProjectsPage = () => {
   const [navbarHeight, setNavbarHeight] = useState(149);
   const [isNavbarOpen, setNavbarOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
+    null
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedEvent, setSelectedEvent] = useState("All Events");
@@ -116,12 +118,16 @@ const ProjectsPage = () => {
                   fontFamily="var(--font-outfit)"
                   mt="0.5rem"
                 >
-                  Discover amazing projects built by our community at Hack This Fall
+                  Discover amazing projects built by our community at Hack This
+                  Fall!
                 </Text>
               </Box>
 
               {/* Search */}
-              <InputGroup maxW={{ base: "full", lg: "320px" }}>
+              <InputGroup
+                maxW={{ base: "full", lg: "320px" }}
+                alignSelf={"end"}
+              >
                 <InputLeftElement pointerEvents="none">
                   <SearchIcon color="gray.400" />
                 </InputLeftElement>
@@ -189,7 +195,7 @@ const ProjectsPage = () => {
               </Box>
 
               {/* Event Filter */}
-              <Box>
+              {/* <Box>
                 <Text
                   fontSize="0.85rem"
                   fontWeight="600"
@@ -227,7 +233,7 @@ const ProjectsPage = () => {
                     </Flex>
                   ))}
                 </Flex>
-              </Box>
+              </Box> */}
             </Flex>
 
             {/* Results Count */}
@@ -243,10 +249,7 @@ const ProjectsPage = () => {
 
             {/* Projects Grid */}
             {filteredProjects.length > 0 ? (
-              <SimpleGrid
-                columns={{ base: 1, md: 2, lg: 3 }}
-                gap="1.5rem"
-              >
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap="1.5rem">
                 {filteredProjects.map((project) => (
                   <ProjectCard
                     key={project.id}

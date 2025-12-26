@@ -1,6 +1,15 @@
 "use client";
 
-import { Box, Flex, Heading, Text, Image, Badge, Avatar, AvatarGroup } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Badge,
+  Avatar,
+  AvatarGroup,
+} from "@chakra-ui/react";
 import { ProjectData } from "../data";
 import AngleArrow from "@/app/components/icons/AngleArrow";
 
@@ -14,16 +23,16 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
     <Flex
       onClick={onClick}
       flexDir="column"
-      borderRadius="20px"
+      borderRadius="0.5rem"
       overflow="hidden"
-      bg="linear-gradient(180deg, #1a1a2e 0%, #16213e 100%)"
-      border="1px solid rgba(255, 128, 0, 0.2)"
+      bg="#fff"
+      border="1px solid rgba(0, 0, 0, 0.2)"
       cursor="pointer"
       transition="all 0.3s ease-in-out"
       _hover={{
         transform: "translateY(-4px)",
-        boxShadow: "0 10px 40px rgba(255, 128, 0, 0.15)",
-        border: "1px solid rgba(255, 128, 0, 0.4)",
+        boxShadow: "0 10px 40px rgba(0, 0, 0, 0.15)",
+        border: "1px solid rgba(0, 0, 0, 0.4)",
       }}
       css={{
         ":hover": {
@@ -65,35 +74,39 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           <Badge
             position="absolute"
             top="0.75rem"
-            right="0.75rem"
-            bg="rgba(161, 99, 255, 0.9)"
+            right="0.5rem"
             color="white"
-            px="0.75rem"
-            py="0.3rem"
-            borderRadius="full"
             fontSize="0.7rem"
             fontWeight="600"
+            bg={"transparent"}
           >
-            {project.category}
+            <span className="bg-purple-200 tag text-purple-600 text-xs font-semibold px-2 py-1 rounded uppercase">
+              {project.category}
+            </span>
           </Badge>
         )}
       </Box>
 
       {/* Content */}
-      <Flex flexDir="column" p="1rem" flex="1" justifyContent="space-between" gap="0.75rem">
+      <Flex
+        flexDir="column"
+        p="1rem"
+        flex="1"
+        justifyContent="space-between"
+        gap="0.75rem"
+      >
         <Box>
           <Heading
             fontSize={{ base: "1.1rem", md: "1.2rem" }}
             fontFamily="var(--font-outfit)"
             fontWeight="600"
-            color="white"
             mb="0.25rem"
             noOfLines={1}
           >
             {project.name}
           </Heading>
           <Text
-            color="rgba(255,255,255,0.65)"
+            color="rgba(0, 0, 0, 0.65)"
             fontSize="0.8rem"
             fontFamily="var(--font-outfit)"
             noOfLines={2}
@@ -113,34 +126,30 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                   name={member.name}
                   src={member.image}
                   bg="#A163FF"
-                  border="2px solid #1a1a2e"
+                  border="0.5px solid #1a1a2e"
+                  color="white"
                 />
               ))}
             </AvatarGroup>
 
             {/* Event Badge */}
-            <Flex
-              alignItems="center"
-              bg="rgba(255,128,0,0.15)"
-              px="0.5rem"
-              py="0.2rem"
-              borderRadius="full"
-              border="1px solid rgba(255,128,0,0.25)"
-            >
-              <Text
-                color="#FF8000"
-                fontSize="0.65rem"
+            <Flex alignItems="center" bg="transparent">
+              <Badge
+                color="white"
+                fontSize="0.7rem"
                 fontWeight="600"
-                fontFamily="var(--font-outfit)"
+                bg={"transparent"}
               >
-                {project.builtAt}
-              </Text>
+                <span className="bg-[#FF663330] tag-orange text-[#FF8000] text-xs font-semibold px-2 py-1 rounded uppercase">
+                  {project.builtAt}
+                </span>
+              </Badge>
             </Flex>
           </Flex>
 
           {/* Arrow Button */}
           <Flex
-            bgColor="#FF8000"
+            bgColor="#000"
             alignItems="center"
             justifyContent="center"
             borderRadius="full"
