@@ -358,13 +358,32 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     View on GitHub
                   </Button>
                 )}
+                {project.devfolioUrl && (
+                  <Button
+                    as={Link}
+                    href={project.devfolioUrl}
+                    isExternal
+                    bg="linear-gradient(135deg, #FF8000 0%, #FFA500 100%)"
+                    color="black"
+                    borderRadius="full"
+                    px="1.5rem"
+                    fontFamily="var(--font-outfit)"
+                    fontWeight="500"
+                    _hover={{
+                      opacity: 0.9,
+                      textDecoration: "none",
+                    }}
+                  >
+                    Project Page
+                  </Button>
+                )}
                 {project.liveUrl && (
                   <Button
                     as={Link}
                     href={project.liveUrl}
                     isExternal
-                    bg="linear-gradient(135deg, #FF8000 0%, #FFA500 100%)"
-                    color="black"
+                    bg="#9933FF"
+                    color="white"
                     borderRadius="full"
                     px="1.5rem"
                     fontFamily="var(--font-outfit)"
@@ -389,25 +408,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     }
                   >
                     Try it Live
-                  </Button>
-                )}
-                {project.devfolioUrl && (
-                  <Button
-                    as={Link}
-                    href={project.devfolioUrl}
-                    isExternal
-                    bg="#3770FF"
-                    color="black"
-                    borderRadius="full"
-                    px="1.5rem"
-                    fontFamily="var(--font-outfit)"
-                    fontWeight="500"
-                    _hover={{
-                      opacity: 0.9,
-                      textDecoration: "none",
-                    }}
-                  >
-                    Project Page
                   </Button>
                 )}
               </Flex>
