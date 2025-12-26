@@ -373,8 +373,22 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       opacity: 0.9,
                       textDecoration: "none",
                     }}
+                    leftIcon={
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    }
                   >
-                    Project Page
+                    Project page
                   </Button>
                 )}
                 {project.liveUrl && (
@@ -400,14 +414,16 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
                       </svg>
                     }
                   >
-                    Try it Live
+                    Try it live
                   </Button>
                 )}
               </Flex>
