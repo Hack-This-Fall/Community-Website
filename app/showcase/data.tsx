@@ -32,12 +32,12 @@ export const projectsData: ProjectData[] = [
     description:
       "SafeMask is a privacy-focused crypto wallet that protects users by hiding real balances behind a normal-looking decoy interface. Designed for real-world safety, it prevents judgment, coercion, or unwanted attention by disguising sensitive wallet data while keeping everything securely encrypted. With features like hidden balances, decoy wallets, and secure key handling, SafeMask lets users manage crypto confidently and discreetly—even when someone else has access to their phone.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2Fff5aa750-2843-4234-a495-967e6e921fe9.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F67060e8f-1566-4aca-8bbd-655aa38e1aa4.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F29db17c2-ef03-4d6b-b7f7-f7fad666a04e.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F4d7b7f2c-b937-4789-abf3-3e1f8e8e7df6.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F9c3e6d5b-a386-4ea0-8201-d92683293ea6.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F3d10b42cfb004204a67d71803c0487a2%2F99e2a174-f985-4386-b8a9-fd777f3c548c.png&w=1440&q=75",
+      "/images/projects/ff5aa750-2843-4234-a495-967e6e921fe9.png",
+      "/images/projects/67060e8f-1566-4aca-8bbd-655aa38e1aa4.png",
+      "/images/projects/29db17c2-ef03-4d6b-b7f7-f7fad666a04e.png",
+      "/images/projects/4d7b7f2c-b937-4789-abf3-3e1f8e8e7df6.png",
+      "/images/projects/9c3e6d5b-a386-4ea0-8201-d92683293ea6.png",
+      "/images/projects/99e2a174-f985-4386-b8a9-fd777f3c548c.png",
     ],
     videoUrl: "https://youtube.com/embed/rnGMY664e8I",
     team: [
@@ -77,9 +77,9 @@ export const projectsData: ProjectData[] = [
     description:
       "Donna (Distributed Organizational Neural Network Assistant) helps teams prevent repeated mistakes by preserving institutional knowledge that’s usually lost across chats, tickets, docs, and employee turnover. It analyzes an organization’s codebase, project history, and communications to understand what worked, what failed, and why. By building a contextual map of past decisions and proactively warning teams when similar failure patterns reappear, Donna shortens onboarding, improves decision-making, and ensures hard-earned lessons are never forgotten.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2Fbf9ee9c9-ea7b-4d3f-947a-4685a437aadd.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F303402f9-b269-4eb4-a3e9-c966e8192d6b.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe2b335399fc24aa884ea8864ccdf8f20%2F566a49fa-549c-4b8c-9459-5dc3a132c07a.png&w=1440&q=75",
+      "/images/projects/bf9ee9c9-ea7b-4d3f-947a-4685a437aadd.png",
+      "/images/projects/303402f9-b269-4eb4-a3e9-c966e8192d6b.png",
+      "/images/projects/566a49fa-549c-4b8c-9459-5dc3a132c07a.png",
     ],
     videoUrl: "https://youtube.com/embed/3ZRISKYuPUU",
     team: [
@@ -116,12 +116,12 @@ export const projectsData: ProjectData[] = [
     description:
       "RudraOne modernizes India’s emergency response operations by unifying telephony, live transcription, translation, mapping, and dispatch into a single real-time platform. It tackles fragmented systems, language barriers, high call volumes, and lack of situational awareness by providing dispatchers with live audio transcription, multilingual translation, accurate location tracking, and shared call state across teams. By reducing miscommunication and response delays, RudraOne enables faster, clearer, and more effective emergency response when every second matters.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F9d9d7ed8-d8ff-450d-b98b-1cca75a26d77.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F4af295f3-7cd4-42c1-b8df-88d277e868df.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F13c8d813-fc88-471b-9632-091a7277adea.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2Ff8141d50-287d-4af9-a46f-15048cc738f8.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F19b72b5b-d69c-434d-a78d-fa40ee62f408.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Ffa254afd96574ee0bb613c7470c378c7%2F218e92df-e341-43dc-a626-3f03e3913c74.jpeg&w=1440&q=75",
+      "/images/projects/9d9d7ed8-d8ff-450d-b98b-1cca75a26d77.jpeg",
+      "/images/projects/4af295f3-7cd4-42c1-b8df-88d277e868df.jpeg",
+      "/images/projects/13c8d813-fc88-471b-9632-091a7277adea.jpeg",
+      "/images/projects/f8141d50-287d-4af9-a46f-15048cc738f8.jpeg",
+      "/images/projects/19b72b5b-d69c-434d-a78d-fa40ee62f408.jpeg",
+      "/images/projects/218e92df-e341-43dc-a626-3f03e3913c74.jpeg",
     ],
     videoUrl: "https://youtube.com/embed/Hbso7qwJCJk",
     team: [
@@ -165,12 +165,12 @@ export const projectsData: ProjectData[] = [
     description:
       "4Diary is a privacy-first, end-to-end encrypted note-taking web app built for people who value both security and simplicity. It ensures that not even the server can read user content, avoids storing passwords entirely, and remains fully open-source and self-hostable. Accessible from any browser and enhanced with features like Kanban boards, 4Diary lets users capture their thoughts securely without trusting opaque platforms or sacrificing usability.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F8c24101b-0885-421e-bff9-9e3ca1c6deda.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3d566945-eea9-4e4d-83a1-433d3a3947b5.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F1777c1cd-49fa-44bb-bc4d-b0ecdaf1ba7f.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2Fde27f416-81ae-4a3b-968a-320f15e9e69b.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F3eff2075-b1cc-43c7-9b1e-4495321ca278.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fe4476fee8efa406e98feba78df93da53%2F7640e0f7-0374-46c4-a44a-c6f542dc78d0.jpeg&w=1440&q=75",
+      "/images/projects/8c24101b-0885-421e-bff9-9e3ca1c6deda.jpeg",
+      "/images/projects/3d566945-eea9-4e4d-83a1-433d3a3947b5.jpeg",
+      "/images/projects/1777c1cd-49fa-44bb-bc4d-b0ecdaf1ba7f.jpeg",
+      "/images/projects/de27f416-81ae-4a3b-968a-320f15e9e69b.jpeg",
+      "/images/projects/3eff2075-b1cc-43c7-9b1e-4495321ca278.jpeg",
+      "/images/projects/7640e0f7-0374-46c4-a44a-c6f542dc78d0.jpeg",
     ],
     videoUrl: "https://player.vimeo.com/video/1141388287",
     team: [
@@ -204,9 +204,7 @@ export const projectsData: ProjectData[] = [
     tagline: "Learn until it clicks.",
     description:
       "Wakarumade helps children truly understand math word problems by breaking them into small, guided reasoning steps instead of focusing only on answers. It targets the real failure point—language comprehension—by scaffolding how kids think through problems, giving immediate feedback, and generating new practice questions based on where they struggled. The result is less guessing, clearer reasoning, and a learning experience that supports both kids and parents without repetitive re-explanations.",
-    images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F7be4df3280a9454aa33c706c7beeca13%2Feb7d9d09-cc91-4cff-aad6-a035fda116b0.png&w=1440&q=75",
-    ],
+    images: ["/images/projects/eb7d9d09-cc91-4cff-aad6-a035fda116b0.png"],
     videoUrl: "https://youtube.com/embed/4-p-3T3RSig",
     team: [
       {
@@ -388,12 +386,12 @@ export const projectsData: ProjectData[] = [
     description:
       "This project redefines home security by transforming ordinary doorbells and cameras into an intelligent, proactive, and affordable AI-powered guardian. Instead of passive recording and delayed alerts, it identifies known and unknown visitors, detects suspicious behaviour in real time, protects children with smart safety modes, and communicates instantly through platforms people already use like Telegram. With conversational AI, two-way communication, and real-time threat understanding, the system doesn’t just record what happens at home - it understands intent, acts early, and keeps families genuinely informed and protected, without expensive hardware or subscriptions.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2F089b2808-5da0-41c6-a393-b775691c31fa.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2Faea027a6-ce70-412d-83cc-722c7042f057.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2F4303c2a2-b45b-4c08-978a-d15f53049590.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2F27924d88-c7e4-4d7b-abf3-ddee6948b853.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2Faac88106-621e-439e-b6a0-0796d0737cb6.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F379860690b664df683ea223a6a2c9dd3%2Fe24e0913-d265-4a8e-b922-02a04cf83959.jpeg&w=1440&q=75",
+      "/images/projects/089b2808-5da0-41c6-a393-b775691c31fa.jpeg",
+      "/images/projects/aea027a6-ce70-412d-83cc-722c7042f057.jpeg",
+      "/images/projects/4303c2a2-b45b-4c08-978a-d15f53049590.jpeg",
+      "/images/projects/27924d88-c7e4-4d7b-abf3-ddee6948b853.png",
+      "/images/projects/aac88106-621e-439e-b6a0-0796d0737cb6.jpeg",
+      "/images/projects/e24e0913-d265-4a8e-b922-02a04cf83959.jpeg",
     ],
     videoUrl: "https://www.youtube.com/embed/hCx1eeWRhvA",
     team: [
@@ -425,12 +423,12 @@ export const projectsData: ProjectData[] = [
     description:
       "Three21 transforms static diagrams into high-fidelity, interactive 3D learning experiences. It automatically breaks down 3D models into parts, layers, geometry, and connections while a contextual, personalized multimodal AI explains how everything works in real time. Users can explore models conversationally, ask questions, and even pull live academic research, turning complex engineering concepts into intuitive, self-explaining visual knowledge.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2F6a9a47cb-9f55-4f69-b3ca-8e3f71960366.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2Fbe0dcb4d-7e8f-48f2-aeca-1a4ecbaeaf71.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2F29423549-75c5-410c-8061-40ba53a6d1a9.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2F6e734d7a-36b7-480f-a5b2-56862a24c46c.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2F73144894-5795-4c13-a6b0-774a3d3524b4.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F156550eacbaa415ca53484a0c25350f1%2Fee4b7769-3cf5-45c9-8e28-c69bc546178c.png&w=1440&q=75",
+      "/images/projects/6a9a47cb-9f55-4f69-b3ca-8e3f71960366.png",
+      "/images/projects/be0dcb4d-7e8f-48f2-aeca-1a4ecbaeaf71.png",
+      "/images/projects/29423549-75c5-410c-8061-40ba53a6d1a9.png",
+      "/images/projects/6e734d7a-36b7-480f-a5b2-56862a24c46c.png",
+      "/images/projects/73144894-5795-4c13-a6b0-774a3d3524b4.png",
+      "/images/projects/ee4b7769-3cf5-45c9-8e28-c69bc546178c.png",
     ],
     videoUrl: "https://www.youtube.com/embed/-_31f2KVpRM",
     team: [
@@ -473,12 +471,12 @@ export const projectsData: ProjectData[] = [
     description:
       "brnch turns plain-English investing ideas into real, backtested results. Instead of forcing users to learn complex tools or programming languages, it lets non-technical investors validate strategies instantly using historical market data. By unifying research, backtesting, and insights into a single platform, brnch removes guesswork and helps users understand whether an idea that sounds good on paper actually works in practice.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2Fd00aa8db-2c7f-44b6-a275-8b491ccd2e7e.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2F172cb8ec-88f8-4e8c-9f6e-ff5d28437595.jpeg&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2Fe5cac66c-8e5f-4af9-9d18-ec51d8485897.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2Fd14ddabc-9ff9-4f26-96c6-828c1a19bce1.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2F0f64e1ab-e811-4142-8593-01b9c7795311.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fc9a8c7a3cf804a6d99aff7f93785292c%2Fec4f7ef6-2669-4b8d-b13a-c20349a99ba5.png&w=1440&q=75",
+      "/images/projects/d00aa8db-2c7f-44b6-a275-8b491ccd2e7e.jpeg",
+      "/images/projects/172cb8ec-88f8-4e8c-9f6e-ff5d28437595.jpeg",
+      "/images/projects/e5cac66c-8e5f-4af9-9d18-ec51d8485897.png",
+      "/images/projects/d14ddabc-9ff9-4f26-96c6-828c1a19bce1.png",
+      "/images/projects/0f64e1ab-e811-4142-8593-01b9c7795311.png",
+      "/images/projects/ec4f7ef6-2669-4b8d-b13a-c20349a99ba5.png",
     ],
     videoUrl: "https://youtube.com/embed/d5BdJA971g4",
     team: [
@@ -524,9 +522,9 @@ export const projectsData: ProjectData[] = [
     description:
       "BotBlocks makes building AI chatbots as simple as creating a WordPress website. Instead of complex flow builders or coding, users upload their data, choose pre-built chatbot functions, select a personality, pick a platform, and deploy in under a minute. Designed for small businesses, creators, and entrepreneurs, BotBlocks removes technical barriers and enables anyone to launch intelligent, production-ready chatbots without writing a single line of code.",
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F1557475782ba4536ad3daab59a2db469%2F9373b2c8-6b51-4638-b5bd-f000563643bd.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F1557475782ba4536ad3daab59a2db469%2Faf5b7a6a-1d07-4dc7-8d2c-27d35f0ced7b.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2F1557475782ba4536ad3daab59a2db469%2F637f489a-ae92-4f5c-8993-52389c0a04a0.png&w=1440&q=75",
+      "/images/projects/9373b2c8-6b51-4638-b5bd-f000563643bd.png",
+      "/images/projects/af5b7a6a-1d07-4dc7-8d2c-27d35f0ced7b.png",
+      "/images/projects/637f489a-ae92-4f5c-8993-52389c0a04a0.png",
     ],
     videoUrl: "https://youtube.com/embed/DkH-BT2oIUs",
     team: [
@@ -574,12 +572,12 @@ export const projectsData: ProjectData[] = [
     description:
       'Playlistify AI turns natural language moods into perfectly curated Spotify playlists in under 30 seconds. Instead of scrolling through generic playlists or mastering complex filters, users simply describe how they feel—like "happy but tired" or "energetic yet calm"—and the system generates a playlist that matches their exact vibe. Built with privacy-first authentication and smart NLP-driven genre prioritization, Playlistify AI removes friction from music discovery and delivers exactly what users want to hear.',
     images: [
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2F402ee746-fd76-4689-8204-1faded849bff.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2Fa3018629-d6cc-4202-829c-e65958cf4088.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2Fc9ea5e0f-a158-498c-ba15-1dc870a7722d.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2F1545657e-002c-4e64-9bf1-3a3d986bcfeb.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2F45ac8750-df24-418c-80fd-391d49d8fb03.png&w=1440&q=75",
-      "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fhackthisfall%2Fprojects%2Fb20d082f97674690ab60ba3bdff3fb99%2F14e480e1-d65e-4633-a339-75cf1d390ca1.png&w=1440&q=75",
+      "/images/projects/402ee746-fd76-4689-8204-1faded849bff.png",
+      "/images/projects/a3018629-d6cc-4202-829c-e65958cf4088.png",
+      "/images/projects/c9ea5e0f-a158-498c-ba15-1dc870a7722d.png",
+      "/images/projects/1545657e-002c-4e64-9bf1-3a3d986bcfeb.png",
+      "/images/projects/45ac8750-df24-418c-80fd-391d49d8fb03.png",
+      "/images/projects/14e480e1-d65e-4633-a339-75cf1d390ca1.png",
     ],
     videoUrl: "https://youtube.com/embed/Fg-mkwssghQ",
     team: [
