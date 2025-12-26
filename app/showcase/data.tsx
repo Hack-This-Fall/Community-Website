@@ -85,8 +85,8 @@ export const projectsData: ProjectData[] = [
     team: [
       {
         name: "Manas Nanivadekar",
-        // image:
-        //   "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
+        image:
+          "https://assets.devfolio.co/users/e2b335399fc24aa884ea8864ccdf8f20/avatar-538e0146-a357-4692-8640-f15c6a5d2d70.jpeg",
         role: "Builder",
       },
       {

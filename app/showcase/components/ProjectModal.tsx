@@ -189,25 +189,19 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     {project.tagline}
                   </Text>
                 </Box>
-                <Flex
-                  alignItems="center"
-                  gap="0.5rem"
-                  bg="rgba(255,128,0,0.15)"
-                  px="1rem"
-                  py="0.5rem"
-                  borderRadius="full"
-                  border="1px solid rgba(255,128,0,0.3)"
-                  flexShrink={0}
+                <Badge
+                  bg="#FF663330"
+                  color="#FF8000"
+                  px="0.75rem"
+                  py="0.2rem"
+                  borderRadius="0.4rem"
+                  fontSize="0.85rem"
+                  fontWeight="500"
+                  border="0.75px solid #FF8000"
+                  fontFamily="var(--font-outfit)"
                 >
-                  <Text
-                    color="#FF8000"
-                    fontSize="0.85rem"
-                    fontWeight="600"
-                    fontFamily="var(--font-outfit)"
-                  >
-                    Built at {project.builtAt}
-                  </Text>
-                </Flex>
+                  {project.builtAt}
+                </Badge>
               </Flex>
 
               {/* Team */}
