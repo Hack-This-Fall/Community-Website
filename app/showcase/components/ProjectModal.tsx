@@ -364,7 +364,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     href={project.devfolioUrl}
                     isExternal
                     bg="linear-gradient(135deg, #FF8000 0%, #FFA500 100%)"
-                    color="black"
+                    color="white"
                     borderRadius="full"
                     px="1.5rem"
                     fontFamily="var(--font-outfit)"
